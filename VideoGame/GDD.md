@@ -37,18 +37,23 @@ Tomás Molina Pérez Diez - A01784116
 
 ### **Resumen**
 
-En "Tower Siege", dos jugadores se enfrentan en una batalla estratégica, seleccionando mazos de cartas que representan varias unidades para atacar las torres del oponente mientras defienden las propias. El dominio del posicionamiento de unidades y la gestión de recursos es clave para la victoria en este competitivo juego 2D.
+En "Tower Siege", dos jugadores se enfrentan en una batalla estratégica, seleccionando mazos de cartas que representan varias unidades para atacar las torres del oponente mientras defienden las propias. El dominio de creación de mazo, posicionamiento de unidades y la gestión de recursos es clave para la victoria en este competitivo juego 2D.
 
 ### **Jugabilidad**
 
-El juego empieza al enseñarle a los jugadores en que tablero (mapa) va a ser la partida. Los jugadores después seleccionan cinco cartas de un conjunto de veinte, incluyendo soldados, caballeros, arqueros, catapultas entre otros. El jugador no sabe que baraja escogió su contrincante.
+El juego empieza al enseñarle a los jugadores en que tablero (mapa) va a ser la partida. Los jugadores después seleccionan un mazo prehecho o crea uno en el momento. El jugador crea un mazo de 40 cartas de un pool de 20 tipo de cartas, haciendo que tenga cartas repetidas el jugador. El jugador no sabe que baraja escogió su contrincante.
 Al usar una carta en el tablero, esto hará que aparezca el personaje de la carta en el lugar colocado. Cada carta tiene un costo de recursos para desplegar y un cooldown después de que ha sido usada. El juego desafía a los jugadores a gestionar estos recursos, desplegar unidades estratégicamente, y conquistar las torres centrales para obtener una ventaja. 
-Al conquistar las torres centrales, estas amplían el espacio donde un jugador puede colocar sus cartas.
-La victoria se logra destruyendo las torres del oponente o si nadie ha ganado al terminar el tiempo de partida el jugador que ha hecho más daño al oponente gana..
+
+Al conquistar las torres centrales, estas amplían el espacio donde un jugador puede colocar sus cartas. Al inicio de la partida las torres centrales son neutras y los jugadores tiene que pelear para conquistarlas. Para conquistar una torre central tus tropas le tienen que hacer cierto numero de daño, lo cual se vera reflejado en una barra de vida arriba de la torre. El jugador que le de el ultimo golpe a la torre central y haga que se llene la barra se vuelve dueño de la torre. 
+
+Los jugadores empiezan la partida con 6 cartas "en mano", es decir cartas disponibles para colocar en campo de batalla. Al despegar una se les dara otra carta de su mazo, cuando se cumpla el tiempo de cooldown de esa carta. El jugador puede colocar muchas cartas si es que tiene los recursos para hacerlo pero solo podra tener un maximo de 6 cartas en mano. Las cartas colocadas se descartan, y cuando todo el mazo del jugador se ha descartado. Las cartas descartas se revolveran y podra volver a obtener 6 cartas en mano. Este proceso va durar 7s dandole al oponente una ventana donde podra atacar sin que el otro jugador pueda colocar cartas.
+
+La victoria se logra destruyendo las torres del oponente o si nadie ha ganado al terminar el tiempo de partida el jugador que ha hecho más daño al oponente gana, en caso de que el daño este empatado, se hara un sudden death donde el primero en hacer daño gana.
 
 ### **Mentalidad**
 
 El juego busca invocar una mentalidad de planificación estratégica y adaptabilidad. Los jugadores deberían sentir la tensión de la gestión de recursos, la emoción de romper las defensas exitosamente, y la necesidad de adaptarse constantemente al campo de batalla en evolución.
+La estarategia del juego tiene muchas facetas, desde la creación de mazo, a la administración de recursos, el posicionamiento y timing de la colocación de cartas, a la estarategia de torres, etc.
 
 ## _Técnico_
 
@@ -58,6 +63,8 @@ El juego busca invocar una mentalidad de planificación estratégica y adaptabil
 
 1. Pantalla de Título
     - Iniciar Juego
+    - Ver Cartas
+    - ¿Como Jugar?
     - Opciones
     - Salir
 2. Selección de Mazo
@@ -87,7 +94,7 @@ indiquen.
 #### **Campo de Batalla**
 - **Ambiente**: Competitivo, intenso
 - **Objetos**
-    - _Interactivos_: Árboles (cobertura), lagos(obstáculo)
+    - _Interactivos_:  Lagos(obstáculo)
 
 ### **Flujo de Juego**
 
