@@ -78,32 +78,58 @@ La estarategia del juego tiene muchas facetas, desde la creación de mazo, admin
 
 ### **Pantallas**
 
-- Pantalla de Título
-    - Iniciar Partida
-        - Mapa de partida
-        - Elegir mazo
-            - Listas de mazos disponibles
-            - Crear mazo
-        - Partida
-            - Mano (Cartas Disponibles)
-            - Menu de pausa
-                - Reanudar
-                - Salir
-            Pantalla de Victoria/Derrota
-    - Selección de Mazo
-        - Crear mazo
-        - Listas de mazos
-        - Todas las cartas
-            - Descripción y estadísticas (de cada carta)
-    - ¿Como Jugar?
-        - Documento de instrucciones
-    - Opciones
-        - Volumen
-        - Teclas personalizables
-    - Créditos
-    - Salir
 
----
+### Pantalla de Título
+La primera impresión del juego, donde los jugadores pueden acceder a todas las funcionalidades principales del juego. Esta pantalla incluye:
+
+- **Iniciar Sesión/Registro**: Lleva a los jugadores a la pantalla de Log In para iniciar sesión o registrarse.
+- **¿Cómo Jugar?**: Un tutorial interactivo y documento de instrucciones para nuevos jugadores.
+- **Opciones**: Configuraciones del juego, incluyendo volumen y teclas personalizables.
+- **Créditos**: Información sobre el equipo de desarrollo y agradecimientos.
+- **Salir**: Opción para cerrar el juego.
+
+### Pantalla de Log In/Registro
+Antes de acceder a la configuración de la partida y opciones del juego, los jugadores son dirigidos a la pantalla de Log In, asegurando que sus progresos y estadísticas puedan ser guardados y rastreados correctamente. Esta pantalla ofrece:
+
+- **Log In**: Los jugadores existentes pueden ingresar su usuario y contraseña para acceder a sus perfiles.
+- **Registro**: Nuevos jugadores pueden crear una cuenta, proporcionando un usuario, correo electrónico y contraseña.
+
+### Iniciar Partida
+Esta pantalla guía a los jugadores a través de la configuración de una partida, incluyendo:
+
+- **Mapa de Partida**: Selección de uno de los varios mapas disponibles, cada uno con sus propios desafíos y características.
+- **Elegir Mazo**:
+    - **Listas de Mazos Disponibles**: Visualización y selección de mazos previamente creados.
+    - **Crear Mazo**: Herramienta para crear un nuevo mazo de cartas.
+
+### Partida
+La pantalla principal del juego donde ocurre la acción. Incluye:
+
+- **Mano (Cartas Disponibles)**: Muestra las cartas que el jugador puede jugar actualmente, con detalles sobre coste de recursos.
+- **Menu de Pausa**: Accesible durante la partida para pausar el juego, con opciones para reanudar o salir de la partida.
+
+### Pantalla de Victoria/Derrota
+Al finalizar una partida, los jugadores son dirigidos a esta pantalla, que muestra el resultado de la partida y ofrece opciones para volver al menú principal, jugar otra partida, o revisar las estadísticas del juego recién terminado.
+
+### Selección de Mazo
+Una interfaz dedicada a la gestión de mazos, donde los jugadores pueden:
+
+- **Crear Mazo**: Interface para la creación de nuevos mazos, con acceso a todas las cartas disponibles.
+- **Listas de Mazos**: Visualización y edición de mazos existentes.
+- **Todas las Cartas**: Exploración de todas las cartas disponibles, incluyendo descripciones y estadísticas.
+
+### ¿Cómo Jugar?
+Una sección educativa que proporciona:
+
+- **Documento de Instrucciones**: Guía detallada sobre cómo jugar "Tower Siege", incluyendo reglas, consejos y estrategias.
+
+### Opciones
+Permite a los jugadores personalizar su experiencia de juego, ajustando:
+
+- **Volumen**: Control de volumen para música y efectos de sonido.
+- **Teclas Personalizables**: Configuración de controles de teclado para adaptarse a las preferencias del jugador.
+
+Al mejorar la descripción de las pantallas, se busca proporcionar una experiencia de usuario fluida y accesible, asegurando que los jugadores puedan navegar fácilmente por el juego y acceder a todo lo que necesitan para una experiencia de juego inmersiva y satisfactoria.
 
 ### **Controles**
 
@@ -112,12 +138,35 @@ La estarategia del juego tiene muchas facetas, desde la creación de mazo, admin
 
 ---
 
-### **Mecánicas**
+## _Mecánicas_
 
-- **Generación de Recursos**: Los jugadores reciben recursos con el tiempo, utilizados para jugar cartas.
-- **Despliegue de Unidades**: Interfaz de arrastrar y soltar para colocar unidades en el campo de batalla.
-- **Interacción con el Terreno**: Las unidades interactúan con el terreno, afectando el movimiento y la estrategia.
--**Manejo de unidades desplegadas**: Las unidades toman la dirección que los jugadores indiquen.
+---
+
+### **Generación de Recursos**
+- **Dinámica**: Los recursos son la moneda de juego utilizada para desplegar cartas en el campo de batalla. Los jugadores comienzan cada partida con una cantidad inicial de recursos y estos se generan automáticamente a una tasa constante a lo largo del juego.
+- **Estrategia**: La gestión eficaz de recursos es crucial para el éxito. Los jugadores deben decidir cuándo ahorrar recursos para desplegar unidades más poderosas o cuándo gastarlos rápidamente para ganar ventaja táctica.
+
+### **Despliegue de Unidades**
+- **Mecánica**: Las unidades se despliegan en el campo de batalla mediante una interfaz de arrastrar y soltar, permitiendo a los jugadores elegir estratégicamente la posición inicial de sus unidades.
+- **Estrategia**: La posición de las unidades puede afectar significativamente el resultado de la batalla. Colocar unidades defensivas al frente puede proteger a las unidades de ataque más vulnerables detrás.
+
+### **Interacción con el Terreno**
+- **Dinámica**: El campo de batalla cuenta con varios elementos de terreno, como montañas, bosques, ríos, y más. Cada tipo de terreno afecta a las unidades de manera diferente.
+- **Estrategia**: Los jugadores deben usar el terreno a su favor, posicionando unidades en lugares que maximicen su efectividad mientras limitan las opciones de movimiento del oponente.
+
+### **Manejo de Unidades Desplegadas**
+- **Mecánica de Ataque de Unidades**: Una vez desplegadas, las unidades siguen patrones de ataque específicos basados en su tipo. Algunas unidades atacan al oponente o torre más cercano, siguiendo un enfoque de ataque general. Otras están especializadas y solo atacan las torres enemigas más cercanas, lo que las hace ideales para objetivos específicos de destrucción de estructuras.
+- **Dirección y Reubicación**: Las unidades pueden ser dirigidas hacia objetivos específicos o reubicadas dentro del alcance de su movimiento mediante comandos simples. Esto permite a los jugadores adaptar su estrategia en tiempo real, reaccionando a los movimientos del oponente y al despliegue de unidades.
+- **Estrategia de Despliegue y Ataque**: La elección de cuándo y dónde desplegar tipos específicos de unidades puede cambiar drásticamente el curso de la batalla. Utilizar unidades enfocadas en atacar enemigos para proteger o apoyar a las unidades especializadas en asedio puede crear una sinergia efectiva, permitiendo a los jugadores realizar ataques dirigidos y defender sus propias estructuras simultáneamente.
+- **Adaptabilidad en el Campo de Batalla**: La habilidad para adaptar la formación de unidades y su enfoque de ataque es clave. Los jugadores deben gestionar estratégicamente el despliegue de unidades para aprovechar sus fortalezas, como realizar emboscadas, proteger unidades valiosas, o retirar unidades dañadas del combate para su recuperación.
+
+### **Combate y Confrontación**
+- **Dinámica**: Cuando las unidades entran en contacto con unidades enemigas, automáticamente entran en combate. La fuerza, velocidad, y habilidades especiales de cada unidad determinarán el resultado del enfrentamiento.
+- **Estrategia**: Elegir el momento y lugar del combate es vital. Atacar cuando el oponente está recargando recursos o desde una posición ventajosa puede ser decisivo para ganar la batalla.
+
+### **Conquista de Torres**
+- **Mecánica**: Los jugadores pueden desplegar cartas específicas para atacar y conquistar torres enemigas, ganando ventajas estratégicas y puntos de victoria.
+- **Estrategia**: Decidir cuándo centrarse en la conquista de torres frente a la defensa o el ataque directo al oponente requiere un equilibrio cuidadoso y puede cambiar la dinámica del juego.
 
 ---
 
@@ -129,32 +178,30 @@ La estarategia del juego tiene muchas facetas, desde la creación de mazo, admin
 
 #### **Campo de Batalla**
 - **Ambiente**: Campo de batalla medieval; muy forestal, con caminos, arboles, lagos, ríos, torres de piedra, etc.
-- **Objetos**
-    - _Interactivos_:  
-        - Obtaculos:
-            - Lagos
-            - Rios
-            - Rocas
-            - Arboles
-        - Objetivos:
-            - Torre principal
-            - Torres centrales
-            - Torre principal enemiga
-    -  _No interactivos_:
-        - Decoración
-            - Rocas
-            - Lagos
-            - Rios
-            - Arboles
+- **Ambientes Detallados**:
+  - **Bosques Espesos**: Los árboles no solo añaden complejidad visual, sino que también pueden ofrecer cobertura táctica o ser obstáculos que los jugadores deben navegar.
+  - **Cuerpos de Agua**: Lagos añaden barreras naturales, forzando a los jugadores a adaptar sus estrategias de movimiento y posicionamiento.
+  - **Torres**: Elementos icónicos del paisaje que sirven como objetivos críticos y puntos de fortaleza para ambos competidores.
+
+- **Objetos en el Campo de Batalla**:
+  - **Interactivos**:
+    - **Obstáculos Naturales**: Rocas y árboles pueden bloquear o desviar el avance, mientras que ríos y lagos limitan el acceso a ciertas áreas, requiriendo estrategias adaptativas.
+    - **Objetivos Estratégicos**: La torre principal y torres centrales actúan como catalizadores de confrontaciones, con su conquista ofreciendo ventajas tácticas decisivas.
+  - **Decorativos**: Elementos como rocas, estanques pequeños, y árboles añaden profundidad al mundo del juego, mejorando la inmersión sin afectar directamente la jugabilidad.
 
 ---
 
-### **Flujo de Juego**
+### **Flujo de Juego Estratégico**
 
-1. Cada jugador selecciona su mazo de batalla.
-2. Comienza la batalla, los jugadores generan recursos.
-3. Los jugadores despliegan unidades, con el objetivo principal de destruir las torres del oponente.
-4. La victoria se alcanza cuando la toprre principal de un jugador sea destruida.
+1. **Selección de Mazo**: Cada jugador elige cuidadosamente un mazo de batalla, planeando su estrategia basada en las cartas disponibles y potenciales tácticas enemigas.
+
+2. **Generación de Recursos**: Al inicio de la batalla, los jugadores comienzan a acumular recursos esenciales para el despliegue de unidades, estableciendo la base para la estrategia económica del juego.
+
+3. **Despliegue Táctico de Unidades**: Utilizando el mazo seleccionado, los jugadores colocan unidades en el campo de batalla, con cada decisión influenciada por el diseño del nivel, la composición del mazo enemigo, y los objetivos estratégicos inmediatos.
+
+4. **Conquista y Defensa**: La interacción dinámica entre atacar y defender torres centrales y la torre principal enemiga dicta el ritmo de la partida, con el terreno jugando un papel crucial en el éxito de estas maniobras.
+
+5. **Victorias Condicionales**: La partida culmina con la destrucción de la torre principal de un jugador, pero las estrategias para llegar a este punto varían enormemente, influenciadas por el diseño del nivel y las decisiones tácticas.
 
 ---
 
@@ -165,23 +212,245 @@ La estarategia del juego tiene muchas facetas, desde la creación de mazo, admin
 ### **Clases Abstractas / Componentes**
 
 1. **Carta**
-    - Atributos: Descripción, Vida, velocidad, daño, velocidad de ataque, rango, costo, enemigos, cooldown, tipo (Ataque/Defensa)
+    - Atributos: Descripción, Vida, Velocidad, Daño, Velocidad de Ataque, Rango, Costo, Enemigos Objetivo, Tipo (Ataque/Defensa).
+
 2. **Unidad**
-    - Derivado de Carta: Soldado, Caballero, Arquero
+    - Derivado de Carta: Soldado, Caballero, Arquero, Catapulta, Trol, Gigante, Fantasma, Goblin, Orco, Escudo, Healer, Mago, Dragon, Bruja, Sacerdote, Lanzador de Javalina, Asesino, Elemental de Fuego, Centauro, Nigromante.
+
 3. **Torre**
-    - Vida
+    - Atributos: Vida, Daño, Rango de Ataque.
 
 ---
 
 ### **Clases Derivadas / Composiciones de Componentes**
 
-- **Unidades**
-    - **Soldado**: Bajo costo, unidad básica
-    - **Caballero**: Alta salud, rapido
-    - **Arquero**: Largo alcance, baja salud
-- **Obstáculos**
-    - **Árbol**: Proporciona cobertura a ciertas tropas.
-    - **lago**: No cruzable por la mayoría, potencia ciertas las unidades.
+#### **Unidades**
+
+- **Soldado**: 
+  - Tipo: Común
+  - Costo: 1
+  - Daño: 15
+  - Vida: 50
+  - Alcance: 1 tile
+  - Velocidad de movimiento: 1 tile/s
+  - Velocidad de ataque: 1.5 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque
+
+- **Caballero**: 
+  - Tipo: Raro
+  - Costo: 5
+  - Daño: 25
+  - Vida: 120
+  - Alcance: 1 tile
+  - Velocidad de movimiento: 2 tiles/s
+  - Velocidad de ataque: 2 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque
+
+- **Arquero**: 
+  - Tipo: Común
+  - Costo: 2
+  - Daño: 20
+  - Vida: 30
+  - Alcance: 3 tiles
+  - Velocidad de movimiento: 1 tile/s
+  - Velocidad de ataque: 1 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque
+
+- **Catapulta**: 
+  - Tipo: Épico
+  - Costo: 6
+  - Daño: 40
+  - Vida: 60
+  - Alcance: 5 tiles
+  - Velocidad de movimiento: 0.5 tile/s
+  - Velocidad de ataque: 3 s
+  - Enemigos objetivo: Estructuras
+  - Tipo: Ataque
+
+- **Trol**: 
+  - Tipo: Raro
+  - Costo: 7
+  - Daño: 30
+  - Vida: 150
+  - Alcance: 1 tile
+  - Velocidad de movimiento: 0.75 tile/s
+  - Velocidad de ataque: 2.5 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque
+
+- **Gigante**: 
+  - Tipo: Legendario
+  - Costo: 10
+  - Daño: 70
+  - Vida: 200
+  - Alcance: 2 tiles
+  - Velocidad de movimiento: 0.6 tile/s
+  - Velocidad de ataque: 3 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque
+
+- **Fantasma**:
+  - Tipo: Épico
+  - Costo: 7
+  - Daño: 10 (ataque pasante)
+  - Vida: 80
+  - Alcance: 0 (ataque pasante)
+  - Velocidad de movimiento: 1.5 tiles/s
+  - Velocidad de ataque: 1 ataque cada que atraviesa una unidad
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque especial
+
+- **Goblin**:
+  - Tipo: Común
+  - Costo: 2
+  - Daño: 5
+  - Vida: 25
+  - Alcance: 1 tile
+  - Velocidad de movimiento: 2.5 tiles/s
+  - Velocidad de ataque: 1 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque
+
+- **Orco**:
+  - Tipo: Común
+  - Costo: 3
+  - Daño: 30
+  - Vida: 100
+  - Alcance: 1 tile
+  - Velocidad de movimiento: 1 tile/s
+  - Velocidad de ataque: 1.8 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque
+
+- **Escudo**:
+  - Tipo: Raro
+  - Costo: 4
+  - Daño: 10
+  - Vida: 150
+  - Alcance: 1 tile
+  - Velocidad de movimiento: 0.8 tile/s
+  - Velocidad de ataque: 2 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Defensa
+
+- **Healer**:
+  - Tipo: Épico
+  - Costo: 6
+  - Daño: 0
+  - Vida: 40
+  - Alcance: 3 tiles
+  - Velocidad de movimiento: 1 tile/s
+  - Velocidad de ataque: 2 s (ritmo de curación)
+  - Enemigos objetivo: N/A (aliados)
+  - Tipo: Soporte
+
+- **Mago**:
+  - Tipo: Raro
+  - Costo: 7
+  - Daño: 40 (daño en área)
+  - Vida: 50
+  - Alcance: 3 tiles
+  - Velocidad de movimiento: 0.8 tile/s
+  - Velocidad de ataque: 2.5 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque
+
+- **Dragon**:
+  - Tipo: Legendario
+  - Costo: 10
+  - Daño: 50 (daño en área)
+  - Vida: 150
+  - Alcance: 4 tiles
+  - Velocidad de movimiento: 1 tile/s (vuelo)
+  - Velocidad de ataque: 3 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque
+
+- **Bruja**:
+  - Tipo: Raro
+  - Costo: 8
+  - Daño: 25
+  - Vida: 60
+  - Alcance: 3 tiles
+  - Velocidad de movimiento: 0.7 tile/s
+  - Velocidad de ataque: 2 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque mágico
+
+- **Sacerdote**:
+  - Tipo: Épico
+  - Costo: 7
+  - Daño: 0
+  - Vida: 70
+  - Alcance: 3 tiles
+  - Velocidad de movimiento: 1 tile/s
+  - Velocidad de ataque: 2 s (ritmo de beneficio)
+  - Enemigos objetivo: N/A (aliados)
+  - Tipo: Soporte
+
+- **Lanzador de Javalina**:
+  - Tipo: Común
+  - Costo: 4
+  - Daño: 25
+  - Vida: 40
+  - Alcance: 3 tiles
+  - Velocidad de movimiento: 1.2 tile/s
+  - Velocidad de ataque: 1.7 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque
+
+- **Asesino**:
+  - Tipo: Raro
+  - Costo: 6
+  - Daño: 60
+  - Vida: 30
+  - Alcance: 1 tile
+  - Velocidad de movimiento: 3 tiles/s
+  - Velocidad de ataque: 1 s
+  - Enemigos objetivo: Alta prioridad (healers, unidades de rango)
+  - Tipo: Ataque
+
+- **Elemental de Fuego**:
+  - Tipo: Épico
+  - Costo: 9
+  - Daño: 45 (daño por quemadura)
+  - Vida: 80
+  - Alcance: 2 tiles
+  - Velocidad de movimiento: 0.9 tile/s
+  - Velocidad de ataque: 2 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque
+
+- **Centauro**:
+  - Tipo: Común
+  - Costo: 5
+  - Daño: 35
+  - Vida: 80
+  - Alcance: 2 tiles
+  - Velocidad de movimiento: 2 tiles/s
+  - Velocidad de ataque: 1.5 s
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Ataque
+
+- **Nigromante**:
+  - Tipo: Legendario
+  - Costo: 10
+  - Daño: 20
+  - Vida: 60
+  - Alcance: 3 tiles
+  - Velocidad de movimiento: 0.6 tile/s
+  - Velocidad de ataque: 2.5 s (ritmo de invocación)
+  - Enemigos objetivo: Cualquiera
+  - Tipo: Soporte/Ataque
+
+
+#### **Obstáculos**
+
+- **Árbol&Roca**: Proporciona cobertura y es un obstaculo.
+- **Lago**: Obstáculo natural que limita el movimiento; solo ciertas unidades pueden cruzarlo.
 
 ---
 
