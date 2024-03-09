@@ -182,7 +182,7 @@ Al mejorar la descripción de las pantallas, se busca proporcionar una experienc
   - **Bosques Espesos**: Los árboles no solo añaden complejidad visual, sino que también pueden ofrecer cobertura táctica o ser obstáculos que los jugadores deben navegar.
   - **Cuerpos de Agua**: Lagos añaden barreras naturales, forzando a los jugadores a adaptar sus estrategias de movimiento y posicionamiento.
   - **Torres**: Elementos icónicos del paisaje que sirven como objetivos críticos y puntos de fortaleza para ambos competidores.
-
+![Map1](/VideoGame/map1.pdf)
 - **Objetos en el Campo de Batalla**:
   - **Interactivos**:
     - **Obstáculos Naturales**: Rocas y árboles pueden bloquear o desviar el avance, mientras que ríos y lagos limitan el acceso a ciertas áreas, requiriendo estrategias adaptativas.
