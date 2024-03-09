@@ -182,7 +182,9 @@ Al mejorar la descripción de las pantallas, se busca proporcionar una experienc
   - **Bosques Espesos**: Los árboles no solo añaden complejidad visual, sino que también pueden ofrecer cobertura táctica o ser obstáculos que los jugadores deben navegar.
   - **Cuerpos de Agua**: Lagos añaden barreras naturales, forzando a los jugadores a adaptar sus estrategias de movimiento y posicionamiento.
   - **Torres**: Elementos icónicos del paisaje que sirven como objetivos críticos y puntos de fortaleza para ambos competidores.
-![Map1](/VideoGame/map1.pdf)
+    
+![Map1](/VideoGame/map1.png)
+
 - **Objetos en el Campo de Batalla**:
   - **Interactivos**:
     - **Obstáculos Naturales**: Rocas y árboles pueden bloquear o desviar el avance, mientras que ríos y lagos limitan el acceso a ciertas áreas, requiriendo estrategias adaptativas.
@@ -221,10 +223,68 @@ Al mejorar la descripción de las pantallas, se busca proporcionar una experienc
     - Atributos: Vida, Daño, Rango de Ataque.
 
 ---
+## **Listado de Clases a Programar**
+
+- **Clase `Game`**:
+  - **Responsabilidad**: Administrar el flujo del juego, el estado de la partida y las transiciones entre diferentes pantallas (menús, juego, victoria/derrota).
+  - **Métodos importantes**:
+    - `startGame()`: Inicia una nueva partida.
+    - `pauseGame()`: Pausa la partida en curso.
+    - `endGame()`: Finaliza la partida y muestra resultados.
+
+- **Clase `Player`**:
+  - **Responsabilidad**: Representar a cada jugador, manteniendo su puntuación, mazo de cartas y acciones disponibles.
+  - **Propiedades**:
+    - `deck`: Una colección de objetos `Card`.
+    - `score`: Puntuación actual del jugador.
+  - **Métodos**:
+    - `playCard()`: Juega una carta del mazo.
+    - `calculateScore()`: Actualiza la puntuación basada en el juego.
+
+- **Clase `Card`**:
+  - **Responsabilidad**: Definir las características y comportamiento de las cartas utilizadas en el juego.
+  - **Propiedades**:
+    - `cost`: Recursos necesarios para jugar la carta.
+    - `cooldown`: Tiempo de espera antes de que la carta pueda ser utilizada nuevamente.
+  - **Métodos**:
+    - `activate()`: Ejecuta la acción de la carta cuando se juega.
+
+- **Clase `Unit`**:
+  - **Responsabilidad**: Actuar como la superclase para todas las unidades de combate en el juego, definiendo propiedades comunes y métodos.
+  - **Propiedades**:
+    - `health`: La salud actual de la unidad.
+    - `damage`: El daño que la unidad puede infligir.
+  - **Métodos**:
+    - `move()`: Mueve la unidad en el campo de batalla.
+    - `attack()`: Realiza un ataque a enemigos o estructuras.
+
+- **Clase `Tower`**:
+  - **Responsabilidad**: Controlar el estado y la defensa de las torres en el juego.
+  - **Propiedades**:
+    - `location`: La posición de la torre en el mapa.
+    - `defense`: La capacidad defensiva de la torre.
+  - **Métodos**:
+    - `receiveDamage()`: Reduce la salud de la torre cuando es atacada.
+
+- **Clase `Resource`**:
+  - **Responsabilidad**: Gestionar los recursos del jugador, que son necesarios para desplegar unidades y realizar acciones.
+  - **Propiedades**:
+    - `amount`: La cantidad actual de recursos disponibles.
+  - **Métodos**:
+    - `generate()`: Incrementa los recursos con el tiempo.
+    - `spend()`: Deduce los recursos al jugar cartas o realizar acciones.
+
+- **Clase `AI`**:
+  - **Responsabilidad**: Dirigir la lógica de los oponentes controlados por la computadora, permitiendo una jugabilidad desafiante y dinámica.
+  - **Métodos**:
+    - `determineStrategy()`: Decide una estrategia basada en el estado actual del juego.
+    - `executeAction()`: Realiza una acción basada en la estrategia determinada.
+---
 
 ### **Clases Derivadas / Composiciones de Componentes**
 
 #### **Unidades**
+![Map1](/VideoGame/sampleDeck.png)
 
 - **Soldado**: 
   - Tipo: Común
@@ -469,6 +529,16 @@ Al mejorar la descripción de las pantallas, se busca proporcionar una experienc
 1. **Unidades**: Sprites animados para cada tipo de unidad.
 2. **Terreno**: Texturas variadas para diferentes terrenos (césped, agua, arbol).
 3. **Efectos**: Efectos visuales para ataques, recolección de recursos.
+
+### **Listado de Assets**
+
+- Sprites de personajes
+- Texturas de terreno
+- Elementos de UI (botones, barras de vida, indicadores de recursos)
+- Iconos de habilidades y hechizos
+- Efectos visuales (explosiones, efectos mágicos, etc.)
+- Fondos y paisajes
+- Assets de decoración (árboles, rocas, estructuras)
 
 ## _Sonidos/Música_
 
