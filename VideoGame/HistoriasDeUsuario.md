@@ -2,19 +2,19 @@
 
 ### **1**
 
-Yo como jugador quiero poder tener en el menu la opción de ver todas las cartas del juego, con su descripcion y estadisticas para poder informarme de las distintas cartas y crear mi estrategia.
+Yo como jugador quiero tener la opción en el menude ver todas las cartas del juego, con su descripcion y estadisticas para poder crear mi estrategia.
 
 ### **2**
 
-Yo como jugador quiero poder crear mazos prehechos en el menu sin tener que entrar a una partida, para poder tener tiempo y calma para planear mi estrategia en el mazo.
+Yo como jugador quiero poder crear mazos en el menu sin tener que entrar a una partida.
 
 ### **3**
 
-Yo como jugador quiero que al entrar a una partida poder elegir mi mazo emtre mis mazos prehechos.
+Yo como jugador quiero que al entrar a una partida poder elegir mi mazo entre mis mazos prehechos o crear uno en el momento.
 
 ### **4**
 
-Yo como jugador quiero tener acceso en el menu del juego una pagina con instrucciones basicas de como se juega para poder entenderlo si es mi primer vez jugando.
+Yo como jugador quiero tener acceso a un doc de instrucciones basicas en el menu de como se juega para poder entenderlo si es mi primer vez jugando.
 
 ### **5**
 
@@ -90,35 +90,4 @@ Yo como jugador quiero poder ver el rango de ataque de mis unidades cuando estoy
 
 ### **23**
 
-Yo como jugador quiero que haya un botón de "recomendación aleatoria" al crear un mazo, para cuando quiera probar estrategias nuevas y sorprendentes.
-
-### **24**
-
-Yo como jugador quiero que el juego tenga un indicador de la fuerza relativa de mi mazo comparado con el promedio, para tener una idea de cómo podría desempeñarse en combate.
-
-### **25**
-
-Yo como jugador quiero tener la opción de guardar automáticamente mi partida en caso de que la conexión se interrumpa, para poder reanudar desde donde me quedé.
-
-### **26**
-
-Yo como jugador quiero un modo "tutorial" que pueda activar o desactivar, el cual me da consejos en el juego sobre el uso de mis cartas y estrategias básicas.
-
-### **27**
-
-Yo como jugador quiero poder cambiar la apariencia de mi tablero de juego y de las cartas con temas o skins, para personalizar mi experiencia de juego.
-
-### **28**
-
-Yo como jugador quiero un modo espectador donde pueda ver partidas de otros jugadores en vivo, para aprender de sus estrategias.
-
-### **29**
-
-Yo como jugador quiero tener un sistema simple de recompensas basado en logros como ganar partidas consecutivas o jugar cierto número de partidas, para sentir que mi tiempo invertido es valorado.
-
-### **30**
-
-Yo como jugador quiero tener un sistema de logros sociales que me permita desbloquear insignias especiales por jugar con amigos, para fomentar y visualizar mi participación en la comunidad del juego.
-
-
----
+Yo como jugador quiero tener un sistema simple de recompensas para convencerme de jugar más.
