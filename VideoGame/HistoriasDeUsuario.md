@@ -50,7 +50,7 @@ Yo como jugador quiero que si se acaba el tiempo de partida, ganar si hice más 
 
 ### **13**
 
-Yo como jugador quiero que que si se acaba el tiempo de partida y si el daño que el rival y yo hicimos a nuestras torres es igual, empatar.
+Yo como jugador quiero que que si se acaba el tiempo de partida y si el daño que el rival y yo hicimos a nuestras torres es igual, empiece un Sudden Death.
 
 ### **14**
 
@@ -58,11 +58,11 @@ Yo como jugador quiero poder acceder a un resumen de mis últimas partidas en el
 
 ### **15**
 
-Yo como jugador quiero que el juego me ofrezca sugerencias de mazos basadas en mis cartas más utilizadas, para ayudarme a construir estrategias efectivas rápidamente.
+Yo como jugador quiero que cuando mis tropas esten en rango a las otras tropas o torres enemigas, las ataquen, para ganar el juego.
 
 ### **16**
 
-Yo como jugador quiero tener un modo de práctica contra una IA básica, para familiarizarme con las mecánicas del juego sin presión.
+Yo como jugador qyuero que cuando una torre principal caiga, se acabe el juego y un cartel diga quien gano, para que el juego acabe y quede claro el ganador.
 
 ### **17**
 
@@ -70,7 +70,7 @@ Yo como jugador quiero poder ordenar y filtrar mis cartas por atributos como cos
 
 ### **18**
 
-Yo como jugador quiero poder deshacer mi última acción de colocación de carta durante el turno, por si cometí un error al desplegarla.
+Yo como jugador quiero ver de manera visual la zona donde me es permitido poner cartas, para poder planear mi estrategia.
 
 ### **19**
 
@@ -78,16 +78,44 @@ Yo como jugador quiero un contador visible durante el juego que muestre cuántas
 
 ### **20**
 
-Yo como jugador quiero que haya un límite de tiempo por turno, para asegurar que el juego avance rápidamente y se mantenga dinámico.
+Yo como jugador quiero que cuando conquiste una torre central esta se vuelva mia y me aplie el area donde puedo poner cartas.
 
 ### **21**
 
-Yo como jugador quiero recibir una notificación visual y auditiva cuando sea mi turno, para no perder mi oportunidad de jugar si me distraigo momentáneamente.
+Yo como jugador quiero que los NPC de cartas tengan diferentes tipos de ataques, splash damage, ataque a distancia, etc.
 
 ### **22**
 
-Yo como jugador quiero poder ver el rango de ataque de mis unidades cuando estoy a punto de colocarlas, para poder planificar estratégicamente su posición.
+Yo como jugador quiero que el juego tenga un timer que me deje ver visualmente cuanto tiempo queda en la partida.
 
 ### **23**
 
 Yo como jugador quiero tener un sistema simple de recompensas para convencerme de jugar más.
+
+### **24**
+
+Yo como jugador quiero que el juego tenga musica de fondo para ambientar el juego.
+
+### **25**
+
+Yo como jugador quiero que al poner una carta este haga un sonido carcteristo de esta para que el juego sea mas inmersivo.
+
+### **26**
+
+Yo como jugador quiero que mis torres hagan daño a los enemigos cercanos, para que se puedan defender.
+
+### **27**
+
+Yo como jugador quiero que al quedar un minuto de juego se duplique el generamiento de recursos para poner cartas, asi el final es mas movido y entretenido.
+
+### **28**
+
+Yo como jugador quiero que el AI del enemigo desplegue tropas para que se pueda jugar el juego.
+
+### **29**
+
+Yo como jugador quiero que el AI del enemigo tenga cierta estrategia y congruencia en su mazo para que el juego sea entretenido.
+
+### **30**
+
+Yo como jugador quiero que el jeugo tenga animaciones basicas para que el juego se vea bien.
