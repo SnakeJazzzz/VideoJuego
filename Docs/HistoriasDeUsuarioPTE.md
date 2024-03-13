@@ -123,3 +123,7 @@ Yo como jugador quiero que el jeugo tenga animaciones basicas para que el juego 
 ### **31**
 
 Yo como jugador quiero una base de datos para guardar mis mazos, highscores, etc.
+
+### **32**
+
+Yo como jugador quiero que los personajes tengan profundidad y no este "plano" el juego, para que se vea mas bonito.
