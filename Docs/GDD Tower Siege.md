@@ -78,8 +78,9 @@ La estarategia del juego tiene muchas facetas, desde la creación de mazo, admin
 
 ### **Pantallas**
 
+---
 
-### Pantalla de Título
+#### **Pantalla de Título**
 La primera impresión del juego, donde los jugadores pueden acceder a todas las funcionalidades principales del juego. Esta pantalla incluye:
 
 - **Iniciar Sesión/Registro**: Lleva a los jugadores a la pantalla de Log In para iniciar sesión o registrarse.
@@ -88,13 +89,13 @@ La primera impresión del juego, donde los jugadores pueden acceder a todas las 
 - **Créditos**: Información sobre el equipo de desarrollo y agradecimientos.
 - **Salir**: Opción para cerrar el juego.
 
-### Pantalla de Log In/Registro
+#### **Pantalla de Log In/Registro**
 Antes de acceder a la configuración de la partida y opciones del juego, los jugadores son dirigidos a la pantalla de Log In, asegurando que sus progresos y estadísticas puedan ser guardados y rastreados correctamente. Esta pantalla ofrece:
 
 - **Log In**: Los jugadores existentes pueden ingresar su usuario y contraseña para acceder a sus perfiles.
 - **Registro**: Nuevos jugadores pueden crear una cuenta, proporcionando un usuario, correo electrónico y contraseña.
 
-### Iniciar Partida
+#### **Iniciar Partida**
 Esta pantalla guía a los jugadores a través de la configuración de una partida, incluyendo:
 
 - **Mapa de Partida**: Selección de uno de los varios mapas disponibles, cada uno con sus propios desafíos y características.
@@ -102,34 +103,36 @@ Esta pantalla guía a los jugadores a través de la configuración de una partid
     - **Listas de Mazos Disponibles**: Visualización y selección de mazos previamente creados.
     - **Crear Mazo**: Herramienta para crear un nuevo mazo de cartas.
 
-### Partida
+#### **Partida**
 La pantalla principal del juego donde ocurre la acción. Incluye:
 
 - **Mano (Cartas Disponibles)**: Muestra las cartas que el jugador puede jugar actualmente, con detalles sobre coste de recursos.
 - **Menu de Pausa**: Accesible durante la partida para pausar el juego, con opciones para reanudar o salir de la partida.
 
-### Pantalla de Victoria/Derrota
+#### **Pantalla de Victoria/Derrota**
 Al finalizar una partida, los jugadores son dirigidos a esta pantalla, que muestra el resultado de la partida y ofrece opciones para volver al menú principal, jugar otra partida, o revisar las estadísticas del juego recién terminado.
 
-### Selección de Mazo
+#### **Selección de Mazo**
 Una interfaz dedicada a la gestión de mazos, donde los jugadores pueden:
 
 - **Crear Mazo**: Interface para la creación de nuevos mazos, con acceso a todas las cartas disponibles.
 - **Listas de Mazos**: Visualización y edición de mazos existentes.
 - **Todas las Cartas**: Exploración de todas las cartas disponibles, incluyendo descripciones y estadísticas.
 
-### ¿Cómo Jugar?
+#### **¿Cómo Jugar?**
 Una sección educativa que proporciona:
 
 - **Documento de Instrucciones**: Guía detallada sobre cómo jugar "Tower Siege", incluyendo reglas, consejos y estrategias.
 
-### Opciones
+#### **Opciones**
 Permite a los jugadores personalizar su experiencia de juego, ajustando:
 
 - **Volumen**: Control de volumen para música y efectos de sonido.
 - **Teclas Personalizables**: Configuración de controles de teclado para adaptarse a las preferencias del jugador.
 
 Al mejorar la descripción de las pantallas, se busca proporcionar una experiencia de usuario fluida y accesible, asegurando que los jugadores puedan navegar fácilmente por el juego y acceder a todo lo que necesitan para una experiencia de juego inmersiva y satisfactoria.
+
+---
 
 ### **Controles**
 
@@ -138,7 +141,7 @@ Al mejorar la descripción de las pantallas, se busca proporcionar una experienc
 
 ---
 
-## _Mecánicas_
+### **Mecánicas**
 
 ---
 
