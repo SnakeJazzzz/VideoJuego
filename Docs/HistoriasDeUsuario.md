@@ -101,45 +101,114 @@ Requerimiento Funcional: Que el jugador no reciba cartas hasta el final del tiem
 
 Yo como jugador quiero que el personaje invocado por mis cartas se mueva hacia su target mas cercano (tropas enemigas), para poder defender a los huevos de dragon.
 
+Requerimiento Funcional: Implementación de IA para el movimiento de personajes.
+
+Requerimiento Funcional: Movimiento automático de personajes hacia enemigos cercanos.
+
+Requerimiento No Funcional: Visualización clara del objetivo y movimiento del personaje.
+
 ### **12**
 
 Yo como jugador quiero que al principio de cada orda, se me avise que numero de orda es, para llevar registro de las ordas.
+
+Requerimiento Funcional: Sistema de notificación para el inicio de cada horda.
+
+Requerimiento Funcional: Visualización del número de la horda en la notificación.
+
+Requerimiento No Funcional: Estilo y diseño coherente de las notificaciones.
 
 ### **13**
 
 Yo como jugador quiero que al perder uno de los huevos de dragon no principal, del huevo salgo mucho fuego que mate a enemigos cercanos, para darme oportunidad de recuperame para seguir defendiendo.
 
+Requerimiento Funcional: Activación de explosión de fuego al perder un huevo de dragón.
+
+Requerimiento Funcional: Sistema de daño a enemigos por fuego del dragon.
+
+Requerimiento No Funcional: Efectos visuales y de sonido impactantes para la explosión.
+
 ### **14**
 
 Yo como jugador quiero poder acceder a un resumen de mis últimas partidas en el menú principal, para poder llevar un registro simple de mis victorias y derrotas.
+
+Requerimiento Funcional: Función para acceder a un resumen de partidas anteriores.
+
+Requerimiento Funcional: Visualización de victorias y derrotas en el resumen.
+
+Requerimiento No Funcional: Interfaz de usuario intuitiva para el resumen de partidas.
+
 
 ### **15**
 
 Yo como jugador quiero que cuando mis tropas esten en rango a las otras tropas enemigas, las ataquen, para derrotar esa orda.
 
+Requerimiento Funcional: Implementación de sistema de detección de rango para el ataque.
+
+Requerimiento Funcional: Ataque automático a enemigos dentro del rango.
+
+Requerimiento No Funcional: Precisión en la detección de rango y en el sistema de ataque.
+
 ### **16**
 
 Yo como jugador qyuero que cuando mi huevo de dragon principal se rompa, se acabe el juego y un cartel diga quien a que orda gane y mi score, para que el juego acabe y quede claro el marcador.
+
+Requerimiento Funcional: Finalización del juego al romperse el huevo de dragón principal.
+
+Requerimiento Funcional: Mostrar cartel con información de la horda alcanzada y el score final.
+
+Requerimiento No Funcional: Transición suave hacia la pantalla de finalización del juego.
+
 
 ### **17**
 
 Yo como jugador quiero poder ordenar y filtrar mis cartas por atributos como tipo, costo, daño y vida, para facilitar la construcción de mi mazo.
 
+Requerimiento Funcional: Funcionalidad para ordenar cartas por atributos (tipo, costo, daño, vida).
+
+Requerimiento No Funcional: Interfaz intuitiva para la organización y filtrado de cartas.
+
 ### **18**
 
 Yo como jugador quiero ver de manera visual la zona donde me es permitido poner cartas, para poder planear mi estrategia.
+
+Requerimiento Funcional: Visualización de la zona permitida para colocar cartas en el campo de juego.
+
+Requerimiento Funcional: Actualización dinámica de la zona visual según el estado del juego.
+
+Requerimiento No Funcional: Claridad visual para distinguir la zona permitida.
 
 ### **19**
 
 Yo como jugador quiero un contador visible durante el juego que muestre cuántas cartas me quedan en mi mazo, para poder planear mejor mi estrategia a largo plazo.
 
+Requerimiento Funcional: Mostrar un contador de cartas restantes en el mazo durante el juego.
+
+Requerimiento Funcional: Actualización en tiempo real del contador conforme se usan las cartas.
+
+Requerimiento No Funcional: Precisión en la actualización y visualización del contador de cartas.
+
 ### **20**
 
 Yo como jugador quiero tener un limite de recurso de desplegar cartas, para que no pueda ahorrar demasiado.
 
+Requerimiento Funcional: Establecimiento de un límite de recursos para el despliegue de cartas.
+
+Requerimiento Funcional: Sistema de gestión de recursos que se actualiza con el uso de cartas.
+
+Requerimiento No Funcional: Claridad en la representación visual del límite de recursos y su consumo.
+
 ### **21**
 
 Yo como jugador quiero que los personajes de cartas tengan diferentes tipos de ataques, splash damage, ataque a distancia, etc.
+
+
+Requerimiento Funcional: Diferentes tipos de ataques para personajes de cartas (splash damage, ataque a distancia).
+
+Requerimiento Funcional: Animaciones y efectos para cada tipo de ataque.
+
+Requerimiento No Funcional: Claridad y distinción de efectos de ataques.
+
+Requerimiento No Funcional: Balance adecuado entre los diferentes tipos de ataques.
 
 ### **22**
 
