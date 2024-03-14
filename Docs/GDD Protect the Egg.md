@@ -78,7 +78,7 @@ Primer pantalla al entrar al juego.
 - **Log In**: Los jugadores existentes pueden ingresar su usuario y contraseña para acceder a sus perfiles.
 - **Registro**: Nuevos jugadores pueden crear una cuenta, proporcionando un usuario, correo electrónico y contraseña.
 
-![LogIn](/VideoJuego/Docs/fotos/LogIn.png)
+![LogIn](./fotos/LogIn.png)
 
 #### **Pantalla Principal**
 - **Iniciar Partida**: Lleva a los jugadores a la pantalla de partidas.
@@ -88,7 +88,7 @@ Primer pantalla al entrar al juego.
 - **Créditos**: Lleva a los jugadores a la pantalla de créditos.
 - **Salir**: Opción para cerrar el juego.
 
-![StartScreen](/VideoJuego/Docs/fotos/StartScreen.png)
+![StartScreen](./fotos/StartScreen.png)
 
 #### **Pantalla Partidas**
 - **Mapa de Partida**: Campo de batalla.
@@ -123,7 +123,7 @@ Permite a los jugadores personalizar su experiencia de juego.
 - **Teclas Personalizables**: Configuración de controles de teclado para adaptarse a las preferencias del jugador.
 - **Salir**: Regresa a los jugadores a la pantalla de donde venga.
 
-![options](/VideoJuego/Docs/fotos/options.png)
+![options](./fotos/options.png)
 
 #### **Pantalla de Créditos**
 - **Info de los desarrolladores**: Nombres y matriculas.
@@ -172,7 +172,7 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - **Cuerpos de Agua**: Lagos añaden barreras naturales, forzando a los jugadores a adaptar sus estrategias de movimiento y posicionamiento.
   - **Torres**: Elementos icónicos del paisaje que sirven como objetivos críticos y puntos de fortaleza para ambos competidores.
     
-![MapEgg](VideoJuego/Docs/fotos/fotoMap.png)
+![MapEgg](./fotos/fotoMap.png)
 
 - **Objetos en el Campo de Batalla**:
   - **Interactivos**:
@@ -277,7 +277,7 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
 ---
 
 #### **Unidades**
-![SampleDeck](/VideoJuego/Docs/fotos/sampleDeck.png)
+![SampleDeck](./fotos/sampleDeck.png)
 
 - **Soldado**: 
   - Tipo: Común
