@@ -177,7 +177,7 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
 - **Ambientes Detallados**:
   - **Bosques Espesos**: Los árboles no solo añaden complejidad visual, sino que también pueden ofrecer cobertura táctica o ser obstáculos.
   - **Cuerpos de Agua**: Lagos añaden barreras naturales, forzando a los jugadores a adaptar sus estrategias de movimiento y posicionamiento.
-  - **Torres**: Elementos icónicos del paisaje que sirven como objetivos críticos y puntos de fortaleza
+  - **Torres**: Elementos icónicos del paisaje que sirven como objetivos críticos y puntos de fortaleza.
 
 ![MapEgg](./fotos/fotoMap.png)
 
