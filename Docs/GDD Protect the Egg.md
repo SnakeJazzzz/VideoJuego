@@ -78,7 +78,7 @@ Primer pantalla al entrar al juego.
 - **Log In**: Los jugadores existentes pueden ingresar su usuario y contraseña para acceder a sus perfiles.
 - **Registro**: Nuevos jugadores pueden crear una cuenta, proporcionando un usuario, correo electrónico y contraseña.
 
-![LogIn](/VideoJuego/Docs/fotos/LogIn.png)
+![LogIn](VideoJuego/Docs/fotos/LogIn.png)
 
 #### **Pantalla Principal**
 - **Iniciar Partida**: Lleva a los jugadores a la pantalla de partidas.
