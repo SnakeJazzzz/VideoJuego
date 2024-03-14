@@ -18,7 +18,7 @@ Yo como jugador quiero tener acceso a un doc de instrucciones basicas en el menu
 
 ### **5**
 
-Yo como jugador quiero que cada vez que coloque una carta en el mapa (tablero), la carta invoque al personaje de la carta y este pelee de mi equipo para poder ganar la partida.
+Yo como jugador quiero que cada vez que coloque una carta en el mapa (tablero), la carta invoque al NPC de la carta y este pelee de mi equipo para poder ganar la partida.
 
 ### **6**
 
@@ -42,15 +42,15 @@ Yo como jugador quiero que el proceso de revolver las cartas descartadas tarde u
 
 ### **11**
 
-Yo como jugador quiero que el personaje invocado por mis cartas se mueva hacia su target mas cercano (tropas enemigas), para poder defender a los huevos de dragon.
+Yo como jugador quiero que el NPC invocado por mis cartas se mueva hacia su target mas cercano (tropas enemigas o torres), para poder atacar al rival.
 
 ### **12**
 
-Yo como jugador quiero que al principio de cada orda, se me avise que numero de orda es, para llevar registro de las ordas.
+Yo como jugador quiero que si se acaba el tiempo de partida, ganar si hice más daño a la torre del rival.
 
 ### **13**
 
-Yo como jugador quiero que al perder uno de los huevos de dragon no principal, del huevo salgo mucho fuego que mate a enemigos cercanos, para darme oportunidad de recuperame para seguir defendiendo.
+Yo como jugador quiero que que si se acaba el tiempo de partida y si el daño que el rival y yo hicimos a nuestras torres es igual, empiece un Sudden Death.
 
 ### **14**
 
@@ -58,15 +58,15 @@ Yo como jugador quiero poder acceder a un resumen de mis últimas partidas en el
 
 ### **15**
 
-Yo como jugador quiero que cuando mis tropas esten en rango a las otras tropas enemigas, las ataquen, para derrotar esa orda.
+Yo como jugador quiero que cuando mis tropas esten en rango a las otras tropas o torres enemigas, las ataquen, para ganar el juego.
 
 ### **16**
 
-Yo como jugador qyuero que cuando mi huevo de dragon principal se rompa, se acabe el juego y un cartel diga quien a que orda gane y mi score, para que el juego acabe y quede claro el marcador.
+Yo como jugador qyuero que cuando una torre principal caiga, se acabe el juego y un cartel diga quien gano, para que el juego acabe y quede claro el ganador.
 
 ### **17**
 
-Yo como jugador quiero poder ordenar y filtrar mis cartas por atributos como tipo, costo, daño y vida, para facilitar la construcción de mi mazo.
+Yo como jugador quiero poder ordenar y filtrar mis cartas por atributos como costo, daño y vida, para facilitar la construcción de mi mazo.
 
 ### **18**
 
@@ -78,15 +78,15 @@ Yo como jugador quiero un contador visible durante el juego que muestre cuántas
 
 ### **20**
 
-Yo como jugador quiero tener un limite de recurso de desplegar cartas, para que no pueda ahorrar demasiado.
+Yo como jugador quiero que cuando conquiste una torre central esta se vuelva mia y me aplie el area donde puedo poner cartas.
 
 ### **21**
 
-Yo como jugador quiero que los personajes de cartas tengan diferentes tipos de ataques, splash damage, ataque a distancia, etc.
+Yo como jugador quiero que los NPC de cartas tengan diferentes tipos de ataques, splash damage, ataque a distancia, etc.
 
 ### **22**
 
-Yo como jugador quiero que el juego tenga un timer que me deje ver visualmente cuanto tiempo lleva la partida.
+Yo como jugador quiero que el juego tenga un timer que me deje ver visualmente cuanto tiempo queda en la partida.
 
 ### **23**
 
@@ -102,28 +102,20 @@ Yo como jugador quiero que al poner una carta este haga un sonido carcteristo de
 
 ### **26**
 
-Yo como jugador quiero que haya una torre alado de el huevo de dragon que hagan daño a los enemigos cercanos, para que se puedan defender.
+Yo como jugador quiero que mis torres hagan daño a los enemigos cercanos, para que se puedan defender.
 
 ### **27**
 
-Yo como jugador quiero que al solo quedar el huevo de dragon principal se duplique el generamiento de recursos para poner cartas, asi el final es mas movido y entretenido.
+Yo como jugador quiero que al quedar un minuto de juego se duplique el generamiento de recursos para poner cartas, asi el final es mas movido y entretenido.
 
 ### **28**
 
-Yo como jugador quiero que las ordas de enemigos se vayan haciendo progresivamente mas dificiles.
+Yo como jugador quiero que el AI del enemigo desplegue tropas para que se pueda jugar el juego.
 
 ### **29**
 
-Yo como jugador quiero que las ordas de enemigos no sean siempre iguales y alla variacion entre ellas.
+Yo como jugador quiero que el AI del enemigo tenga cierta estrategia y congruencia en su mazo para que el juego sea entretenido.
 
 ### **30**
 
 Yo como jugador quiero que el jeugo tenga animaciones basicas para que el juego se vea bien.
-
-### **31**
-
-Yo como jugador quiero una base de datos para guardar mis mazos, highscores, etc.
-
-### **32**
-
-Yo como jugador quiero que los personajes tengan profundidad y no este "plano" el juego, para que se vea mas bonito.
