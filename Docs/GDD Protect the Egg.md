@@ -48,9 +48,11 @@ En "Protect the Egg" te enfrascaras en una batalla estrategica contra ordas de m
 ### **Jugabilidad**
 
 #### **Juego**
+
 Cada orda de monstruos es más dificil que la anterior, mientras que la misma orda en dos partida diferentes tienen resultados distintos con la misma dificultad. Esto le da una buena jugabilidad al tener variación entre las partidas.
 
 #### **Premios / Recompensas**
+
 Tras acabar cada partida, el juego guardarán los datos de la partida como los puntos y ordas en tu perfil, los cuales se rankearán dandole un toque de competibidad por ver quien consigue más puntos.
 
 ---
@@ -78,7 +80,7 @@ Primer pantalla al entrar al juego.
 - **Log In**: Los jugadores existentes pueden ingresar su usuario y contraseña para acceder a sus perfiles.
 - **Registro**: Nuevos jugadores pueden crear una cuenta, proporcionando un usuario, correo electrónico y contraseña.
 
-![LogIn](VideoJuego/Docs/fotos/LogIn.png)
+![LogIn](./fotos/LogIn.png)
 
 #### **Pantalla Principal**
 - **Iniciar Partida**: Lleva a los jugadores a la pantalla de partidas.
@@ -88,7 +90,7 @@ Primer pantalla al entrar al juego.
 - **Créditos**: Lleva a los jugadores a la pantalla de créditos.
 - **Salir**: Opción para cerrar el juego.
 
-![StartScreen](/VideoJuego/Docs/fotos/StartScreen.png)
+![StartScreen](./fotos/StartScreen.png)
 
 #### **Pantalla Partidas**
 - **Mapa de Partida**: Campo de batalla.
@@ -123,7 +125,7 @@ Permite a los jugadores personalizar su experiencia de juego.
 - **Teclas Personalizables**: Configuración de controles de teclado para adaptarse a las preferencias del jugador.
 - **Salir**: Regresa a los jugadores a la pantalla de donde venga.
 
-![options](/VideoJuego/Docs/fotos/options.png)
+![options](./fotos/options.png)
 
 #### **Pantalla de Créditos**
 - **Info de los desarrolladores**: Nombres y matriculas.
@@ -142,19 +144,23 @@ Permite a los jugadores personalizar su experiencia de juego.
 ---
 
 #### **General**
-El juego consiste en proteger un huevo de dragón dorado de monstruos, el huevo esta ubicado en el costado derecho del tablero y por medio de cartas que invocan NPC y obstáculos será como lo protegerás. Al usar una carta en el tablero hará que aparezca el personaje de la carta en el lugar colocado, cada carta tiene un costo de recursos para desplegar. Los monstruos atacan al huevo por medio de ordas cada una con mayor dificultad.
+
+El juego consiste en proteger un nido de huevos de dragón de monstruos, el nido esta ubicado en el costado derecho del tablero mientras que un de los huevos esta a la mitad del mapa y por medio de cartas que invocan NPC y obstáculos será como lo protegerás. Al usar una carta en el tablero hará que aparezca el personaje de la carta en el lugar colocado, cada carta tiene un costo de recursos para desplegar. Los monstruos atacan al huevo por medio de ordas cada una con mayor dificultad.
 ¿Por cuantas ordas podras proteger el huevo?
-El juego desafía a los jugadores a gestionar estos recursos y en desplegar unidades estratégicamente para cuidar del huevo; el cuál tiene dos vidas, al perder la primer vida, todos los monstruos en pantalla en ese momento morirán.
+El juego desafía a los jugadores a gestionar estos recursos y en desplegar unidades estratégicamente para cuidar del nideo de huevos; cuando destruyen el huevo de enmedio todos los monstruos en pantalla en ese momento morirán Y el área de invocación de las cartas del jugador se verá reducida. Si las torres de protección predeterminadas son destruidas, así como en el caso del huevo central; el área de invocación de las cartas del jugador se verá reducida.
 
 #### **Creación de Mazos**
+
 El jugador crea un mazo de 20 cartas de un pool de 20 tipos de cartas, consistiendo en que el jugador pueda tener cartas repetidas si quiere, el menú de creación de mazos se encuentra en el menú principal del juego, tambien se encontrará toda la información de cada carta para poder elegir con conciencia.
 
 #### **Mano, Mazos e Invocación de cartas**
+
 El jugador empieza la partida con una mano de 6 cartas, al utilizar una carta; esta se descartará mientras que una nueva del mazo la remplazará. Cuando todas las cartas del mazo se hayan utilizado, las cartas se deben revolver, por lo tanto, se pasaran 7 segundos sin poder poner cartas mientras que estas se revuelven. Al pasar estos 7 segundos, el ciclo del mazo y la mano se reinicia de nuevo.
 
-Para invocar una carta se requiere tenerla en la mano y tener el "elixir de dragón" suficiente para su costo de invocación, cada carta tiene un costo de elixir para que sea invocada dependiendo de sus estadísticas personales. Al comenzar la partida; el jugador comenzará con 5 de elixir y cada 10 segundos el huevo de dragón le brindará 10 de elixir, mientras que el máximo que se puede almacenar al mismo tiempo es 20 de elixir, la administración del elixir es esencial para poder invocar tus cartas con el maximo provecho del recurso, ya que este se puede perder al no tener espacio de almacenamiento en el momento.
+Para invocar una carta se requiere tenerla en la mano y tener el "elixir de dragón" suficiente para su costo de invocación, cada carta tiene un costo de elixir para que sea invocada dependiendo de sus estadísticas personales. Al comenzar la partida; el jugador comenzará con 5 de elixir y cada 10 segundos el nido le brindará 10 de elixir, mientras que el máximo que se puede almacenar al mismo tiempo es 20 de elixir, la administración del elixir es esencial para poder invocar tus cartas con el maximo provecho del recurso, ya que este se puede perder al no tener espacio de almacenamiento en el momento.
 
 #### **Victoria**
+
 ¿Por cuantas ordas de monstruos podras proteger al huevo de dragón?, ¿O derrotaste a todas las ordas de monstruos? Tras terminar la partida, se guardará tu puntuación.
 
 ---
@@ -166,18 +172,19 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
 ### **Temas**
 
 #### **Campo de Batalla**
+
 - **Ambiente**: Campo de batalla medieval; muy forestal, con caminos, arboles, lagos, ríos, torres de piedra, etc.
 - **Ambientes Detallados**:
-  - **Bosques Espesos**: Los árboles no solo añaden complejidad visual, sino que también pueden ofrecer cobertura táctica o ser obstáculos que los jugadores deben navegar.
+  - **Bosques Espesos**: Los árboles no solo añaden complejidad visual, sino que también pueden ofrecer cobertura táctica o ser obstáculos.
   - **Cuerpos de Agua**: Lagos añaden barreras naturales, forzando a los jugadores a adaptar sus estrategias de movimiento y posicionamiento.
-  - **Torres**: Elementos icónicos del paisaje que sirven como objetivos críticos y puntos de fortaleza para ambos competidores.
-    
-![MapEgg](VideoJuego/Docs/fotos/fotoMap.png)
+  - **Torres**: Elementos icónicos del paisaje que sirven como objetivos críticos y puntos de fortaleza
+
+![MapEgg](./fotos/fotoMap.png)
 
 - **Objetos en el Campo de Batalla**:
   - **Interactivos**:
     - **Obstáculos Naturales**: Rocas y árboles pueden bloquear o desviar el avance, mientras que ríos y lagos limitan el acceso a ciertas áreas, requiriendo estrategias adaptativas.
-    - **Objetivos Estratégicos**: La torre principal y torres centrales actúan como catalizadores de confrontaciones, con su conquista ofreciendo ventajas tácticas decisivas.
+    - **Objetivos Estratégicos**: El huevo central y las torres de protección actúan como catalizadores de confrontaciones, con su destrucción ofreciendo ventajas tácticas decisivas.
   - **Decorativos**: Elementos como rocas, estanques pequeños, y árboles añaden profundidad al mundo del juego, mejorando la inmersión sin afectar directamente la jugabilidad.
 
 ---
@@ -277,9 +284,9 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
 ---
 
 #### **Unidades**
-![SampleDeck](/VideoJuego/Docs/fotos/sampleDeck.png)
+![SampleDeck](./fotos/sampleDeck.png)
 
-- **Soldado**: 
+- **Soldado**:
   - Tipo: Común
   - Costo: 1
   - Daño: 15
@@ -290,7 +297,7 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Enemigos objetivo: Cualquiera
   - Tipo: Ataque
 
-- **Caballero**: 
+- **Caballero**:
   - Tipo: Raro
   - Costo: 5
   - Daño: 25
@@ -301,7 +308,7 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Enemigos objetivo: Cualquiera
   - Tipo: Ataque
 
-- **Arquero**: 
+- **Arquero**:
   - Tipo: Común
   - Costo: 2
   - Daño: 20
@@ -312,7 +319,7 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Enemigos objetivo: Cualquiera
   - Tipo: Ataque
 
-- **Catapulta**: 
+- **Catapulta**:
   - Tipo: Épico
   - Costo: 6
   - Daño: 40
@@ -323,7 +330,7 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Enemigos objetivo: Estructuras
   - Tipo: Ataque
 
-- **Trol**: 
+- **Trol**:
   - Tipo: Raro
   - Costo: 7
   - Daño: 30
@@ -334,7 +341,7 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Enemigos objetivo: Cualquiera
   - Tipo: Ataque
 
-- **Gigante**: 
+- **Gigante**:
   - Tipo: Legendario
   - Costo: 10
   - Daño: 70
