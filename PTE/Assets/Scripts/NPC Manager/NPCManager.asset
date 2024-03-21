@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8513bfe8d727b4ddd81ebd719ca35ff3, type: 3}
+  m_Name: NPCManager
+  m_EditorClassIdentifier: 
+  EnemyTowers: {fileID: 11400000, guid: cb4bc791f29ee4879958251c954f2ad5, type: 2}
+  EnemyNPCs: {fileID: 11400000, guid: cf381b07596594bc2bbc61941516c780, type: 2}
+  PlayerTowers: {fileID: 11400000, guid: e46e827e97796419a9a2230762550b1b, type: 2}
+  PlayerNPCs: {fileID: 11400000, guid: 025c3345a348f4a2288a81557ba2ac29, type: 2}
