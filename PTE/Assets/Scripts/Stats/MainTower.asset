@@ -21,5 +21,6 @@ MonoBehaviour:
   cost: 0
   cooldown: 0
   prefab: {fileID: 8373712339497723186, guid: 4c5849f3f38fb4408894ace950526da2, type: 3}
+  isStructure: 1
   attackTowers: 0
   attackEnemies: 1

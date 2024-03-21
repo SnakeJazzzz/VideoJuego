@@ -37,7 +37,7 @@ public class WaveSpawner : MonoBehaviour
             }
         }
         currentWave++;
-        Debug.Log("Wave Spawning is done");
+        //Debug.Log("Wave Spawning is done");
         WaveSpawnOver.Invoke();
     } 
 

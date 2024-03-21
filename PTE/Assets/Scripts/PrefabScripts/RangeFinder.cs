@@ -9,10 +9,29 @@ public class RangeFinder : NPCSystem
     
     public UnityEvent InRange;
     public UnityEvent OutOfRange;
+    Coroutine checkCoroutine;
+
+    public void Start()
+    {
+        checkCoroutine = StartCoroutine(FindClosest());
+    }
+
+    IEnumerator FindClosest()
+    {
+        while (true)
+        {
+            npcController.closest = npcController.manager.ClosestTarget(gameObject, npcController.owner, npcController.npcStats.attackTowers, npcController.npcStats.attackEnemies);
+            yield return new WaitForSeconds(0.5f);
+        }
+
+
+    } 
+
 
 
     void Update()
     {   
+
         if (npcController.closest != null)
         {
             distanceToClosest = Vector3.Distance(transform.position, npcController.closest.transform.position);
@@ -29,7 +48,7 @@ public class RangeFinder : NPCSystem
             {
                InRange.Invoke();
                trigger = false;
-               Debug.Log("IM IN RANGE");
+               //Debug.Log("IM IN RANGE");
             }
         }
         else
@@ -38,7 +57,7 @@ public class RangeFinder : NPCSystem
             {
                 OutOfRange.Invoke();
                 trigger = true;
-                Debug.Log("IM OUT OF RANGE");
+                //Debug.Log("IM OUT OF RANGE");
             }
             
         }
