@@ -246,9 +246,7 @@ Requerimiento Funcional: Desarrollar sistema de puntajes y puntajes maximos.
 
 Requerimiento Funcional: Hacer espacio en la base de datos para guardar puntajes de diversos perfiles.
 
-Requerimiento Funcional: Crear escena donde se vean los puntajes.
-
-Requerimiento No Funcional: Hacer diseño visual para que se vean los mejores puntajes.
+Requerimiento No Funcional: Crear escena donde se vean los puntajes.
 
 
 ### **24**
