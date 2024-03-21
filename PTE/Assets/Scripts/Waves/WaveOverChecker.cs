@@ -17,9 +17,9 @@ public class WaveOverChecker : MonoBehaviour
         while (!(npcManager.Entities[1][0].Count == 0 && npcManager.Entities[1][1].Count== 0))
         {
             yield return new WaitForSeconds(0.5f);
-            Debug.Log("Still "+ npcManager.Entities[1][0].Count+ " enemies remaining");
+            //Debug.Log("Still "+ npcManager.Entities[1][0].Count+ " enemies remaining");
         }
-        Debug.Log("WAVE IS OVER");
+        //Debug.Log("WAVE IS OVER");
         WaveIsOver.Invoke();
 
 

@@ -9,23 +9,24 @@ public class NPCController : MonoBehaviour
     public NPCManager manager;
     public int owner;
     public GameObject closest;
-    public bool isTower;
+
     void OnEnable()
     {
-        manager.Register(gameObject, owner, isTower);
+        manager.Register(gameObject, owner, npcStats.isStructure);
         //Debug.Log("I belong to" + owner.ToString());
     }
 
     void OnDisable()
     {
-        manager.Delete(gameObject, owner, isTower);
+        manager.Delete(gameObject, owner, npcStats.isStructure);
         
     }
 
+    /*
     void Update()
     {
         closest = manager.ClosestTarget(gameObject, owner, npcStats.attackTowers, npcStats.attackEnemies);
-    }
+    }*/
 
     public void setOwnership(int x)
     {

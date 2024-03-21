@@ -20,6 +20,7 @@ MonoBehaviour:
   range: 0
   cost: 0
   cooldown: 0
-  prefab: {fileID: 0}
+  prefab: {fileID: 8373712339497723186, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
+  isStructure: 1
   attackTowers: 0
   attackEnemies: 0
