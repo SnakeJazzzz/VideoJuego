@@ -279,238 +279,164 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
 
 ---
 
-### **Clases Derivadas / Composiciones de Componentes**
+### **Cartas:**
 
 ---
 
 #### **Unidades**
 ![SampleDeck](./fotos/sampleDeck.png)
 
-- **Soldado**:
-  - Tipo: Común
-  - Costo: 1
-  - Daño: 15
-  - Vida: 50
-  - Alcance: 1 tile
-  - Velocidad de movimiento: 1 tile/s
-  - Velocidad de ataque: 1.5 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque
-
 - **Caballero**:
-  - Tipo: Raro
-  - Costo: 5
-  - Daño: 25
-  - Vida: 120
-  - Alcance: 1 tile
-  - Velocidad de movimiento: 2 tiles/s
-  - Velocidad de ataque: 2 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque
+  - Health: 
+  - Speed: 
+  - Attack: 
+  - Attack Cooldown: 
+  - Attack Type:
+  - Range: 
+  - Cost: 
+
+  - Attack Towers?: 
+  - Attack Enemies?: 
 
 - **Arquero**:
-  - Tipo: Común
-  - Costo: 2
-  - Daño: 20
-  - Vida: 30
-  - Alcance: 3 tiles
-  - Velocidad de movimiento: 1 tile/s
-  - Velocidad de ataque: 1 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque
+  - Health: 
+  - Speed: 
+  - Attack: 
+  - Attack Cooldown: 
+  - Attack Type:
+  - Range: 
+  - Cost: 
 
-- **Catapulta**:
-  - Tipo: Épico
-  - Costo: 6
-  - Daño: 40
-  - Vida: 60
-  - Alcance: 5 tiles
-  - Velocidad de movimiento: 0.5 tile/s
-  - Velocidad de ataque: 3 s
-  - Enemigos objetivo: Estructuras
-  - Tipo: Ataque
+  - Attack Towers?: 
+  - Attack Enemies?: 
 
-- **Trol**:
-  - Tipo: Raro
-  - Costo: 7
-  - Daño: 30
-  - Vida: 150
-  - Alcance: 1 tile
-  - Velocidad de movimiento: 0.75 tile/s
-  - Velocidad de ataque: 2.5 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque
+- **Duende**:
+  - Health: 
+  - Speed: 
+  - Attack: 
+  - Attack Cooldown: 
+  - Attack Type:
+  - Range: 
+  - Cost: 
+
+  - Attack Towers?: 
+  - Attack Enemies?: 
 
 - **Gigante**:
-  - Tipo: Legendario
-  - Costo: 10
-  - Daño: 70
-  - Vida: 200
-  - Alcance: 2 tiles
-  - Velocidad de movimiento: 0.6 tile/s
-  - Velocidad de ataque: 3 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque
+  - Health: 
+  - Speed: 
+  - Attack: 
+  - Attack Cooldown: 
+  - Attack Type:
+  - Range: 
+  - Cost: 
 
-- **Fantasma**:
-  - Tipo: Épico
-  - Costo: 7
-  - Daño: 10 (ataque pasante)
-  - Vida: 80
-  - Alcance: 0 (ataque pasante)
-  - Velocidad de movimiento: 1.5 tiles/s
-  - Velocidad de ataque: 1 ataque cada que atraviesa una unidad
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque especial
-
-- **Goblin**:
-  - Tipo: Común
-  - Costo: 2
-  - Daño: 5
-  - Vida: 25
-  - Alcance: 1 tile
-  - Velocidad de movimiento: 2.5 tiles/s
-  - Velocidad de ataque: 1 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque
-
-- **Orco**:
-  - Tipo: Común
-  - Costo: 3
-  - Daño: 30
-  - Vida: 100
-  - Alcance: 1 tile
-  - Velocidad de movimiento: 1 tile/s
-  - Velocidad de ataque: 1.8 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque
-
-- **Escudo**:
-  - Tipo: Raro
-  - Costo: 4
-  - Daño: 10
-  - Vida: 150
-  - Alcance: 1 tile
-  - Velocidad de movimiento: 0.8 tile/s
-  - Velocidad de ataque: 2 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Defensa
-
-- **Healer**:
-  - Tipo: Épico
-  - Costo: 6
-  - Daño: 0
-  - Vida: 40
-  - Alcance: 3 tiles
-  - Velocidad de movimiento: 1 tile/s
-  - Velocidad de ataque: 2 s (ritmo de curación)
-  - Enemigos objetivo: N/A (aliados)
-  - Tipo: Soporte
+  - Attack Towers?: 
+  - Attack Enemies?: 
 
 - **Mago**:
-  - Tipo: Raro
-  - Costo: 7
-  - Daño: 40 (daño en área)
-  - Vida: 50
-  - Alcance: 3 tiles
-  - Velocidad de movimiento: 0.8 tile/s
-  - Velocidad de ataque: 2.5 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque
+  - Health: 
+  - Speed: 
+  - Attack: 
+  - Attack Cooldown: 
+  - Attack Type:
+  - Range: 
+  - Cost: 
 
-- **Dragon**:
-  - Tipo: Legendario
-  - Costo: 10
-  - Daño: 50 (daño en área)
-  - Vida: 150
-  - Alcance: 4 tiles
-  - Velocidad de movimiento: 1 tile/s (vuelo)
-  - Velocidad de ataque: 3 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque
+  - Attack Towers?: 
+  - Attack Enemies?: 
 
-- **Bruja**:
-  - Tipo: Raro
-  - Costo: 8
-  - Daño: 25
-  - Vida: 60
-  - Alcance: 3 tiles
-  - Velocidad de movimiento: 0.7 tile/s
-  - Velocidad de ataque: 2 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque mágico
+- **Fantasma**:
+  - Health: 
+  - Speed: 
+  - Attack: 
+  - Attack Cooldown: 
+  - Attack Type:
+  - Range: 
+  - Cost: 
 
-- **Sacerdote**:
-  - Tipo: Épico
-  - Costo: 7
-  - Daño: 0
-  - Vida: 70
-  - Alcance: 3 tiles
-  - Velocidad de movimiento: 1 tile/s
-  - Velocidad de ataque: 2 s (ritmo de beneficio)
-  - Enemigos objetivo: N/A (aliados)
-  - Tipo: Soporte
+  - Attack Towers?: 
+  - Attack Enemies?: 
 
-- **Lanzador de Javalina**:
-  - Tipo: Común
-  - Costo: 4
-  - Daño: 25
-  - Vida: 40
-  - Alcance: 3 tiles
-  - Velocidad de movimiento: 1.2 tile/s
-  - Velocidad de ataque: 1.7 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque
+- **Orco**:
+  - Health: 
+  - Speed: 
+  - Attack: 
+  - Attack Cooldown: 
+  - Attack Type:
+  - Range: 
+  - Cost: 
+
+  - Attack Towers?: 
+  - Attack Enemies?: 
 
 - **Asesino**:
-  - Tipo: Raro
-  - Costo: 6
-  - Daño: 60
-  - Vida: 30
-  - Alcance: 1 tile
-  - Velocidad de movimiento: 3 tiles/s
-  - Velocidad de ataque: 1 s
-  - Enemigos objetivo: Alta prioridad (healers, unidades de rango)
-  - Tipo: Ataque
+  - Health: 
+  - Speed: 
+  - Attack: 
+  - Attack Cooldown: 
+  - Attack Type:
+  - Range: 
+  - Cost: 
 
-- **Elemental de Fuego**:
-  - Tipo: Épico
-  - Costo: 9
-  - Daño: 45 (daño por quemadura)
-  - Vida: 80
-  - Alcance: 2 tiles
-  - Velocidad de movimiento: 0.9 tile/s
-  - Velocidad de ataque: 2 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque
+  - Attack Towers?: 
+  - Attack Enemies?: 
 
 - **Centauro**:
-  - Tipo: Común
-  - Costo: 5
-  - Daño: 35
-  - Vida: 80
-  - Alcance: 2 tiles
-  - Velocidad de movimiento: 2 tiles/s
-  - Velocidad de ataque: 1.5 s
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Ataque
+  - Health: 
+  - Speed: 
+  - Attack: 
+  - Attack Cooldown: 
+  - Attack Type:
+  - Range: 
+  - Cost: 
 
-- **Nigromante**:
-  - Tipo: Legendario
-  - Costo: 10
-  - Daño: 20
-  - Vida: 60
-  - Alcance: 3 tiles
-  - Velocidad de movimiento: 0.6 tile/s
-  - Velocidad de ataque: 2.5 s (ritmo de invocación)
-  - Enemigos objetivo: Cualquiera
-  - Tipo: Soporte/Ataque
+  - Attack Towers?: 
+  - Attack Enemies?: 
+
+
+#### **Estructuras**:
+
+**Cañón**:
+  - Health: 
+  - Attack: 
+  - Attack Cooldown: 
+  - Attack Type:
+  - Range: 
+  - Cost: 
+
+  - Attack Towers?: 
+  - Attack Enemies?: Si
+
+- **Catapulta**:
+  - Health: 
+  - Attack: 
+  - Attack Cooldown: 
+  - Attack Type:
+  - Range: 
+  - Cost: 
+
+  - Attack Towers?: 
+  - Attack Enemies?: Si
+
+- **Mortero**:
+  - Health: 
+  - Attack: 
+  - Attack Cooldown: 
+  - Attack Type:
+  - Range: 
+  - Cost: 
+
+  - Attack Towers?: 
+  - Attack Enemies?: Si
+
+
 
 ---
 
 #### **Obstáculos**
 
-- **Árbol&Roca**: Proporciona cobertura y es un obstaculo.
+- **Árbol & Roca**: Proporciona cobertura y es un obstaculo.
 - **Lago**: Obstáculo natural que limita el movimiento; solo ciertas unidades pueden cruzarlo.
 
 ---
