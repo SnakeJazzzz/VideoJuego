@@ -323,6 +323,7 @@ GameObject:
   - component: {fileID: 3550290410881553097}
   - component: {fileID: 5725626201204970524}
   - component: {fileID: -1004132896668918902}
+  - component: {fileID: -4524763931279732985}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -485,8 +486,6 @@ MonoBehaviour:
   npcStats: {fileID: 11400000, guid: 1bdfec8d0c88c49cd8f5fde2e9855b1c, type: 2}
   manager: {fileID: 11400000, guid: e8ef3ba2208284799ba7650c2ae364c3, type: 2}
   owner: 0
-  closest: {fileID: 0}
-  isTower: 0
 --- !u!114 &5407820127193346447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,23 +631,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de6624d5b0a04549b7018451cb3b6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InRange:
+  StartAttack:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5407820127193346447}
-        m_TargetAssemblyTypeName: NPCMovement, Assembly-CSharp
-        m_MethodName: inRange
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5670210319069151022}
-        m_TargetAssemblyTypeName: NPCAttack, Assembly-CSharp
+        m_TargetAssemblyTypeName: SingleAttack, Assembly-CSharp
         m_MethodName: InTest
         m_Mode: 1
         m_Arguments:
@@ -659,23 +646,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OutOfRange:
+  StopAttack:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5407820127193346447}
-        m_TargetAssemblyTypeName: NPCMovement, Assembly-CSharp
-        m_MethodName: outOfRange
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 5670210319069151022}
-        m_TargetAssemblyTypeName: NPCAttack, Assembly-CSharp
+        m_TargetAssemblyTypeName: SingleAttack, Assembly-CSharp
         m_MethodName: OutTest
         m_Mode: 1
         m_Arguments:
@@ -726,6 +701,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-4524763931279732985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7795571062971709141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e46d31e480444e76b0bfc9cebe49a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closest: {fileID: 0}
 --- !u!1 &8656115705108129154
 GameObject:
   m_ObjectHideFlags: 0

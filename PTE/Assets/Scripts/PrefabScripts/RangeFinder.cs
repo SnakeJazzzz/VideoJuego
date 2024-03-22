@@ -5,31 +5,71 @@ using UnityEngine.Events;
 public class RangeFinder : NPCSystem
 {
     float distanceToClosest;
-    bool trigger = true;
-    
-    public UnityEvent InRange;
-    public UnityEvent OutOfRange;
+    bool isAttacking = false;
+    float range;
+    public UnityEvent StartAttack;
+    public UnityEvent StopAttack;
     Coroutine checkCoroutine;
 
-    public void Start()
+    ClosestFinder closestFinder;
+
+    protected override void Awake()
     {
-        checkCoroutine = StartCoroutine(FindClosest());
+        base.Awake();
+        closestFinder = GetComponent<ClosestFinder>(); 
     }
 
-    IEnumerator FindClosest()
+    void Start()
+    {
+        range = npcController.npcStats.range;
+        checkCoroutine = StartCoroutine(ChecktoAttack());
+    }
+
+    IEnumerator ChecktoAttack()
     {
         while (true)
         {
-            npcController.closest = npcController.manager.ClosestTarget(gameObject, npcController.owner, npcController.npcStats.attackTowers, npcController.npcStats.attackEnemies);
+            if (closestFinder.closest == null)
+            {
+                if (isAttacking) // Only invoke StopAttack if we were previously attacking
+                {
+                    Debug.Log("Enemy is null");
+                    StopAttack.Invoke();
+                    isAttacking = false; // Update the state
+                }
+                yield return new WaitForSeconds(0.5f); // Wait before the next iteration
+                continue;
+            }
+            
+            distanceToClosest = Vector3.Distance(transform.position, closestFinder.closest.transform.position); // Ensure you're using the `closest` variable correctly
+
+            if (distanceToClosest <= npcController.npcStats.range && !isAttacking)
+            {
+                
+                    Debug.Log("Starting to attack");
+                    StartAttack.Invoke();
+                    isAttacking = true; // Update the state
+                
+            }
+            else if (distanceToClosest > npcController.npcStats.range && isAttacking)
+            {
+                
+                    Debug.Log("Stopping attack");
+                    StopAttack.Invoke();
+                    isAttacking = false; // Update the state
+                
+            }
+            
             yield return new WaitForSeconds(0.5f);
+
         }
 
 
     } 
 
 
-
-    void Update()
+    /*
+    void Test()
     {   
 
         if (npcController.closest != null)
@@ -48,7 +88,7 @@ public class RangeFinder : NPCSystem
             {
                InRange.Invoke();
                trigger = false;
-               //Debug.Log("IM IN RANGE");
+               Debug.Log("IM IN RANGE");
             }
         }
         else
@@ -57,9 +97,9 @@ public class RangeFinder : NPCSystem
             {
                 OutOfRange.Invoke();
                 trigger = true;
-                //Debug.Log("IM OUT OF RANGE");
+                Debug.Log("IM OUT OF RANGE");
             }
             
         }
-    }
+    }*/
 }

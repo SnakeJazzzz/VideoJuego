@@ -8,7 +8,7 @@ public class NPCController : MonoBehaviour
     public NPCStats npcStats;
     public NPCManager manager;
     public int owner;
-    public GameObject closest;
+    //public GameObject closest;
 
     void OnEnable()
     {

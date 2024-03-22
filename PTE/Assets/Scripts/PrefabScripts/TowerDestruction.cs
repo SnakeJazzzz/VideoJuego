@@ -7,7 +7,7 @@ public class TowerDestruction : NPCSystem
  
     public GameEvent gameOver;
     
-    public void DestroyGameObject()
+    public void TriggerGameOver()
     {
         gameOver.TriggerEvent();
         Destroy(gameObject);

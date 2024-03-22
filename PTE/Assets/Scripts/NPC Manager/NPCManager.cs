@@ -87,12 +87,15 @@ public class NPCManager : ScriptableObject
 
         foreach (GameObject target in targets)
         {
-            float thisDistance = Vector3.Distance (GO.transform.position, target.transform.position);;
-            if (distance > thisDistance)
-            {
-                distance = thisDistance; // Update the distance to the new shortest distance
-                closest = target; // Update the closest tower
-            }
+            //if (target != null)
+            //{
+                float thisDistance = Vector3.Distance (GO.transform.position, target.transform.position);;
+                if (distance > thisDistance)
+                {
+                    distance = thisDistance; // Update the distance to the new shortest distance
+                    closest = target; // Update the closest tower
+                }
+            //}
         }
         
         return closest;
