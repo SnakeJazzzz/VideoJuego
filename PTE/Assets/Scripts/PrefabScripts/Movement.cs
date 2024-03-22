@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class Movement : NPCSystem
 {
+   
     Coroutine move;
 
+     ClosestFinder closestFinder;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        closestFinder = GetComponent<ClosestFinder>();
+    }
     void Update()
     {
-       if(npcController.closest != null)
+        
+       if(closestFinder.closest != null)
         {
-            transform.position = Vector3.MoveTowards(transform.position, npcController.closest.transform.position, npcController.npcStats.speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, closestFinder.closest.transform.position, npcController.npcStats.speed * Time.deltaTime);
         }
     }
     /*
@@ -26,7 +34,7 @@ public class Movement : NPCSystem
     public void outOfRange()
     {
         move = StartCoroutine(Move());
-    }*/
+    }
     IEnumerator Move()
     {
         while(true)
@@ -37,6 +45,6 @@ public class Movement : NPCSystem
             }
             yield return null;
         }
-    }
+    }*/
 }
 
