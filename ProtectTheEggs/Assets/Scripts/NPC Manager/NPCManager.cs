@@ -7,12 +7,13 @@ using UnityEngine;
 "Set")]
 public class NPCManager : ScriptableObject
 {
-
+    /*
     public  RSGameObject EnemyTowers;
     public  RSGameObject EnemyNPCs;
     public  RSGameObject PlayerTowers;
     public  RSGameObject PlayerNPCs;
     public RSRSGameObject AllEntities;
+    */
     public List<List<List<GameObject>>> Entities = new List<List<List<GameObject>>>
     {
         new List<List<GameObject>>{ new List<GameObject>(), new List<GameObject>()}, // First empty list
@@ -41,7 +42,7 @@ public class NPCManager : ScriptableObject
 
     }
 
-     public void Delete(GameObject toRegister, int team, bool isTower)
+    public void Delete(GameObject toRegister, int team, bool isTower)
     {
         
         int index = isTower ? 1 : 0;

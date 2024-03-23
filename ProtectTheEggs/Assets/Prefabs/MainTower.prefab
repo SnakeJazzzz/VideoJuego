@@ -635,6 +635,7 @@ GameObject:
   - component: {fileID: 7682202348279256893}
   - component: {fileID: 4277474300338651185}
   - component: {fileID: 7233533370745542728}
+  - component: {fileID: -6499806047446991612}
   m_Layer: 0
   m_Name: MainTower
   m_TagString: Untagged
@@ -675,7 +676,6 @@ MonoBehaviour:
   npcStats: {fileID: 11400000, guid: bb27d342dcd6040d899ba62033c07c4b, type: 2}
   manager: {fileID: 11400000, guid: e8ef3ba2208284799ba7650c2ae364c3, type: 2}
   owner: 0
-  closest: {fileID: 0}
 --- !u!114 &-6424681921024238697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9de6624d5b0a04549b7018451cb3b6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InRange:
+  StartAttack:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4277474300338651185}
@@ -788,7 +788,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OutOfRange:
+  StopAttack:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4277474300338651185}
@@ -827,3 +827,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff77e863975514cd9bf8ed4816f91a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameEvent: {fileID: 0}
+--- !u!114 &-6499806047446991612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8373712339497723186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e46d31e480444e76b0bfc9cebe49a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closest: {fileID: 0}

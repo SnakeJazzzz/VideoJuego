@@ -14,8 +14,7 @@ public class NPCStats : ScriptableObject
     public float attackCooldown;
     public float range;
     public float cost;
-    public float cooldown;
-     public GameObject prefab;
+    public GameObject prefab;
     public bool isStructure;
     public bool attackTowers;
     public bool attackEnemies;

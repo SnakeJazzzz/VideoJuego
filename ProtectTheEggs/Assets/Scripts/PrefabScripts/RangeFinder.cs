@@ -33,7 +33,7 @@ public class RangeFinder : NPCSystem
             {
                 if (isAttacking) // Only invoke StopAttack if we were previously attacking
                 {
-                    Debug.Log("Enemy is null");
+                    //Debug.Log("Enemy is null");
                     StopAttack.Invoke();
                     isAttacking = false; // Update the state
                 }
@@ -46,7 +46,7 @@ public class RangeFinder : NPCSystem
             if (distanceToClosest <= npcController.npcStats.range && !isAttacking)
             {
                 
-                    Debug.Log("Starting to attack");
+                    //Debug.Log("Starting to attack");
                     StartAttack.Invoke();
                     isAttacking = true; // Update the state
                 
@@ -54,7 +54,7 @@ public class RangeFinder : NPCSystem
             else if (distanceToClosest > npcController.npcStats.range && isAttacking)
             {
                 
-                    Debug.Log("Stopping attack");
+                    //Debug.Log("Stopping attack");
                     StopAttack.Invoke();
                     isAttacking = false; // Update the state
                 
