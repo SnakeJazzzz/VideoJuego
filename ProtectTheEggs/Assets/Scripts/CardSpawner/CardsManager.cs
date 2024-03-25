@@ -10,7 +10,7 @@ public class CardsManager : MonoBehaviour
     public List<int> listaDeIndices = new List<int>();
 
     Coroutine shuffle;
-    void Start()
+    void Awake()
     {
         for(int i = 0; i < mazo.Items.Count; i++)
         {
