@@ -6,15 +6,15 @@ using UnityEngine.Events;
 public class Spawner : MonoBehaviour
 {
     
-    public RSNPCStats cartasEnMano;
+    public RSCards cartasEnMano;
     public int selected = -1;
-    public UnityEvent GetNewCard;
+    public UnityEvent CardPlaced;
     public UnityEvent OutOfCards;
 
 
     void Start()
     {
-        GetNewCard.Invoke();
+        CardPlaced.Invoke();
     }
     public void NewSelected(int newValue)
     {
@@ -35,14 +35,12 @@ public class Spawner : MonoBehaviour
             return;
         }
 
-        Vector3 clickPosition = Input.mousePosition;
-        clickPosition = Camera.main.ScreenToWorldPoint(clickPosition);
-        clickPosition.z = 0;  
+        Spawn(cartasEnMano.Items[selected]);
 
-        Spawn(cartasEnMano.Items[selected].prefab, clickPosition);
         cartasEnMano.Items.RemoveAt(selected);
         selected = -1;
-        GetNewCard.Invoke();
+        CardPlaced.Invoke();
+
         if (cartasEnMano.Items.Count == 0)
         {
             OutOfCards.Invoke();
@@ -51,12 +49,19 @@ public class Spawner : MonoBehaviour
     }
 
     
-   void Spawn(GameObject toSpawn, Vector3 position)
-    {
-        GameObject newNPC = Instantiate(toSpawn,position, transform.rotation);
+   void Spawn(Card card)
+    {   
+        Vector3 clickPosition = Input.mousePosition;
+        clickPosition = Camera.main.ScreenToWorldPoint(clickPosition);
+        clickPosition.z = 0;  
 
-        newNPC.GetComponent<NPCController>().setOwnership(0); 
-        newNPC.SetActive(true);
+        for(int i = 0; i < card.numberOfNPCs; i++)
+        {
+            GameObject newNPC = Instantiate(card.prefab ,clickPosition, transform.rotation);
+            newNPC.GetComponent<NPCController>().setOwnership(0); 
+            newNPC.SetActive(true);
+        }
+
     }
 }
 
