@@ -23,7 +23,7 @@ public class SpawnerTest : MonoBehaviour
             clickPosition = Camera.main.ScreenToWorldPoint(clickPosition);
             clickPosition.z = 0;    
             // Instantiate the prefab at the click position
-            Instantiate(npcList.Items[0].prefab, clickPosition, transform.rotation);
+            //Instantiate(npcList.Items[0].prefab, clickPosition, transform.rotation);
             
         }
         else if (Input.GetMouseButtonDown(1))
@@ -33,7 +33,7 @@ public class SpawnerTest : MonoBehaviour
             clickPosition = Camera.main.ScreenToWorldPoint(clickPosition);
             clickPosition.z = 0;    
             // Instantiate the prefab at the click position
-            Instantiate(npcList.Items[1].prefab,clickPosition, transform.rotation);
+            //Instantiate(npcList.Items[1].prefab,clickPosition, transform.rotation);
         }
     }
 }

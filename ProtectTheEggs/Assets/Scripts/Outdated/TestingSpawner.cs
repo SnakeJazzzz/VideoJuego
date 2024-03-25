@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NewSpawner : MonoBehaviour
 {
-    public RSNPCStats npcList;
+    public RSCards npcList;
     
     // Update is called once per frame
     void Update()

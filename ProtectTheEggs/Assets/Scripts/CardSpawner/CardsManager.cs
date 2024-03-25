@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CardsManager : MonoBehaviour
 {
-    public RSNPCStats cartasEnMano;
-    public RSNPCStats mazo;
+    public RSCards cartasEnMano;
+    public RSCards mazo;
     int currentIndex = 0;
     public List<int> listaDeIndices = new List<int>();
 
