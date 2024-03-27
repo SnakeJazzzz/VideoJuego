@@ -287,148 +287,266 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
 ![SampleDeck](./fotos/sampleDeck.png)
 
 - **Caballero**:
-  - Health: 
-  - Speed: 
-  - Attack: 
-  - Attack Cooldown: 
-  - Attack Type:
-  - Range: 
-  - Cost: 
-
-  - Attack Towers?: 
-  - Attack Enemies?: 
+  - Health: 400
+  - Speed: Alto
+  - Attack: 70
+  - Attack Cooldown: 1.5 segundos
+  - Attack Type: Cuerpo a cuerpo
+  - Range: Corto
+  - Cost: 3 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Resistente a ataques físicos, ideal para combate frontal.
 
 - **Arquero**:
-  - Health: 
-  - Speed: 
-  - Attack: 
-  - Attack Cooldown: 
-  - Attack Type:
-  - Range: 
-  - Cost: 
-
-  - Attack Towers?: 
-  - Attack Enemies?: 
+  - Health: 150
+  - Speed: Alto
+  - Attack: 40
+  - Attack Cooldown: 1 segundo
+  - Attack Type: A distancia
+  - Range: Largo
+  - Cost: 2 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Puede atacar desde lejos, vulnerable a ataques rápidos.
 
 - **Duende**:
-  - Health: 
-  - Speed: 
-  - Attack: 
-  - Attack Cooldown: 
-  - Attack Type:
-  - Range: 
-  - Cost: 
-
-  - Attack Towers?: 
-  - Attack Enemies?: 
+  - Health: 100
+  - Speed: Muy Alto
+  - Attack: 25
+  - Attack Cooldown: 0.5 segundos
+  - Attack Type: Cuerpo a cuerpo
+  - Range: Corto
+  - Cost: 1 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Rápido y eficaz para ataques rápidos y distracciones.
 
 - **Gigante**:
-  - Health: 
-  - Speed: 
-  - Attack: 
-  - Attack Cooldown: 
-  - Attack Type:
-  - Range: 
-  - Cost: 
-
-  - Attack Towers?: 
-  - Attack Enemies?: 
+  - Health: 800
+  - Speed: Bajo
+  - Attack: 150
+  - Attack Cooldown: 2 segundos
+  - Attack Type: Cuerpo a cuerpo
+  - Range: Corto
+  - Cost: 5 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Muy resistente, ideal para absorber daño.
 
 - **Mago**:
-  - Health: 
-  - Speed: 
-  - Attack: 
-  - Attack Cooldown: 
-  - Attack Type:
-  - Range: 
-  - Cost: 
-
-  - Attack Towers?: 
-  - Attack Enemies?: 
+  - Health: 250
+  - Speed: Medio
+  - Attack: 100
+  - Attack Cooldown: 2 segundos
+  - Attack Type: Mágico
+  - Range: Medio
+  - Cost: 4 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Capaz de causar daño en área, efectivo contra grupos de enemigos.
 
 - **Fantasma**:
-  - Health: 
-  - Speed: 
-  - Attack: 
-  - Attack Cooldown: 
-  - Attack Type:
-  - Range: 
-  - Cost: 
-
-  - Attack Towers?: 
-  - Attack Enemies?: 
+  - Health: 200
+  - Speed: Alto
+  - Attack: 30 
+  - Attack Cooldown: 1
+  - Attack Type: Cuerpo a Cuerpo
+  - Range: Corto
+  - Cost: 3 de elixir
+  - Attack Enemies?: Si
+  - Nota: atraviesa unidades enemigas, invisible los primeros 5 segundos
 
 - **Orco**:
-  - Health: 
-  - Speed: 
-  - Attack: 
-  - Attack Cooldown: 
-  - Attack Type:
-  - Range: 
-  - Cost: 
-
-  - Attack Towers?: 
-  - Attack Enemies?: 
+  - Health: 350
+  - Speed: Medio
+  - Attack: 60
+  - Attack Cooldown: 1.2 segundos
+  - Attack Type: Cuerpo a cuerpo
+  - Range: Corto
+  - Cost: 3 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Fuerte y resistente, buen balance entre ataque y defensa.
 
 - **Asesino**:
-  - Health: 
-  - Speed: 
-  - Attack: 
-  - Attack Cooldown: 
-  - Attack Type:
-  - Range: 
-  - Cost: 
-
-  - Attack Towers?: 
-  - Attack Enemies?: 
+  - Health: 150
+  - Speed: Muy Alto
+  - Attack: 80
+  - Attack Cooldown: 1 segundo
+  - Attack Type: Cuerpo a cuerpo
+  - Range: Corto
+  - Cost: 4 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Alto daño y velocidad, perfecto para eliminar objetivos clave rápidamente.
 
 - **Centauro**:
-  - Health: 
-  - Speed: 
-  - Attack: 
-  - Attack Cooldown: 
-  - Attack Type:
-  - Range: 
-  - Cost: 
+  - Health: 300
+  - Speed: Alto
+  - Attack: 70
+  - Attack Cooldown: 1.5 segundos
+  - Attack Type: A distancia
+  - Range: Medio
+  - Cost: 4 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Versátil para ataque y defensa, efectivo en múltiples situaciones.
+  - 
+- **Elfo**:
+  - Health: 300
+  - Speed: Medio
+  - Attack: 60
+  - Attack Cooldown: 1.2 segundos
+  - Attack Type: Físico
+  - Range: Largo
+  - Cost: 4 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Excelentes para ataques a larga distancia, los Elfos pueden ablandar al enemigo antes de que se acerquen.
 
-  - Attack Towers?: 
-  - Attack Enemies?: 
+- **Berserker**:
+  - Health: 450
+  - Speed: Alto
+  - Attack: 85
+  - Attack Cooldown: 0.8 segundos
+  - Attack Type: Físico
+  - Range: Corto
+  - Cost: 5 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Guerreros feroces que causan estragos en las filas enemigas con su increíble velocidad y fuerza.
+
+- **Hechicera de Hielo**:
+  - Health: 250
+  - Speed: Medio
+  - Attack: 70
+  - Attack Cooldown: 1.5 segundos
+  - Attack Type: Mágico (Congelación)
+  - Range: Medio
+  - Cost: 6 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Puede ralentizar a los enemigos con su magia de hielo, dando ventaja táctica al jugador.
+
+- **Gólem de Piedra**:
+  - Health: 800
+  - Speed: Bajo
+  - Attack: 100
+  - Attack Cooldown: 2.5 segundos
+  - Attack Type: Físico
+  - Range: Corto
+  - Cost: 7 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Un tanque viviente, capaz de absorber una cantidad masiva de daño antes de caer.
+
+- **Troll**:
+  - Health: 650
+  - Speed: Bajo
+  - Attack: 120
+  - Attack Cooldown: 2.5 segundos
+  - Attack Type: Físico
+  - Range: Corto
+  - Cost: 7 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Fuertes y resistentes, los Trolls son excelentes para romper las líneas defensivas enemigas.
+
+- **Explorador**:
+  - Health: 200
+  - Speed: Muy Alto
+  - Attack: 50
+  - Attack Cooldown: 1 segundo
+  - Attack Type: Físico
+  - Range: Medio
+  - Cost: 3 de elixir
+  - Attack Enemies?: Sí
+  - Nota: Rápidos y ágiles, los Exploradores son perfectos para reconocer y atacar puntos débiles enemigos.
+
 
 
 #### **Estructuras**:
 
-**Cañón**:
-  - Health: 
-  - Attack: 
-  - Attack Cooldown: 
-  - Attack Type:
-  - Range: 
-  - Cost: 
+- **Cañón**:
+  - Health: 500
+  - Attack: 80
+  - Attack Cooldown: 2 segundos
+  - Attack Type: Proyectil
+  - Range: Medio
+  - Cost: 4 de elixir
 
-  - Attack Towers?: 
-  - Attack Enemies?: Si
+  - Attack Towers?: No
+  - Attack Enemies?: Sí
+  - Nota: Ideal para defensa contra unidades terrestres, el Cañón proporciona un sólido punto de control.
 
 - **Catapulta**:
-  - Health: 
-  - Attack: 
-  - Attack Cooldown: 
-  - Attack Type:
-  - Range: 
-  - Cost: 
+  - Health: 400
+  - Attack: 120
+  - Attack Cooldown: 3 segundos
+  - Attack Type: Área de Efecto
+  - Range: Largo
+  - Cost: 5 de elixir
 
-  - Attack Towers?: 
-  - Attack Enemies?: Si
+  - Attack Towers?: No
+  - Attack Enemies?: Sí
+  - Nota: Con su gran alcance y daño en área, la Catapulta es perfecta contra grupos de enemigos.
 
 - **Mortero**:
-  - Health: 
-  - Attack: 
-  - Attack Cooldown: 
-  - Attack Type:
-  - Range: 
-  - Cost: 
+  - Health: 450
+  - Attack: 100
+  - Attack Cooldown: 2.5 segundos
+  - Attack Type: Explosivo
+  - Range: Muy Largo
+  - Cost: 6 de elixir
 
-  - Attack Towers?: 
-  - Attack Enemies?: Si
+  - Attack Towers?: No
+  - Attack Enemies?: Sí
+  - Nota: El Mortero puede alcanzar y dañar a enemigos desde una distancia segura, ideal para posiciones fortificadas.
+
+
+- **Torre de Arqueras**:
+  - Health: 650
+  - Attack: 45 por arquera
+  - Attack Cooldown: 1 segundo
+  - Attack Type: Flechas
+  - Range: Largo
+  - Cost: 5 de elixir
+
+  - Attack Enemies?: Sí
+  - Nota: Alberga a tres arqueras que atacan independientemente a los enemigos en su rango.
+
+- **Torre Inferno**:
+  - Health: 550
+  - Attack: 20 a 120 (incrementa con el tiempo mientras ataca al mismo objetivo)
+  - Attack Cooldown: 2 segundos
+  - Attack Type: Rayo de Fuego
+  - Range: Medio
+  - Cost: 6 de elixir
+
+  - Attack Enemies?: Sí
+  - Nota: Su daño aumenta cuanto más tiempo permanece enfocado en un solo objetivo, ideal contra unidades de alta salud.
+
+- **Torre de Mago**:
+  - Health: 500
+  - Attack: 80
+  - Attack Cooldown: 1.5 segundos
+  - Attack Type: Mágico
+  - Range: Medio
+  - Cost: 7 de elixir
+
+  - Attack Enemies?: Sí
+  - Nota: Lanza hechizos de área que pueden afectar a múltiples enemigos a la vez.
+
+- **Barrera de Espinas**:
+  - Health: 800
+  - Attack: 30 (a los enemigos que contactan con la barrera)
+  - Attack Cooldown: No aplica
+  - Attack Type: Pasivo
+  - Range: No aplica
+  - Cost: 4 de elixir
+
+  - Attack Enemies?: Sí
+  - Nota: Daña a los enemigos que la atacan o intentan cruzarla, efectiva para ralentizar avances.
+
+- **Torre de Bombardero**:
+  - Health: 600
+  - Attack: 100
+  - Attack Cooldown: 2.5 segundos
+  - Attack Type: Explosivo
+  - Range: Medio
+  - Cost: 6 de elixir
+
+  - Attack Enemies?: Sí
+  - Nota: Arroja bombas a un área, causando daño masivo a múltiples unidades enemigas.
+
 
 
 
