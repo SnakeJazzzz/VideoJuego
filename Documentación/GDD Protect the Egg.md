@@ -297,6 +297,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: Resistente a ataques físicos, ideal para combate frontal.
 
+  ![Knight](./fotos/Card_pictures/knight.png)
+
 - **Arquero**:
   - Health: 150
   - Speed: Alto
@@ -307,6 +309,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Cost: 2 de elixir
   - Attack Enemies?: Sí
   - Nota: Puede atacar desde lejos, vulnerable a ataques rápidos.
+
+![Archer](./fotos/Card_pictures/archer.png)
 
 - **Duende**:
   - Health: 100
@@ -319,6 +323,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: Rápido y eficaz para ataques rápidos y distracciones.
 
+![Duende](./fotos/Card_pictures/Duende.png)
+
 - **Gigante**:
   - Health: 800
   - Speed: Bajo
@@ -329,6 +335,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Cost: 5 de elixir
   - Attack Enemies?: Sí
   - Nota: Muy resistente, ideal para absorber daño.
+
+![Gigante](./fotos/Card_pictures/Gigante.png)
 
 - **Mago**:
   - Health: 250
@@ -341,6 +349,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: Capaz de causar daño en área, efectivo contra grupos de enemigos.
 
+![Mago](./fotos/Card_pictures/Mago.png)
+
 - **Fantasma**:
   - Health: 200
   - Speed: Alto
@@ -351,6 +361,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Cost: 3 de elixir
   - Attack Enemies?: Si
   - Nota: atraviesa unidades enemigas, invisible los primeros 5 segundos
+
+![Fantasma](./fotos/Card_pictures/Fantasma.png)
 
 - **Orco**:
   - Health: 350
@@ -363,6 +375,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: Fuerte y resistente, buen balance entre ataque y defensa.
 
+![Orco](./fotos/Card_pictures/Orco.png)
+
 - **Asesino**:
   - Health: 150
   - Speed: Muy Alto
@@ -374,6 +388,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: Alto daño y velocidad, perfecto para eliminar objetivos clave rápidamente.
 
+![Asesino](./fotos/Card_pictures/Asesino.png)
+
 - **Centauro**:
   - Health: 300
   - Speed: Alto
@@ -384,7 +400,9 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Cost: 4 de elixir
   - Attack Enemies?: Sí
   - Nota: Versátil para ataque y defensa, efectivo en múltiples situaciones.
-  - 
+
+![Centauro](./fotos/Card_pictures/centauro.png)
+
 - **Elfo**:
   - Health: 300
   - Speed: Medio
@@ -395,6 +413,9 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Cost: 4 de elixir
   - Attack Enemies?: Sí
   - Nota: Excelentes para ataques a larga distancia, los Elfos pueden ablandar al enemigo antes de que se acerquen.
+
+![Elfo](./fotos/Card_pictures/Elfo.png)
+
 
 - **Berserker**:
   - Health: 450
@@ -407,6 +428,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: Guerreros feroces que causan estragos en las filas enemigas con su increíble velocidad y fuerza.
 
+![Berserker](./fotos/Card_pictures/Berserker.png)
+
 - **Hechicera de Hielo**:
   - Health: 250
   - Speed: Medio
@@ -417,6 +440,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Cost: 6 de elixir
   - Attack Enemies?: Sí
   - Nota: Puede ralentizar a los enemigos con su magia de hielo, dando ventaja táctica al jugador.
+
+![Hechicera de Hielo](./fotos/Card_pictures/HechiceraHielo.png)
 
 - **Gólem de Piedra**:
   - Health: 800
@@ -429,6 +454,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: Un tanque viviente, capaz de absorber una cantidad masiva de daño antes de caer.
 
+![Golem de piedra](./fotos/Card_pictures/GolemPiedra.png)
+
 - **Troll**:
   - Health: 650
   - Speed: Bajo
@@ -439,6 +466,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Cost: 7 de elixir
   - Attack Enemies?: Sí
   - Nota: Fuertes y resistentes, los Trolls son excelentes para romper las líneas defensivas enemigas.
+
+![Troll](./fotos/Card_pictures/Troll.png)
 
 - **Explorador**:
   - Health: 200
@@ -451,7 +480,7 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: Rápidos y ágiles, los Exploradores son perfectos para reconocer y atacar puntos débiles enemigos.
 
-
+![Explorador](./fotos/Card_pictures/Explorador.png)
 
 #### **Estructuras**:
 
@@ -467,6 +496,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: Ideal para defensa contra unidades terrestres, el Cañón proporciona un sólido punto de control.
 
+![Cañón](./fotos/Card_pictures/Canon.png)
+
 - **Catapulta**:
   - Health: 400
   - Attack: 120
@@ -478,6 +509,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Towers?: No
   - Attack Enemies?: Sí
   - Nota: Con su gran alcance y daño en área, la Catapulta es perfecta contra grupos de enemigos.
+
+![Catapulta](./fotos/Card_pictures/catapulta.png)
 
 - **Mortero**:
   - Health: 450
@@ -491,6 +524,7 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: El Mortero puede alcanzar y dañar a enemigos desde una distancia segura, ideal para posiciones fortificadas.
 
+![Torre Mortero](./fotos/Card_pictures/Mortero.png)
 
 - **Torre de Arqueras**:
   - Health: 650
@@ -503,6 +537,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: Alberga a tres arqueras que atacan independientemente a los enemigos en su rango.
 
+![Torre de arqueras](./fotos/Card_pictures/Torre_de_arqueras.png)
+
 - **Torre Inferno**:
   - Health: 550
   - Attack: 20 a 120 (incrementa con el tiempo mientras ataca al mismo objetivo)
@@ -513,6 +549,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
 
   - Attack Enemies?: Sí
   - Nota: Su daño aumenta cuanto más tiempo permanece enfocado en un solo objetivo, ideal contra unidades de alta salud.
+
+![Torre inferno](./fotos/Card_pictures/Torre_inferno.png)
 
 - **Torre de Mago**:
   - Health: 500
@@ -525,6 +563,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: Lanza hechizos de área que pueden afectar a múltiples enemigos a la vez.
 
+![Torre de magos](./fotos/Card_pictures/Torre_de_magos.png)
+
 - **Barrera de Espinas**:
   - Health: 800
   - Attack: 30 (a los enemigos que contactan con la barrera)
@@ -535,6 +575,8 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
 
   - Attack Enemies?: Sí
   - Nota: Daña a los enemigos que la atacan o intentan cruzarla, efectiva para ralentizar avances.
+
+![Barrera de Espinas](./fotos/Card_pictures/Barrera_de_Espinas.png)
 
 - **Torre de Bombardero**:
   - Health: 600
@@ -547,6 +589,7 @@ Para invocar una carta se requiere tenerla en la mano y tener el "elixir de drag
   - Attack Enemies?: Sí
   - Nota: Arroja bombas a un área, causando daño masivo a múltiples unidades enemigas.
 
+![Torre de Bombardero](./fotos/Card_pictures/Torre_de_Bombardero.png)
 
 
 
