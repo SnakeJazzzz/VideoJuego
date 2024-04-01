@@ -3,27 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CardsUIManager : MonoBehaviour
+public class CardsUIManager1 : MonoBehaviour
 {
+    public CardSOSystem cardSOSYstem;
     public RSCards cartasEnMano;
     public List<CardDisplay> cardPanels;
     int selectChange = 40;
     int lastselected = -1;
 
-    void Start()
+    void OnEnable()
     {
-        //SelectACard(0);
+        cardSOSYstem.UIShow += Show;
+        cardSOSYstem.UIShow += Deselect;
+        cardSOSYstem.Select += SelectACard;
+    }
+
+    void OnDisable()
+    {
+        cardSOSYstem.UIShow -= Show;
+        cardSOSYstem.UIShow -= Deselect;
+        cardSOSYstem.Select -= SelectACard;
     }
 
     public void Show()
     {
         int num = cartasEnMano.Items.Count;
         //Debug.Log("Hay " + num + " cartas");
-        for (int i = 0;  i < cartasEnMano.Items.Count; i++)
+        for (int i = 0; i < 6; i++)
         {
-            if (i < num )
+            if (i < num)
             {
-                Debug.Log(i +" "+cartasEnMano.Items[i]);
                 cardPanels[i].Display(cartasEnMano.Items[i]);
                 cardPanels[i].setActive(true);
             }
@@ -36,7 +45,7 @@ public class CardsUIManager : MonoBehaviour
 
     public void SelectACard(int index)
     {
-        index--;
+        //Debug.Log("Index: " + index);
         if (index == lastselected) {return;}
         Deselect();
 

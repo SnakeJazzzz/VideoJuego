@@ -8,7 +8,7 @@ public class CardDisplay : MonoBehaviour
     
     Image image;
 
-    void Start()
+    void Awake()
     {
         image = GetComponent<Image>();
     }
@@ -20,7 +20,9 @@ public class CardDisplay : MonoBehaviour
 
     public void Display(Card card)
     {
+        
         image.sprite = card.artwork;
+
     }
 
     

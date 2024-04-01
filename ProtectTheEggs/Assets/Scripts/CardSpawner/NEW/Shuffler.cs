@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CardsManager : MonoBehaviour
+public class Shuffler : MonoBehaviour
 {
+    public CardSOSystem cardSOSystem;
     public RSCards cartasEnMano;
     public RSCards mazo;
     int currentIndex = 0;
     public List<int> listaDeIndices = new List<int>();
-    public UnityEvent ShuffleOver;
+ 
 
     Coroutine shuffle;
     void Awake()
-    {
+    {   
+     
         for(int i = 0; i < mazo.Items.Count; i++)
         {
             listaDeIndices.Add(i);
@@ -21,19 +23,30 @@ public class CardsManager : MonoBehaviour
         ShuffleList(listaDeIndices);
 
     }
+    
+    void OnEnable()
+    {
+        cardSOSystem.GetNewCard += GiveCard;
+        cardSOSystem.Shuffle += StartShuffleCoroutine;
+
+    }
 
     void OnDisable()
     {
-        cartasEnMano.Items.Clear();
+        cardSOSystem.GetNewCard -= GiveCard;
+        cardSOSystem.Shuffle -= StartShuffleCoroutine;
     }
 
-    public void RefillCards()
+    
+
+    public void GiveCard()
     {
-        while (currentIndex < mazo.Items.Count && cartasEnMano.Items.Count < 6)
+        if (currentIndex < mazo.Items.Count)
         {
-            cartasEnMano.Add(mazo.Items[listaDeIndices[currentIndex]]);
-            currentIndex++;
+        cartasEnMano.Add(mazo.Items[listaDeIndices[currentIndex]]);
+        currentIndex++;
         }
+        
     }
 
     void ShuffleList(List<int> list)
@@ -58,8 +71,8 @@ public class CardsManager : MonoBehaviour
         yield return new WaitForSeconds(5f);
         ShuffleList(listaDeIndices);
         currentIndex = 0;
-        RefillCards();
-        ShuffleOver.Invoke();
+        cardSOSystem.ShuffleOver();
+       
     }
 
 

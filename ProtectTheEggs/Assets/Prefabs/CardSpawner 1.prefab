@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8330408597308466585
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6010595164496802681}
+  - component: {fileID: 5459648922037876616}
+  - component: {fileID: 4071013533257224624}
+  - component: {fileID: 3080218563660072350}
+  - component: {fileID: 329403642435473581}
+  - component: {fileID: 4929520380876138637}
+  m_Layer: 0
+  m_Name: CardSpawner 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6010595164496802681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330408597308466585}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.3306246, y: 7.623797, z: 9.159868}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5459648922037876616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330408597308466585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200c088bcc39648abbdc9df9495ae298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardSOSystem: {fileID: 11400000, guid: 34ef335433ca24b7098b4b1988de9419, type: 2}
+  cartasEnMano: {fileID: 11400000, guid: db16005068ccf486cafd8472ee634f8b, type: 2}
+  mazo: {fileID: 11400000, guid: 7ec9c74ccd49148a3a1504c762693d7c, type: 2}
+  listaDeIndices: 
+--- !u!114 &4071013533257224624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330408597308466585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f401e0725f1e94eb6b211f0e8c42a625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardSOSystem: {fileID: 11400000, guid: 34ef335433ca24b7098b4b1988de9419, type: 2}
+--- !u!114 &3080218563660072350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330408597308466585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0072d638fbbbd4884befa1e7e26eea36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cartasEnMano: {fileID: 11400000, guid: db16005068ccf486cafd8472ee634f8b, type: 2}
+  cardSOSystem: {fileID: 11400000, guid: 34ef335433ca24b7098b4b1988de9419, type: 2}
+--- !u!114 &329403642435473581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330408597308466585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bef4f638fd2e4d3cbc50d4febd2060e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardSOSYstem: {fileID: 11400000, guid: 34ef335433ca24b7098b4b1988de9419, type: 2}
+  cartasEnMano: {fileID: 11400000, guid: db16005068ccf486cafd8472ee634f8b, type: 2}
+  cardPanels:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &4929520380876138637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330408597308466585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7397b63a160490d88e7cb482dc0edd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardSOSystem: {fileID: 11400000, guid: 34ef335433ca24b7098b4b1988de9419, type: 2}

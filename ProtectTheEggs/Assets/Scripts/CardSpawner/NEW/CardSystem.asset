@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0499ce98a3b3b4cf99d1775902350ed2, type: 3}
+  m_Name: CardSystem
+  m_EditorClassIdentifier: 
+  cartasEnMano: {fileID: 11400000, guid: db16005068ccf486cafd8472ee634f8b, type: 2}
+  mazo: {fileID: 0}
+  elixir: {fileID: 11400000, guid: 84fb4a18d1dbd461abb76bead5c7fb34, type: 2}
+  selected: 0
+  currentIndex: 0
+  useElixir: 1
