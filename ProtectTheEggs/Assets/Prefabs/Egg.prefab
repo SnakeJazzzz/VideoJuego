@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -1236926435
   m_SortingLayer: 1
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 53894a8e338e9445da9964b36014cc8a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aea9a993bbfb67845af8663508393241, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,7 +121,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.25, y: 2.25}
+    oldSize: {x: 2.56, y: 2.56}
     newSize: {x: 3.2, y: 3.2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -538,7 +538,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: -209550175
   m_SortingOrder: 0
@@ -673,8 +673,6 @@ MonoBehaviour:
   npcStats: {fileID: 11400000, guid: edadeabf596a34353ae1d07307b01273, type: 2}
   manager: {fileID: 11400000, guid: e8ef3ba2208284799ba7650c2ae364c3, type: 2}
   owner: 0
-  closest: {fileID: 0}
-  isTower: 1
 --- !u!114 &-6424681921024238697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,8 +704,8 @@ MonoBehaviour:
   OnZeroHealth:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Destruction, Assembly-CSharp
+      - m_Target: {fileID: 3294038006015286985}
+        m_TargetAssemblyTypeName: TowerDestruction, Assembly-CSharp
         m_MethodName: DestroyGameObject
         m_Mode: 1
         m_Arguments:

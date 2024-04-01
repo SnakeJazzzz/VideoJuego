@@ -371,38 +371,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -6424681921024238697, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
-      propertyPath: OnZeroHealth.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6424681921024238697, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
-      propertyPath: OnZeroHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -6424681921024238697, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
-      propertyPath: OnZeroHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1367121097}
-    - target: {fileID: -6424681921024238697, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
-      propertyPath: OnZeroHealth.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: -6424681921024238697, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
-      propertyPath: OnZeroHealth.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DestroyGameObject
-      objectReference: {fileID: 0}
-    - target: {fileID: -6424681921024238697, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
-      propertyPath: OnZeroHealth.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: TowerDestruction, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: -6424681921024238697, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
-      propertyPath: OnZeroHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 201005339532777661, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: aea9a993bbfb67845af8663508393241, type: 3}
     - target: {fileID: 6458116419297576790, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1048336
@@ -451,10 +419,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7140145573071753829, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 8373712339497723186, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
       propertyPath: m_Name
       value: Egg
@@ -464,17 +428,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
---- !u!114 &1367121097 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3294038006015286985, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
-  m_PrefabInstance: {fileID: 627892488}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c25a513418c694f5a84f52db2bdf1e2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1602757583
 PrefabInstance:
   m_ObjectHideFlags: 0
