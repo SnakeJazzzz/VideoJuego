@@ -399,6 +399,10 @@ PrefabInstance:
       propertyPath: OnZeroHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 201005339532777661, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aea9a993bbfb67845af8663508393241, type: 3}
     - target: {fileID: 6458116419297576790, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1048336
