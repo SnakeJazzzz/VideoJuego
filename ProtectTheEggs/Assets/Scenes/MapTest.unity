@@ -447,6 +447,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7140145573071753829, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8373712339497723186, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
       propertyPath: m_Name
       value: Egg
