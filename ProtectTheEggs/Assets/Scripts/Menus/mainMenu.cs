@@ -7,15 +7,13 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
        
-
-
         // Choose a random map index between 5 and 7 and load it additively
         int randomMapIndex = Random.Range(5, 8); // Random.Range is max-exclusive
-        //SceneManager.LoadScene(randomMapIndex);
-        SceneManager.LoadScene("Map1");
-        
-  
+        SceneManager.LoadScene(randomMapIndex);
+        //SceneManager.LoadScene("Map2");
+     
 
+        
     }
 
     public void QuitGame()

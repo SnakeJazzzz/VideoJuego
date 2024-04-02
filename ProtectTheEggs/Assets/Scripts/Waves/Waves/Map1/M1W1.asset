@@ -18,10 +18,10 @@ MonoBehaviour:
     spawnTime: 0
     count: 5
   - prefab: {fileID: 7795571062971709141, guid: 1954688ba8f7a439680aca66957c16fb, type: 3}
-    spawnPosition: {x: 40, y: 10, z: 0}
+    spawnPosition: {x: 40, y: 3, z: 0}
     spawnTime: 2
     count: 3
   - prefab: {fileID: 7795571062971709141, guid: 1954688ba8f7a439680aca66957c16fb, type: 3}
-    spawnPosition: {x: 40, y: -10, z: 0}
+    spawnPosition: {x: 40, y: -3, z: 0}
     spawnTime: 2
     count: 3

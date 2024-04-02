@@ -7,7 +7,7 @@ public class ElixirGenerator : MonoBehaviour
     
     public Elixir elixir;
     public float timer = 5f;
-    public int valueToAdd = 10;
+    public int valueToAdd = 5;
     Coroutine generate;
     void Start()
     {

@@ -31824,63 +31824,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1001 &2009304966
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.3306246
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7.623797
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 9.159868
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8330408597308466585, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_Name
-      value: CardSpawner 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c91bd5745368440b9823018a11e97504, type: 3}
 --- !u!1001 &2059982548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31929,6 +31872,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2117710570122360307, guid: 8281a61aaec77451f8609141bbc15ebc, type: 3}
+      propertyPath: waves
+      value: 
+      objectReference: {fileID: 11400000, guid: 3438a7d2414f44a38b52e6dac8229c30, type: 2}
     - target: {fileID: 4938028800137842852, guid: 8281a61aaec77451f8609141bbc15ebc, type: 3}
       propertyPath: m_Name
       value: Enemy Spawner
@@ -31947,5 +31894,4 @@ SceneRoots:
   - {fileID: 1793912531}
   - {fileID: 655674713}
   - {fileID: 1604174958}
-  - {fileID: 2009304966}
   - {fileID: 2059982548}
