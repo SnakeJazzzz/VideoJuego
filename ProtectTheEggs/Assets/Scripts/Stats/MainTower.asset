@@ -16,10 +16,8 @@ MonoBehaviour:
   health: 300
   speed: 0
   attack: 10
-  attackCooldown: 0.1
+  attackCooldown: 0.5
   range: 5
-  cost: 0
-  prefab: {fileID: 8373712339497723186, guid: 4c5849f3f38fb4408894ace950526da2, type: 3}
   isStructure: 1
   attackTowers: 0
   attackEnemies: 1

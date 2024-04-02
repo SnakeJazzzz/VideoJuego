@@ -632,7 +632,7 @@ GameObject:
   - component: {fileID: -6424681921024238697}
   - component: {fileID: 287210839901314097}
   - component: {fileID: -5249848618100508057}
-  - component: {fileID: 3294038006015286985}
+  - component: {fileID: 374016981998563692}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Untagged
@@ -649,7 +649,7 @@ Transform:
   m_GameObject: {fileID: 8373712339497723186}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.12, y: 2.45, z: 0}
   m_LocalScale: {x: 0.7, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -704,9 +704,9 @@ MonoBehaviour:
   OnZeroHealth:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3294038006015286985}
-        m_TargetAssemblyTypeName: TowerDestruction, Assembly-CSharp
-        m_MethodName: DestroyGameObject
+      - m_Target: {fileID: 374016981998563692}
+        m_TargetAssemblyTypeName: Destruction, Assembly-CSharp
+        m_MethodName: TriggerSOEvent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -758,7 +758,7 @@ MonoBehaviour:
   teamColors: {fileID: 11400000, guid: 154457e206b2d4829b348cef0d3d5cd7, type: 2}
   healthBarValue: {fileID: 0}
   healthBarColor: {fileID: 0}
---- !u!114 &3294038006015286985
+--- !u!114 &374016981998563692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -767,7 +767,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8373712339497723186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c25a513418c694f5a84f52db2bdf1e2c, type: 3}
+  m_Script: {fileID: 11500000, guid: ff77e863975514cd9bf8ed4816f91a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOver: {fileID: 11400000, guid: 459d60ef71d1f4864899379a690db9d8, type: 2}
+  gameEvent: {fileID: 11400000, guid: 459d60ef71d1f4864899379a690db9d8, type: 2}

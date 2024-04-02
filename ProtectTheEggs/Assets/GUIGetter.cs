@@ -3,18 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class start : MonoBehaviour
+public class GUIGetter : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
     {
-         SceneManager.LoadSceneAsync(0, LoadSceneMode.Additive);
+        SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
