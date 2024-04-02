@@ -23,8 +23,6 @@ CREATE TABLE Cartas (
     NombreMarco TEXT CHECK(NombreMarco IN ('comun', 'raro', 'exotico', 'legendario')),
     NombreArchivoSonido TEXT
 );
-
-
 -- Creación de la tabla Mazos
 CREATE TABLE Mazos (
     IDMazo INTEGER PRIMARY KEY AUTOINCREMENT,
