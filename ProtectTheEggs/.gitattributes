@@ -1,0 +1,11 @@
+*.unity binary merge=unityyamlmerge
+*.prefab binary merge=unityyamlmerge
+*.asset binary merge=unityyamlmerge
+*.mat binary merge=unityyamlmerge
+*.anim binary merge=unityyamlmerge
+*.controller binary merge=unityyamlmerge
+*.physicMaterial binary merge=unityyamlmerge
+*.physicsMaterial2D binary merge=unityyamlmerge
+*.mask binary merge=unityyamlmerge
+*.fontsettings binary merge=unityyamlmerge
+*.rendertexture binary merge=unityyamlmerge
