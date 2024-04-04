@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f375d33400f942c8932932d0b047155, type: 3}
+  m_Name: Archer
+  m_EditorClassIdentifier: 
+  cardName: Archer
+  cost: 6
+  numberOfNPCs: 2
+  stats: {fileID: 11400000, guid: 9e77fb60f20174caa87a3053031440a0, type: 2}
+  marco: {fileID: 21300000, guid: e4ca3f12872a6f14aa95aa4c166a9068, type: 3}
+  artwork: {fileID: 21300000, guid: ce78f064428d94e56873917cd8b2418f, type: 3}
+  prefab: {fileID: 7795571062971709141, guid: 62ec3c35adafc4b508b238d12b47afd4, type: 3}

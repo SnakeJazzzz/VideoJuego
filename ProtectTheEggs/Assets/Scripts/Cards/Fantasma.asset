@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f375d33400f942c8932932d0b047155, type: 3}
+  m_Name: Fantasma
+  m_EditorClassIdentifier: 
+  cardName: Fantasma
+  cost: 15
+  numberOfNPCs: 4
+  stats: {fileID: 11400000, guid: 942c1343c313a487da4376a79f7da94a, type: 2}
+  artwork: {fileID: 21300000, guid: 4d5a026c2fc384045b8b85c182de4cd5, type: 3}
+  prefab: {fileID: 7795571062971709141, guid: cb0e68df53b744e0bad945f3ce82013d, type: 3}
