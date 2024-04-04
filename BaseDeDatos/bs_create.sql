@@ -1,15 +1,19 @@
+DROP SCHEMA IF EXISTS PTE;
+CREATE SCHEMA PTE;
+USE PTE;
+
+
 -- Creación de la tabla Usuarios
 CREATE TABLE Usuarios (
-    IDUsuario INTEGER PRIMARY KEY AUTOINCREMENT,
+    IDUsuario INTEGER PRIMARY KEY AUTO_INCREMENT,
     NombreUsuario TEXT NOT NULL,
-    CorreoElectronico TEXT NOT NULL UNIQUE,
     Contraseña TEXT NOT NULL,
     PuntuaciónMáxima INTEGER DEFAULT 0
 );
 
 -- Creación de la tabla Cartas
 CREATE TABLE Cartas (
-    IDCarta INTEGER PRIMARY KEY AUTOINCREMENT,
+    IDCarta INTEGER PRIMARY KEY AUTO_INCREMENT,
     Nombre TEXT NOT NULL,
     Descripción TEXT,
     Vida INTEGER,
@@ -25,7 +29,7 @@ CREATE TABLE Cartas (
 );
 -- Creación de la tabla Mazos
 CREATE TABLE Mazos (
-    IDMazo INTEGER PRIMARY KEY AUTOINCREMENT,
+    IDMazo INTEGER PRIMARY KEY AUTO_INCREMENT,
     IDUsuario INTEGER,
     NombreMazo TEXT NOT NULL,
     FOREIGN KEY (IDUsuario) REFERENCES Usuarios(IDUsuario)
@@ -33,7 +37,7 @@ CREATE TABLE Mazos (
 
 -- Creación de la tabla DetallesMazo
 CREATE TABLE DetallesMazo (
-    IDDetalle INTEGER PRIMARY KEY AUTOINCREMENT,
+    IDDetalle INTEGER PRIMARY KEY AUTO_INCREMENT,
     IDMazo INTEGER,
     IDCarta INTEGER,
     Cantidad INTEGER,
@@ -43,7 +47,7 @@ CREATE TABLE DetallesMazo (
 
 -- Creación de la tabla Partidas
 CREATE TABLE Partidas (
-    IDPartida INTEGER PRIMARY KEY AUTOINCREMENT,
+    IDPartida INTEGER PRIMARY KEY AUTO_INCREMENT,
     IDUsuario INTEGER,
     FechaHoraInicio DATETIME,
     FechaHoraFin DATETIME,
@@ -54,7 +58,7 @@ CREATE TABLE Partidas (
 
 -- Creación de la tabla AccionesPartida
 CREATE TABLE AccionesPartida (
-    IDAcción INTEGER PRIMARY KEY AUTOINCREMENT,
+    IDAcción INTEGER PRIMARY KEY AUTO_INCREMENT,
     IDPartida INTEGER,
     Momento DATETIME,
     IDCarta INTEGER,

@@ -1,3 +1,5 @@
+USE PTE;
+
 INSERT INTO Cartas 
 (Nombre, Descripción, Vida, Velocidad, Daño, VelocidadAtaque, Rango, CostoElixir, Tipo, NombreArchivoImagen, NombreMarco, NombreArchivoSonido) 
 VALUES 
@@ -26,8 +28,9 @@ VALUES
 ('Torre de Arqueras', 'Alberga a tres arqueras que atacan independientemente a los enemigos en su rango.', 650, 0, 45, 1, 3, 5, 'Defensa', 'torredearqueras.png', 'raro', 'torredearqueras.mp3');
 
 -- Insertar un usuario dummy
-INSERT INTO Usuarios (NombreUsuario, CorreoElectronico, Contraseña, PuntuaciónMáxima) VALUES 
-('jugador1', 'jugador1@example.com', 'contraseñaSegura123', 0);
+INSERT INTO Usuarios (NombreUsuario, Contraseña, PuntuaciónMáxima) VALUES 
+('jugador1', 'contraseñaSegura123', 0),
+('test', '123', 0);
 
 -- Insertar un mazo para el usuario dummy
 INSERT INTO Mazos (IDUsuario, NombreMazo) VALUES 
