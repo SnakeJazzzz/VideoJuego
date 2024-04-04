@@ -9,6 +9,7 @@ public class Card : ScriptableObject
     public int cost;
     public int numberOfNPCs;
     public NPCStats stats;
+    public Sprite marco;
     public Sprite artwork;
     public GameObject prefab;
 }
