@@ -16,6 +16,5 @@ MonoBehaviour:
   cost: 16
   numberOfNPCs: 2
   stats: {fileID: 11400000, guid: 65381e82fea654d0e95c3b9d129469c0, type: 2}
-  marco: {fileID: 0}
-  artwork: {fileID: 21300000, guid: a1ed30060252b44dd8a373607ac2b118, type: 3}
+  artwork: {fileID: 21300000, guid: 30b488cf930991c469163f79b8bf59a5, type: 3}
   prefab: {fileID: 7795571062971709141, guid: f4caf3725942943c189a44598c7eaa4d, type: 3}
