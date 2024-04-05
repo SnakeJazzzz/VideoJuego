@@ -19,9 +19,13 @@ public class NewSpawner : MonoBehaviour
             clickPosition = Camera.main.ScreenToWorldPoint(clickPosition);
             clickPosition.z = 0;    
             // Instantiate the prefab at the click position
+            /*
             GameObject newNPC = Instantiate(npcList.Items[0].prefab,clickPosition, transform.rotation);
 
             newNPC.GetComponent<NPCController>().setOwnership(0); 
+            newNPC.SetActive(true);*/
+            GameObject prefab = Resources.Load<GameObject>("Knight");
+            GameObject newNPC = Instantiate(prefab ,clickPosition, transform.rotation);
             newNPC.SetActive(true);
         }
         else if (Input.GetMouseButtonDown(1))

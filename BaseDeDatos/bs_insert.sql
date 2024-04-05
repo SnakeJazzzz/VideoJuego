@@ -1,8 +1,8 @@
 USE PTE;
-
+/*
 INSERT INTO Cartas 
-(Nombre, Descripción, Vida, Velocidad, Daño, VelocidadAtaque, Rango, CostoElixir, Tipo, NombreArchivoImagen, NombreMarco, NombreArchivoSonido) 
-VALUES 
+(cardName, descri, Vida, Velocidad, Daño, VelocidadAtaque, Rango, CostoElixir, Tipo, NombreArchivoImagen, NombreMarco, NombreArchivoSonido) 
+VALUES ('Caballero', 'Resistente a ataques físicos, ideal para combate frontal.', 400, 1.0, 70, 1.5, 1, 3, 'Ataque', 'caballero.png', 'comun', 'caballero.mp3'),
 ('Caballero', 'Resistente a ataques físicos, ideal para combate frontal.', 400, 1.0, 70, 1.5, 1, 3, 'Ataque', 'caballero.png', 'comun', 'caballero.mp3'),
 ('Arquero', 'Puede atacar desde lejos, vulnerable a ataques rápidos.', 150, 1.0, 40, 1, 3, 2, 'Ataque', 'arquero.png', 'raro', 'arquero.mp3'),
 ('Duende', 'Rápido y eficaz para ataques rápidos y distracciones.', 100, 1.5, 25, 0.5, 1, 1, 'Ataque', 'duende.png', 'comun', 'duende.mp3'),
@@ -26,15 +26,46 @@ VALUES
 ('Catapulta', 'Con su gran alcance y daño en área, la Catapulta es perfecta contra grupos de enemigos.', 400, 0, 120, 3, 3, 5, 'Ataque', 'catapulta.png', 'raro', 'catapulta.mp3'),
 ('Mortero', 'El Mortero puede alcanzar y dañar a enemigos desde una distancia segura, ideal para posiciones fortificadas.', 450, 0, 100, 2.5, 4, 6, 'Ataque', 'mortero.png', 'exotico', 'mortero.mp3'),
 ('Torre de Arqueras', 'Alberga a tres arqueras que atacan independientemente a los enemigos en su rango.', 650, 0, 45, 1, 3, 5, 'Defensa', 'torredearqueras.png', 'raro', 'torredearqueras.mp3');
-
+*/
 -- Insertar un usuario dummy
+
+INSERT INTO NPC (name, health, speed, attack, attackCooldown, `range`, isStructure, attackTowers, attackEnemies) VALUES 
+('Knight', 100, 1.2, 30, 1.0, 1.0, 0, 1, 1),
+('Knight2', 100, 1.2, 30, 1.0, 1.0, 0, 1, 1),
+('Knight3', 100, 1.2, 30, 1.0, 1.0, 0, 1, 1),
+('Knight4', 100, 1.2, 30, 1.0, 1.0, 0, 1, 1),
+('Knight5', 100, 1.2, 30, 1.0, 1.0, 0, 1, 1),
+('Knight6', 100, 1.2, 30, 1.0, 1.0, 0, 1, 1),
+('Knight7', 100, 1.2, 30, 1.0, 1.0, 0, 1, 1),
+('Knight8', 100, 1.2, 30, 1.0, 1.0, 0, 1, 1),
+('Knight9', 100, 1.2, 30, 1.0, 1.0, 0, 1, 1),
+('Knight10', 100, 1.2, 30, 1.0, 1.0, 0, 1, 1);
+
+
+
+INSERT INTO Cartas (cardName, description, cost, numberOfNPCs, IDNPC) VALUES 
+('Knight', 'Strong Knight', 5, 1, 1),
+('Knight', 'Strong Knight', 5, 1, 2),
+('Knight', 'Strong Knight', 5, 1, 3),
+('Knight', 'Strong Knight', 5, 1, 4),
+('Knight', 'Strong Knight', 5, 1, 5),
+('Knight', 'Strong Knight', 5, 1, 6),
+('Knight', 'Strong Knight', 5, 1, 7),
+('Knight', 'Strong Knight', 5, 1, 8),
+('Knight', 'Strong Knight', 5, 1, 9),
+('Knight', 'Strong Knight', 5, 1, 10);
+
+
+
 INSERT INTO Usuarios (NombreUsuario, Contraseña, PuntuaciónMáxima) VALUES 
 ('jugador1', 'contraseñaSegura123', 0),
 ('test', '123', 0);
 
 -- Insertar un mazo para el usuario dummy
 INSERT INTO Mazos (IDUsuario, NombreMazo) VALUES 
-(1, 'Mazo Inicial');
+(1, 'Mazo Inicial'),
+(1, 'Mazo 2');
+
 
 -- Insertar detalles del mazo (asumiendo que los IDs de las cartas van del 1 al 10)
 INSERT INTO DetallesMazo (IDMazo, IDCarta, Cantidad) VALUES 
@@ -47,8 +78,9 @@ INSERT INTO DetallesMazo (IDMazo, IDCarta, Cantidad) VALUES
 (1, 7, 2),
 (1, 8, 2),
 (1, 9, 2),
-(1, 10, 2);
-
+(1, 10, 2),
+(2, 1 ,5);
+/*
 -- Insertar una partida dummy
 INSERT INTO Partidas (IDUsuario, FechaHoraInicio, FechaHoraFin, Puntuación, OrdasSuperadas) VALUES 
 (1, '2023-01-01 10:00:00', '2023-01-01 10:30:00', 500, 5);
@@ -57,4 +89,4 @@ INSERT INTO Partidas (IDUsuario, FechaHoraInicio, FechaHoraFin, Puntuación, Ord
 INSERT INTO AccionesPartida (IDPartida, Momento, IDCarta, DescripciónAcción) VALUES 
 (1, '2023-01-01 10:05:00', 1, 'Invocar'),
 (1, '2023-01-01 10:06:00', 2, 'Invocar'),
-(1, '2023-01-01 10:07:00', 3, 'Mover');
+(1, '2023-01-01 10:07:00', 3, 'Mover');*/
