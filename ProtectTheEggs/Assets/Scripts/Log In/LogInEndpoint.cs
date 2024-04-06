@@ -1,13 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
-public class ValidateUser : MonoBehaviour
+public class LogInEndpoint : MonoBehaviour
 {
+    public UsernameValidator usernameValidator;
     public string apiURL = "http://localhost:3000/api/usuarios/";
     private string username;
     private string password;
+
+    void OnEnable()
+    {
+        usernameValidator.ValidUsername += CheckInfo;
+    }
+
+    void OnDisable()
+    {
+        usernameValidator.ValidUsername -= CheckInfo;
+    }
+    
     public void CheckInfo(string u, string p)
     {
         //Debug.Log("Last char:"+u[u.Length-1]+".");
@@ -43,17 +56,14 @@ public class ValidateUser : MonoBehaviour
             // Using the JsonUtility class, we can parse the JSON data and store it in the card object
             // It is important to note that the JSON data must match the structure of the Card class
             
-            if (logInCheck.username && logInCheck.password)
+            if (logInCheck.Success)
             {
                 Debug.Log("Access Granted");
-            }
-            else if (logInCheck.username)
-            {
-                Debug.Log("Wrong Password");
+                SceneManager.LoadScene("Menu");
             }
             else
             {
-                Debug.Log("That username doesn't exist");
+                Debug.Log(logInCheck.Error);
             }
         }
     }

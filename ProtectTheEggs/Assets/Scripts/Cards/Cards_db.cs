@@ -4,34 +4,27 @@ using System;
 [System.Serializable]
 public class Cards
 {
-    public string Nombre;
-    public string Descripcion;
-    public int Vida;
-    public float Velocidad;
-    public int Daño;
-    public float VelocidadAtaque;
-    public float Rango;
-    public int CostoElixir;
-    public string Tipo;
-    public string NombreArchivoImagen;
-    public string NombreMarco;
-    public string NombreArchivoSonido;
-
+    public string cardName;
+    public string description;
+    public int cost;
+    public int numberOfNPCs;
+   
+    public Stats stats;
     // Constructor
-    public Cards(string nombre, string descripcion, int vida, float velocidad, int daño, float velocidadAtaque, float rango, int costoElixir, string tipo, string nombreArchivoImagen, string nombreMarco, string nombreArchivoSonido)
-    {
-        Nombre = nombre;
-        Descripcion = descripcion;
-        Vida = vida;
-        Velocidad = velocidad;
-        Daño = daño;
-        VelocidadAtaque = velocidadAtaque;
-        Rango = rango;
-        CostoElixir = costoElixir;
-        Tipo = tipo;
-        NombreArchivoImagen = nombreArchivoImagen;
-        NombreMarco = nombreMarco;
-        NombreArchivoSonido = nombreArchivoSonido;
-    }
+    
+}
+
+[System.Serializable]
+public class Stats
+{
+    public string name;
+    public int health;
+    public float speed;
+    public int attack;
+    public float attackCooldown;
+    public int range;
+    public bool isStructure;
+    public bool attackTowers;
+    public bool attackEnemies;
 }
 
