@@ -13,16 +13,11 @@ MonoBehaviour:
   m_Name: Mazo1
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 11400000, guid: 8f6ff7679ac1e41c18e03db8c906ba64, type: 2}
-  - {fileID: 11400000, guid: b165883d3c88d47c59173536610f69a5, type: 2}
-  - {fileID: 11400000, guid: bca13935869c04633b0ed06919e0328e, type: 2}
-  - {fileID: 11400000, guid: 9edf887e5cbc74cdca39f7ce4af2d8aa, type: 2}
-  - {fileID: 11400000, guid: e68149e5be4d04920a3823bc360baeb3, type: 2}
-  - {fileID: 11400000, guid: b106ec967188547e78f6cde3337c1051, type: 2}
-  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
-  - {fileID: 11400000, guid: c592bdfe51e914662825253ced8b152b, type: 2}
-  - {fileID: 11400000, guid: e8b17c89872ac48ddb167d84b492c47b, type: 2}
   - {fileID: 11400000, guid: 11de55c54a8b449638f9792fd887b9cb, type: 2}
-  - {fileID: 11400000, guid: 074a9d4ba04c04b509f7a12cd34f72db, type: 2}
-  - {fileID: 11400000, guid: 4e0796014d8e247d5be7ff0720661839, type: 2}
-  - {fileID: 11400000, guid: 48a4f8b00ac294616a02fb0743a7d4e3, type: 2}
+  - {fileID: 11400000, guid: c592bdfe51e914662825253ced8b152b, type: 2}
+  - {fileID: 11400000, guid: bca13935869c04633b0ed06919e0328e, type: 2}
+  - {fileID: 11400000, guid: c592bdfe51e914662825253ced8b152b, type: 2}
+  - {fileID: 11400000, guid: c592bdfe51e914662825253ced8b152b, type: 2}
+  - {fileID: 11400000, guid: c592bdfe51e914662825253ced8b152b, type: 2}
+  - {fileID: 11400000, guid: c592bdfe51e914662825253ced8b152b, type: 2}
+  - {fileID: 11400000, guid: c592bdfe51e914662825253ced8b152b, type: 2}
