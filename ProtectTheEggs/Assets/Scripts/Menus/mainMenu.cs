@@ -18,11 +18,6 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("DeckBuilder");
     }
 
-        public void BuildDeck()
-    {
-        SceneManager.LoadScene("DeckBuilder");
-    }
-
 
     public void QuitGame()
     {
