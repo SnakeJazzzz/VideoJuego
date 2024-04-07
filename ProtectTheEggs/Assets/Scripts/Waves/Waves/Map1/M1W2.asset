@@ -19,13 +19,17 @@ MonoBehaviour:
     count: 3
   - prefab: {fileID: 7795571062971709141, guid: 78e875fceaea447388f0f27c295c4002, type: 3}
     spawnPosition: {x: 40, y: 5, z: 0}
-    spawnTime: 0
+    spawnTime: 2
     count: 3
   - prefab: {fileID: 7795571062971709141, guid: 78e875fceaea447388f0f27c295c4002, type: 3}
     spawnPosition: {x: 40, y: -5, z: 0}
-    spawnTime: 0
+    spawnTime: 4
     count: 3
-  - prefab: {fileID: 7795571062971709141, guid: 78e875fceaea447388f0f27c295c4002, type: 3}
+  - prefab: {fileID: 7795571062971709141, guid: e051b6e6a61ae41899e5eb8a942665f3, type: 3}
     spawnPosition: {x: 40, y: 0, z: 0}
-    spawnTime: 5
-    count: 7
+    spawnTime: 6
+    count: 1
+  - prefab: {fileID: 7795571062971709141, guid: 62ec3c35adafc4b508b238d12b47afd4, type: 3}
+    spawnPosition: {x: 40, y: 0, z: 0}
+    spawnTime: 8
+    count: 2

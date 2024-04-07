@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: Mazo1
   m_EditorClassIdentifier: 
   Items:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
+  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
+  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
+  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
+  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
+  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
+  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
+  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
