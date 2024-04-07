@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 339033355}
   - component: {fileID: 339033354}
   m_Layer: 5
-  m_Name: Build Deck
+  m_Name: Deck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
