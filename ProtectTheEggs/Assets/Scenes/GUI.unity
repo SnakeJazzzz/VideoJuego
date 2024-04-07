@@ -290,6 +290,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2c937756ec145cd8335d90c5fe53fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  artworkImage: {fileID: 0}
+  cardData: {fileID: 0}
+  button: {fileID: 0}
 --- !u!1 &317885792
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,6 +590,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2c937756ec145cd8335d90c5fe53fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  artworkImage: {fileID: 0}
+  cardData: {fileID: 0}
+  button: {fileID: 0}
 --- !u!1 &420240708
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,7 +708,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1457484752, guid: 31b94558e208e4c35af4d7467c398d1f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01c5d52745c29b640911ad5ab8e5d995, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -988,6 +994,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2c937756ec145cd8335d90c5fe53fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  artworkImage: {fileID: 0}
+  cardData: {fileID: 0}
+  button: {fileID: 0}
 --- !u!1 &790170050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1085,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2c937756ec145cd8335d90c5fe53fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  artworkImage: {fileID: 0}
+  cardData: {fileID: 0}
+  button: {fileID: 0}
 --- !u!1 &839448792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1438,7 +1450,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9616e6bc5853549e9a54813cdc547e47, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85cb339957f00164eb17bb07d4ad2245, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1662,8 +1674,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1861, y: -350}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchoredPosition: {x: 1855.7699, y: -347.38495}
+  m_SizeDelta: {x: 90.4602, y: 85.2301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235924809
 MonoBehaviour:
@@ -1741,7 +1753,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 525640626, guid: 31b94558e208e4c35af4d7467c398d1f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 873652c331c5c56419f6d90c9170667a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1816,8 +1828,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 0dd87191105a33448acf9b74504590e7, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2446,8 +2458,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1861, y: -489}
-  m_SizeDelta: {x: 80, y: 95.7724}
+  m_AnchoredPosition: {x: 1855.8, y: -472}
+  m_SizeDelta: {x: 90.46, y: 93.1573}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1730916974
 MonoBehaviour:
@@ -2525,7 +2537,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 452482057, guid: 31b94558e208e4c35af4d7467c398d1f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7fc5bc1f68b04e94dadc934b5c67f00d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2699,6 +2711,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2c937756ec145cd8335d90c5fe53fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  artworkImage: {fileID: 0}
+  cardData: {fileID: 0}
+  button: {fileID: 0}
 --- !u!1 &1953412173
 GameObject:
   m_ObjectHideFlags: 0
@@ -2787,6 +2802,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2c937756ec145cd8335d90c5fe53fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  artworkImage: {fileID: 0}
+  cardData: {fileID: 0}
+  button: {fileID: 0}
 --- !u!1 &1997668192
 GameObject:
   m_ObjectHideFlags: 0
