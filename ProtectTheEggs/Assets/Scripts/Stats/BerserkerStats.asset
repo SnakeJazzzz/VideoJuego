@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aac46674e0b943a898107cff9129095, type: 3}
   m_Name: BerserkerStats
   m_EditorClassIdentifier: 
-  name: Mago
+  name: Berserker
   health: 450
   speed: 2.5
   attack: 115
