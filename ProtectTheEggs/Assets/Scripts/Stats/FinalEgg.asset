@@ -12,15 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0aac46674e0b943a898107cff9129095, type: 3}
   m_Name: FinalEgg
   m_EditorClassIdentifier: 
-  name: 
+  name: Final Egg
   health: 500
   speed: 0
   attack: 0
   attackCooldown: 0
   range: 0
-  cost: 0
-  cooldown: 0
-  prefab: {fileID: 8373712339497723186, guid: d435892f021ad49e2ad8f2f4440b8308, type: 3}
   isStructure: 1
   attackTowers: 0
   attackEnemies: 0
