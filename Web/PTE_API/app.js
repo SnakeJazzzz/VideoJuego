@@ -31,7 +31,8 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
     let connection = null;
   
     try {
-  
+    console.log("Username: "+ request.params.username + "\nPassword: "+request.params.password);
+
     connection = await connectToDB();
   
       // The execute method is used to execute a SQL query. It returns a Promise that resolves with an array containing the results of the query (results) and an array containing the metadata of the results (fields).
@@ -75,14 +76,13 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
 
 
   //Endpoint para crear una cuenta
-  app.post("/api/usuarios", async (request, response) => {
+  app.post("/api/usuarios/", async (request, response) => {
     let connection = null;
 
     try {
     //console.log("Request arrived");
     const username = request.body.username;
     const password = request.body.password;
-    //console.log("Username: "+ username + "\nPassword: "+password);
     //console.log(request.body);
   
     //const returnjson = {};
@@ -143,40 +143,27 @@ app.get("/api/card/:id", async (request, response) => {
     // The execute method is used to execute a SQL query. It returns a Promise that resolves with an array containing the results of the query (results) and an array containing the metadata of the results (fields).
     
   const [results, fields] = await connection.execute(
-      "SELECT * FROM Cartas INNER JOIN NPC USING(IDNPC) WHERE IDCarta = ?;",
+      "SELECT * FROM Cartas WHERE IDCarta = ?;",
       [request.params.id]
   );
-      if (results[0] !== undefined)
-      {  
-        delete results[0].IDNPC;
-        delete results[0].IDCarta;
-        results[0].stats = {
-          "name": results[0].name,
-          "health": results[0].health,
-          "speed": results[0].speed,
-          "attack": results[0].attack,
-          "attackCooldown": results[0].attackCooldown,
-          "range": results[0].range,
-          "isStructure": results[0].isStructure,
-          "attackTowers": results[0].attackTowers,
-          "attackEnemies": results[0].attackEnemies
-        }
-        delete results[0].name;
-        delete results[0].health;
-        delete results[0].speed;
-        delete results[0].attack;
-        delete results[0].attackCooldown;
-        delete results[0].range;
-        delete results[0].isStructure;
-        delete results[0].attackTowers;
-        delete results[0].attackEnemies;
-        console.log(results);
-        response.status(200).json(results[0]);
-      }
-      else
+      if (results.length < 1)
       {
         response.status(200).send("No se encontro esa carta.");
+        return;
       }
+      const [stats, fields2] = await connection.execute(
+        "SELECT name, health, speed, attack, attackCooldown, `range`, isStructure, attackTowers ,attackEnemies FROM NPC INNER JOIN Cartas USING(IDNPC) WHERE IDCarta = ?;        ",
+        [request.params.id]
+    );
+
+      delete results[0].IDNPC;
+      delete results[0].IDCarta;
+      results[0].stats = structuredClone(stats[0])
+      
+      console.log(results);
+      response.status(200).json(results[0]);
+      
+     
 
   }
   catch (error) {
@@ -192,8 +179,9 @@ app.get("/api/card/:id", async (request, response) => {
   }
 });
 
-//Endpoint que regresa los mazos de un jugador
 
+
+//Endpoint que regresa los mazos de un jugador
 app.get("/api/mazo/:username", async (request, response) => {
   let connection = null;
 
@@ -203,19 +191,44 @@ app.get("/api/mazo/:username", async (request, response) => {
 
     // The execute method is used to execute a SQL query. It returns a Promise that resolves with an array containing the results of the query (results) and an array containing the metadata of the results (fields).
     
-  const [results, fields] = await connection.execute(
-      "SELECT IDMazo, IDCarta, Cantidad FROM Mazos INNER JOIN DetallesMazo USING (IDMazo) INNER JOIN Usuarios USING (IDUsuario) WHERE NombreUsuario = ?;",
+  const [mazos, fields] = await connection.execute(
+    "SELECT NombreMazo FROM Mazos INNER JOIN Usuarios USING(IDUsuario) WHERE NombreUsuario = ?;",
       [request.params.username]
   );
-     console.log(results);
-     if (results[0] !== undefined)
-     {
-       response.status(200).json(results);
-     }
-     else
-     {
-      response.status(200).send("No se encontro ese usuario.");
-     }
+  if (mazos.length === 0)
+  {
+   response.status(200).send("No se encontro ese usuario.");
+    return;
+  }
+
+    for (let i = 0; i < mazos.length; i++)
+    {
+      //console.log(mazos[i].NombreMazo);
+      const [datosmazo, fields2] = await connection.execute(
+        "SELECT IDCarta, Cantidad FROM DetallesMazo INNER JOIN Mazos USING(IDMazo) WHERE NombreMazo = ?;",
+          [mazos[i].NombreMazo]);
+
+        mazos[i]["Datos"] =[]
+        //console.log(datosmazo[0]);
+        
+        //mazos[i]["Datos"].push( datosmazo[0]) ;
+        for (let j = 0; j < datosmazo.length;  j++)
+        {
+          mazos[i]["Datos"].push( structuredClone(datosmazo[j]) );
+        }
+    }
+
+    console.log(mazos)//["Datos"][0]);
+
+    //console.log(mazos);
+
+    
+     
+     
+    console.log(mazos);
+    response.status(200).json(mazos);
+      
+     
 
   }
   catch (error) {
