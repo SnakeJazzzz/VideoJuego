@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -11.118, y: 1220}
+  m_AnchoredPosition: {x: 0, y: 1220}
   m_SizeDelta: {x: 3000, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &68864393
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Protect The Egg
+  m_text: Log In
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -617,8 +617,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -77, y: -536}
-  m_SizeDelta: {x: 909.948, y: 680.993}
+  m_AnchoredPosition: {x: 0, y: -575}
+  m_SizeDelta: {x: 775, y: 775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &577130873
 MonoBehaviour:
@@ -1229,7 +1229,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1236.1, y: -1070.574}
+  m_AnchoredPosition: {x: -2467, y: -1513}
   m_SizeDelta: {x: 694.47, y: 388.148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893901818
@@ -1465,7 +1465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13, y: 11}
+  m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: 832, y: 103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &949355790
@@ -1640,7 +1640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -13, y: 578}
+  m_AnchoredPosition: {x: 0, y: 550}
   m_SizeDelta: {x: 832, y: 103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &972388741
@@ -1816,7 +1816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1232, y: -588.22}
+  m_AnchoredPosition: {x: -2458, y: -1065}
   m_SizeDelta: {x: 702.739, y: 416.551}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002955008
@@ -2138,7 +2138,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Enter Password\u200B"
+  m_text: Enter Username
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
