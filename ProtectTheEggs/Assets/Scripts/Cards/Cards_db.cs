@@ -14,6 +14,7 @@ public class Cards
     
 }
 
+/*
 [System.Serializable]
 public class Stats
 {
@@ -26,5 +27,5 @@ public class Stats
     public bool isStructure;
     public bool attackTowers;
     public bool attackEnemies;
-}
+}*/
 

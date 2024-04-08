@@ -57,9 +57,10 @@ public class Spawner : MonoBehaviour
 
         for(int i = 0; i < card.numberOfNPCs; i++)
         {
+            /*
             GameObject newNPC = Instantiate(card.prefab ,clickPosition, transform.rotation);
             newNPC.GetComponent<NPCController>().setOwnership(0); 
-            newNPC.SetActive(true);
+            newNPC.SetActive(true);*/
         }
 
     }

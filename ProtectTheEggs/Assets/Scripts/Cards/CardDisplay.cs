@@ -10,13 +10,11 @@ public class CardDisplay : MonoBehaviour
     private void Awake()
     {
         // If you need to get the Image component on the GameObject this script is attached to:
-        if (artworkImage == null)
-        {
-            artworkImage = GetComponent<Image>();
-        }
+        artworkImage = GetComponent<Image>();
+        
 
 
-        button.onClick.AddListener(() => FindObjectOfType<DeckBuilder>().AddCardToDeck(cardData));
+        //button.onClick.AddListener(() => FindObjectOfType<DeckBuilder>().AddCardToDeck(cardData));
         
     }
 
@@ -24,7 +22,8 @@ public class CardDisplay : MonoBehaviour
     public void Initialize(Card card, bool isSelectable)
     {
         cardData = card;
-        artworkImage.sprite = card.artwork; // Assign the sprite to the artwork image.
+        Sprite artwork = Resources.Load<Sprite>("Cards_Artwork/" + card.cardName);
+        artworkImage.sprite = artwork; // Assign the sprite to the artwork image.
 
         button.onClick.RemoveAllListeners(); // Clear existing listeners
         if (isSelectable)
@@ -43,7 +42,8 @@ public class CardDisplay : MonoBehaviour
     public void Display(Card card)
     {
         cardData = card;
-        artworkImage.sprite = card.artwork;
+        Sprite artwork = Resources.Load<Sprite>("Cards_Artwork/" + card.cardName);
+        artworkImage.sprite = artwork;
         
         // Additional display setup for card name, cost, etc., can go here if needed.
     }

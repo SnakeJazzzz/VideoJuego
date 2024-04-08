@@ -2,13 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "Card", menuName = "Card")]
-public class Card : ScriptableObject
+[System.Serializable]
+public class Card 
 {
     public string cardName;
     public int cost;
     public int numberOfNPCs;
-    public NPCStats stats;
-    public Sprite artwork;
-    public GameObject prefab;
+   public Stats stats;
+}
+
+[System.Serializable]
+public class Stats
+{
+    public string name;
+    public int health;
+    public float speed;
+    public int attack;
+    public float attackCooldown;
+    public int range;
+    public bool isStructure;
+    public bool attackTowers;
+    public bool attackEnemies;
 }

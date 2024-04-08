@@ -12,12 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c5819a6ea2649c38c68f38e6d6c902, type: 3}
   m_Name: Mazo1
   m_EditorClassIdentifier: 
-  Items:
-  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
-  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
-  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
-  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
-  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
-  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
-  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
-  - {fileID: 11400000, guid: ecb077e0bd5d549b887af1cce574039f, type: 2}
+  Items: []
