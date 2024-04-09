@@ -11,6 +11,7 @@ public class LoadDecks : MonoBehaviour
     public string apiURL = "http://localhost:3000/api/mazo/";
     void Start()
     {
+        mazos.Reset();
         if(!userInformation.loadedDeck)
         {
             StartCoroutine(GetDecks());
@@ -21,7 +22,7 @@ public class LoadDecks : MonoBehaviour
    
     IEnumerator GetDecks()
     {
-        
+        Debug.Log("Starting Coroutine");
         string ruta = apiURL + userInformation.username ;
 
         UnityWebRequest www = UnityWebRequest.Get(ruta); 
@@ -36,9 +37,28 @@ public class LoadDecks : MonoBehaviour
         {
            
             string data = www.downloadHandler.text;
-            //LogInCheck logInCheck = JsonUtility.FromJson<LogInCheck>(data);
-            userInformation.loadedDeck = true;
             Debug.Log(data);
+
+            ListaMazo MyMazos = JsonUtility.FromJson<ListaMazo>(data);
+
+            userInformation.loadedDeck = true;
+            
+            Debug.Log(MyMazos.Mazos.Count);
+
+
+            for (int i = 0; i < MyMazos.Mazos.Count; i++)
+            {
+                for (int j = 0; j < MyMazos.Mazos[i].Datos.Count; j++)
+                {
+                    Debug.Log("Cantidad: "+MyMazos.Mazos[i].Datos[j].Cantidad+"\nCardName: "+MyMazos.Mazos[i].Datos[j].Carta.stats.name);
+                    for (int k = 0; k < MyMazos.Mazos[i].Datos[j].Cantidad; k++)
+                    {
+                        mazos.Items[i].Items.Add(MyMazos.Mazos[i].Datos[j].Carta);
+                    }
+                }
+            }
+
+
         }
     }
 }

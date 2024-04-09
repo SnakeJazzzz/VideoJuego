@@ -2727,6 +2727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
+  mazos: {fileID: 11400000, guid: 0b12d424b6874449480202a6aab6a4b8, type: 2}
   apiURL: http://localhost:3000/api/mazo/
 --- !u!4 &2137147581
 Transform:

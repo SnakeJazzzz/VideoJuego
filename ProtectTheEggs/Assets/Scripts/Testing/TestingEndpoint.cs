@@ -32,7 +32,7 @@ public class TestingEndpoint : MonoBehaviour
             // The response of the request is stored in the downloadHandler property of the UnityWebRequest object
             string data = www.downloadHandler.text;
             Debug.Log(data);
-            Cards cardtest = JsonUtility.FromJson<Cards>(data);
+            Card cardtest = JsonUtility.FromJson<Card>(data);
             
             //Debug.Log(cardtest.stats.health);
             //Debug.Log(cardtest);

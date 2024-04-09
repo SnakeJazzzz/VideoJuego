@@ -15,105 +15,261 @@ MonoBehaviour:
   Items:
   - cardName: Knight
     cost: 5
-    numberOfNPCs: 3
+    numberOfNPCs: 1
     stats:
-      name: 
-      health: 0
-      speed: 0
-      attack: 0
-      attackCooldown: 0
-      range: 0
+      name: Knight
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
       isStructure: 0
-      attackTowers: 0
-      attackEnemies: 0
+      attackTowers: 1
+      attackEnemies: 1
   - cardName: Knight
     cost: 5
-    numberOfNPCs: 3
+    numberOfNPCs: 1
     stats:
-      name: 
-      health: 0
-      speed: 0
-      attack: 0
-      attackCooldown: 0
-      range: 0
+      name: Knight
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
       isStructure: 0
-      attackTowers: 0
-      attackEnemies: 0
+      attackTowers: 1
+      attackEnemies: 1
   - cardName: Knight
     cost: 5
-    numberOfNPCs: 3
+    numberOfNPCs: 1
     stats:
-      name: 
-      health: 0
-      speed: 0
-      attack: 0
-      attackCooldown: 0
-      range: 0
+      name: Knight2
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
       isStructure: 0
-      attackTowers: 0
-      attackEnemies: 0
+      attackTowers: 1
+      attackEnemies: 1
   - cardName: Knight
     cost: 5
-    numberOfNPCs: 3
+    numberOfNPCs: 1
     stats:
-      name: 
-      health: 0
-      speed: 0
-      attack: 0
-      attackCooldown: 0
-      range: 0
+      name: Knight2
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
       isStructure: 0
-      attackTowers: 0
-      attackEnemies: 0
-  - cardName: Gigante
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
     cost: 5
-    numberOfNPCs: 3
+    numberOfNPCs: 1
     stats:
-      name: 
-      health: 0
-      speed: 0
-      attack: 0
-      attackCooldown: 0
-      range: 0
+      name: Knight3
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
       isStructure: 0
-      attackTowers: 0
-      attackEnemies: 0
-  - cardName: Gigante
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
     cost: 5
-    numberOfNPCs: 3
+    numberOfNPCs: 1
     stats:
-      name: 
-      health: 0
-      speed: 0
-      attack: 0
-      attackCooldown: 0
-      range: 0
+      name: Knight3
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
       isStructure: 0
-      attackTowers: 0
-      attackEnemies: 0
-  - cardName: Gigante
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
     cost: 5
-    numberOfNPCs: 3
+    numberOfNPCs: 1
     stats:
-      name: 
-      health: 0
-      speed: 0
-      attack: 0
-      attackCooldown: 0
-      range: 0
+      name: Knight4
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
       isStructure: 0
-      attackTowers: 0
-      attackEnemies: 0
-  - cardName: Gigante
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
     cost: 5
-    numberOfNPCs: 3
+    numberOfNPCs: 1
     stats:
-      name: 
-      health: 0
-      speed: 0
-      attack: 0
-      attackCooldown: 0
-      range: 0
+      name: Knight4
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
       isStructure: 0
-      attackTowers: 0
-      attackEnemies: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
+    cost: 5
+    numberOfNPCs: 1
+    stats:
+      name: Knight5
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
+    cost: 5
+    numberOfNPCs: 1
+    stats:
+      name: Knight5
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
+    cost: 5
+    numberOfNPCs: 1
+    stats:
+      name: Knight6
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
+    cost: 5
+    numberOfNPCs: 1
+    stats:
+      name: Knight6
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
+    cost: 5
+    numberOfNPCs: 1
+    stats:
+      name: Knight7
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
+    cost: 5
+    numberOfNPCs: 1
+    stats:
+      name: Knight7
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
+    cost: 5
+    numberOfNPCs: 1
+    stats:
+      name: Knight8
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
+    cost: 5
+    numberOfNPCs: 1
+    stats:
+      name: Knight8
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
+    cost: 5
+    numberOfNPCs: 1
+    stats:
+      name: Knight9
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
+    cost: 5
+    numberOfNPCs: 1
+    stats:
+      name: Knight9
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
+    cost: 5
+    numberOfNPCs: 1
+    stats:
+      name: Knight10
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - cardName: Knight
+    cost: 5
+    numberOfNPCs: 1
+    stats:
+      name: Knight10
+      health: 100
+      speed: 1.2
+      attack: 30
+      attackCooldown: 1
+      range: 1
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1

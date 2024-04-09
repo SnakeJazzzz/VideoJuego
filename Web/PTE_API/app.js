@@ -206,19 +206,14 @@ app.get("/api/mazo/:username", async (request, response) => {
         for (let j = 0; j < datosmazo.length;  j++)
         {
           datosmazo[j]["Carta"] = await getCardFormat(datosmazo[j]["IDCarta"]);
+          delete datosmazo[j]["IDCarta"];
           mazos[i]["Datos"].push( structuredClone(datosmazo[j]) );
         }
     }
 
-    console.log(mazos)//["Datos"][0]);
-
-    //console.log(mazos);
-
-    
-     
-     
+   
     console.log(mazos);
-    response.status(200).json(mazos);
+    response.status(200).json({"Mazos": mazos});
       
      
 

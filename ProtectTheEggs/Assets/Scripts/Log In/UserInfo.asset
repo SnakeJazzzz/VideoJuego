@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: UserInfo
   m_EditorClassIdentifier: 
   username: jugador1
-  loadedDeck: 0
+  loadedDeck: 1
