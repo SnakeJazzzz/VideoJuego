@@ -24,6 +24,7 @@ public class Spawner1 : MonoBehaviour
 
    void Spawn(int index)
     {   
+        Debug.Log("Spawning NPC!");
         Card card = cartasEnMano.Items[index];
         Vector3 clickPosition = Input.mousePosition;
         clickPosition = Camera.main.ScreenToWorldPoint(clickPosition);
@@ -31,7 +32,7 @@ public class Spawner1 : MonoBehaviour
 
         for(int i = 0; i < card.numberOfNPCs; i++)
         {
-
+            Debug.Log("Prefabs/" + card.cardName);
             GameObject prefab = Resources.Load<GameObject>("Prefabs/" + card.cardName);
             GameObject newNPC = Instantiate(prefab, clickPosition, transform.rotation);
 

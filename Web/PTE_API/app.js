@@ -75,6 +75,9 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
   });
 
 
+
+
+
   //Endpoint para crear una cuenta
   app.post("/api/usuarios/", async (request, response) => {
     let connection = null;
@@ -132,36 +135,24 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
 
 
 
+
+
+
+
 //Endpoint para recibir una carta a partir de un id
 app.get("/api/card/:id", async (request, response) => {
   let connection = null;
 
   try {
-
-  connection = await connectToDB();
-
-    // The execute method is used to execute a SQL query. It returns a Promise that resolves with an array containing the results of the query (results) and an array containing the metadata of the results (fields).
-    
-  const [results, fields] = await connection.execute(
-      "SELECT * FROM Cartas WHERE IDCarta = ?;",
-      [request.params.id]
-  );
-      if (results.length < 1)
+      let results = await getCardFormat(request.params.id)
+      console.log(results);
+      if (results == undefined)
       {
         response.status(200).send("No se encontro esa carta.");
         return;
       }
-      const [stats, fields2] = await connection.execute(
-        "SELECT name, health, speed, attack, attackCooldown, `range`, isStructure, attackTowers ,attackEnemies FROM NPC INNER JOIN Cartas USING(IDNPC) WHERE IDCarta = ?;        ",
-        [request.params.id]
-    );
-
-      delete results[0].IDNPC;
-      delete results[0].IDCarta;
-      results[0].stats = structuredClone(stats[0])
       
-      console.log(results);
-      response.status(200).json(results[0]);
+      response.status(200).json(results);
       
      
 
@@ -214,6 +205,7 @@ app.get("/api/mazo/:username", async (request, response) => {
         //mazos[i]["Datos"].push( datosmazo[0]) ;
         for (let j = 0; j < datosmazo.length;  j++)
         {
+          datosmazo[j]["Carta"] = await getCardFormat(datosmazo[j]["IDCarta"]);
           mazos[i]["Datos"].push( structuredClone(datosmazo[j]) );
         }
     }
@@ -249,6 +241,40 @@ app.get("/api/mazo/:username", async (request, response) => {
 
 
 
+
+
+
+async function getCardFormat(cardID)
+{
+  let connection = null;
+  try
+  {
+  connection = await connectToDB();
+
+  const [results, fields] = await connection.execute(
+    "SELECT * FROM Cartas WHERE IDCarta = ?;",
+    [cardID]
+  ); 
+
+    if (results.length < 1)
+    {
+      return {};
+    }
+  const [stats, fields2] = await connection.execute(
+    "SELECT name, health, speed, attack, attackCooldown, `range`, isStructure, attackTowers ,attackEnemies FROM NPC INNER JOIN Cartas USING(IDNPC) WHERE IDCarta = ?;        ",
+    [cardID]
+);
+
+    delete results[0].IDNPC;
+    delete results[0].IDCarta;
+    results[0].stats = structuredClone(stats[0]);
+    return results[0];
+  }
+  catch (error) {
+    console.error(error);
+    return {};
+  }
+}
 
 
   

@@ -366,7 +366,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   artworkImage: {fileID: 0}
-  cardData: {fileID: 0}
+  cardData:
+    cardName: 
+    cost: 0
+    numberOfNPCs: 0
+    stats:
+      name: 
+      health: 0
+      speed: 0
+      attack: 0
+      attackCooldown: 0
+      range: 0
+      isStructure: 0
+      attackTowers: 0
+      attackEnemies: 0
   button: {fileID: 0}
 --- !u!1 &317885792
 GameObject:
@@ -666,7 +679,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   artworkImage: {fileID: 0}
-  cardData: {fileID: 0}
+  cardData:
+    cardName: 
+    cost: 0
+    numberOfNPCs: 0
+    stats:
+      name: 
+      health: 0
+      speed: 0
+      attack: 0
+      attackCooldown: 0
+      range: 0
+      isStructure: 0
+      attackTowers: 0
+      attackEnemies: 0
   button: {fileID: 0}
 --- !u!1 &420240708
 GameObject:
@@ -968,7 +994,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   artworkImage: {fileID: 0}
-  cardData: {fileID: 0}
+  cardData:
+    cardName: 
+    cost: 0
+    numberOfNPCs: 0
+    stats:
+      name: 
+      health: 0
+      speed: 0
+      attack: 0
+      attackCooldown: 0
+      range: 0
+      isStructure: 0
+      attackTowers: 0
+      attackEnemies: 0
   button: {fileID: 0}
 --- !u!1 &743335774
 GameObject:
@@ -1096,7 +1135,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   artworkImage: {fileID: 0}
-  cardData: {fileID: 0}
+  cardData:
+    cardName: 
+    cost: 0
+    numberOfNPCs: 0
+    stats:
+      name: 
+      health: 0
+      speed: 0
+      attack: 0
+      attackCooldown: 0
+      range: 0
+      isStructure: 0
+      attackTowers: 0
+      attackEnemies: 0
   button: {fileID: 0}
 --- !u!1 &839448792
 GameObject:
@@ -2844,7 +2896,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   artworkImage: {fileID: 0}
-  cardData: {fileID: 0}
+  cardData:
+    cardName: 
+    cost: 0
+    numberOfNPCs: 0
+    stats:
+      name: 
+      health: 0
+      speed: 0
+      attack: 0
+      attackCooldown: 0
+      range: 0
+      isStructure: 0
+      attackTowers: 0
+      attackEnemies: 0
   button: {fileID: 0}
 --- !u!1 &1953412173
 GameObject:
@@ -2935,7 +3000,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   artworkImage: {fileID: 0}
-  cardData: {fileID: 0}
+  cardData:
+    cardName: 
+    cost: 0
+    numberOfNPCs: 0
+    stats:
+      name: 
+      health: 0
+      speed: 0
+      attack: 0
+      attackCooldown: 0
+      range: 0
+      isStructure: 0
+      attackTowers: 0
+      attackEnemies: 0
   button: {fileID: 0}
 --- !u!1 &1997668192
 GameObject:
@@ -3173,6 +3251,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 329403642435473581, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329403642435473581, guid: c91bd5745368440b9823018a11e97504, type: 3}
       propertyPath: cardPanels.Array.data[0]
       value: 
       objectReference: {fileID: 397457017}
@@ -3196,6 +3278,22 @@ PrefabInstance:
       propertyPath: cardPanels.Array.data[5]
       value: 
       objectReference: {fileID: 790170054}
+    - target: {fileID: 3080218563660072350, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071013533257224624, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929520380876138637, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459648922037876616, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.3306246

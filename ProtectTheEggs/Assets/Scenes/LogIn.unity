@@ -1516,8 +1516,8 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 7
-  m_InputType: 2
+  m_ContentType: 0
+  m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
@@ -2740,6 +2740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bf90b35f192241bdbeceddd8ecc08ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
   usernameValidator: {fileID: 2123203965}
   apiURL: http://localhost:3000/api/usuarios/
 --- !u!4 &2123203967

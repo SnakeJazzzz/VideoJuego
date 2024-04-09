@@ -31940,6 +31940,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GUICaller
       objectReference: {fileID: 0}
+    - target: {fileID: 968778482288982459, guid: 885dcdcd668f24f47bdd9bded22ad6d2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4779283321956939510, guid: 885dcdcd668f24f47bdd9bded22ad6d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 943

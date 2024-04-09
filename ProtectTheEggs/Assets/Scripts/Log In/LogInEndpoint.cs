@@ -6,6 +6,7 @@ using UnityEngine.Networking;
 
 public class LogInEndpoint : MonoBehaviour
 {
+    public UserInformation userInformation;
     public UsernameValidator usernameValidator;
     public string apiURL = "http://localhost:3000/api/usuarios/";
     private string username;
@@ -59,6 +60,7 @@ public class LogInEndpoint : MonoBehaviour
             if (logInCheck.Success)
             {
                 Debug.Log("Access Granted");
+                userInformation.username = username;
                 SceneManager.LoadScene("Menu");
             }
             else
