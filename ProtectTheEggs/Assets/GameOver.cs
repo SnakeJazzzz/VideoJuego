@@ -11,7 +11,5 @@ public class GameOver : MonoBehaviour
     public void OnTowerDeath()
     {
         GOText.SetActive(true);
-    }
-
-    
+    }    
 }

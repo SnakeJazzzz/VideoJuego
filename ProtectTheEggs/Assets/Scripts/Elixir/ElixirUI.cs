@@ -19,12 +19,10 @@ public class ElixirUI : MonoBehaviour
         elixir.UpdateUI -= UpdateData;
     }
 
-
     public void UpdateData(int value, int limit)
     {
         //Debug.Log("Value: " + value +"\nLimit: "+ limit+"\nPercentage: "+ (float)value / limit);
         slider.value = (float)value / limit;
         valueText.text = value.ToString();
-    }
-    
+    }   
 }

@@ -15,6 +15,6 @@ MonoBehaviour:
   cartasEnMano: {fileID: 11400000, guid: db16005068ccf486cafd8472ee634f8b, type: 2}
   mazo: {fileID: 0}
   elixir: {fileID: 11400000, guid: 84fb4a18d1dbd461abb76bead5c7fb34, type: 2}
-  selected: 0
+  selected: -1
   currentIndex: 0
   useElixir: 1

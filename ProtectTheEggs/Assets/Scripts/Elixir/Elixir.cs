@@ -38,6 +38,4 @@ public class Elixir : ScriptableObject
 
         UpdateUI?.Invoke(elixirLevel, limit);
     }
-
-    
 }
