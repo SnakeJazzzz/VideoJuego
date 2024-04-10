@@ -16,6 +16,7 @@ public abstract class RuntimeSet<T>: ScriptableObject
    {
       
         Items.Remove(thing);
+        
    } 
 }
 

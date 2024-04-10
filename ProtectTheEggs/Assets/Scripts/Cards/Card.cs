@@ -3,20 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Card 
-{
-    public string cardName;
-    public int cost;
-    public int numberOfNPCs;
-   public Stats stats;
-}
-
-[System.Serializable]
-public class Stats
+public class CardStats
 {
     public string name;
     public int health;
-    public float speed;
+    public int speed;
     public int attack;
     public float attackCooldown;
     public int range;
@@ -26,7 +17,18 @@ public class Stats
 }
 
 [System.Serializable]
+public class Card
+{
+    public int ID;
+    public string cardName;
+    public string description;
+    public int cost;
+    public int numberOfNPCs;
+    public CardStats stats;
+}
+
+[System.Serializable]
 public class CardArray
 {
-    public Card[] cards;
+    public Card[] cards; // The variable name should match the key in your JSON array
 }

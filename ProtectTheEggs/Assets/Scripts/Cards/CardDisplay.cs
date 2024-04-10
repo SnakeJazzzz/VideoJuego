@@ -25,6 +25,17 @@ public class CardDisplay : MonoBehaviour
         Sprite artwork = Resources.Load<Sprite>("Cards_Artwork/" + card.cardName);
         artworkImage.sprite = artwork; // Assign the sprite to the artwork image.
 
+
+        if (artwork == null)
+    {
+        Debug.LogError("Artwork not found for card: " + card.cardName);
+    }
+    else
+    {
+        artworkImage.sprite = artwork; // Assign the sprite to the artwork image.
+    }
+    
+
         button.onClick.RemoveAllListeners(); // Clear existing listeners
         if (isSelectable)
         {

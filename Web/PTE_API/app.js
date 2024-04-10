@@ -218,6 +218,7 @@ app.get("/api/mazo/:username", async (request, response) => {
      
 
   }
+
   catch (error) {
     response.status(500);
     response.json(error);
@@ -231,6 +232,123 @@ app.get("/api/mazo/:username", async (request, response) => {
   }
 });
 
+   //-------------------------------
+   app.post('/api/updateDeck', async (req, res) => {
+    let connection;
+    try {
+        connection = await connectToDB();
+        const username = req.body.username;
+        const cards = req.body.cards; // This should be an array of { IDCarta, Cantidad }
+
+        // Start transaction
+        await connection.beginTransaction();
+
+        // Fetch the user's ID
+        const [users] = await connection.execute(
+            "SELECT IDUsuario FROM Usuarios WHERE NombreUsuario = ?;",
+            [username]
+        );
+
+        if (users.length === 0) {
+            throw new Error("User not found.");
+        }
+
+        const userID = users[0].IDUsuario;
+
+        // Check how many decks the user already has
+        const [decks] = await connection.execute(
+            "SELECT IDMazo FROM Mazos WHERE IDUsuario = ?;",
+            [userID]
+        );
+
+        let deckID;
+        if (decks.length >= 5) {
+            throw new Error("User already has the maximum number of decks (5).");
+        } else if (decks.length < 5) {
+            // If the user has less than 5 decks, create a new one
+            const [newDeckResult] = await connection.execute(
+                "INSERT INTO Mazos (IDUsuario, NombreMazo) VALUES (?, CONCAT('Deck ', ?));",
+                [userID, decks.length + 1] // This will create deck names like "Deck 1", "Deck 2", etc.
+            );
+            deckID = newDeckResult.insertId;
+        }
+
+        // Since a new deck is always created, there's no need to delete current cards as in the previous version
+
+        // Insert new deck cards
+        for (const card of cards) {
+            await connection.execute(
+                "INSERT INTO DetallesMazo (IDMazo, IDCarta, Cantidad) VALUES (?, ?, ?);",
+                [deckID, card.IDCarta, card.Cantidad]
+            );
+        }
+
+        // Commit transaction
+        await connection.commit();
+
+        res.status(200).json({"Success": true, "DeckID": deckID});
+    } catch (error) {
+        if (connection) {
+            await connection.rollback(); // Rollback transaction on error
+        }
+        res.status(500).json({"Success": false, "Error": error.message});
+        console.log(error);
+    } finally {
+        if (connection) {
+            connection.end();
+        }
+    }
+});
+
+
+
+async function getCardFormat(cardID) {
+  let connection = null;
+  try {
+    connection = await connectToDB();
+
+    // Retrieve the card information
+    const [cardResults, cardFields] = await connection.execute(
+      "SELECT * FROM Cartas WHERE IDCarta = ?;",
+      [cardID]
+    );
+
+    // If no card is found, return an empty object
+    if (cardResults.length < 1) {
+      return {};
+    }
+
+    // Retrieve the NPC (stats) information associated with the card
+    const [statsResults, statsFields] = await connection.execute(
+      "SELECT name, health, speed, attack, attackCooldown, `range`, isStructure, attackTowers, attackEnemies FROM NPC INNER JOIN Cartas USING(IDNPC) WHERE IDCarta = ?;",
+      [cardID]
+    );
+
+    // Create the card data object, including the ID and stats
+    const cardData = {
+      ID: cardResults[0].IDCarta, // Assign the IDCarta to the ID field
+      cardName: cardResults[0].cardName,
+      description: cardResults[0].description,
+      cost: cardResults[0].cost,
+      numberOfNPCs: cardResults[0].numberOfNPCs,
+      stats: statsResults[0] // Assign the retrieved stats
+    };
+
+    // Return the formatted card data
+    return cardData;
+  } catch (error) {
+    console.error(error);
+    return {};
+  } finally {
+    if (connection) {
+      connection.end(); // Make sure to close the database connection
+    }
+  }
+}
+
+
+   
+  //-------------------------------
 
 
 
@@ -239,7 +357,8 @@ app.get("/api/mazo/:username", async (request, response) => {
 
 
 
-async function getCardFormat(cardID)
+
+/*async function getCardFormat(cardID)
 {
   let connection = null;
   try
@@ -269,7 +388,7 @@ async function getCardFormat(cardID)
     console.error(error);
     return {};
   }
-}
+}*/
 
 
   
