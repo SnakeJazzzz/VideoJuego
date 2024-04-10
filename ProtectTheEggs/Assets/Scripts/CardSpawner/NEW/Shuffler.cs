@@ -10,7 +10,7 @@ public class Shuffler : MonoBehaviour
     public RSCards mazo;
     int currentIndex = 0;
     public List<int> listaDeIndices = new List<int>();
- 
+    public float shuffleTime = 5f;
 
     Coroutine shuffle;
     void Awake()
@@ -37,8 +37,6 @@ public class Shuffler : MonoBehaviour
         cardSOSystem.Shuffle -= StartShuffleCoroutine;
     }
 
-    
-
     public void GiveCard()
     {
         if (currentIndex < mazo.Items.Count)
@@ -61,20 +59,18 @@ public class Shuffler : MonoBehaviour
         }
     }
 
-    public void StartShuffleCoroutine()
+    public void StartShuffleCoroutine(float time)
     {
+        shuffleTime = time;
         shuffle = StartCoroutine(ShuffleCoroutine());
     }
 
     IEnumerator ShuffleCoroutine()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(shuffleTime);
         ShuffleList(listaDeIndices);
         currentIndex = 0;
         cardSOSystem.ShuffleOver();
        
     }
-
-
-
 }
