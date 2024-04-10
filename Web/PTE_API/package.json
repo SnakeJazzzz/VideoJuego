@@ -1,7 +1,6 @@
 {
   "name": "pte_api",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "type": "module",
   "scripts": {
@@ -13,5 +12,7 @@
   "dependencies": {
     "express": "^4.19.2",
     "mysql2": "^3.9.3"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
