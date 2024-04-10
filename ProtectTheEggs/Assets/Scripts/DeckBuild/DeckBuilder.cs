@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Networking;
+using System.Collections;
 
 public class DeckBuilder : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class DeckBuilder : MonoBehaviour
     void Start()
     {
         PopulateAvailableCards();
+        StartCoroutine(LoadAvailableCardsFromServer());
     }
 
     private void PopulateAvailableCards()
@@ -62,6 +65,31 @@ public class DeckBuilder : MonoBehaviour
             display.Initialize(card, false); // false indicates this card is in the selected deck and   should be set up for removal
         }
     }
+
+    IEnumerator LoadAvailableCardsFromServer()
+    {
+    string url = "http://localhost:3000/api/cards"; // Replace with your actual API endpoint for fetching cards
+    UnityWebRequest www = UnityWebRequest.Get(url);
+    yield return www.SendWebRequest();
+
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+        Debug.LogError($"Error fetching cards: {www.error}");
+        }
+        else
+        {
+        // Deserialize the JSON response
+        string jsonResponse = www.downloadHandler.text;
+        // Use the correct class name here, which is CardArray
+        CardArray cardArray = JsonUtility.FromJson<CardArray>(jsonResponse);
+
+        // Now we have an array of cards in cardArray.cards
+        availableCards.Clear();
+        availableCards.AddRange(cardArray.cards);
+        PopulateAvailableCards(); // This will update the UI
+        }
+    }
+
 
     public void FinishDeckAndLoadMenu()
     {

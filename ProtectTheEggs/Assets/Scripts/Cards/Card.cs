@@ -24,3 +24,9 @@ public class Stats
     public bool attackTowers;
     public bool attackEnemies;
 }
+
+[System.Serializable]
+public class CardArray
+{
+    public Card[] cards;
+}
