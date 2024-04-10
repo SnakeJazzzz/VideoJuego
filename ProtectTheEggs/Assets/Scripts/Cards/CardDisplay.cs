@@ -53,5 +53,4 @@ public class CardDisplay : MonoBehaviour
         gameObject.SetActive(state);
     }
     
-    // Add other methods as necessary that might be used by your UI.
 }

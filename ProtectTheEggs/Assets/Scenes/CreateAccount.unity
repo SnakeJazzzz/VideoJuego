@@ -843,8 +843,8 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 7
-  m_InputType: 2
+  m_ContentType: 0
+  m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
@@ -2062,7 +2062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad9b72f75470e4653a4c9e5119821320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usernameValidator: {fileID: 0}
+  usernameValidator: {fileID: 2123203965}
 --- !u!114 &1970144402
 MonoBehaviour:
   m_ObjectHideFlags: 0

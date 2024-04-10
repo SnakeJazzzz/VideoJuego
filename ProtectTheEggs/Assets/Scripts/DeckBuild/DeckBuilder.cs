@@ -68,7 +68,7 @@ public class DeckBuilder : MonoBehaviour
 
     IEnumerator LoadAvailableCardsFromServer()
     {
-    string url = "http://localhost:3000/api/cards"; // Replace with your actual API endpoint for fetching cards
+    string url = "http://localhost:3000/api/cards"; 
     UnityWebRequest www = UnityWebRequest.Get(url);
     yield return www.SendWebRequest();
 
