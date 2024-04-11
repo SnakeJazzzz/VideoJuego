@@ -14,4 +14,8 @@ public class Button : MonoBehaviour
     {
         SceneManager.LoadScene("CreateAccount");
     }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

@@ -10,6 +10,7 @@ public class CreateAccountEndpoint : MonoBehaviour
     private string username;
     private string password;
     public UsernameValidator usernameValidator;
+    public UserInformation userInformation;
 
     void OnEnable()
     {
@@ -65,6 +66,7 @@ public class CreateAccountEndpoint : MonoBehaviour
             if (logInCheck.Success)
             {
                 Debug.Log("Created new account!");
+                userInformation.username = username;
                 SceneManager.LoadScene("Menu");
             }
             else

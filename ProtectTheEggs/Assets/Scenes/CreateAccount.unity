@@ -2473,6 +2473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   apiURL: http://localhost:3000/api/usuarios/
   usernameValidator: {fileID: 2123203965}
+  userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

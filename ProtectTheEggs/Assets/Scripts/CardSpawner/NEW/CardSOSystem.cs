@@ -8,6 +8,7 @@ public class CardSOSystem : ScriptableObject
 {
     public RSCards cartasEnMano;
     public RSRSCards mazos;
+    public RSCards mazo;
     public UserInformation userInformation;
     public Elixir elixir;
     public int selected = -1;
@@ -21,6 +22,12 @@ public class CardSOSystem : ScriptableObject
     public Action<int> Select;
     public Action NoCardSelected;
     public Action NotEnoughElixir;
+
+    
+    public void SetMazo()
+    {
+        mazo = mazos.Items[userInformation.selectedDeck];
+    }
 
     public void NewSelected(int newvalue)
     {
@@ -78,11 +85,15 @@ public class CardSOSystem : ScriptableObject
 
     public void RefillCards()
     {
-        
+        //Debug.Log("Refill cards called!" + cartasEnMano.Items.Count);
+    
         while (cartasEnMano.Items.Count < 6)
+        //while (x < 6)
         {
             GetNewCard?.Invoke();
+            //Debug.Log("Giving Card!");
         }
+
         //Debug.Log("Refilling over there are "+ cartasEnMano.Items.Count + " cards");
 
         UIShow?.Invoke();

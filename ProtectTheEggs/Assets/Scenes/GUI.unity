@@ -636,7 +636,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artworkImage: {fileID: 0}
   cardData:
+    ID: 0
     cardName: 
+    description: 
     cost: 0
     numberOfNPCs: 0
     stats:
@@ -649,7 +651,6 @@ MonoBehaviour:
       isStructure: 0
       attackTowers: 0
       attackEnemies: 0
-  button: {fileID: 0}
 --- !u!1 &288047143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1127,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artworkImage: {fileID: 0}
   cardData:
+    ID: 0
     cardName: 
+    description: 
     cost: 0
     numberOfNPCs: 0
     stats:
@@ -1139,7 +1142,6 @@ MonoBehaviour:
       isStructure: 0
       attackTowers: 0
       attackEnemies: 0
-  button: {fileID: 0}
 --- !u!1 &420240708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1518,7 +1520,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &645460288
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1880,7 +1882,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artworkImage: {fileID: 0}
   cardData:
+    ID: 0
     cardName: 
+    description: 
     cost: 0
     numberOfNPCs: 0
     stats:
@@ -1893,7 +1897,6 @@ MonoBehaviour:
       isStructure: 0
       attackTowers: 0
       attackEnemies: 0
-  button: {fileID: 0}
 --- !u!1 &743335774
 GameObject:
   m_ObjectHideFlags: 0
@@ -2020,7 +2023,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artworkImage: {fileID: 0}
   cardData:
+    ID: 0
     cardName: 
+    description: 
     cost: 0
     numberOfNPCs: 0
     stats:
@@ -2033,7 +2038,6 @@ MonoBehaviour:
       isStructure: 0
       attackTowers: 0
       attackEnemies: 0
-  button: {fileID: 0}
 --- !u!1 &839448792
 GameObject:
   m_ObjectHideFlags: 0
@@ -4828,7 +4832,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artworkImage: {fileID: 0}
   cardData:
+    ID: 0
     cardName: 
+    description: 
     cost: 0
     numberOfNPCs: 0
     stats:
@@ -4841,7 +4847,6 @@ MonoBehaviour:
       isStructure: 0
       attackTowers: 0
       attackEnemies: 0
-  button: {fileID: 0}
 --- !u!1 &1801712547
 GameObject:
   m_ObjectHideFlags: 0
@@ -5110,27 +5115,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816855498}
   m_CullTransparentMesh: 1
---- !u!1 &1860572003 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8330408597308466585, guid: c91bd5745368440b9823018a11e97504, type: 3}
-  m_PrefabInstance: {fileID: 133351185617438952}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1860572004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1860572003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1499dbf0ffd50242acc8042188a436b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardSOSystem: {fileID: 11400000, guid: 34ef335433ca24b7098b4b1988de9419, type: 2}
-  NoCardSelectedoBanner: {fileID: 689830180}
-  NotEnoughElixirBanner: {fileID: 558695851}
-  ReshufflingDeckBanner: {fileID: 1451390049}
 --- !u!1 &1953412173
 GameObject:
   m_ObjectHideFlags: 0
@@ -5221,7 +5205,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artworkImage: {fileID: 0}
   cardData:
+    ID: 0
     cardName: 
+    description: 
     cost: 0
     numberOfNPCs: 0
     stats:
@@ -5234,7 +5220,6 @@ MonoBehaviour:
       isStructure: 0
       attackTowers: 0
       attackEnemies: 0
-  button: {fileID: 0}
 --- !u!1 &1957339768
 GameObject:
   m_ObjectHideFlags: 0
@@ -5707,6 +5692,22 @@ PrefabInstance:
       propertyPath: cardPanels.Array.data[5]
       value: 
       objectReference: {fileID: 790170054}
+    - target: {fileID: 1459907335599354743, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1459907335599354743, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: NoCardSelectedoBanner
+      value: 
+      objectReference: {fileID: 689830180}
+    - target: {fileID: 1459907335599354743, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: NotEnoughElixirBanner
+      value: 
+      objectReference: {fileID: 558695851}
+    - target: {fileID: 1459907335599354743, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: ReshufflingDeckBanner
+      value: 
+      objectReference: {fileID: 1451390049}
     - target: {fileID: 3080218563660072350, guid: c91bd5745368440b9823018a11e97504, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -5767,13 +5768,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CardSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 8330408597308466585, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8330408597308466585, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1860572004}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c91bd5745368440b9823018a11e97504, type: 3}
 --- !u!1001 &8548470883603287308
 PrefabInstance:

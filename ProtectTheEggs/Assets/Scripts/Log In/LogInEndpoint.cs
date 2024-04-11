@@ -22,6 +22,11 @@ public class LogInEndpoint : MonoBehaviour
         usernameValidator.ValidUsername -= CheckInfo;
     }
     
+    void Start()
+    {
+        userInformation.Reset();
+    }
+
     public void CheckInfo(string u, string p)
     {
         //Debug.Log("Last char:"+u[u.Length-1]+".");

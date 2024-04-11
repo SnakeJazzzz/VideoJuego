@@ -6,9 +6,14 @@ public class Starter : MonoBehaviour
 {
 
     public CardSOSystem cardSOSystem;
+    
+    void Awake()
+    {
+        //cardSOSystem.SetMazo();
+    }
     void Start()
     {
-       
+        //Debug.Log("Start() Starter");
         //Invoke("RefillCards", 0.01f);
         cardSOSystem.RefillCards();
         //cardSOSystem.UIShow?.Invoke();
@@ -16,6 +21,7 @@ public class Starter : MonoBehaviour
     
     void RefillCards()
     {
+        
         cardSOSystem.RefillCards();
     }
 

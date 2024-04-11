@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         // Ensure the options panel is not active when the game starts
-        optionsPanel.SetActive(false);
+        //optionsPanel.SetActive(false);
     }
 
     // This function is called when the pause button is pressed.

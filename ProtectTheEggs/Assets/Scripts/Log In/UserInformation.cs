@@ -16,5 +16,6 @@ public class UserInformation : ScriptableObject
     {
         username = null;
         loadedDeck = false;
+        selectedDeck = -1;
     }
 }
