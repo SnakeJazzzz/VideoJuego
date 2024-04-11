@@ -135,6 +135,45 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
 
 
 
+//Endpoint para recibir todas las cartqas
+app.get("/api/card", async (request, response) => {
+  let connection = null;
+
+  try {
+
+    connection = await connectToDB();
+    const [ids, fields] = await connection.execute(
+      "SELECT IDCarta FROM Cartas;"
+    ); 
+
+      //console.log(ids);
+      let cartas = {"Cartas": []};
+      for (let i = 0; i < ids.length; i++)
+      {
+          let results = await getCardFormat(ids[i]["IDCarta"]);
+          cartas.Cartas.push(results);
+      }
+    
+
+      
+      
+      response.status(200).json(cartas);
+      
+     
+
+  }
+  catch (error) {
+    response.status(500);
+    response.json(error);
+    console.log(error);
+  }
+  finally {
+    if (connection !== null) {
+      connection.end();
+      console.log("Connection closed succesfully!");
+    }
+  }
+});
 
 
 
@@ -233,13 +272,13 @@ app.get("/api/mazo/:username", async (request, response) => {
 });
 
    //-------------------------------
-   app.post('/api/updateDeck', async (req, res) => {
+   app.post('/api/CreateDeck', async (req, res) => {
     let connection;
     try {
         connection = await connectToDB();
         const username = req.body.username;
         const cards = req.body.cards; // This should be an array of { IDCarta, Cantidad }
-
+        
         // Start transaction
         await connection.beginTransaction();
 

@@ -15,3 +15,8 @@ public class CardData
     public int Cantidad;
 }
 
+[System.Serializable]
+public class CardList
+{
+    public List<Card> Cartas;
+}

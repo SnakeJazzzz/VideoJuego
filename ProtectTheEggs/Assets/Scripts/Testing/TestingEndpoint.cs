@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 public class TestingEndpoint : MonoBehaviour
 {
-    public string apiURL = "http://localhost:3000/api/card/1";
+    private string apiURL = "http://localhost:3000/api/mazo/";
     
     void Start()
     {
@@ -18,9 +18,17 @@ public class TestingEndpoint : MonoBehaviour
 
     IEnumerator Test()
     {
-        UnityWebRequest www = UnityWebRequest.Get(apiURL); 
+        WWWForm form = new WWWForm();
+        form.AddField("nombreMazo", "MazoTest");
+        form.AddField("username", "test");
+        form.AddField("cartaDatos", "1,2,3,4");
+        form.AddField("cantidadDatos", "2,2,2,2");
+
+        UnityWebRequest www = UnityWebRequest.Post(apiURL, form); 
         yield return www.SendWebRequest();
 
+
+       
         // If the request fails, we log the error
         if(www.result != UnityWebRequest.Result.Success)
         {
@@ -28,17 +36,16 @@ public class TestingEndpoint : MonoBehaviour
         }
         else 
         {
-            // If the request is successful, we parse the JSON data and store it in the card object
-            // The response of the request is stored in the downloadHandler property of the UnityWebRequest object
+           
+           /*
             string data = www.downloadHandler.text;
             Debug.Log(data);
-            Card cardtest = JsonUtility.FromJson<Card>(data);
+            Card cardtest = JsonUtility.FromJson<Card>(data);*/
             
             //Debug.Log(cardtest.stats.health);
             //Debug.Log(cardtest);
-            // Using the JsonUtility class, we can parse the JSON data and store it in the card object
-            // It is important to note that the JSON data must match the structure of the Card class
-            
+        
+             Debug.Log("succes");
            
         }
     }

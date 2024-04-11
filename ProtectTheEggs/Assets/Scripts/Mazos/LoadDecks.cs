@@ -48,8 +48,10 @@ public class LoadDecks : MonoBehaviour
 
             for (int i = 0; i < MyMazos.Mazos.Count; i++)
             {
+                mazos.Items[i].nombreMazo = MyMazos.Mazos[i].NombreMazo;
                 for (int j = 0; j < MyMazos.Mazos[i].Datos.Count; j++)
                 {
+                   
                     Debug.Log("Cantidad: "+MyMazos.Mazos[i].Datos[j].Cantidad+"\nCardName: "+MyMazos.Mazos[i].Datos[j].Carta.stats.name);
                     for (int k = 0; k < MyMazos.Mazos[i].Datos[j].Cantidad; k++)
                     {

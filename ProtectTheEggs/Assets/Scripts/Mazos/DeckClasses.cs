@@ -14,6 +14,12 @@ public class Mazo
    public string NombreMazo;
    public List<Dato> Datos;
 
+   public void Reset()
+   {
+      NombreMazo = "";
+      Datos.Clear();
+   }
+
 }
 
 [System.Serializable]
@@ -21,5 +27,11 @@ public class Dato
 {
    public int Cantidad;
    public Card Carta;
+
+   public Dato(int cantidad, Card carta)
+   {
+      Cantidad = cantidad;
+      Carta = carta;
+   }
 
 }

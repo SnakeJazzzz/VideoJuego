@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Mazo2
   m_EditorClassIdentifier: 
   Items: []
+  nombreMazo: 

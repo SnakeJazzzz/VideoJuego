@@ -15,7 +15,7 @@ public class DeckBuilder : MonoBehaviour
 
     public UserInformation userInformation;
 
-    public int maxCardId = 20;
+    public int maxCardId = 15;
 
 
     void Start()
@@ -29,9 +29,11 @@ public class DeckBuilder : MonoBehaviour
         
         foreach (Card card in availableCards)
         {
-            CardDisplay display = Instantiate(cardDisplayPrefab, availableCardsPanel).GetComponent<CardDisplay>();
+            /*
+            MenuCard display = Instantiate(cardDisplayPrefab, availableCardsPanel).GetComponent<MenuCard>();
             display.Initialize(card, true); // true indicates this card is in the available pool and should be set up for addition
-        }
+            */
+       }
  
     }
 
@@ -64,8 +66,10 @@ public class DeckBuilder : MonoBehaviour
         // Instantiate new card displays for the selected deck
         foreach (Card card in selectedDeck)
         {
-            CardDisplay display = Instantiate(cardDisplayPrefab, selectedDeckPanel).    GetComponent<CardDisplay>();
+            /*
+            MenuCard display = Instantiate(cardDisplayPrefab, selectedDeckPanel).    GetComponent<MenuCard>();
             display.Initialize(card, false); // false indicates this card is in the selected deck and   should be set up for removal
+            */
         }
     }
 
@@ -133,7 +137,7 @@ public IEnumerator SaveDeckCoroutine()
 
 
 
-    IEnumerator PostDeck(string json)
+IEnumerator PostDeck(string json)
 {
     string url = "http://localhost:3000/api/updateDeck"; // Endpoint to update the deck in the database.
     UnityWebRequest www = new UnityWebRequest(url, "POST");

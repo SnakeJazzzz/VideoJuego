@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
 
     public void BuildDeck()
     {
-        SceneManager.LoadScene("DeckBuilder");
+        SceneManager.LoadScene("DeckMenu");
     }
 
 

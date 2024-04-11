@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: cb698a60c01d44aa6bb7d76f4de343aa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - cartasEnMano: {fileID: 11400000, guid: db16005068ccf486cafd8472ee634f8b, type: 2}
+  - mazo: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

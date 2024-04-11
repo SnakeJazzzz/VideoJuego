@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb698a60c01d44aa6bb7d76f4de343aa, type: 3}
+  m_Name: DBManager
+  m_EditorClassIdentifier: 
+  AvailableCards: {fileID: 11400000, guid: 618a25b0ccc5b4c7ba48ff067fc78f49, type: 2}
+  MazoSeleccionado:
+    NombreMazo: 
+    Datos: []
+  CardPrefab: {fileID: 8399710078885539249, guid: bce81db71ecf24cdcaef346df41a0a6b, type: 3}

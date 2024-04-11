@@ -10,6 +10,7 @@ public class UserInformation : ScriptableObject
 {
     public string username;
     public bool loadedDeck = false;
+    public int selectedDeck = -1;
 
     public void Reset()
     {

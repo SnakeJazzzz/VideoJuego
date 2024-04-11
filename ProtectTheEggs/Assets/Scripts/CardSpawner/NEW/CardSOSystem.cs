@@ -7,7 +7,8 @@ using System;
 public class CardSOSystem : ScriptableObject
 {
     public RSCards cartasEnMano;
-    public RSCards mazo;
+    public RSRSCards mazos;
+    public UserInformation userInformation;
     public Elixir elixir;
     public int selected = -1;
     public int currentIndex = 0;
