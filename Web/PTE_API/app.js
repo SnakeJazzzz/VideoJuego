@@ -220,16 +220,12 @@ app.get("/api/mazo/:username", async (request, response) => {
   connection = await connectToDB();
 
     // The execute method is used to execute a SQL query. It returns a Promise that resolves with an array containing the results of the query (results) and an array containing the metadata of the results (fields).
-    
+    console.log("Obteniendo mazos de "+ request.params.username);
   const [mazos, fields] = await connection.execute(
     "SELECT NombreMazo FROM Mazos INNER JOIN Usuarios USING(IDUsuario) WHERE NombreUsuario = ?;",
       [request.params.username]
   );
-  if (mazos.length === 0)
-  {
-   response.status(200).send("No se encontro ese usuario.");
-    return;
-  }
+  
 
     for (let i = 0; i < mazos.length; i++)
     {
