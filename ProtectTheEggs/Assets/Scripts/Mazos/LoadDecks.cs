@@ -11,9 +11,10 @@ public class LoadDecks : MonoBehaviour
     public string apiURL = "http://localhost:3000/api/mazo/";
     void Start()
     {
-        mazos.Reset();
+
         if(!userInformation.loadedDeck)
         {
+            mazos.Reset();
             StartCoroutine(GetDecks());
         }
         
