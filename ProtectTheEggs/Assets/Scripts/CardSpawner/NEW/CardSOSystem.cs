@@ -13,12 +13,14 @@ public class CardSOSystem : ScriptableObject
     public int selected = -1;
     public int currentIndex = 0;
     public bool useElixir = true;
+    public float shuffleTime = 5f;
     public Action<int> Spawn;
     public Action GetNewCard;
-    public Action Shuffle;
+    public Action<float> Shuffle;
     public Action UIShow;
     public Action<int> Select;
-
+    public Action NoCardSelected;
+    public Action NotEnoughElixir;
 
     public void NewSelected(int newvalue)
     {
@@ -40,11 +42,13 @@ public class CardSOSystem : ScriptableObject
         if (selected == -1)
         {
             Debug.Log("No hay carta seleccionada.");
+            NoCardSelected?.Invoke();
             return;
         }
         if (useElixir && elixir.elixirLevel < cartasEnMano.Items[selected].cost)
         {
             Debug.Log("No hay suficiente elixir.");
+            NotEnoughElixir?.Invoke();
             return;
         }
 
@@ -64,7 +68,7 @@ public class CardSOSystem : ScriptableObject
 
     public void OutOfCards()
     {
-        Shuffle?.Invoke();
+        Shuffle?.Invoke(shuffleTime);
     }
 
     public void ShuffleOver()
@@ -83,7 +87,4 @@ public class CardSOSystem : ScriptableObject
 
         UIShow?.Invoke();
     }
-
-    
-
 }

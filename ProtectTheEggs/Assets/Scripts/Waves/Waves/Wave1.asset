@@ -21,3 +21,7 @@ MonoBehaviour:
     spawnPosition: {x: 5, y: 0, z: 0}
     spawnTime: 2
     count: 3
+  - prefab: {fileID: 7795571062971709141, guid: 78e875fceaea447388f0f27c295c4002, type: 3}
+    spawnPosition: {x: 5, y: 0, z: 0}
+    spawnTime: 2
+    count: 3
