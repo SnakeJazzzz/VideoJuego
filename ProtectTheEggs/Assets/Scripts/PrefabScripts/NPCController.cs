@@ -5,7 +5,7 @@ using System;
 
 public class NPCController : MonoBehaviour
 {
-    public NPCStats npcStats;
+    public CardStats npcStats;
     public NPCManager manager;
     public int owner;
     //public GameObject closest;
@@ -28,8 +28,9 @@ public class NPCController : MonoBehaviour
         closest = manager.ClosestTarget(gameObject, owner, npcStats.attackTowers, npcStats.attackEnemies);
     }*/
 
-    public void setOwnership(int x)
+    public void setOwnership(int x, Card card)
     {
         owner = x;
+        npcStats = card.stats;
     }
 }

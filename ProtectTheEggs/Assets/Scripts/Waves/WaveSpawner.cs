@@ -43,7 +43,7 @@ public class WaveSpawner : MonoBehaviour
     {
         GameObject newNPC = Instantiate(toSpawn,position, transform.rotation);
 
-        newNPC.GetComponent<NPCController>().setOwnership(1); 
-        newNPC.SetActive(true);
+        //newNPC.GetComponent<NPCController>().setOwnership(1, card); 
+        //newNPC.SetActive(true);
     }
 }

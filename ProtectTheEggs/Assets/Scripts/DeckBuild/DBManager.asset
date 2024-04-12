@@ -15,5 +15,226 @@ MonoBehaviour:
   AvailableCards: {fileID: 11400000, guid: 618a25b0ccc5b4c7ba48ff067fc78f49, type: 2}
   MazoSeleccionado:
     NombreMazo: 
-    Datos: []
+    Datos:
+    - Cantidad: 4
+      Carta:
+        ID: 1
+        cardName: Knight
+        description: Front-line combat
+        cost: 3
+        numberOfNPCs: 1
+        stats:
+          name: Knight
+          health: 400
+          speed: 3
+          attack: 70
+          attackCooldown: 1.5
+          range: 1
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
+    - Cantidad: 1
+      Carta:
+        ID: 2
+        cardName: Archer
+        description: Quick and ranged
+        cost: 2
+        numberOfNPCs: 1
+        stats:
+          name: Archer
+          health: 150
+          speed: 3
+          attack: 40
+          attackCooldown: 1
+          range: 3
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
+    - Cantidad: 1
+      Carta:
+        ID: 3
+        cardName: Goblin
+        description: Strikes and distractions
+        cost: 1
+        numberOfNPCs: 1
+        stats:
+          name: Goblin
+          health: 100
+          speed: 4
+          attack: 25
+          attackCooldown: 0.5
+          range: 1
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
+    - Cantidad: 5
+      Carta:
+        ID: 4
+        cardName: Giant
+        description: Very resilient
+        cost: 5
+        numberOfNPCs: 1
+        stats:
+          name: Giant
+          health: 800
+          speed: 1
+          attack: 150
+          attackCooldown: 2
+          range: 1
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
+    - Cantidad: 1
+      Carta:
+        ID: 5
+        cardName: Mage
+        description: Can deal area damage
+        cost: 4
+        numberOfNPCs: 1
+        stats:
+          name: Mage
+          health: 250
+          speed: 2
+          attack: 100
+          attackCooldown: 2
+          range: 2
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
+    - Cantidad: 1
+      Carta:
+        ID: 6
+        cardName: Ghost
+        description: Sumons other ghost
+        cost: 3
+        numberOfNPCs: 1
+        stats:
+          name: Ghost
+          health: 200
+          speed: 3
+          attack: 30
+          attackCooldown: 1
+          range: 1
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
+    - Cantidad: 1
+      Carta:
+        ID: 7
+        cardName: Orc
+        description: Strong and sturdy
+        cost: 3
+        numberOfNPCs: 1
+        stats:
+          name: Orc
+          health: 350
+          speed: 2
+          attack: 60
+          attackCooldown: 1.2
+          range: 1
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
+    - Cantidad: 1
+      Carta:
+        ID: 9
+        cardName: Centaur
+        description: Versatile
+        cost: 4
+        numberOfNPCs: 1
+        stats:
+          name: Centaur
+          health: 300
+          speed: 3
+          attack: 70
+          attackCooldown: 1.5
+          range: 2
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
+    - Cantidad: 1
+      Carta:
+        ID: 10
+        cardName: Elf
+        description: long-range attacks
+        cost: 4
+        numberOfNPCs: 1
+        stats:
+          name: Elf
+          health: 300
+          speed: 2
+          attack: 60
+          attackCooldown: 1.2
+          range: 3
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
+    - Cantidad: 1
+      Carta:
+        ID: 11
+        cardName: Berserker
+        description: Fierce warriors causing
+        cost: 5
+        numberOfNPCs: 1
+        stats:
+          name: Berserker
+          health: 450
+          speed: 3
+          attack: 85
+          attackCooldown: 0.8
+          range: 1
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
+    - Cantidad: 1
+      Carta:
+        ID: 12
+        cardName: Ice Sorceress
+        description: tactical advantage
+        cost: 6
+        numberOfNPCs: 1
+        stats:
+          name: Ice Sorceress
+          health: 250
+          speed: 2
+          attack: 70
+          attackCooldown: 1.5
+          range: 2
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
+    - Cantidad: 1
+      Carta:
+        ID: 13
+        cardName: Stone Golem
+        description: A living tank
+        cost: 7
+        numberOfNPCs: 1
+        stats:
+          name: Stone Golem
+          health: 800
+          speed: 1
+          attack: 100
+          attackCooldown: 2.5
+          range: 1
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
+    - Cantidad: 1
+      Carta:
+        ID: 14
+        cardName: Troll
+        description: Strong and resilient
+        cost: 7
+        numberOfNPCs: 1
+        stats:
+          name: Troll
+          health: 650
+          speed: 1
+          attack: 120
+          attackCooldown: 2.5
+          range: 1
+          isStructure: 0
+          attackTowers: 0
+          attackEnemies: 1
   CardPrefab: {fileID: 8399710078885539249, guid: bce81db71ecf24cdcaef346df41a0a6b, type: 3}

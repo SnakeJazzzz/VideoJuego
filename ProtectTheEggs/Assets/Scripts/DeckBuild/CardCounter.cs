@@ -7,13 +7,16 @@ using TMPro;
 public class CardCounter : MonoBehaviour
 {
     public int count;
-    public string textToAdd = "/20 Cards";
+    //public string textToAdd = "/20 Cards";
     public TMP_Text counterText;
-
+    public int deckSize = 20;
+    public bool status = false;
+    
     public void ChangeCount(int x)
     {
         count += x;
-        counterText.text = count.ToString() + textToAdd;
+        status = count == deckSize;
+        counterText.text = count.ToString() + "/" +deckSize + " Cards";
         
     }
 }

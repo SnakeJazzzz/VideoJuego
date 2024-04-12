@@ -373,7 +373,6 @@ GameObject:
   - component: {fileID: 45033102}
   - component: {fileID: 45033104}
   - component: {fileID: 45033105}
-  - component: {fileID: 45033106}
   m_Layer: 5
   m_Name: AvailableCardsPanel
   m_TagString: Untagged
@@ -471,25 +470,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 45033100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be2fb83957b564a7996a6e109c16fab6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deckBuilderManager: {fileID: 11400000, guid: 743eea175007b452f920da75b1931303, type: 2}
---- !u!114 &45033106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 45033100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2948ed9fb8a794a42824dace30da4498, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   count: 0
-  textToAdd: ' /20 Cards'
   counterText: {fileID: 1414998388}
+  deckSize: 20
+  status: 0
 --- !u!1 &77819025
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,8 +865,8 @@ GameObject:
   - component: {fileID: 364787150}
   - component: {fileID: 364787149}
   - component: {fileID: 364787151}
-  - component: {fileID: 364787152}
   - component: {fileID: 364787153}
+  - component: {fileID: 364787154}
   m_Layer: 0
   m_Name: DeckBuilder
   m_TagString: Untagged
@@ -936,19 +923,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deckBuilderManager: {fileID: 11400000, guid: 743eea175007b452f920da75b1931303, type: 2}
   apiURL: http://localhost:3000/api/card
---- !u!114 &364787152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364787148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5916ca8fd469d466fa2af4f4e80fc32a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedCards: {fileID: 11400000, guid: 9d94a7d2a7ce44fdf8c3d20c8588429e, type: 2}
 --- !u!114 &364787153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -964,6 +938,21 @@ MonoBehaviour:
   deckBuilderManager: {fileID: 11400000, guid: 743eea175007b452f920da75b1931303, type: 2}
   AvailableCardsContainer: {fileID: 45033101}
   CardPrefab: {fileID: 8399710078885539249, guid: bce81db71ecf24cdcaef346df41a0a6b, type: 3}
+--- !u!114 &364787154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364787148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be2fb83957b564a7996a6e109c16fab6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deckBuilderManager: {fileID: 11400000, guid: 743eea175007b452f920da75b1931303, type: 2}
+  CardContainer: {fileID: 45033100}
+  cardCounter: {fileID: 0}
 --- !u!1 &484503894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1569,7 +1558,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1743839782}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 364787154}
+        m_TargetAssemblyTypeName: CardAdder, Assembly-CSharp
+        m_MethodName: AddAllCardss
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1743839782
 MonoBehaviour:
   m_ObjectHideFlags: 0

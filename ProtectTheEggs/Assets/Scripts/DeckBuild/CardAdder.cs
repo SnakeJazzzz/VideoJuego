@@ -8,22 +8,27 @@ public class CardAdder : MonoBehaviour
 {
     public DeckBuilderManager deckBuilderManager;
     List<MenuCard> menuCards;
-
+    public GameObject CardContainer;
+    public CardCounter cardCounter;
     
 
-    void Start()
+    void Awake()
     {
-        //StartCoroutine(Test());
+       cardCounter = CardContainer.GetComponent<CardCounter>();
     }
     IEnumerator Test()
     {
         yield return new WaitForSeconds(5f);
-        CountAllCards();
+        //CountAllCards();
     }
 
-    public void CountAllCards()
+    public void AddAllCardss()
     {
-        menuCards = GetComponentsInChildren<MenuCard>().ToList();
+
+        if (!cardCounter.status) 
+        {Debug.Log("Tienes que seleccionar "+ cardCounter.deckSize+ " cartas.");return;}
+
+        menuCards = CardContainer.GetComponentsInChildren<MenuCard>().ToList();
 
 
         for (int i = 0; i < menuCards.Count; i++)
@@ -33,7 +38,11 @@ public class CardAdder : MonoBehaviour
                 deckBuilderManager.MazoSeleccionado.Datos.Add(new Dato(menuCards[i].value, menuCards[i].cardDisplay.cardData));
             }
         }
-        //Debug.Log(count);
+        /*
+        for (int i = 0; i < deckBuilderManager.MazoSeleccionado.Datos.Count; i++)
+        {
+            Debug.Log("Carta: "+ deckBuilderManager.MazoSeleccionado.Datos[i].Carta.cardName+"\nCantidad: "+ deckBuilderManager.MazoSeleccionado.Datos[i].Cantidad);
+        }*/
     }
 
 }
