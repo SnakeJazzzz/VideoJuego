@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class Spawner1 : MonoBehaviour
 {
-    
     public RSCards cartasEnMano;
     public CardSOSystem cardSOSystem;
 
@@ -18,9 +17,6 @@ public class Spawner1 : MonoBehaviour
     {
        cardSOSystem.Spawn -= Spawn; 
     }
-
-
-    
 
    void Spawn(int index)
     {   
@@ -42,7 +38,6 @@ public class Spawner1 : MonoBehaviour
                 newNPC.SetActive(true);
             }
         }
-
     }
 }
 

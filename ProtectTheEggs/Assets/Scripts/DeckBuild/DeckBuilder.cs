@@ -34,7 +34,6 @@ public class DeckBuilder : MonoBehaviour
             display.Initialize(card, true); // true indicates this card is in the available pool and should be set up for addition
             */
        }
- 
     }
 
     public void AddCardToDeck(Card card)
