@@ -7,7 +7,7 @@ public class Shuffler : MonoBehaviour
 {
     public CardSOSystem cardSOSystem;
     public RSCards cartasEnMano;
-    int currentIndex = 0;
+    //int currentIndex = 0;
     public List<int> listaDeIndices = new List<int>();
     public float shuffleTime = 5f;
 
@@ -38,10 +38,10 @@ public class Shuffler : MonoBehaviour
 
     public void GiveCard()
     {
-        if (currentIndex < cardSOSystem.mazo.Items.Count)
+        if (cardSOSystem.currentIndex < cardSOSystem.mazo.Items.Count)
         {
-        cartasEnMano.Add(cardSOSystem.mazo.Items[listaDeIndices[currentIndex]]);
-        currentIndex++;
+        cartasEnMano.Add(cardSOSystem.mazo.Items[listaDeIndices[cardSOSystem.currentIndex]]);
+        cardSOSystem.currentIndex++;
         }
         
     }
@@ -68,7 +68,7 @@ public class Shuffler : MonoBehaviour
     {
         yield return new WaitForSeconds(shuffleTime);
         ShuffleList(listaDeIndices);
-        currentIndex = 0;
+        cardSOSystem.currentIndex = 0;
         cardSOSystem.ShuffleOver();
        
     }

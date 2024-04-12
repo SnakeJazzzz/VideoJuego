@@ -13,8 +13,8 @@ public GameObject buttonsContainer;
          if(userInformation.selectedDeck != -1)
         {
             deckButtons[userInformation.selectedDeck].Highlight();
+            buttonsContainer.SetActive(true);
         }
-        buttonsContainer.SetActive(true);
     }
 
 
