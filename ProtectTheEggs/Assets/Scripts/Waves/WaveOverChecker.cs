@@ -21,9 +21,5 @@ public class WaveOverChecker : MonoBehaviour
         }
         //Debug.Log("WAVE IS OVER");
         WaveIsOver.Invoke();
-
-
-    } 
-
-
+    }
 }

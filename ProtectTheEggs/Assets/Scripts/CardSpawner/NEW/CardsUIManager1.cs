@@ -56,7 +56,6 @@ public class CardsUIManager1 : MonoBehaviour
         lastselected = index;
     }
 
-
     public void Deselect()
     {
         if (lastselected == -1) {return;}
@@ -67,6 +66,4 @@ public class CardsUIManager1 : MonoBehaviour
         lastselected = -1;
 
     }
-
-
 }

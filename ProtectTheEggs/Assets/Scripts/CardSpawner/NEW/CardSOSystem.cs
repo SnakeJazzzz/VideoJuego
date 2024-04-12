@@ -23,7 +23,6 @@ public class CardSOSystem : ScriptableObject
     public Action NoCardSelected;
     public Action NotEnoughElixir;
 
-    
     public void SetMazo()
     {
         mazo = mazos.Items[userInformation.selectedDeck];

@@ -44,6 +44,5 @@ public class InputSystem1 : MonoBehaviour
             //Debug.Log("6 selected.");
             cardSOSystem.NewSelected(6);        
         }
-        
     }
 }
