@@ -8,7 +8,4 @@ using UnityEngine;
 public class RSCards: RuntimeSet<Card>
 {
     public string nombreMazo;
-   
 }   
-    
-

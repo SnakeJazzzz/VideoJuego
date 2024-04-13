@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-
 public class WaveSpawner : MonoBehaviour
 {
     Coroutine spawnWaveCoroutine;
@@ -21,7 +20,6 @@ public class WaveSpawner : MonoBehaviour
     {
         spawnWaveCoroutine = StartCoroutine(StartWave());
     }
-
 
     public IEnumerator StartWave()
     {

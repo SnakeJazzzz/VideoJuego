@@ -10,7 +10,6 @@ public RSCards selectedCards;
     /*
     void Start()
     {
-        
         StartCoroutine(PostDeck());
     }
 
@@ -30,7 +29,6 @@ public RSCards selectedCards;
     string json = JsonUtility.ToJson(deckData);
     yield return StartCoroutine(PostDeck(json));
     }
-
 
     IEnumerator PostDeck()
     {

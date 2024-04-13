@@ -20,14 +20,12 @@ public class Shuffler : MonoBehaviour
             listaDeIndices.Add(i);
         }
         ShuffleList(listaDeIndices);
-
     }
     
     void OnEnable()
     {
         cardSOSystem.GetNewCard += GiveCard;
         cardSOSystem.Shuffle += StartShuffleCoroutine;
-
     }
 
     void OnDisable()
@@ -43,7 +41,6 @@ public class Shuffler : MonoBehaviour
         cartasEnMano.Add(cardSOSystem.mazo.Items[listaDeIndices[cardSOSystem.currentIndex]]);
         cardSOSystem.currentIndex++;
         }
-        
     }
 
     void ShuffleList(List<int> list)
@@ -68,8 +65,8 @@ public class Shuffler : MonoBehaviour
     {
         yield return new WaitForSeconds(shuffleTime);
         ShuffleList(listaDeIndices);
+        
         cardSOSystem.currentIndex = 0;
         cardSOSystem.ShuffleOver();
-       
     }
 }

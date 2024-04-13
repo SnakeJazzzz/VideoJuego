@@ -47,4 +47,3 @@ public class GetAllCards : MonoBehaviour
         }
     }
 }
-
