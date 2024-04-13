@@ -8,6 +8,7 @@ public class WaveSpawner : MonoBehaviour
 {
     Coroutine spawnWaveCoroutine;
     public WaveList waves;
+    public RSCards AvailableCards;
     public UnityEvent WaveSpawnOver;
     public int currentWave = 0;
    //pdate is called once per frame
@@ -31,9 +32,18 @@ public class WaveSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(spawnInfo.spawnTime - timer);
             timer += spawnInfo.spawnTime;
+
+            Debug.Log("Prefabs/" + spawnInfo.fileName);
+            GameObject prefab = Resources.Load<GameObject>("Prefabs/" + spawnInfo.fileName);
+            
+            Card card = AvailableCards.Items.Find(x => x.cardName == spawnInfo.fileName);
+
             for (int i = 0; i < spawnInfo.count; i++)
             {
-                Spawn(spawnInfo.prefab, spawnInfo.spawnPosition);
+                if (prefab != null)
+                {
+                    Spawn(prefab, spawnInfo.spawnPosition, card.stats);
+                }
             }
         }
         currentWave++;
@@ -41,11 +51,14 @@ public class WaveSpawner : MonoBehaviour
         WaveSpawnOver.Invoke();
     } 
 
-    void Spawn(GameObject toSpawn, Vector3 position)
+    void Spawn(GameObject prefab, Vector3 position, CardStats stats)
     {
-        GameObject newNPC = Instantiate(toSpawn,position, transform.rotation);
+        
+        GameObject newNPC = Instantiate(prefab,position, transform.rotation);
 
-        //newNPC.GetComponent<NPCController>().setOwnership(1, card); 
-        //newNPC.SetActive(true);
+        newNPC.GetComponent<NPCController>().setOwnership(1, stats); 
+        newNPC.SetActive(true);
+            
+        
     }
 }

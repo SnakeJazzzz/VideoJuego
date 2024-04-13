@@ -12,5 +12,155 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c5819a6ea2649c38c68f38e6d6c902, type: 3}
   m_Name: Mazo1
   m_EditorClassIdentifier: 
-  Items: []
+  Items:
+  - ID: 0
+    cardName: Knight
+    description: 
+    cost: 4
+    numberOfNPCs: 2
+    stats:
+      name: 
+      health: 100
+      speed: 2
+      attack: 4
+      attackCooldown: 2
+      range: 5
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - ID: 0
+    cardName: Knight
+    description: 
+    cost: 4
+    numberOfNPCs: 2
+    stats:
+      name: 
+      health: 100
+      speed: 2
+      attack: 4
+      attackCooldown: 2
+      range: 5
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - ID: 0
+    cardName: Knight
+    description: 
+    cost: 4
+    numberOfNPCs: 2
+    stats:
+      name: 
+      health: 100
+      speed: 2
+      attack: 4
+      attackCooldown: 2
+      range: 5
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - ID: 0
+    cardName: Knight
+    description: 
+    cost: 4
+    numberOfNPCs: 2
+    stats:
+      name: 
+      health: 100
+      speed: 2
+      attack: 4
+      attackCooldown: 2
+      range: 5
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - ID: 0
+    cardName: Knight
+    description: 
+    cost: 4
+    numberOfNPCs: 2
+    stats:
+      name: 
+      health: 100
+      speed: 2
+      attack: 4
+      attackCooldown: 2
+      range: 5
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - ID: 0
+    cardName: Knight
+    description: 
+    cost: 4
+    numberOfNPCs: 2
+    stats:
+      name: 
+      health: 100
+      speed: 2
+      attack: 4
+      attackCooldown: 2
+      range: 5
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - ID: 0
+    cardName: Knight
+    description: 
+    cost: 4
+    numberOfNPCs: 2
+    stats:
+      name: 
+      health: 100
+      speed: 2
+      attack: 4
+      attackCooldown: 2
+      range: 5
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - ID: 0
+    cardName: Knight
+    description: 
+    cost: 4
+    numberOfNPCs: 2
+    stats:
+      name: 
+      health: 100
+      speed: 2
+      attack: 4
+      attackCooldown: 2
+      range: 5
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - ID: 0
+    cardName: Knight
+    description: 
+    cost: 4
+    numberOfNPCs: 2
+    stats:
+      name: 
+      health: 100
+      speed: 2
+      attack: 4
+      attackCooldown: 2
+      range: 5
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
+  - ID: 0
+    cardName: Knight
+    description: 
+    cost: 4
+    numberOfNPCs: 2
+    stats:
+      name: 
+      health: 100
+      speed: 2
+      attack: 4
+      attackCooldown: 2
+      range: 5
+      isStructure: 0
+      attackTowers: 1
+      attackEnemies: 1
   nombreMazo: 

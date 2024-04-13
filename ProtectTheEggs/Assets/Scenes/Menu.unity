@@ -2311,6 +2311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2137147581}
   - component: {fileID: 2137147580}
+  - component: {fileID: 2137147582}
   m_Layer: 0
   m_Name: DeckLoader
   m_TagString: Untagged
@@ -2348,6 +2349,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2137147582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137147579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e9a9c0dad08443aea192505d3afc568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AvailableCards: {fileID: 11400000, guid: 618a25b0ccc5b4c7ba48ff067fc78f49, type: 2}
+  userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
+  apiURL: http://localhost:3000/api/card
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

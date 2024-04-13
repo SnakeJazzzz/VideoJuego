@@ -26,7 +26,7 @@ public class SceneLoader : MonoBehaviour
             }
 
             userInformation.selectedDeck = firstEmpty;
-            Debug.Log("Cambiando a Escena DeckBuilder");
+            //Debug.Log("Cambiando a Escena DeckBuilder");
             SceneManager.LoadScene("DeckBuilder");
         }
     }

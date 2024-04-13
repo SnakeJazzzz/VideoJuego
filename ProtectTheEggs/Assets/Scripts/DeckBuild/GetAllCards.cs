@@ -5,13 +5,18 @@ using UnityEngine.Networking;
 
 public class GetAllCards : MonoBehaviour
 {
-    public DeckBuilderManager deckBuilderManager;
+    public RSCards AvailableCards;
+    public UserInformation userInformation;
     public string apiURL = "http://localhost:3000/api/card";
 
     void Start()
     {
-        deckBuilderManager.AvailableCards.Items.Clear();
-        StartCoroutine(APIGet());
+        if(!userInformation.loadedDeck)
+        {
+            AvailableCards.Items.Clear();
+            StartCoroutine(APIGet());
+        }
+       
     }
 
     IEnumerator APIGet()
@@ -34,10 +39,10 @@ public class GetAllCards : MonoBehaviour
             for(int i = 0; i < cartas.Cartas.Count; i++)
             {
                 //Debug.Log(cartas.Cartas[i].cardName);
-                deckBuilderManager.AvailableCards.Items.Add(cartas.Cartas[i]);
+                AvailableCards.Items.Add(cartas.Cartas[i]);
             }
 
-            deckBuilderManager.GetOver?.Invoke();
+           
             
         }
     }

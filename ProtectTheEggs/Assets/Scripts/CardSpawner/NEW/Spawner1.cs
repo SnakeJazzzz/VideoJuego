@@ -38,7 +38,7 @@ public class Spawner1 : MonoBehaviour
             {
                 GameObject newNPC = Instantiate(prefab, clickPosition, transform.rotation);
 
-                newNPC.GetComponent<NPCController>().setOwnership(0, card); 
+                newNPC.GetComponent<NPCController>().setOwnership(0, card.stats); 
                 newNPC.SetActive(true);
             }
         }

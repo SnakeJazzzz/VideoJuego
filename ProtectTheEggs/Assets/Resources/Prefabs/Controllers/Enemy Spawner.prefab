@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1112953137605603975
 Transform:
   m_ObjectHideFlags: 0
@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94fa90cf3320d4aa4ac0fe7b929bf438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves: {fileID: 11400000, guid: 5404514001dc341ab822fcbd136a6988, type: 2}
+  waves: {fileID: 11400000, guid: 31d30bd20065448a28abae5753ab54fa, type: 2}
+  AvailableCards: {fileID: 11400000, guid: 618a25b0ccc5b4c7ba48ff067fc78f49, type: 2}
   WaveSpawnOver:
     m_PersistentCalls:
       m_Calls:

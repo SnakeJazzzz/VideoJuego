@@ -28,9 +28,9 @@ public class NPCController : MonoBehaviour
         closest = manager.ClosestTarget(gameObject, owner, npcStats.attackTowers, npcStats.attackEnemies);
     }*/
 
-    public void setOwnership(int x, Card card)
+    public void setOwnership(int x, CardStats stats)
     {
         owner = x;
-        npcStats = card.stats;
+        npcStats = stats;
     }
 }
