@@ -10,7 +10,7 @@ public class PopulateButtons : MonoBehaviour
     public UserInformation userInformation;
     public RSRSCards mazos;
 
-    void Start ()
+    void Start()
     {
         for(int i = 0; i < mazos.Items.Count; i++)
         {

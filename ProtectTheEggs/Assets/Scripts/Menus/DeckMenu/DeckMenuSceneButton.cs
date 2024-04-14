@@ -5,9 +5,12 @@ using UnityEngine;
 public class DeckMenuSceneButton : MonoBehaviour
 {
     public SceneLoader sceneLoader;
+
     
     public void CND()
     {
         sceneLoader.CreateNewDeck();
     }
+    
+
 }

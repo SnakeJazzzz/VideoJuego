@@ -222,7 +222,7 @@ app.get("/api/mazo/:username", async (request, response) => {
     // The execute method is used to execute a SQL query. It returns a Promise that resolves with an array containing the results of the query (results) and an array containing the metadata of the results (fields).
     console.log("Obteniendo mazos de "+ request.params.username);
   const [mazos, fields] = await connection.execute(
-    "SELECT NombreMazo FROM Mazos INNER JOIN Usuarios USING(IDUsuario) WHERE NombreUsuario = ?;",
+    "SELECT NombreMazo, IDMazo FROM Mazos INNER JOIN Usuarios USING(IDUsuario) WHERE NombreUsuario = ?;",
       [request.params.username]
   );
   
@@ -271,6 +271,7 @@ app.get("/api/mazo/:username", async (request, response) => {
    app.post('/api/CreateDeck', async (req, res) => {
     let connection;
     try {
+      
         connection = await connectToDB();
         const username = req.body.username;
         const cards = req.body.cards; // This should be an array of { IDCarta, Cantidad }
@@ -285,7 +286,7 @@ app.get("/api/mazo/:username", async (request, response) => {
         );
 
         if (users.length === 0) {
-            throw new Error("User not found.");
+          res.status(200).json({"Success": false, "Error": "Couldnt find user."});
         }
 
         const userID = users[0].IDUsuario;
@@ -298,12 +299,12 @@ app.get("/api/mazo/:username", async (request, response) => {
 
         let deckID;
         if (decks.length >= 5) {
-            throw new Error("User already has the maximum number of decks (5).");
+          res.status(200).json({"Success": false, "Error": "Too many decks for one user."});
         } else if (decks.length < 5) {
             // If the user has less than 5 decks, create a new one
             const [newDeckResult] = await connection.execute(
-                "INSERT INTO Mazos (IDUsuario, NombreMazo) VALUES (?, CONCAT('Deck ', ?));",
-                [userID, decks.length + 1] // This will create deck names like "Deck 1", "Deck 2", etc.
+                "INSERT INTO Mazos (IDUsuario, NombreMazo) VALUES (?, ?);",
+                [userID, req.body.nombreMazo] 
             );
             deckID = newDeckResult.insertId;
         }
@@ -334,6 +335,49 @@ app.get("/api/mazo/:username", async (request, response) => {
         }
     }
 });
+
+
+
+//Endpoint que borra un mazo
+app.delete('/api/mazo/:id', async (req, res) => {
+  let connection;
+  try {
+    connection = await connectToDB();
+    const id = req.params.id;
+
+    await connection.execute(
+      " DELETE FROM DetallesMazo WHERE IDMazo = ?;",
+      [id]
+  );
+
+  await connection.execute(
+    "DELETE FROM Mazos WHERE IDMazo = ?;",
+    [id]
+);
+
+res.status(200).send("Success!");
+
+
+
+
+
+
+
+      
+  } catch (error) {
+      if (connection) {
+          await connection.rollback(); // Rollback transaction on error
+      }
+      res.status(500).json({"Success": false, "Error": error.message});
+      console.log(error);
+  } finally {
+      if (connection) {
+          connection.end();
+          console.log("Connection closed succesfully!");
+      }
+  }
+});
+
 
 
 

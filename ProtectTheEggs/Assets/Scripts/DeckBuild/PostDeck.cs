@@ -1,53 +1,68 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class PostDeck : MonoBehaviour
 {
- string url = "http://localhost:3000/api/CreateDeck"; // Endpoint to update the deck in the database.private 
-public RSCards selectedCards;
+    public string url = "http://localhost:3000/api/CreateDeck"; // Endpoint to update the deck in the database.private 
+    public DeckBuilderManager deckBuilderManager;
     string json;
-    /*
-    void Start()
+    public RSRSCards mazos;
+
+
+    void OnEnable()
     {
-        StartCoroutine(PostDeck());
+        deckBuilderManager.StartPost += CreateJson;
     }
 
-    void CreateDeck()
+    void OnDisable()
     {
-        DeckData deckData = new DeckData
-    {
-        username = userInformation.username, // User's username
-        cards = new List<CardData>() // List of cards to be saved
-    };
-
-    foreach (Card card in selectedDeck)
-    {
-        deckData.cards.Add(new CardData { IDCarta = card.ID, Cantidad = 1 }); // Assuming each card is added once
+        deckBuilderManager.StartPost -= CreateJson;
     }
 
-    string json = JsonUtility.ToJson(deckData);
-    yield return StartCoroutine(PostDeck(json));
+
+    
+    void CreateJson()
+    {
+        //Debug.Log("Creando Json");
+        string json = JsonUtility.ToJson(deckBuilderManager.MazoSeleccionado);
+        Debug.Log(json);
+        StartCoroutine(Post(json));
     }
 
-    IEnumerator PostDeck()
+    
+    IEnumerator Post(string json)
     {
-    UnityWebRequest www = new UnityWebRequest(url, "POST");
-    byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
-    www.uploadHandler = new UploadHandlerRaw(jsonToSend);
-    www.downloadHandler = new DownloadHandlerBuffer();
-    www.SetRequestHeader("Content-Type", "application/json");
+        UnityWebRequest www = new UnityWebRequest(url, "POST");
+        byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
+        www.uploadHandler = new UploadHandlerRaw(jsonToSend);
+        www.downloadHandler = new DownloadHandlerBuffer();
+        www.SetRequestHeader("Content-Type", "application/json");
 
-    yield return www.SendWebRequest();
+        yield return www.SendWebRequest();
 
-    if (www.result != UnityWebRequest.Result.Success)
-    {
-        Debug.LogError($"Error saving deck: {www.error}");
+        if (www.result != UnityWebRequest.Result.Success)
+        {
+            Debug.LogError($"Error saving deck: {www.error}");
+        }
+        else
+        {
+            string data = www.downloadHandler.text;
+            DeckUpload deckUpload = JsonUtility.FromJson<DeckUpload>(data);
+            if (deckUpload.Success)
+            {
+                Debug.Log("Saved!");
+                deckBuilderManager.SavedInDB?.Invoke(deckUpload.DeckID);
+            }
+            else
+            {
+                Debug.Log(deckUpload.Error);
+            }
+            // ... Handle successful deck save ...
+        }
     }
-    else
-    {
-        Debug.Log("Deck saved successfully.");
-        // ... Handle successful deck save ...
-    }
-}*/
+
+   
+
 }

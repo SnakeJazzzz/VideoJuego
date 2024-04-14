@@ -7,7 +7,7 @@ public class WaveCounter : MonoBehaviour
 {
     public WaveSpawner waveSpawner;
     private Text waveText;
-
+    /*
     void Start()
     {
         waveText = GetComponent<Text>();
@@ -28,5 +28,5 @@ public class WaveCounter : MonoBehaviour
     void OnDisable()
     {
         waveSpawner.WaveSpawnOver.RemoveListener(UpdateWaveCounter);
-    }
+    }*/
 }

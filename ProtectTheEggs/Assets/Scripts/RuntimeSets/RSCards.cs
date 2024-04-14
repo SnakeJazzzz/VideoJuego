@@ -8,4 +8,23 @@ using UnityEngine;
 public class RSCards: RuntimeSet<Card>
 {
     public string nombreMazo;
+    public int ID;
+
+    public void Reset()
+    {
+        nombreMazo = "";
+        ID =0;
+        Items.Clear();
+    }
+    public void Copy(RSCards rSCards)
+    {
+        nombreMazo = rSCards.nombreMazo;
+        ID = rSCards.ID;
+        Items.Clear();  
+
+        foreach (var item in rSCards.Items)
+        {
+            Items.Add(item);  
+        }
+    }
 }   

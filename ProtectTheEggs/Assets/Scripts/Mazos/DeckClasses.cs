@@ -12,6 +12,7 @@ public class ListaMazo
 public class Mazo 
 {
    public string NombreMazo;
+   public int IDMazo;
    public List<Dato> Datos;
 
    public void Reset()
@@ -27,11 +28,5 @@ public class Dato
 {
    public int Cantidad;
    public Card Carta;
-
-   public Dato(int cantidad, Card carta)
-   {
-      Cantidad = cantidad;
-      Carta = carta;
-   }
 
 }

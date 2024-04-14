@@ -5,14 +5,21 @@ using UnityEngine;
 public class DeckData
 {
     public string username;
+    public string nombreMazo;
     public List<CardData> cards;
 }
 
 [System.Serializable]
 public class CardData
 {
-    public int IDCarta;
     public int Cantidad;
+    public int IDCarta;
+    public CardData(int cantidad, int id)
+   {
+      Cantidad = cantidad;
+      IDCarta = id;
+   }
+    
 }
 
 [System.Serializable]

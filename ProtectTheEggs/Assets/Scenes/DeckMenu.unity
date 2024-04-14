@@ -1319,7 +1319,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 846747593}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1756869821}
+        m_TargetAssemblyTypeName: DeleteDeck, Assembly-CSharp
+        m_MethodName: StartDelete
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &846747593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2418,6 +2430,7 @@ GameObject:
   - component: {fileID: 1756869817}
   - component: {fileID: 1756869819}
   - component: {fileID: 1756869820}
+  - component: {fileID: 1756869821}
   m_Layer: 0
   m_Name: DeckSelector
   m_TagString: Untagged
@@ -2494,6 +2507,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
   mazos: {fileID: 11400000, guid: 0b12d424b6874449480202a6aab6a4b8, type: 2}
+--- !u!114 &1756869821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756869816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb514d4e17e8f475fbc3daa298e08849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mazos: {fileID: 11400000, guid: 0b12d424b6874449480202a6aab6a4b8, type: 2}
+  userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
+  apiURL: http://localhost:3000/api/mazo/
 --- !u!1 &1964569345
 GameObject:
   m_ObjectHideFlags: 0

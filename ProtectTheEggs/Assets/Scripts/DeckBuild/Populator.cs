@@ -8,18 +8,9 @@ public class Populator : MonoBehaviour
     public Transform AvailableCardsContainer;
     public GameObject CardPrefab;
 
-    void OnEnable()
-    {
-        deckBuilderManager.GetOver += PopulateCards;
-        //PopulateCards();
-    }
+   
 
-    void OnDisable()
-    {
-        deckBuilderManager.GetOver -= PopulateCards;
-    }
-
-    public void PopulateCards()
+    public void Start()
     {
         foreach (Card card in deckBuilderManager.AvailableCards.Items)
         {

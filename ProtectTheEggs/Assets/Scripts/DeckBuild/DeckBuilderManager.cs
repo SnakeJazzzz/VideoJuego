@@ -7,7 +7,8 @@ using System;
 public class DeckBuilderManager : ScriptableObject
 {
     public RSCards AvailableCards;
-    public Mazo MazoSeleccionado;
+    public DeckData MazoSeleccionado;
     public GameObject CardPrefab;
-    public Action GetOver;
+    public Action StartPost;
+    public Action<int> SavedInDB;
 }

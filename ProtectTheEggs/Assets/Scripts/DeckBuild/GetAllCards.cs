@@ -38,7 +38,7 @@ public class GetAllCards : MonoBehaviour
             CardList cartas = JsonUtility.FromJson<CardList>(data);
             for(int i = 0; i < cartas.Cartas.Count; i++)
             {
-                //Debug.Log(cartas.Cartas[i].cardName);
+                Debug.Log(cartas.Cartas[i].cardName);
                 AvailableCards.Items.Add(cartas.Cartas[i]);
             }
 

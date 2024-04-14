@@ -126,7 +126,7 @@ public IEnumerator SaveDeckCoroutine()
 
     foreach (Card card in selectedDeck)
     {
-        deckData.cards.Add(new CardData { IDCarta = card.ID, Cantidad = 1 }); // Assuming each card is added once
+        deckData.cards.Add(new CardData (card.ID, 1 )); // Assuming each card is added once
     }
 
     string json = JsonUtility.ToJson(deckData);
