@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class RSCards: RuntimeSet<Card>
 {
+    private void OnEnable() => hideFlags = HideFlags.DontUnloadUnusedAsset;
+
     public string nombreMazo;
     public int ID;
 

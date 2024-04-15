@@ -29,7 +29,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f; // Ensure the time scale is reset to resume normal game speed
         // The following line should load the main menu scene, not additively but as the main scene to clear the current game state.
-        SceneManager.LoadScene(4,LoadSceneMode.Additive);  // Replace "Menu" with the exact name of your main menu scene
+        SceneManager.LoadScene("Menu");  // Replace "Menu" with the exact name of your main menu scene
     }
 
     public void QuitGame()

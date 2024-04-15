@@ -25,6 +25,7 @@ public class CardSOSystem : ScriptableObject
 
     public void SetMazo()
     {
+        Debug.Log("Index: "+userInformation.selectedDeck);
         mazo = mazos.Items[userInformation.selectedDeck];
     }
 
@@ -86,7 +87,7 @@ public class CardSOSystem : ScriptableObject
     {
         //Debug.Log("Refill cards called!" + cartasEnMano.Items.Count);
     
-        while (cartasEnMano.Items.Count < 6)
+        for(int i = 0; i < 6; i++)
         //while (x < 6)
         {
             GetNewCard?.Invoke();

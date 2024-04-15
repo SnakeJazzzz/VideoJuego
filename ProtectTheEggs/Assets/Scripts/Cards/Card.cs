@@ -14,6 +14,20 @@ public class CardStats
     public bool isStructure;
     public bool attackTowers;
     public bool attackEnemies;
+     public CardStats(CardStats other)
+     {
+        
+
+        name = other.name;
+        health = other.health;
+        speed = other.speed;
+        attack = other.attack;
+        attackCooldown = other.attackCooldown;
+        range = other.range;
+        isStructure = other.isStructure;
+        attackTowers = other.attackTowers;
+        attackEnemies = other.attackEnemies;
+    }
 }
 
 [System.Serializable]
@@ -25,6 +39,18 @@ public class Card
     public int cost;
     public int numberOfNPCs;
     public CardStats stats;
+     public Card(Card other)
+    {
+        ID = other.ID;
+        cardName = other.cardName;
+        description = other.description;
+        cost = other.cost;
+        numberOfNPCs = other.numberOfNPCs;
+
+        // Assuming CardStats has a copy constructor or a method to create a deep copy
+        // This is necessary to avoid both Card objects pointing to the same CardStats instance
+        stats = new CardStats(other.stats);
+    }
 }
 
 [System.Serializable]

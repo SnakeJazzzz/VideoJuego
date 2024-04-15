@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cd3e6baec5af4eaca26abd9bb2876dc, type: 3}
   m_Name: UserInfo
   m_EditorClassIdentifier: 
-  username: jugador1
+  username: test
   loadedDeck: 1
-  selectedDeck: -1
+  selectedDeck: 0

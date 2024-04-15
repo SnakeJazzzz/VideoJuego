@@ -156,7 +156,7 @@ app.get("/api/card", async (request, response) => {
     
 
       
-      
+      console.log("Regresando las "+ cartas.Cartas.length +" cartas.")
       response.status(200).json(cartas);
       
      
