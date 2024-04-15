@@ -3,7 +3,9 @@ guid: 94fa90cf3320d4aa4ac0fe7b929bf438
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - waves: {instanceID: 0}
+  - AvailableCards: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
