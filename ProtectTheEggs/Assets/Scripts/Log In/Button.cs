@@ -18,4 +18,8 @@ public class Button : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+     public void DeckMenu()
+    {
+        SceneManager.LoadScene("DeckMenu");
+    }
 }

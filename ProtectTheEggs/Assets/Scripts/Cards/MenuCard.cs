@@ -9,11 +9,25 @@ public class MenuCard : MonoBehaviour
    public int value = 0;
    public TMP_Text text;
    public CardCounter cardCounter;
-   public CardDisplay cardDisplay;
+   
 
+
+    public Image artworkImage; 
+    public Card cardData;
+    //public UnityEngine.UI.Button button; 
+
+    // This method might be called elsewhere in your UI to update the card's display.
+    public void Display(Card card)
+    {
+        cardData = card;
+        Sprite artwork = Resources.Load<Sprite>("Cards_Artwork/" + card.cardName);
+        artworkImage.sprite = artwork;
+        
+        // Additional display setup for card name, cost, etc., can go here if needed.
+    }
     private void Awake()
     {
-        cardDisplay = GetComponent<CardDisplay>();
+        artworkImage = GetComponent<Image>();
         text = GetComponentInChildren<TMP_Text>();
         cardCounter = GetComponentInParent<CardCounter>();
     }
@@ -30,5 +44,11 @@ public class MenuCard : MonoBehaviour
         value--;
         text.text = value.ToString();
         cardCounter.ChangeCount(-1);
+    }
+    public void SetValue(int x)
+    {
+        value = x;
+        text.text = value.ToString();
+        cardCounter.ChangeCount(x);
     }
 }

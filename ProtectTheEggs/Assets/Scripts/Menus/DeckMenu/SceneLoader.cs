@@ -30,4 +30,9 @@ public class SceneLoader : MonoBehaviour
             SceneManager.LoadScene("DeckBuilder");
         }
     }
+
+    public void EditDeck()
+    {
+        SceneManager.LoadScene("DeckBuilder");
+    }
 }

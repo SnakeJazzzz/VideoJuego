@@ -356,13 +356,6 @@ app.delete('/api/mazo/:id', async (req, res) => {
 );
 
 res.status(200).send("Success!");
-
-
-
-
-
-
-
       
   } catch (error) {
       if (connection) {
@@ -376,6 +369,73 @@ res.status(200).send("Success!");
           console.log("Connection closed succesfully!");
       }
   }
+});
+
+
+
+//Editar un mazo
+app.put('/api/EditDeck/:id', async (req, res) => {
+    let connection;
+    try {
+      
+      connection = await connectToDB();
+      const id = req.params.id;
+      const username = req.body.username;
+      const cards = req.body.cards; // This should be an array of { IDCarta, Cantidad }
+      
+      // Start transaction
+      await connection.beginTransaction();
+
+      // Fetch the user's ID
+      const [users] = await connection.execute(
+          "SELECT IDUsuario FROM Usuarios WHERE NombreUsuario = ?;",
+          [username]
+      );
+
+      if (users.length === 0) {
+        res.status(200).json({"Success": false, "Error": "Couldnt find user."});
+      }
+
+      const userID = users[0].IDUsuario;
+
+      let deckID;
+      
+      // If the user has less than 5 decks, create a new one
+      const [updateResult] = await connection.execute(
+        "UPDATE Mazos SET NombreMazo = ? WHERE IDMazo = ?;",
+        [req.body.nombreMazo, id]
+    );
+      
+      
+
+      // Since a new deck is always created, there's no need to delete current cards as in the previous version
+      await connection.execute(
+        " DELETE FROM DetallesMazo WHERE IDMazo = ?;",
+        [id]
+    );
+      // Insert new deck cards
+      for (const card of cards) {
+          await connection.execute(
+              "INSERT INTO DetallesMazo (IDMazo, IDCarta, Cantidad) VALUES (?, ?, ?);",
+              [id, card.IDCarta, card.Cantidad]
+          );
+      }
+
+      // Commit transaction
+      await connection.commit();
+
+      res.status(200).json({"Success": true});
+    } catch (error) {
+        if (connection) {
+            await connection.rollback(); // Rollback transaction on error
+        }
+        res.status(500).json({"Success": false, "Error": error.message});
+        console.log(error);
+    } finally {
+        if (connection) {
+            connection.end();
+        }
+    }
 });
 
 

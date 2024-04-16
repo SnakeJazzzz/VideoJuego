@@ -11,6 +11,12 @@ public class DeckMenuSceneButton : MonoBehaviour
     {
         sceneLoader.CreateNewDeck();
     }
+
+    public void ED()
+    {
+        sceneLoader.EditDeck();
+    }
+    
     
 
 }
