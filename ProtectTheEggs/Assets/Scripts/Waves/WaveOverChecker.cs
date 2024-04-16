@@ -6,6 +6,7 @@ public class WaveOverChecker : MonoBehaviour
 {
     public NPCManager npcManager;
     public UnityEvent WaveIsOver;
+    public WaveCounter waveCounter;
     Coroutine checkCoroutine;
     public void WaveOver()
     {
@@ -22,4 +23,18 @@ public class WaveOverChecker : MonoBehaviour
         //Debug.Log("WAVE IS OVER");
         WaveIsOver.Invoke();
     }
+
+
+
+    private void Awake()
+{
+    // Subscribe the OnWaveCompleted method to the WaveIsOver event
+    WaveIsOver.AddListener(waveCounter.OnWaveCompleted);
+}
+
+private void OnDestroy()
+{
+    // Unsubscribe when the object is destroyed
+    WaveIsOver.RemoveListener(waveCounter.OnWaveCompleted);
+}
 }

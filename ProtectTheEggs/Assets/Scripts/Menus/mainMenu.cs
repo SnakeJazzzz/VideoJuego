@@ -13,6 +13,7 @@ public class MainMenu : MonoBehaviour
         {
             int randomMapIndex = Random.Range(5, 8); // Random.Range is max-exclusive
             SceneManager.LoadScene(randomMapIndex);
+ 
         }
         else
         {

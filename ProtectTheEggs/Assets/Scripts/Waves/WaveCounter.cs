@@ -1,32 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro; // Make sure to include the TextMeshPro namespace
 
 public class WaveCounter : MonoBehaviour
 {
-    public WaveSpawner waveSpawner;
-    private Text waveText;
-    /*
-    void Start()
+    public TextMeshProUGUI waveNumberText; // Reference to the TextMeshProUGUI component
+    public WaveList waveList; // Reference to the WaveList scriptable object
+    private int currentWaveIndex = 0; // Keeps track of the current wave index
+
+    private void Start()
     {
-        waveText = GetComponent<Text>();
-        UpdateWaveCounter();
+        // Find the TextMeshProUGUI component in the GUI scene.
+        waveNumberText = GameObject.FindWithTag("WaveNumber").GetComponent<TextMeshProUGUI>();
+        if (waveNumberText == null)
+        {
+            Debug.LogError("WaveCounter: Failed to find the Wave Number TextMeshProUGUI component in the scene.");
+            return;
+        }
+        // Initialize the wave number text at the start of the game.
+        UpdateWaveNumberText();
     }
 
-    void UpdateWaveCounter()
+    public void OnWaveCompleted()
     {
-        //Debug.Log("Horda: " + (waveSpawner.currentWave + 1));
-        waveText.text = (waveSpawner.currentWave + 1).ToString();
+        // Re-find the TextMeshProUGUI component in case it's lost (due to scene unload/    load).
+        if (waveNumberText == null)
+        {
+            waveNumberText = GameObject.FindWithTag("WaveNumber").    GetComponent<TextMeshProUGUI>();
+            if (waveNumberText == null)
+            {
+                Debug.LogError("WaveCounter: Failed to find the Wave Number     TextMeshProUGUI component after completing a wave.");
+                return;
+            }
+        }
+
+        // Increment the wave index since a wave is completed
+        currentWaveIndex++;
+
+        // Update the wave number text UI
+        UpdateWaveNumberText();
     }
 
-    void OnEnable()
-    {
-        waveSpawner.WaveSpawnOver.AddListener(UpdateWaveCounter);
-    }
+    
 
-    void OnDisable()
+    private void UpdateWaveNumberText()
     {
-        waveSpawner.WaveSpawnOver.RemoveListener(UpdateWaveCounter);
-    }*/
+        // Update the wave number in the TextMeshProUGUI component
+        waveNumberText.text = (currentWaveIndex + 1).ToString();
+    }
 }
+
+
