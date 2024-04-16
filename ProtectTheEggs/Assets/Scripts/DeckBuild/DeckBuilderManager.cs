@@ -9,6 +9,9 @@ public class DeckBuilderManager : ScriptableObject
     public RSCards AvailableCards;
     public DeckData MazoSeleccionado;
     public GameObject CardPrefab;
+    public bool CreateOrEdit; //True = Create False = Edit
     public Action StartPost;
+    public Action StartPut;
     public Action<int> SavedInDB;
+    //public Action PopulationOver;
 }

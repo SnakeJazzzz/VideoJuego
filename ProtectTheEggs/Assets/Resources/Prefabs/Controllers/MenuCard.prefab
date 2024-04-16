@@ -547,7 +547,6 @@ GameObject:
   - component: {fileID: 4018181787472620356}
   - component: {fileID: 7169821001603414102}
   - component: {fileID: 5812436877829671320}
-  - component: {fileID: 5223634626440275956}
   m_Layer: 5
   m_Name: MenuCard
   m_TagString: Untagged
@@ -685,18 +684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value: 0
   text: {fileID: 0}
---- !u!114 &5223634626440275956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8399710078885539249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af2c937756ec145cd8335d90c5fe53fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  cardCounter: {fileID: 0}
   artworkImage: {fileID: 0}
   cardData:
     ID: 0

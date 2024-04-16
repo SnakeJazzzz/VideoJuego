@@ -27,7 +27,10 @@ public class SaveLocal : MonoBehaviour
         RSCards mazoNuevo =  mazos.Items[userInformation.selectedDeck];
 
         mazoNuevo.nombreMazo = deckData.nombreMazo;
-        mazoNuevo.ID = id;
+
+        if(deckBuilderManager.CreateOrEdit)
+       {mazoNuevo.ID = id;}
+        
         mazoNuevo.Items.Clear();
         for (int i = 0;i < deckData.cards.Count ;i++)
         {

@@ -66,7 +66,7 @@ CREATE TABLE Partidas (
     IDPartida INTEGER PRIMARY KEY AUTO_INCREMENT,
     IDUsuario INTEGER NOT NULL, -- Ensure NOT NULL for IDUsuario to enforce relationship integrity
     MaxOrda INTEGER NOT NULL,
-    IDMap INTEGER NOT NULL,
+    IDMapa INTEGER NOT NULL,
     FOREIGN KEY (IDUsuario) REFERENCES Usuarios(IDUsuario),
     FOREIGN KEY (IDMapa) REFERENCES Mapas(IDMapa)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

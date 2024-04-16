@@ -3,22 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PostDeck : MonoBehaviour
+public class PutDeck : MonoBehaviour
 {
-    public string url = "http://localhost:3000/api/CreateDeck"; // Endpoint to update the deck in the database.private 
+    [SerializeField]
+    string url = "http://localhost:3000/api/EditDeck/"; // Endpoint to update the deck in the database.private 
     public DeckBuilderManager deckBuilderManager;
     string json;
-   
+    public RSRSCards mazos;
+    public UserInformation userInformation;
 
 
     void OnEnable()
     {
-        deckBuilderManager.StartPost += CreateJson;
+        deckBuilderManager.StartPut += CreateJson;
     }
 
     void OnDisable()
     {
-        deckBuilderManager.StartPost -= CreateJson;
+        deckBuilderManager.StartPut -= CreateJson;
     }
 
 
@@ -34,7 +36,10 @@ public class PostDeck : MonoBehaviour
     
     IEnumerator Post(string json)
     {
-        UnityWebRequest www = new UnityWebRequest(url, "POST");
+        string ruta = url + mazos.Items[userInformation.selectedDeck].ID;
+        Debug.Log(ruta);
+
+        UnityWebRequest www = new UnityWebRequest(ruta, "PUT");
         byte[] jsonToSend = new System.Text.UTF8Encoding().GetBytes(json);
         www.uploadHandler = new UploadHandlerRaw(jsonToSend);
         www.downloadHandler = new DownloadHandlerBuffer();
@@ -52,7 +57,7 @@ public class PostDeck : MonoBehaviour
             DeckUpload deckUpload = JsonUtility.FromJson<DeckUpload>(data);
             if (deckUpload.Success)
             {
-                Debug.Log("Saved!");
+                Debug.Log("Saved Edited Deck!");
                 deckBuilderManager.SavedInDB?.Invoke(deckUpload.DeckID);
             }
             else

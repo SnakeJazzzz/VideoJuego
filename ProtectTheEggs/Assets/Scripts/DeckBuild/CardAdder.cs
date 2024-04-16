@@ -19,12 +19,7 @@ public class CardAdder : MonoBehaviour
     {
        cardCounter = CardContainer.GetComponent<CardCounter>();
     }
-    IEnumerator Test()
-    {
-        yield return new WaitForSeconds(5f);
-        //CountAllCards();
-    }
-
+   
     public void AddAllCardss()
     {
 
@@ -51,11 +46,18 @@ public class CardAdder : MonoBehaviour
         {
             if (menuCards[i].value > 0)
             {
-                deckBuilderManager.MazoSeleccionado.cards.Add(new CardData(menuCards[i].value, menuCards[i].cardDisplay.cardData.ID));
+                deckBuilderManager.MazoSeleccionado.cards.Add(new CardData(menuCards[i].value, menuCards[i].cardData.ID));
             }
         }
 
-        deckBuilderManager.StartPost?.Invoke();
+        if (deckBuilderManager.CreateOrEdit)
+        {
+            deckBuilderManager.StartPost?.Invoke();
+        }
+        else
+        {
+            deckBuilderManager.StartPut?.Invoke();
+        }
         /*
         for (int i = 0; i < deckBuilderManager.MazoSeleccionado.Datos.Count; i++)
         {

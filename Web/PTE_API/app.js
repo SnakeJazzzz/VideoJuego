@@ -20,11 +20,11 @@ async function connectToDB() {
   return await mysql.createConnection({
     host: "localhost",
     user: "tc2005b",
-    password: "Tec12345!", //"tec123",
+    password: "tec123",
+    // password: "Tec12345!",
     database: "PTE",
   });
 }
-
 
 //Endpoint para verificar si los datos del log in estan correctos.
 app.get("/api/usuarios/:username/:password", async (request, response) => {
@@ -32,7 +32,6 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
   
     try {
     console.log("Username: "+ request.params.username + "\nPassword: "+request.params.password);
-
     connection = await connectToDB();
   
       // The execute method is used to execute a SQL query. It returns a Promise that resolves with an array containing the results of the query (results) and an array containing the metadata of the results (fields).
@@ -41,8 +40,7 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
         "SELECT NombreUsuario, Contraseña FROM Usuarios WHERE NombreUsuario LIKE ?;",
         [request.params.username]
     );
-
-        
+ 
     if (results[0] == undefined)
     {
         console.log("Username doesnt exist.\n");
@@ -58,7 +56,6 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
     {
     console.log("Wrong password.\n");
     response.status(200).json({"Success": false, "Error": "Wrong password."});
-
     }
     }
     catch (error) {
@@ -113,13 +110,11 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
             );
             console.log("Succesfully created account!");
             response.status(200).json({"Success": true});
-        
     }
     }
     catch (error) {
       response.status(500);
       response.json(error);
-  
     }
     finally {
       // The finally statement lets you execute code, after try and catch, regardless of the result. In this case, it closes the connection to the database.
@@ -156,9 +151,6 @@ app.get("/api/card", async (request, response) => {
       
       console.log("Regresando las "+ cartas.Cartas.length +" cartas.")
       response.status(200).json(cartas);
-      
-     
-
   }
   catch (error) {
     response.status(500);
@@ -189,7 +181,9 @@ app.get("/api/card/:id", async (request, response) => {
       }
       
       response.status(200).json(results);
-      
+
+    
+    
   }
   catch (error) {
     response.status(500);
@@ -239,8 +233,6 @@ app.get("/api/mazo/:username", async (request, response) => {
           mazos[i]["Datos"].push( structuredClone(datosmazo[j]) );
         }
     }
-
-   
     console.log(mazos);
     response.status(200).json({"Mazos": mazos});
   }
@@ -348,8 +340,8 @@ app.delete('/api/mazo/:id', async (req, res) => {
 
 res.status(200).send("Success!");
 
-
-
+    
+    
   } catch (error) {
       if (connection) {
           await connection.rollback(); // Rollback transaction on error
@@ -362,6 +354,77 @@ res.status(200).send("Success!");
           console.log("Connection closed succesfully!");
       }
   }
+});
+
+
+
+//Editar un mazo
+app.put('/api/EditDeck/:id', async (req, res) => {
+    let connection;
+    try {
+      
+      connection = await connectToDB();
+      const id = req.params.id;
+      const username = req.body.username;
+      const cards = req.body.cards; // This should be an array of { IDCarta, Cantidad }
+      
+      // Start transaction
+      await connection.beginTransaction();
+
+      // Fetch the user's ID
+      const [users] = await connection.execute(
+          "SELECT IDUsuario FROM Usuarios WHERE NombreUsuario = ?;",
+          [username]
+      );
+
+      if (users.length === 0) {
+        res.status(200).json({"Success": false, "Error": "Couldnt find user."});
+      }
+
+      const userID = users[0].IDUsuario;
+
+      let deckID;
+      
+
+      const [updateResult] = await connection.execute(
+        "UPDATE Mazos SET NombreMazo = ? WHERE IDMazo = ?;",
+        [req.body.nombreMazo, id]
+    );
+      
+      
+
+      // Since a new deck is always created, there's no need to delete current cards as in the previous version
+      await connection.execute(
+        " DELETE FROM DetallesMazo WHERE IDMazo = ?;",
+        [id]
+    );
+   
+      // Insert new deck cards
+      for (const card of cards) {
+          //console.log("Inserting IDMazo: "+ id);
+          //console.log("Inserting IDCarta: "+ card.IDCarta);
+          await connection.execute(
+              "INSERT INTO DetallesMazo (IDMazo, IDCarta, Cantidad) VALUES (?, ?, ?);",
+              [id, card.IDCarta, card.Cantidad]
+          );
+
+      }
+
+      // Commit transaction
+      await connection.commit();
+
+      res.status(200).json({"Success": true});
+    } catch (error) {
+        if (connection) {
+            await connection.rollback(); // Rollback transaction on error
+        }
+        res.status(500).json({"Success": false, "Error": error.message});
+        console.log(error);
+    } finally {
+        if (connection) {
+            connection.end();
+        }
+    }
 });
 
 
@@ -411,7 +474,7 @@ async function getCardFormat(cardID) {
 }
 
 
-   
+
   //-------------------------------
 
 
@@ -448,7 +511,7 @@ async function getCardFormat(cardID) {
   }
 }*/
 
-  
+
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

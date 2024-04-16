@@ -28,9 +28,10 @@ INSERT INTO NPC (name, health, speed, attack, attackCooldown, `range`, isStructu
 ('Mortar Tower', 450, 0, 100, 2.5, 4, 1, 0, 1),
 ('Archer Tower', 650, 0, 45, 1, 3, 1, 0, 1),
 ('Inferno Tower', 550, 0, 20, 2, 2, 1, 0, 1),
-('Wizard Tower', 500, 0, 80, 1.5, 2, 1, 0, 1),
+('Wizard Tower', 500, 0, 80, 1.5, 2, 1, 0, 1);
+/*
 ('Thorn Barrier', 800, 0, 30, 0, 0, 1, 0, 1),
-('Bomber Tower', 600, 0, 100, 2.5, 2, 1, 0, 1);
+('Bomber Tower', 600, 0, 100, 2.5, 2, 1, 0, 1);*/
 
 -- Insert data to Cartas table
 INSERT INTO Cartas (cardName, description, cost, numberOfNPCs, IDNPC) VALUES 
@@ -54,9 +55,7 @@ INSERT INTO Cartas (cardName, description, cost, numberOfNPCs, IDNPC) VALUES
 ('Mortar Tower', 'fortified positions', 6, 1, 18),
 ('Archer Tower', 'Covering/ range', 5, 1, 19),
 ('Inferno Tower', 'Ideal bigDamage', 6, 1, 20),
-('Wizard Tower', 'Casts spells', 7, 1, 21),
-('Thorn Barrier', 'slowing advances', 4, 1, 22),
-('Bomber Tower', 'Throws bombs', 6, 1, 23);
+('Wizard Tower', 'Casts spells', 7, 1, 21);
 
 -- Insert data to Mazos table for Usuarios
 INSERT INTO Mazos (IDUsuario, NombreMazo) VALUES 

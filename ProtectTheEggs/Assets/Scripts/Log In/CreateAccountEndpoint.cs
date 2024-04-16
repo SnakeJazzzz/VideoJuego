@@ -22,9 +22,6 @@ public class CreateAccountEndpoint : MonoBehaviour
         usernameValidator.ValidUsername -= StartPost;
     }
 
-
-
-
     public void StartPost(string u, string p)
     {
         //Debug.Log("Last char:"+u[u.Length-1]+".");
@@ -43,7 +40,6 @@ public class CreateAccountEndpoint : MonoBehaviour
         form.AddField("password", password);
 
         Debug.Log(username);
-
         
         UnityWebRequest www = UnityWebRequest.Post(apiURL, form); 
         yield return www.SendWebRequest();

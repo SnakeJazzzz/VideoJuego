@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AvailableCards: {fileID: 11400000, guid: 618a25b0ccc5b4c7ba48ff067fc78f49, type: 2}
   MazoSeleccionado:
-    username: jugador1
-    nombreMazo: Test1
-    cards:
-    - Cantidad: 20
-      IDCarta: 1
+    username: 
+    nombreMazo: 
+    cards: []
   CardPrefab: {fileID: 8399710078885539249, guid: bce81db71ecf24cdcaef346df41a0a6b, type: 3}
