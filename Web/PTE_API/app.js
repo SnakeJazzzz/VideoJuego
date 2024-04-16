@@ -20,7 +20,7 @@ async function connectToDB() {
   return await mysql.createConnection({
     host: "localhost",
     user: "tc2005b",
-    password: "tec123",
+    password: "Tec12345!", //"tec123",
     database: "PTE",
   });
 }
@@ -73,8 +73,6 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
       }
     }
   });
-
-
 
 
 
@@ -177,7 +175,6 @@ app.get("/api/card", async (request, response) => {
 
 
 
-
 //Endpoint para recibir una carta a partir de un id
 app.get("/api/card/:id", async (request, response) => {
   let connection = null;
@@ -193,8 +190,6 @@ app.get("/api/card/:id", async (request, response) => {
       
       response.status(200).json(results);
       
-     
-
   }
   catch (error) {
     response.status(500);
@@ -226,7 +221,6 @@ app.get("/api/mazo/:username", async (request, response) => {
       [request.params.username]
   );
   
-
     for (let i = 0; i < mazos.length; i++)
     {
       //console.log(mazos[i].NombreMazo);
@@ -249,9 +243,6 @@ app.get("/api/mazo/:username", async (request, response) => {
    
     console.log(mazos);
     response.status(200).json({"Mazos": mazos});
-      
-     
-
   }
 
   catch (error) {
@@ -359,11 +350,6 @@ res.status(200).send("Success!");
 
 
 
-
-
-
-
-      
   } catch (error) {
       if (connection) {
           await connection.rollback(); // Rollback transaction on error
@@ -377,7 +363,6 @@ res.status(200).send("Success!");
       }
   }
 });
-
 
 
 
@@ -431,12 +416,6 @@ async function getCardFormat(cardID) {
 
 
 
-
-
-
-
-
-
 /*async function getCardFormat(cardID)
 {
   let connection = null;
@@ -468,7 +447,6 @@ async function getCardFormat(cardID) {
     return {};
   }
 }*/
-
 
   
 

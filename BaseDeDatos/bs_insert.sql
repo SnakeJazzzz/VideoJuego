@@ -1,7 +1,12 @@
+-- Link document with schema
 USE PTE;
 
--- Insertar un usuario dummy
+-- Insert data to Usuarios table
+INSERT INTO Usuarios (NombreUsuario, Contraseña, PuntuaciónMáxima) VALUES 
+('jugador1', 'contraseñaSegura123', 0),
+('test', '123', 0);
 
+-- Insert data to NPC table
 INSERT INTO NPC (name, health, speed, attack, attackCooldown, `range`, isStructure, attackTowers, attackEnemies) VALUES 
 ('Knight', 400, 3, 70, 1.5, 1, 0, 0, 1),
 ('Archer', 150, 3, 40, 1, 3, 0, 0, 1),
@@ -27,6 +32,7 @@ INSERT INTO NPC (name, health, speed, attack, attackCooldown, `range`, isStructu
 ('Thorn Barrier', 800, 0, 30, 0, 0, 1, 0, 1),
 ('Bomber Tower', 600, 0, 100, 2.5, 2, 1, 0, 1);
 
+-- Insert data to Cartas table
 INSERT INTO Cartas (cardName, description, cost, numberOfNPCs, IDNPC) VALUES 
 ('Knight', 'Front-line combat', 3, 1, 1),
 ('Archer', 'Quick and ranged', 2, 1, 2),
@@ -52,20 +58,12 @@ INSERT INTO Cartas (cardName, description, cost, numberOfNPCs, IDNPC) VALUES
 ('Thorn Barrier', 'slowing advances', 4, 1, 22),
 ('Bomber Tower', 'Throws bombs', 6, 1, 23);
 
-
-
-
-INSERT INTO Usuarios (NombreUsuario, Contraseña, PuntuaciónMáxima) VALUES 
-('jugador1', 'contraseñaSegura123', 0),
-('test', '123', 0);
-
--- Insertar un mazo para el usuario dummy
+-- Insert data to Mazos table for Usuarios
 INSERT INTO Mazos (IDUsuario, NombreMazo) VALUES 
 (1, 'Mazo Inicial'),
 (1, 'Mazo 2');
 
-
--- Insertar detalles del mazo (asumiendo que los IDs de las cartas van del 1 al 10)
+-- Insert Mazo data (asumiendo que los IDs de las cartas van del 1 al 10)
 INSERT INTO DetallesMazo (IDMazo, IDCarta, Cantidad) VALUES 
 (1, 1, 2),
 (1, 2, 2),
@@ -78,13 +76,15 @@ INSERT INTO DetallesMazo (IDMazo, IDCarta, Cantidad) VALUES
 (1, 9, 2),
 (1, 10, 2),
 (2, 1 ,5);
-/*
--- Insertar una partida dummy
-INSERT INTO Partidas (IDUsuario, FechaHoraInicio, FechaHoraFin, Puntuación, OrdasSuperadas) VALUES 
-(1, '2023-01-01 10:00:00', '2023-01-01 10:30:00', 500, 5);
 
--- Insertar acciones de partida (ejemplo)
-INSERT INTO AccionesPartida (IDPartida, Momento, IDCarta, DescripciónAcción) VALUES 
-(1, '2023-01-01 10:05:00', 1, 'Invocar'),
-(1, '2023-01-01 10:06:00', 2, 'Invocar'),
-(1, '2023-01-01 10:07:00', 3, 'Mover');*/
+-- Insert data to Mapas table
+INSERT INTO Mapas (IDMapa, NombreMapa) VALUES
+(1, "Mapa 1"),
+(2, "Mapa 2"),
+(3, "Mapa 3");
+
+/*
+-- Insert data to Partidas table
+INSERT INTO Partidas (IDUsuario, MaxOrda) VALUES 
+(1, 500);
+*/
