@@ -71,6 +71,8 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
     }
   });
 
+
+
   //Endpoint para crear una cuenta
   app.post("/api/usuarios/", async (request, response) => {
     let connection = null;
@@ -179,6 +181,9 @@ app.get("/api/card/:id", async (request, response) => {
       }
       
       response.status(200).json(results);
+
+    
+    
   }
   catch (error) {
     response.status(500);
@@ -334,7 +339,9 @@ app.delete('/api/mazo/:id', async (req, res) => {
 );
 
 res.status(200).send("Success!");
-      
+
+    
+    
   } catch (error) {
       if (connection) {
           await connection.rollback(); // Rollback transaction on error
@@ -419,7 +426,6 @@ app.put('/api/EditDeck/:id', async (req, res) => {
         }
     }
 });
-
 
 
 
