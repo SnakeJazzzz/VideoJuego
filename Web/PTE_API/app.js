@@ -21,10 +21,10 @@ async function connectToDB() {
     host: "localhost",
     user: "tc2005b",
     password: "tec123",
+    // password: "Tec12345!",
     database: "PTE",
   });
 }
-
 
 //Endpoint para verificar si los datos del log in estan correctos.
 app.get("/api/usuarios/:username/:password", async (request, response) => {
@@ -32,7 +32,6 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
   
     try {
     console.log("Username: "+ request.params.username + "\nPassword: "+request.params.password);
-
     connection = await connectToDB();
   
       // The execute method is used to execute a SQL query. It returns a Promise that resolves with an array containing the results of the query (results) and an array containing the metadata of the results (fields).
@@ -41,8 +40,7 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
         "SELECT NombreUsuario, Contraseña FROM Usuarios WHERE NombreUsuario LIKE ?;",
         [request.params.username]
     );
-
-        
+ 
     if (results[0] == undefined)
     {
         console.log("Username doesnt exist.\n");
@@ -58,7 +56,6 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
     {
     console.log("Wrong password.\n");
     response.status(200).json({"Success": false, "Error": "Wrong password."});
-
     }
     }
     catch (error) {
@@ -73,10 +70,6 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
       }
     }
   });
-
-
-
-
 
   //Endpoint para crear una cuenta
   app.post("/api/usuarios/", async (request, response) => {
@@ -115,13 +108,11 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
             );
             console.log("Succesfully created account!");
             response.status(200).json({"Success": true});
-        
     }
     }
     catch (error) {
       response.status(500);
       response.json(error);
-  
     }
     finally {
       // The finally statement lets you execute code, after try and catch, regardless of the result. In this case, it closes the connection to the database.
@@ -158,9 +149,6 @@ app.get("/api/card", async (request, response) => {
       
       console.log("Regresando las "+ cartas.Cartas.length +" cartas.")
       response.status(200).json(cartas);
-      
-     
-
   }
   catch (error) {
     response.status(500);
@@ -174,7 +162,6 @@ app.get("/api/card", async (request, response) => {
     }
   }
 });
-
 
 
 
@@ -192,9 +179,6 @@ app.get("/api/card/:id", async (request, response) => {
       }
       
       response.status(200).json(results);
-      
-     
-
   }
   catch (error) {
     response.status(500);
@@ -226,7 +210,6 @@ app.get("/api/mazo/:username", async (request, response) => {
       [request.params.username]
   );
   
-
     for (let i = 0; i < mazos.length; i++)
     {
       //console.log(mazos[i].NombreMazo);
@@ -245,13 +228,8 @@ app.get("/api/mazo/:username", async (request, response) => {
           mazos[i]["Datos"].push( structuredClone(datosmazo[j]) );
         }
     }
-
-   
     console.log(mazos);
     response.status(200).json({"Mazos": mazos});
-      
-     
-
   }
 
   catch (error) {
@@ -486,14 +464,8 @@ async function getCardFormat(cardID) {
 }
 
 
-   
+
   //-------------------------------
-
-
-
-
-
-
 
 
 
@@ -530,7 +502,6 @@ async function getCardFormat(cardID) {
 }*/
 
 
-  
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

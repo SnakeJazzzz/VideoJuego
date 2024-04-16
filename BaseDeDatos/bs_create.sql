@@ -1,6 +1,5 @@
 -- Drop the existing schema if it exists to start fresh
 DROP SCHEMA IF EXISTS PTE;
-
 -- Create the new schema
 CREATE SCHEMA PTE;
 USE PTE;
@@ -56,13 +55,18 @@ CREATE TABLE DetallesMazo (
     FOREIGN KEY (IDCarta) REFERENCES Cartas(IDCarta)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Create the Partidas table with a foreign key to Usuarios
+-- Create the Mapas table with no foreign key
+CREATE TABLE Mapas (
+	IDMapa INTEGER PRIMARY KEY AUTO_INCREMENT,
+    NombreMapa VARCHAR(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Create the Partidas table with foreign keys to Usuarios and Mapas
 CREATE TABLE Partidas (
     IDPartida INTEGER PRIMARY KEY AUTO_INCREMENT,
     IDUsuario INTEGER NOT NULL, -- Ensure NOT NULL for IDUsuario to enforce relationship integrity
-    FechaHoraInicio DATETIME,
-    FechaHoraFin DATETIME,
-    Puntuación INTEGER,
-    OrdasSuperadas INTEGER,
-    FOREIGN KEY (IDUsuario) REFERENCES Usuarios(IDUsuario)
+    MaxOrda INTEGER NOT NULL,
+    IDMap INTEGER NOT NULL,
+    FOREIGN KEY (IDUsuario) REFERENCES Usuarios(IDUsuario),
+    FOREIGN KEY (IDMapa) REFERENCES Mapas(IDMapa)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
