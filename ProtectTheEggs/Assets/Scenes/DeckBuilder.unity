@@ -929,6 +929,7 @@ MonoBehaviour:
   CardPrefab: {fileID: 8399710078885539249, guid: bce81db71ecf24cdcaef346df41a0a6b, type: 3}
   userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
   mazos: {fileID: 11400000, guid: 0b12d424b6874449480202a6aab6a4b8, type: 2}
+  nameText: {fileID: 430597069}
 --- !u!114 &364787154
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -378,7 +378,7 @@ app.put('/api/EditDeck/:id', async (req, res) => {
 
       let deckID;
       
-      // If the user has less than 5 decks, create a new one
+
       const [updateResult] = await connection.execute(
         "UPDATE Mazos SET NombreMazo = ? WHERE IDMazo = ?;",
         [req.body.nombreMazo, id]
@@ -391,12 +391,16 @@ app.put('/api/EditDeck/:id', async (req, res) => {
         " DELETE FROM DetallesMazo WHERE IDMazo = ?;",
         [id]
     );
+   
       // Insert new deck cards
       for (const card of cards) {
+          //console.log("Inserting IDMazo: "+ id);
+          //console.log("Inserting IDCarta: "+ card.IDCarta);
           await connection.execute(
               "INSERT INTO DetallesMazo (IDMazo, IDCarta, Cantidad) VALUES (?, ?, ?);",
               [id, card.IDCarta, card.Cantidad]
           );
+
       }
 
       // Commit transaction
