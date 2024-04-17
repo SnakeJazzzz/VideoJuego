@@ -423,6 +423,7 @@ GameObject:
   - component: {fileID: 116734445}
   - component: {fileID: 116734447}
   - component: {fileID: 116734446}
+  - component: {fileID: 116734448}
   m_Layer: 5
   m_Name: Numero de cartas en mazo
   m_TagString: Untagged
@@ -546,6 +547,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116734444}
   m_CullTransparentMesh: 1
+--- !u!114 &116734448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116734444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2948ed9fb8a794a42824dace30da4498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardCountText: {fileID: 116734446}
+  cardSystem: {fileID: 11400000, guid: 34ef335433ca24b7098b4b1988de9419, type: 2}
+  OriginalValue: 20
+  value: 20
 --- !u!1 &233042901
 GameObject:
   m_ObjectHideFlags: 0
