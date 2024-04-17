@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 [CreateAssetMenu(menuName = "UserInformation", fileName =
 "Set")] 
 public class UserInformation : ScriptableObject

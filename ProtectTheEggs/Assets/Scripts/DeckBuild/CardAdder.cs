@@ -14,7 +14,6 @@ public class CardAdder : MonoBehaviour
     public CardCounter cardCounter;
     public TMP_Text text;
     
-
     void Awake()
     {
        cardCounter = CardContainer.GetComponent<CardCounter>();
@@ -22,7 +21,6 @@ public class CardAdder : MonoBehaviour
    
     public void AddAllCardss()
     {
-
         if (!cardCounter.status) 
         {
             Debug.Log("Tienes que seleccionar "+ cardCounter.deckSize+ " cartas.");
@@ -35,7 +33,6 @@ public class CardAdder : MonoBehaviour
             return;
         }
         string name = text.text.Substring(0, text.text.Length-1);
- 
 
         menuCards = CardContainer.GetComponentsInChildren<MenuCard>().ToList();
         deckBuilderManager.MazoSeleccionado.cards.Clear();
@@ -58,11 +55,5 @@ public class CardAdder : MonoBehaviour
         {
             deckBuilderManager.StartPut?.Invoke();
         }
-        /*
-        for (int i = 0; i < deckBuilderManager.MazoSeleccionado.Datos.Count; i++)
-        {
-            Debug.Log("Carta: "+ deckBuilderManager.MazoSeleccionado.Datos[i].Carta.cardName+"\nCantidad: "+ deckBuilderManager.MazoSeleccionado.Datos[i].Cantidad);
-        }*/
     }
-
 }

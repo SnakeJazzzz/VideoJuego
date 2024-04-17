@@ -18,6 +18,7 @@ public class CardSOSystem : ScriptableObject
     public Action<int> Spawn;
     public Action GetNewCard;
     public Action<float> Shuffle;
+    public Action ShuffleOverA;
     public Action UIShow;
     public Action<int> Select;
     public Action NoCardSelected;
@@ -25,7 +26,7 @@ public class CardSOSystem : ScriptableObject
 
     public void SetMazo()
     {
-        Debug.Log("Index: "+userInformation.selectedDeck);
+        Debug.Log("Index: " + userInformation.selectedDeck);
         mazo = mazos.Items[userInformation.selectedDeck];
     }
 
@@ -39,7 +40,6 @@ public class CardSOSystem : ScriptableObject
             return;
         }
 
-        //Debug.Log("Carta "+newvalue + " selecionada.");
         selected = newvalue;
         Select?.Invoke(selected);
     }
@@ -64,7 +64,7 @@ public class CardSOSystem : ScriptableObject
         cartasEnMano.Items.RemoveAt(selected);
         GetNewCard?.Invoke();
         selected = -1;
-        
+
         UIShow?.Invoke();
 
         if (cartasEnMano.Items.Count == 0)
@@ -80,21 +80,20 @@ public class CardSOSystem : ScriptableObject
 
     public void ShuffleOver()
     {
-       RefillCards();
+        ShuffleOverA?.Invoke();
+        RefillCards();
     }
 
     public void RefillCards()
     {
-        //Debug.Log("Refill cards called!" + cartasEnMano.Items.Count);
-    
-        for(int i = 0; i < 6; i++)
-        //while (x < 6)
+        Debug.Log("Número de cartas antes de rellenar: " + cartasEnMano.Items.Count);
+
+        for (int i = 0; i < 6; i++)
         {
             GetNewCard?.Invoke();
-            //Debug.Log("Giving Card!");
         }
 
-        //Debug.Log("Refilling over there are "+ cartasEnMano.Items.Count + " cards");
+        Debug.Log("Número de cartas después de rellenar: " + cartasEnMano.Items.Count);
 
         UIShow?.Invoke();
     }
