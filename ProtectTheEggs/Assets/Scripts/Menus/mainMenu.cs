@@ -4,22 +4,26 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public UserInformation userInformation;
-    // This function is called when the "Play" button is pressed.
+
+    public void cambiarescena(string escena)
+    {
+        SceneManager.LoadScene(escena);
+    }
+
+/*
     public void PlayGame()
     {
-       
-        // Choose a random map index between 5 and 7 and load it additively
         if (userInformation.selectedDeck != -1)
         {
-            int randomMapIndex = Random.Range(5, 8); // Random.Range is max-exclusive
+            int randomMapIndex = Random.Range(5, 8);
             SceneManager.LoadScene(randomMapIndex);
- 
         }
         else
         {
             Debug.Log("No hay mazo seleccionado!");
         }
-        //SceneManager.LoadScene("Map2"); 
+
+        // SceneManager.LoadScene("Map2"); 
     }
 
     public void BuildDeck()
@@ -27,6 +31,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("DeckMenu");
     }
 
+*/
 
     public void QuitGame()
     {

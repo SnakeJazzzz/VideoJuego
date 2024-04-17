@@ -37,5 +37,4 @@ public class CardUICounter : MonoBehaviour
         cardCountText.text = value.ToString();
     }
 }
-
     
