@@ -21,7 +21,7 @@ async function connectToDB() {
     host: "localhost",
     user: "tc2005b",
     password: "tec123",
-    // password: "Tec12345!",
+    //password: "Tec12345!",
     database: "PTE",
   });
 }
