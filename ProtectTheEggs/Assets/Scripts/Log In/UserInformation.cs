@@ -15,7 +15,7 @@ public class UserInformation : ScriptableObject
 
     public void Reset()
     {
-        Debug.Log("UserInfo Reset!");
+        //Debug.Log("UserInfo Reset!");
         username = null;
         loadedDeck = false;
         selectedDeck = -1;

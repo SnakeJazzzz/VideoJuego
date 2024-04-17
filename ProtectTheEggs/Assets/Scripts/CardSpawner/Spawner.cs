@@ -5,64 +5,39 @@ using UnityEngine.Events;
 
 public class Spawner : MonoBehaviour
 {
-    
     public RSCards cartasEnMano;
-    public int selected = -1;
-    public UnityEvent CardPlaced;
-    public UnityEvent OutOfCards;
+    public CardSOSystem cardSOSystem;
 
-
-    void Start()
+    void OnEnable()
     {
-        CardPlaced.Invoke();
+        cardSOSystem.Spawn += Spawn;
     }
-    public void NewSelected(int newValue)
+
+    void OnDisable()
     {
-        //Debug.Log("Received "+ newValue);
-        selected = newValue - 1;
+       cardSOSystem.Spawn -= Spawn; 
     }
 
-    public void OnClick()
+   void Spawn(int index)
     {   
-        if (selected == -1)
-        {
-            Debug.Log("No hay carta seleccionada.");
-            return;
-        }
-        if (selected >= cartasEnMano.Items.Count)
-        {
-            Debug.Log("No hay carta en ese lugar.");
-            return;
-        }
-
-        Spawn(cartasEnMano.Items[selected]);
-
-        cartasEnMano.Items.RemoveAt(selected);
-        selected = -1;
-        CardPlaced.Invoke();
-
-        if (cartasEnMano.Items.Count == 0)
-        {
-            OutOfCards.Invoke();
-        }
-
-    }
-
-    
-   void Spawn(Card card)
-    {   
+        Debug.Log("Spawning NPC!");
+        Card card = cartasEnMano.Items[index];
         Vector3 clickPosition = Input.mousePosition;
         clickPosition = Camera.main.ScreenToWorldPoint(clickPosition);
         clickPosition.z = 0;  
 
         for(int i = 0; i < card.numberOfNPCs; i++)
         {
-            /*
-            GameObject newNPC = Instantiate(card.prefab ,clickPosition, transform.rotation);
-            newNPC.GetComponent<NPCController>().setOwnership(0); 
-            newNPC.SetActive(true);*/
-        }
+            Debug.Log("Prefabs/" + card.cardName);
+            GameObject prefab = Resources.Load<GameObject>("Prefabs/" + card.cardName);
+            if (prefab != null)
+            {
+                GameObject newNPC = Instantiate(prefab, clickPosition, transform.rotation);
 
+                newNPC.GetComponent<NPCController>().setOwnership(0, card.stats); 
+                newNPC.SetActive(true);
+            }
+        }
     }
 }
 

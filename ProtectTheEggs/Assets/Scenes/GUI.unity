@@ -5703,10 +5703,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 329403642435473581, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 329403642435473581, guid: c91bd5745368440b9823018a11e97504, type: 3}
       propertyPath: cardPanels.Array.data[0]
       value: 
       objectReference: {fileID: 397457017}
@@ -5731,10 +5727,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 790170054}
     - target: {fileID: 1459907335599354743, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1459907335599354743, guid: c91bd5745368440b9823018a11e97504, type: 3}
       propertyPath: NoCardSelectedoBanner
       value: 
       objectReference: {fileID: 689830180}
@@ -5746,22 +5738,6 @@ PrefabInstance:
       propertyPath: ReshufflingDeckBanner
       value: 
       objectReference: {fileID: 1451390049}
-    - target: {fileID: 3080218563660072350, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4071013533257224624, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4929520380876138637, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5459648922037876616, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.3306246
@@ -5805,10 +5781,6 @@ PrefabInstance:
     - target: {fileID: 8330408597308466585, guid: c91bd5745368440b9823018a11e97504, type: 3}
       propertyPath: m_Name
       value: CardSpawner
-      objectReference: {fileID: 0}
-    - target: {fileID: 8330408597308466585, guid: c91bd5745368440b9823018a11e97504, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
