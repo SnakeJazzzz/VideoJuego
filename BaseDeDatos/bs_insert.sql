@@ -78,6 +78,6 @@ INSERT INTO DetallesMazo (IDMazo, IDCarta, Cantidad) VALUES
 
 -- Insert data to Mapas table
 INSERT INTO Mapas (NombreMapa) VALUES
-("Map1"),
-("Map2"),
-("Map3");
+("SeaSide"),
+("Village"),
+("EnchantedForest");
