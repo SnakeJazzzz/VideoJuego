@@ -77,13 +77,7 @@ INSERT INTO DetallesMazo (IDMazo, IDCarta, Cantidad) VALUES
 (2, 1 ,5);
 
 -- Insert data to Mapas table
-INSERT INTO Mapas (IDMapa, NombreMapa) VALUES
-(1, "Mapa 1"),
-(2, "Mapa 2"),
-(3, "Mapa 3");
-
-/*
--- Insert data to Partidas table
-INSERT INTO Partidas (IDUsuario, MaxOrda) VALUES 
-(1, 500);
-*/
+INSERT INTO Mapas (NombreMapa) VALUES
+("Map1"),
+("Map2"),
+("Map3");
