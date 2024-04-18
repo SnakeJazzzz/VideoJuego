@@ -34,7 +34,7 @@ RectTransform:
   m_Father: {fileID: 5960268652353706783}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -487,7 +487,7 @@ MonoBehaviour:
     name: 
     health: 100
     speed: 1
-    attack: 20
+    attack: 0
     attackCooldown: 1
     range: 5
     isStructure: 0
@@ -702,6 +702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proyectile: {fileID: 8930121568858369566, guid: 967c1eb77972c458bae401849421c3c1, type: 3}
   Pspeed: 6
+  Radius: 0
 --- !u!114 &5725626201204970524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -714,7 +715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff77e863975514cd9bf8ed4816f91a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 0}
+  gameEvent: {fileID: 11400000, guid: 459d60ef71d1f4864899379a690db9d8, type: 2}
 --- !u!114 &-1004132896668918902
 MonoBehaviour:
   m_ObjectHideFlags: 0
