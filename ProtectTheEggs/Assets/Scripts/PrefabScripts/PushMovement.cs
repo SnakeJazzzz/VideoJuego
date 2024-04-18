@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : NPCSystem
+public class PushMovement : NPCSystem
 {
    
     Coroutine move;
 
-     ClosestFinder closestFinder;
+    ClosestFinder closestFinder;
 
     protected override void Awake()
     {

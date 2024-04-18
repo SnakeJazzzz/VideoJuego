@@ -47,9 +47,12 @@ TagManager:
   - name: In-Game
     uniqueID: 3058040861
     locked: 0
+  - name: Proyectiles
+    uniqueID: 839880769
+    locked: 0
   - name: HealthBars
     uniqueID: 4085417121
     locked: 0
-  - name: New Layer 3
-    uniqueID: 839880769
+  - name: New Layer 4
+    uniqueID: 233359593
     locked: 0
