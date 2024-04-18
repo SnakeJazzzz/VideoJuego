@@ -58,7 +58,7 @@ public class RangeFinder : NPCSystem
             {
                 if (!isAttacking)
                 {
-                    Debug.Log("Starting to attack");
+                    //Debug.Log("Starting to attack");
                     StopMovement.Invoke();
                     StartAttack.Invoke();
                     isAttacking = true; // Update the state
@@ -73,7 +73,7 @@ public class RangeFinder : NPCSystem
             {
                 if (isAttacking)
                 {   
-                    Debug.Log("Stopping attack");
+                    //Debug.Log("Stopping attack");
                     StopAttack.Invoke();
                     isAttacking = false; // Update the state
                 }
