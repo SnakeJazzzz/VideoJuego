@@ -315,12 +315,12 @@ GameObject:
   - component: {fileID: 1000834736685596780}
   - component: {fileID: 9137229724764263253}
   - component: {fileID: 1669404953554243420}
-  - component: {fileID: 5407820127193346447}
   - component: {fileID: 4227773298884916044}
   - component: {fileID: 2685408752614795333}
-  - component: {fileID: 5670210319069151022}
   - component: {fileID: -1790917776489516627}
   - component: {fileID: 3550290410881553097}
+  - component: {fileID: 8679509633958322904}
+  - component: {fileID: 5267919103291594872}
   - component: {fileID: 5725626201204970524}
   - component: {fileID: -1004132896668918902}
   - component: {fileID: -4524763931279732985}
@@ -462,7 +462,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 17.713032, y: 25.069998}
+    oldSize: {x: 98.40573, y: 139.27777}
     newSize: {x: 17.713032, y: 25.069998}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -483,21 +483,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f0e25a6d81d413085aad648cf32f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcStats: {fileID: 11400000, guid: 84e9a643331ed4062b1d18c6305dfe56, type: 2}
+  npcStats:
+    name: 
+    health: 100
+    speed: 1
+    attack: 10
+    attackCooldown: 1
+    range: 5
+    isStructure: 0
+    attackTowers: 0
+    attackEnemies: 1
   manager: {fileID: 11400000, guid: e8ef3ba2208284799ba7650c2ae364c3, type: 2}
   owner: 0
---- !u!114 &5407820127193346447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7795571062971709141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aabe1363e48842d5927a0d3a8eec67c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4227773298884916044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,7 +538,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5407820127193346447}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
         m_MethodName: StopAllCoroutines
         m_Mode: 1
@@ -553,7 +550,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5670210319069151022}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
         m_MethodName: StopAllCoroutines
         m_Mode: 1
@@ -580,18 +577,6 @@ MonoBehaviour:
   teamColors: {fileID: 11400000, guid: 154457e206b2d4829b348cef0d3d5cd7, type: 2}
   healthBarValue: {fileID: 0}
   healthBarColor: {fileID: 0}
---- !u!114 &5670210319069151022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7795571062971709141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e65cedbd503564db7b3f356cf40d5c00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-1790917776489516627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,8 +619,8 @@ MonoBehaviour:
   StartAttack:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670210319069151022}
-        m_TargetAssemblyTypeName: SingleAttack, Assembly-CSharp
+      - m_Target: {fileID: 5267919103291594872}
+        m_TargetAssemblyTypeName: ProyectileAttack, Assembly-CSharp
         m_MethodName: InTest
         m_Mode: 1
         m_Arguments:
@@ -649,8 +634,8 @@ MonoBehaviour:
   StopAttack:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670210319069151022}
-        m_TargetAssemblyTypeName: SingleAttack, Assembly-CSharp
+      - m_Target: {fileID: 5267919103291594872}
+        m_TargetAssemblyTypeName: ProyectileAttack, Assembly-CSharp
         m_MethodName: OutTest
         m_Mode: 1
         m_Arguments:
@@ -661,6 +646,63 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  StartMovement:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8679509633958322904}
+        m_TargetAssemblyTypeName: StopMovement, Assembly-CSharp
+        m_MethodName: StartMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  StopMovement:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8679509633958322904}
+        m_TargetAssemblyTypeName: StopMovement, Assembly-CSharp
+        m_MethodName: StopMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8679509633958322904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7795571062971709141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636a79aaab74c4188a4579e27a3a2784, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5267919103291594872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7795571062971709141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fa31dcae3d1141a294b76dbfea864f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proyectile: {fileID: 6862277898855426095, guid: 7c64bda0245564734be5e9b81c492a71, type: 3}
+  Pspeed: 2
+  Radius: 3
 --- !u!114 &5725626201204970524
 MonoBehaviour:
   m_ObjectHideFlags: 0

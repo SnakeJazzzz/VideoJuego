@@ -7,4 +7,9 @@ public class mapsMenu : MonoBehaviour
     {
         SceneManager.LoadScene(escena);
     }
+
+    public string GetCurrentMapName()
+    {
+        return SceneManager.GetActiveScene().name;
+    }
 }

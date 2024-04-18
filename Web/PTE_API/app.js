@@ -477,6 +477,54 @@ async function getCardFormat(cardID) {
 
   //-------------------------------
 
+  //Endpoint to create a new game session
+app.post("/api/partidas", async (req, res) => {
+  let connection = null;
+
+  try {
+    connection = await connectToDB();
+    const { NombreMapa, MaxOrda, username } = req.body;
+
+    // Fetch the user's ID based on the username
+    const [users] = await connection.execute(
+      "SELECT IDUsuario FROM Usuarios WHERE NombreUsuario = ?;",
+      [username]
+    );
+    if (users.length === 0) {
+      res.status(404).json({ "Success": false, "Error": "User not found." });
+      return;
+    }
+    const userID = users[0].IDUsuario;
+
+    // Fetch the map's ID based on the map name
+    const [maps] = await connection.execute(
+      "SELECT IDMapa FROM Mapas WHERE NombreMapa = ?;",
+      [NombreMapa]
+    );
+    if (maps.length === 0) {
+      res.status(404).json({ "Success": false, "Error": "Map not found." });
+      return;
+    }
+    const mapID = maps[0].IDMapa;
+
+    // Insert the new game session into Partidas
+    const [insertResult] = await connection.execute(
+      "INSERT INTO Partidas (IDUsuario, MaxOrda, IDMapa) VALUES (?, ?, ?);",
+      [userID, MaxOrda, mapID]
+    );
+
+    res.status(200).json({ "Success": true, "IDPartida": insertResult.insertId });
+  } catch (error) {
+    res.status(500).json({ "Success": false, "Error": error.message });
+    console.error(error);
+  } finally {
+    if (connection) {
+      connection.end();
+    }
+  }
+});
+
+
 
 
 /*async function getCardFormat(cardID)

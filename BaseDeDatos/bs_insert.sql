@@ -9,10 +9,10 @@ INSERT INTO Usuarios (NombreUsuario, Contraseña, PuntuaciónMáxima) VALUES
 -- Insert data to NPC table
 INSERT INTO NPC (name, health, speed, attack, attackCooldown, `range`, isStructure, attackTowers, attackEnemies) VALUES 
 ('Knight', 400, 3, 70, 1.5, 1, 0, 0, 1),
-('Archer', 150, 3, 40, 1, 3, 0, 0, 1),
+('Archer', 150, 3, 40, 1, 7, 0, 0, 1),
 ('Goblin', 100, 4, 25, 0.5, 1, 0, 0, 1),
 ('Giant', 800, 1, 150, 2, 1, 0, 0, 1),
-('Mage', 250, 2, 100, 2, 2, 0, 0, 1),
+('Mage', 250, 2, 100, 2, 7, 0, 0, 1),
 ('Ghost', 200, 3, 30, 1, 1, 0, 0, 1),
 ('Orc', 350, 2, 60, 1.2, 1, 0, 0, 1),
 ('Assassin', 150, 4, 80, 1, 1, 0, 0, 1),
@@ -77,10 +77,10 @@ INSERT INTO DetallesMazo (IDMazo, IDCarta, Cantidad) VALUES
 (2, 1 ,5);
 
 -- Insert data to Mapas table
-INSERT INTO Mapas (IDMapa, NombreMapa) VALUES
-(1, "Mapa 1"),
-(2, "Mapa 2"),
-(3, "Mapa 3");
+INSERT INTO Mapas (NombreMapa) VALUES
+("SeaSide"),
+("Village"),
+("EnchantedForest");
 
 /*
 -- Insert data to Partidas table
