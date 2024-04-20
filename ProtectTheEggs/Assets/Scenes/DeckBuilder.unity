@@ -471,7 +471,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 364787150}
-  - component: {fileID: 364787149}
   - component: {fileID: 364787153}
   - component: {fileID: 364787154}
   - component: {fileID: 364787155}
@@ -484,26 +483,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &364787149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 364787148}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad1eb35d8fe94e499d9fdba4bfdaaaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedDeckPanel: {fileID: 0}
-  availableCards: []
-  selectedDeck: []
-  cardDisplayPrefab: {fileID: 235204779058148199, guid: bce81db71ecf24cdcaef346df41a0a6b, type: 3}
-  availableCardsPanel: {fileID: 45033101}
-  mazo1: {fileID: 11400000, guid: 7ec9c74ccd49148a3a1504c762693d7c, type: 2}
-  userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
-  maxCardId: 10
 --- !u!4 &364787150
 Transform:
   m_ObjectHideFlags: 0
@@ -1874,6 +1853,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 1387600548}
   - {fileID: 77819029}
-  - {fileID: 37216410}
   - {fileID: 1972444242}
   - {fileID: 364787150}
