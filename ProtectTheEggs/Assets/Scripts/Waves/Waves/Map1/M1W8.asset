@@ -13,23 +13,23 @@ MonoBehaviour:
   m_Name: M1W8
   m_EditorClassIdentifier: 
   WaveInformation:
-  - fileName: Giant
-    spawnPosition: {x: 40, y: -1, z: 0}
+  - fileName: Orc
+    spawnPosition: {x: 45, y: -1, z: 0}
     spawnTime: 0
-    count: 2
-  - fileName: Assassin
-    spawnPosition: {x: 40, y: 3, z: 0}
-    spawnTime: 1
-    count: 3
-  - fileName: Goblin
-    spawnPosition: {x: 40, y: 4, z: 0}
-    spawnTime: 5
-    count: 10
-  - fileName: Mage
-    spawnPosition: {x: 40, y: 1, z: 0}
-    spawnTime: 7
-    count: 3
+    count: 6
   - fileName: Troll
-    spawnPosition: {x: 40, y: 1, z: 0}
-    spawnTime: 10
+    spawnPosition: {x: 45, y: 3, z: 0}
+    spawnTime: 7
+    count: 5
+  - fileName: Goblin
+    spawnPosition: {x: 45, y: 4, z: 0}
+    spawnTime: 15
+    count: 12
+  - fileName: Orc
+    spawnPosition: {x: 45, y: 1, z: 0}
+    spawnTime: 20
     count: 4
+  - fileName: Troll
+    spawnPosition: {x: 45, y: 1, z: 0}
+    spawnTime: 30
+    count: 8

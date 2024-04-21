@@ -13,4 +13,26 @@ MonoBehaviour:
   m_Name: Map1Waves
   m_EditorClassIdentifier: 
   Waves:
+  - {fileID: 11400000, guid: 137d8107f8fe84b3c9cc61bffc3928f4, type: 2}
+  - {fileID: 11400000, guid: 817120da8ad11404bb1e257e31ae5034, type: 2}
+  - {fileID: 11400000, guid: c65d9119f0b1d4db38f081ad4a2efeaf, type: 2}
+  - {fileID: 11400000, guid: 9c2beaa1551934f548cfca5ff6b90f50, type: 2}
+  - {fileID: 11400000, guid: 5036c7ec6ef4141bb84fe68571b1a77a, type: 2}
+  - {fileID: 11400000, guid: 9470751f1b0724fd189e4e5291e9500b, type: 2}
   - {fileID: 11400000, guid: 0a94ed77da8eb40df9f1f06e641785c6, type: 2}
+  - {fileID: 11400000, guid: 10e96dd26632f4153a883d09887e65cf, type: 2}
+  - {fileID: 11400000, guid: b3840685845dc42f88cfb92bdb5a9577, type: 2}
+  - {fileID: 11400000, guid: 09260edbdf7c24f63825fd8ed49d2f53, type: 2}
+  - {fileID: 11400000, guid: 137d8107f8fe84b3c9cc61bffc3928f4, type: 2}
+  - {fileID: 11400000, guid: 5036c7ec6ef4141bb84fe68571b1a77a, type: 2}
+  - {fileID: 11400000, guid: 797394b2a4c7f40a6ab5d39266d06396, type: 2}
+  - {fileID: 11400000, guid: c65d9119f0b1d4db38f081ad4a2efeaf, type: 2}
+  - {fileID: 11400000, guid: e5908934e666d4b6b8884c4bb6538288, type: 2}
+  - {fileID: 11400000, guid: 9c2beaa1551934f548cfca5ff6b90f50, type: 2}
+  - {fileID: 11400000, guid: 817120da8ad11404bb1e257e31ae5034, type: 2}
+  - {fileID: 11400000, guid: 23f6d6420cd6744288e5c13b1a98dd2a, type: 2}
+  - {fileID: 11400000, guid: 137d8107f8fe84b3c9cc61bffc3928f4, type: 2}
+  - {fileID: 11400000, guid: cbd5c320f7d3848ba975518a993b12f9, type: 2}
+  - {fileID: 11400000, guid: 9470751f1b0724fd189e4e5291e9500b, type: 2}
+  - {fileID: 11400000, guid: c65d9119f0b1d4db38f081ad4a2efeaf, type: 2}
+  - {fileID: 11400000, guid: a4b1974c61fdb4369860bd7b7e0088a8, type: 2}
