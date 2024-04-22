@@ -11,7 +11,12 @@ public class MenuCard : MonoBehaviour
    public CardCounter cardCounter;
     public Image artworkImage; 
     public Card cardData;
+    public StatsShower statsShower;
 
+    public void ShowStats()
+    {
+        statsShower.ShowStats(cardData);
+    }
     public void Display(Card card)
     {
         cardData = card;
@@ -23,6 +28,7 @@ public class MenuCard : MonoBehaviour
         artworkImage = GetComponent<Image>();
         text = GetComponentInChildren<TMP_Text>();
         cardCounter = GetComponentInParent<CardCounter>();
+        statsShower= GetComponentInParent<StatsShower>();
     }
     public void Plus()
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class ProyectileAttack : NPCSystem
 {
     public GameObject proyectile;
+    public Vector3 offset = new Vector3(0, 0, 0);
     public float Pspeed;
     public float Radius;
 
@@ -19,7 +20,11 @@ public class ProyectileAttack : NPCSystem
 
     public void InTest()
     {
-        //Debug.Log("IM IN RANGE!");
+        if (attackCoroutine != null)
+        {
+            StopCoroutine(attackCoroutine);
+        }
+      //Debug.Log("IM IN RANGE!");
         attackCoroutine = StartCoroutine(AttackCoroutine());
     }
 
@@ -41,7 +46,7 @@ public class ProyectileAttack : NPCSystem
             yield return new WaitForSeconds(npcController.npcStats.attackCooldown);
             if (closestFinder.closest != null)
             {
-                GameObject Proyectile = Instantiate(proyectile, gameObject.transform.position, Quaternion.identity);
+                GameObject Proyectile = Instantiate(proyectile, gameObject.transform.position + offset, Quaternion.identity);
 
                 Proyectile.GetComponent<PController>().SetData(closestFinder.closest, Pspeed, npcController.npcStats.attack, Radius, npcController.owner);
                 Proyectile.SetActive(true);

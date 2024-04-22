@@ -245,6 +245,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainTower (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8373712339497723186, guid: 4c5849f3f38fb4408894ace950526da2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1135,6 +1139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainTower
       objectReference: {fileID: 0}
+    - target: {fileID: 8373712339497723186, guid: 4c5849f3f38fb4408894ace950526da2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1256,6 +1264,10 @@ PrefabInstance:
     - target: {fileID: 8373712339497723186, guid: 4c5849f3f38fb4408894ace950526da2, type: 3}
       propertyPath: m_Name
       value: MainTower (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8373712339497723186, guid: 4c5849f3f38fb4408894ace950526da2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
