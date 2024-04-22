@@ -365,7 +365,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -209550175
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -670,7 +670,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f0e25a6d81d413085aad648cf32f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcStats: {fileID: 11400000, guid: edadeabf596a34353ae1d07307b01273, type: 2}
+  npcStats:
+    name: 
+    health: 2000
+    speed: 0
+    attack: 0
+    attackCooldown: 0
+    range: 0
+    isStructure: 0
+    attackTowers: 0
+    attackEnemies: 0
   manager: {fileID: 11400000, guid: e8ef3ba2208284799ba7650c2ae364c3, type: 2}
   owner: 0
 --- !u!114 &-6424681921024238697

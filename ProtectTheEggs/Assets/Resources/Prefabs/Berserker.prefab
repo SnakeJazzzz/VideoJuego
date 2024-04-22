@@ -388,7 +388,7 @@ SpriteRenderer:
   m_SortingLayerID: -1236926435
   m_SortingLayer: 1
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 542b1978ecefb4fbfa8381306364a3f2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93af811ebbc59435e8403758d8a1486a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -462,7 +462,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 17.713032, y: 25.069998}
+    oldSize: {x: 98.40573, y: 139.27777}
     newSize: {x: 17.713032, y: 25.069998}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -483,7 +483,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f0e25a6d81d413085aad648cf32f93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcStats: {fileID: 11400000, guid: 721bd99f5702e450db13bd62970d84af, type: 2}
+  npcStats:
+    name: 
+    health: 0
+    speed: 0
+    attack: 0
+    attackCooldown: 0
+    range: 0
+    isStructure: 0
+    attackTowers: 0
+    attackEnemies: 0
   manager: {fileID: 11400000, guid: e8ef3ba2208284799ba7650c2ae364c3, type: 2}
   owner: 0
 --- !u!114 &5407820127193346447
@@ -661,6 +670,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  StartMovement:
+    m_PersistentCalls:
+      m_Calls: []
+  StopMovement:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5725626201204970524
 MonoBehaviour:
   m_ObjectHideFlags: 0

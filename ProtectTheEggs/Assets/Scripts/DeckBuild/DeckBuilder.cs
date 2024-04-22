@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
@@ -65,10 +65,6 @@ public class DeckBuilder : MonoBehaviour
         // Instantiate new card displays for the selected deck
         foreach (Card card in selectedDeck)
         {
-            /*
-            MenuCard display = Instantiate(cardDisplayPrefab, selectedDeckPanel).    GetComponent<MenuCard>();
-            display.Initialize(card, false); // false indicates this card is in the selected deck and   should be set up for removal
-            */
         }
     }
 
