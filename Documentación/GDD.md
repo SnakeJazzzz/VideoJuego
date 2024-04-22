@@ -41,8 +41,7 @@ Tomás Molina Pérez Diez - A01784116
 
 ### **Resumen**
 
-En "Protect the Egg" te enfrascaras en una batalla estrategica contra ordas de monstruos, con la ayuda de cartas invocaras tus tropas con el objetivo de proteger un huevo de dragón. El dominio de creación de mazo, posicionamiento de unidades y la gestión de recursos es clave para la victoria en este competitivo juego 2D para computadoras. ¿Sobrevivirás?
-
+En "Protect the Egg" te enfrascaras en una batalla estratégica contra ordas de monstruos, con la ayuda de cartas invocaras tus tropas con el objetivo de proteger un huevo de dragón. El dominio de creación de mazo, posicionamiento de unidades y estrucutras, más la gestión de recursos es clave para la victoria en este competitivo juego 2D para computadoras. El juego desafía a los jugadores a gestionar estos recursos y en desplegar unidades estratégicamente para cuidar el huevo de dragón ¿Por cuantas ordas podras protegerlo?
 ---
 
 ### **Jugabilidad**
@@ -143,25 +142,29 @@ Permite a los jugadores personalizar su experiencia de juego.
 
 ---
 
-#### **General**
+#### **En Partida**
 
-El juego consiste en proteger un nido de huevos de dragón de monstruos, el nido esta ubicado en el costado izquierdo del tablero mientras que un de los huevos esta a la mitad del mapa y por medio de cartas que invocan NPC y obstáculos será como lo protegerás. Al usar una carta en el tablero hará que aparezca el personaje de la carta en el lugar colocado, cada carta tiene un costo de recursos para desplegar. Los monstruos atacan al huevo por medio de ordas cada una con mayor dificultad.
-¿Por cuantas ordas podras proteger el huevo?
-El juego desafía a los jugadores a gestionar estos recursos y en desplegar unidades estratégicamente para cuidar del nideo de huevos; cuando destruyen el huevo de enmedio todos los monstruos en pantalla en ese momento morirán Y el área de invocación de las cartas del jugador se verá reducida. Si las torres de protección predeterminadas son destruidas, así como en el caso del huevo central; el área de invocación de las cartas del jugador se verá reducida.
+El objetivo principal del juego consiste en proteger un huevo de dragón el cual es atacado por oleadas de monstruos, por medio de cartas de invocación de personajes (NPC) y estrucutras.
 
-#### **Creación de Mazos**
+Para invocar cartas, dispones de elixir de dragón como recurso de invocación, la cantidad empieza en 10 puntos, y este aumenta en 10 puntos cada 10 segundos y el límite de almacenamiento es de 50 puntos, cada carta tiene un costo para desplegar y puedes ver la cantidad de elixir que dispones en la esquina superior izquierda.
 
-El jugador crea un mazo de 20 cartas de un pool de 20 tipos de cartas, consistiendo en que el jugador pueda tener cartas repetidas si quiere, el menú de creación de mazos se encuentra en el menú principal del juego, tambien se encontrará toda la información de cada carta para poder elegir con conciencia.
+Para usar una carta, para moverte entre las cartas entre tu mano; se seleccionan con las teclas; 1, 2, 3, 4, 5 y 6. Mientras que con click derecho, el personaje o estrucutra se colocará en la posición del mouse. Ten en cuenta que hay una zona limitada para invocar cartas, si intentas colocarla de esta zona, no se colocará la carta y se marcará el límite de la zona.
 
-#### **Mano, Mazos e Invocación de cartas**
+Tras haber usado las 20 cartas de tu mazo; estas se volverán a revolver para que las puedas volver a usar, este proceso dura 5 segundos, en los cuales no podrás usar ninguna carta, en alado derecho de las cartas "en mano" se encuentra el contador de cartas restantes en el mazo.
 
-El jugador empieza la partida con una mano de 6 cartas, al utilizar una carta; esta se descartará mientras que una nueva del mazo la remplazará. Cuando todas las cartas del mazo se hayan utilizado, las cartas se deben revolver, por lo tanto, se pasaran 7 segundos sin poder poner cartas mientras que estas se revuelven. Al pasar estos 7 segundos, el ciclo del mazo y la mano se reinicia de nuevo.
+Por otra parte, las oleadas de monstruos se van poniendo progresivamente más dificiles, el contador de la orda en la que te encuentras se ubica en el centro de la parte superior.
 
-Para invocar una carta se requiere tenerla en la mano y tener el "elixir de dragón" suficiente para su costo de invocación, cada carta tiene un costo de elixir para que sea invocada dependiendo de sus estadísticas personales. Al comenzar la partida; el jugador comenzará con 5 de elixir y cada 10 segundos el nido le brindará 10 de elixir, mientras que el máximo que se puede almacenar al mismo tiempo es 20 de elixir, la administración del elixir es esencial para poder invocar tus cartas con el maximo provecho del recurso, ya que este se puede perder al no tener espacio de almacenamiento en el momento.
+#### **Selección y Creación de Mazos**
+
+Para poder jugar, debes crear almenos un mazo de los 5 disponibles, cada mazo debe de tener 20 cartas exactas y un nombre para poderse guardar, las cartas se pueden repetir siempre y cuando el total sea 20, tambien se encontrará toda la información de cada carta para poder elegir con conciencia.
+
+#### **Selección de Mapa**
+
+Tras elegir tu mazo, debes de elegir en cual de los 3 mapas jugarás, al clickear en el botón del mapa elegido, se comenzará la partida con tu mazo seleccionado y mapa elegido.
 
 #### **Victoria**
 
-¿Por cuantas ordas de monstruos podras proteger al huevo de dragón?, ¿O derrotaste a todas las ordas de monstruos? Tras terminar la partida, se guardará tu puntuación.
+¿Por cuantas ordas de monstruos podras proteger al huevo de dragón? Tras terminar la partida, se guardará tu puntuación.
 
 ---
 

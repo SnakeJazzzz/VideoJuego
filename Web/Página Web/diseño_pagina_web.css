@@ -1,0 +1,72 @@
+body
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+p
+{
+    margin: -10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+div
+{
+    margin: -8px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.title
+{
+    background-color: #23434d;
+}
+
+div.resumen
+{
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+div.titleVideojuego
+{
+    background-color: #23434d;
+}
+
+div.videjuego
+{
+    background-color: white;
+}
+
+div.titleComoJugar
+{
+    background-color: #b97d2d;
+}
+
+div.textoComoJugar
+{
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+div.puntajes
+{
+    background-color: #b97d2d;
+}
+
+div.stats
+{
+    background-color: white;
+    color: black;
+}
+
+div.creditos
+{
+    background-color: #23434d;
+    text-align: center; 
+}
