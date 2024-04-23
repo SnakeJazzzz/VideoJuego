@@ -21,7 +21,7 @@ public class PSingleAttack : MonoBehaviour
 
     void SingleAttack()
     {
-        Debug.Log("Atacando!");
+        //Debug.Log("Atacando!");
         pController.target.GetComponent<IDamageable>().TakeDamage(pController.damage);
         Destroy(this.gameObject);
         return;

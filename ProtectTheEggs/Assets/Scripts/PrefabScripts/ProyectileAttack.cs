@@ -8,6 +8,7 @@ public class ProyectileAttack : NPCSystem
     public Vector3 offset = new Vector3(0, 0, 0);
     public float Pspeed;
     public float Radius;
+    public float angle;
 
     Coroutine attackCoroutine;
     ClosestFinder closestFinder;
@@ -48,7 +49,7 @@ public class ProyectileAttack : NPCSystem
             {
                 GameObject Proyectile = Instantiate(proyectile, gameObject.transform.position + offset, Quaternion.identity);
 
-                Proyectile.GetComponent<PController>().SetData(closestFinder.closest, Pspeed, npcController.npcStats.attack, Radius, npcController.owner);
+                Proyectile.GetComponent<PController>().SetData(closestFinder.closest, Pspeed, npcController.npcStats.attack, Radius, npcController.owner, angle);
                 Proyectile.SetActive(true);
             }
             //npcController.closest.GetComponent<IDamageable>().TakeDamage(1);

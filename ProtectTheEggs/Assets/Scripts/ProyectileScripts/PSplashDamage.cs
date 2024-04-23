@@ -5,7 +5,7 @@ using UnityEngine;
 public class PSplashDamage : MonoBehaviour
 {
     PController pController;
-    public float radius;
+
     void Awake()
     {
         pController = GetComponent<PController>();
@@ -25,7 +25,7 @@ public class PSplashDamage : MonoBehaviour
     {
         Debug.Log("Explode function called!");
         
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, radius);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, pController.radius);
         
         Debug.Log(hitColliders.Length);
         foreach (Collider2D hit in hitColliders)
@@ -33,6 +33,7 @@ public class PSplashDamage : MonoBehaviour
             NPCController hitController = hit.GetComponent<NPCController>();
             if (hitController == null)
             {
+                Debug.Log("hitController es null");
                 continue;
             }
             if (hitController.owner != pController.team)

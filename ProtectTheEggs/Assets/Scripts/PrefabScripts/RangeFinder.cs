@@ -38,7 +38,7 @@ public class RangeFinder : NPCSystem
 
                 if (isAttacking) // Only invoke StopAttack if we were previously attacking
                 {
-                   // Debug.Log("Enemy is null");
+                    //Debug.Log("Enemy is null");
 
                     StopAttack.Invoke();
                     isAttacking = false; // Update the state
