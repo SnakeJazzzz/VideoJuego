@@ -13,35 +13,35 @@ MonoBehaviour:
   m_Name: M3W12
   m_EditorClassIdentifier: 
   WaveInformation:
-  - fileName: Orc
+  - fileName: Ghost
     spawnPosition: {x: 10, y: 12, z: 0}
     spawnTime: 0
-    count: 8
-  - fileName: Goblin
+    count: 15
+  - fileName: Mage
     spawnPosition: {x: 35, y: 12, z: 0}
     spawnTime: 2
-    count: 15
-  - fileName: Trol
+    count: 5
+  - fileName: Ghost
     spawnPosition: {x: -6, y: 2, z: 0}
     spawnTime: 6
-    count: 8
-  - fileName: Goblin
+    count: 16
+  - fileName: Mage
     spawnPosition: {x: -6, y: 6, z: 0}
     spawnTime: 8
-    count: 15
-  - fileName: Orc
+    count: 6
+  - fileName: Ghost
     spawnPosition: {x: -6, y: 6, z: 0}
     spawnTime: 10
-    count: 10
-  - fileName: Orc
+    count: 20
+  - fileName: Mage
     spawnPosition: {x: 45, y: 10, z: 0}
     spawnTime: 13
     count: 8
-  - fileName: Archer
+  - fileName: Ghost
     spawnPosition: {x: 45, y: 12, z: 0}
     spawnTime: 15
-    count: 10
-  - fileName: Goblin
+    count: 22
+  - fileName: Mage
     spawnPosition: {x: 45, y: 12, z: 0}
     spawnTime: 20
-    count: 15
+    count: 5
