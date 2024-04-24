@@ -7,11 +7,13 @@ public class SceneLoader : MonoBehaviour
 {
     public UserInformation userInformation;
     public RSRSCards mazos;
+    public GameObject textoMensajeNoEspacio;
     public void CreateNewDeck()
     {
         if (mazos.Items[mazos.Items.Count - 1].nombreMazo != "")
         {
-            Debug.Log("No tienes espacio para crear otro mazo.");
+            StartCoroutine(MensajeNoEspacio());
+            // Debug.Log("No tienes espacio para crear otro mazo.");
         }
         else
         {
@@ -24,7 +26,6 @@ public class SceneLoader : MonoBehaviour
                     break;
                 }
             }
-
             userInformation.selectedDeck = firstEmpty;
             //Debug.Log("Cambiando a Escena DeckBuilder");
             SceneManager.LoadScene("DeckBuilder");
@@ -34,5 +35,13 @@ public class SceneLoader : MonoBehaviour
     public void EditDeck()
     {
         SceneManager.LoadScene("DeckBuilder");
+    }
+
+    IEnumerator MensajeNoEspacio()
+    {
+        textoMensajeNoEspacio.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        Debug.Log("No tienes espacio para crear otro mazo.");
+        textoMensajeNoEspacio.SetActive(false);
     }
 }

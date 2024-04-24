@@ -10,6 +10,7 @@ public class UsernameValidator : MonoBehaviour
     public TMP_Text usernameText;
     public TMP_Text passwordText;
     public Action<string, string> ValidUsername;
+    public GameObject textoMensaje3caracteres;
 
     public void Validate()
     {
@@ -22,7 +23,15 @@ public class UsernameValidator : MonoBehaviour
         }
         else
         {
-            Debug.Log("El username y password tiene que ser mas de 3 o mas caracteres");
+            StartCoroutine(MensajeMensaje3caracteres());
+            Debug.Log("El username y password tiene que ser más de 3 o mas caracteres");
         }
+    }
+
+    IEnumerator MensajeMensaje3caracteres()
+    {
+        textoMensaje3caracteres.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        textoMensaje3caracteres.SetActive(false);
     }
 }

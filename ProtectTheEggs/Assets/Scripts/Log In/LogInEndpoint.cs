@@ -11,6 +11,7 @@ public class LogInEndpoint : MonoBehaviour
     public string apiURL = "http://localhost:3000/api/usuarios/";
     private string username;
     private string password;
+    public GameObject textoMensajeAccesGranted;
 
     void OnEnable()
     {
@@ -64,14 +65,28 @@ public class LogInEndpoint : MonoBehaviour
             
             if (logInCheck.Success)
             {
-                Debug.Log("Access Granted");
-                userInformation.username = username;
-                SceneManager.LoadScene("Menu");
+                StartCoroutine(MensajeAccesGranted());
+                // Debug.Log("Access Granted");
+                // userInformation.username = username;
+                // SceneManager.LoadScene("Menu");
             }
             else
             {
                 Debug.Log(logInCheck.Error);
             }
         }
+    }
+
+    IEnumerator MensajeAccesGranted()
+    {
+        textoMensajeAccesGranted.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        textoMensajeAccesGranted.SetActive(false);
+
+        Debug.Log("Access Granted");
+        userInformation.username = username;
+
+        yield return new WaitForSeconds(0.25f);
+        SceneManager.LoadScene("Menu");
     }
 }

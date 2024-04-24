@@ -17,7 +17,6 @@ public GameObject buttonsContainer;
         }
     }
 
-
     public void NewSelect(int index)
     {
 
@@ -33,7 +32,6 @@ public GameObject buttonsContainer;
             deckButtons[index].Highlight();
         }
         
-
         if (userInformation.selectedDeck != -1)
         {
             buttonsContainer.SetActive(true);
@@ -42,6 +40,5 @@ public GameObject buttonsContainer;
         {
             buttonsContainer.SetActive(false);
         }
-    }
-    
+    }   
 }

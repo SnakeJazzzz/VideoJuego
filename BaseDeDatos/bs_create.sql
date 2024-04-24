@@ -2,6 +2,7 @@
 DROP SCHEMA IF EXISTS PTE;
 -- Create the new schema
 CREATE SCHEMA PTE;
+-- Link document with schema
 USE PTE;
 
 -- Create the Usuarios table
@@ -66,7 +67,7 @@ CREATE TABLE Partidas (
     IDPartida INTEGER PRIMARY KEY AUTO_INCREMENT,
     IDUsuario INTEGER NOT NULL, -- Ensure NOT NULL for IDUsuario to enforce relationship integrity
     MaxOrda INTEGER NOT NULL,
-    IDMapa INTEGER NOT NULL,
+    IDMapa INTEGER NOT NULL, -- Ensure NOT NULL for IDMapa to enforce relationship integrity
     FOREIGN KEY (IDUsuario) REFERENCES Usuarios(IDUsuario),
     FOREIGN KEY (IDMapa) REFERENCES Mapas(IDMapa)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

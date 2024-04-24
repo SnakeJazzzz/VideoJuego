@@ -7,7 +7,7 @@ public class CardDisplay : MonoBehaviour
     public Image artworkImage; 
     public TMP_Text costText;
     public Card cardData;
-    //public UnityEngine.UI.Button button; 
+    //public UnityEngine.UI.Button button;
 
     private void Awake()
     {
@@ -18,9 +18,7 @@ public class CardDisplay : MonoBehaviour
         //artworkImage.sprite = artwork;
 
         //button.onClick.AddListener(() => FindObjectOfType<DeckBuilder>().AddCardToDeck(cardData));
-        
     }
-
 
     // This method might be called elsewhere in your UI to update the card's display.
     public void Display(Card card)
@@ -37,5 +35,4 @@ public class CardDisplay : MonoBehaviour
     {
         gameObject.SetActive(state);
     }
-    
 }

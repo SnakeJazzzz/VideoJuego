@@ -11,6 +11,7 @@ public class CreateAccountEndpoint : MonoBehaviour
     private string password;
     public UsernameValidator usernameValidator;
     public UserInformation userInformation;
+    public GameObject textoMensajeCreatedAccount;
 
     void OnEnable()
     {
@@ -61,14 +62,28 @@ public class CreateAccountEndpoint : MonoBehaviour
             
             if (logInCheck.Success)
             {
-                Debug.Log("Created new account!");
-                userInformation.username = username;
-                SceneManager.LoadScene("Menu");
+                StartCoroutine(MensajeCreatedAccount());
+                //Debug.Log("Created new account!");
+                //userInformation.username = username;
+                //SceneManager.LoadScene("Menu");
             }
             else
             {
                 Debug.Log(logInCheck.Error);
             }
         }
+    }
+
+    IEnumerator MensajeCreatedAccount()
+    {
+        textoMensajeCreatedAccount.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        textoMensajeCreatedAccount.SetActive(false);
+
+        Debug.Log("Created new account!");
+        userInformation.username = username;
+
+        yield return new WaitForSeconds(0.25f);
+        SceneManager.LoadScene("Menu");
     }
 }

@@ -36,16 +36,16 @@ INSERT INTO NPC (name, health, speed, attack, attackCooldown, `range`, isStructu
 -- Insert data to Cartas table
 INSERT INTO Cartas (cardName, description, cost, numberOfNPCs, IDNPC) VALUES 
 ('Knight', 'Front-line combat', 5, 1, 1),
-('Archer', 'Quick and ranged', 10, 2, 2),
-('Goblin', 'Strikes and distractions', 5, 3, 3),
-('Giant', 'Very resilient', 30, 1, 4),
-('Mage', 'Can deal area damage', 15, 1, 5),
-('Ghost', 'Sumons other ghost', 12, 4, 6),
+('Archer', 'Long-distance combat', 10, 2, 2),
+('Goblin', 'Quick and annoying', 5, 3, 3),
+('Giant', 'Slow but resilient', 30, 1, 4),
+('Mage', 'Long-distance + Splash Damage', 15, 1, 5),
+('Ghost', 'Summons other ghosts', 12, 4, 6),
 ('Orc', 'Strong and sturdy', 8, 1, 7),
-('Assassin', 'High damage and speed', 12, 1, 8),
-('Centaur', 'Versatile', 8, 1, 9),
-('Elf', 'long-range attacks', 25, 1, 10),
-('Berserker', 'Fierce warriors causing', 10, 1, 11),
+('Assassin', 'High speed and damage', 12, 1, 8),
+('Centaur', 'Has a bow', 8, 1, 9),
+('Elf', 'Throwing knives', 25, 1, 10),
+('Berserker', 'Fierce warriors, splash damage', 10, 1, 11),
 ('Ice Sorceress', 'tactical advantage', 12, 3, 12),
 ('Stone Golem', 'A living tank', 20, 1, 13),
 ('Troll', 'Strong and resilient', 7, 1, 14),
@@ -54,7 +54,7 @@ INSERT INTO Cartas (cardName, description, cost, numberOfNPCs, IDNPC) VALUES
 ('Catapult', 'Great range', 40, 1, 17),
 ('Mortar Tower', 'fortified positions', 35, 1, 18),
 ('Archer Tower', 'Covering/ range', 35, 1, 19),
-('Inferno Tower', 'Ideal bigDamage', 40, 1, 20),
+('Inferno Tower', 'Big ass damage', 40, 1, 20),
 ('Wizard Tower', 'Casts spells', 40, 1, 21);
 
 -- Insert data to Mazos table for Usuarios
