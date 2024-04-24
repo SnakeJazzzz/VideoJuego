@@ -11,6 +11,8 @@ public class CreateAccountEndpoint : MonoBehaviour
     private string password;
     public UsernameValidator usernameValidator;
     public UserInformation userInformation;
+    public GameObject textoMensajeCreateAccount;
+    public GameObject textoMensajeErrorCA;
 
     void OnEnable()
     {
@@ -48,6 +50,10 @@ public class CreateAccountEndpoint : MonoBehaviour
         if(www.result != UnityWebRequest.Result.Success)
         {
             Debug.Log($"Request failed: {www.error}");
+
+            textoMensajeErrorCA.SetActive(true);
+            yield return new WaitForSeconds(2f);
+            textoMensajeErrorCA.SetActive(false);
         }
         else 
         {
@@ -63,11 +69,21 @@ public class CreateAccountEndpoint : MonoBehaviour
             {
                 Debug.Log("Created new account!");
                 userInformation.username = username;
+
+                textoMensajeCreateAccount.SetActive(true);
+                yield return new WaitForSeconds(0.5f);
+
                 SceneManager.LoadScene("Menu");
+
+                textoMensajeCreateAccount.SetActive(false);
             }
             else
             {
                 Debug.Log(logInCheck.Error);
+
+                textoMensajeErrorCA.SetActive(true);
+                yield return new WaitForSeconds(2f);
+                textoMensajeErrorCA.SetActive(false);
             }
         }
     }

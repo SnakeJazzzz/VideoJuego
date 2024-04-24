@@ -9,13 +9,12 @@ public class DeleteDeck : MonoBehaviour
     public RSRSCards mazos;
     public UserInformation userInformation;
     public string apiURL = "http://localhost:3000/api/mazo/";
-   
-    
-    
+    public GameObject TextoMensajeMazoBorrado;
+    public GameObject TextoMensajeBorrandoMazo;
+    public GameObject TextoMensajeErrorDD;
 
     public void StartDelete()
     {
-
         StartCoroutine(Delete());
     }
 
@@ -26,7 +25,8 @@ public class DeleteDeck : MonoBehaviour
         string ruta = apiURL + mazos.Items[userInformation.selectedDeck].ID;
 
         Debug.Log("Deleting " + ruta);
-       
+        TextoMensajeBorrandoMazo.SetActive(true);
+        yield return new WaitForSeconds(2f);
        
         UnityWebRequest www = UnityWebRequest.Delete(ruta); 
         yield return www.SendWebRequest();
@@ -34,12 +34,26 @@ public class DeleteDeck : MonoBehaviour
         // If the request fails, we log the error
         if(www.result != UnityWebRequest.Result.Success)
         {
+            TextoMensajeBorrandoMazo.SetActive(false);
+            yield return new WaitForSeconds(2f);
+
             Debug.Log($"Request failed: {www.error}");
+
+            TextoMensajeErrorDD.SetActive(true);
+            yield return new WaitForSeconds(5f);
+            TextoMensajeErrorDD.SetActive(false);
         }
         else 
         {
+            TextoMensajeBorrandoMazo.SetActive(false);
+            yield return new WaitForSeconds(2f);
+
             Debug.Log("Deleted Correctly!");
             DeleteLocally();
+
+            TextoMensajeMazoBorrado.SetActive(true);
+            yield return new WaitForSeconds(5f);
+            TextoMensajeMazoBorrado.SetActive(false);
         }
     }
 
@@ -53,7 +67,5 @@ public class DeleteDeck : MonoBehaviour
         mazos.Items[mazos.Items.Count - 1].Reset();
         userInformation.selectedDeck = -1;
         SceneManager.LoadScene("DeckMenu");
-
     }   
 }
-
