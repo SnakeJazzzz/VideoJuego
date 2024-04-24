@@ -858,6 +858,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   proyectile: {fileID: 653842438281425388, guid: 3f93776ba57a34ef58d1a557a399cd62, type: 3}
   offset: {x: 0, y: 2, z: 0}
-  Pspeed: 8
+  Pspeed: 2
   Radius: 1.5
-  angle: 30
+  angle: 85
