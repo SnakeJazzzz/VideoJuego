@@ -5280,6 +5280,10 @@ PrefabInstance:
       propertyPath: waves
       value: 
       objectReference: {fileID: 11400000, guid: 31d30bd20065448a28abae5753ab54fa, type: 2}
+    - target: {fileID: 2117710570122360307, guid: 8281a61aaec77451f8609141bbc15ebc, type: 3}
+      propertyPath: EnemyCountIncrement
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4938028800137842852, guid: 8281a61aaec77451f8609141bbc15ebc, type: 3}
       propertyPath: m_Name
       value: Enemy Spawner
