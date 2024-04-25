@@ -1900,6 +1900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usernameValidator: {fileID: 0}
+  userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
 --- !u!114 &1787704337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1946,7 +1947,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1787704336}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
-        m_MethodName: DeckMenu
+        m_MethodName: MenuAndUnselect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

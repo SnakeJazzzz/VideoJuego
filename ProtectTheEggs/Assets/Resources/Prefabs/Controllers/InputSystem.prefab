@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9141101911336551124}
   - component: {fileID: 7439636094884055950}
   - component: {fileID: 2809051307550817774}
+  - component: {fileID: 9216027908774118097}
   m_Layer: 0
   m_Name: InputSystem
   m_TagString: Untagged
@@ -215,3 +216,31 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &9216027908774118097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511544101894144805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a092310b1cad4ec094b372c57f49638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 459d60ef71d1f4864899379a690db9d8, type: 2}
+  onEventTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7439636094884055950}
+        m_TargetAssemblyTypeName: ClickArea, Assembly-CSharp
+        m_MethodName: DestroyGameObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

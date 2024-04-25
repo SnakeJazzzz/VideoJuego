@@ -83,7 +83,7 @@ public class LogInEndpoint : MonoBehaviour
             else
             {
                 Debug.Log(logInCheck.Error);
-                
+                //textoMensajeErrorLItext = logInCheck.Error;
                 textoMensajeErrorLI.SetActive(true);
                 yield return new WaitForSeconds(2f);
                 textoMensajeErrorLI.SetActive(false);
