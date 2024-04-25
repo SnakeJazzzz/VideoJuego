@@ -3886,6 +3886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a756b7d5059e3ca4d8ee5c2cb5dc6b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userInformation: {fileID: 0}
 --- !u!4 &1434833711
 Transform:
   m_ObjectHideFlags: 0
@@ -5265,6 +5266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992554509}
   - component: {fileID: 1992554508}
+  - component: {fileID: 1992554510}
   m_Layer: 0
   m_Name: SessionAPIHandler
   m_TagString: Untagged
@@ -5304,6 +5306,34 @@ Transform:
   - {fileID: 1434833711}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1992554510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1992554507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a092310b1cad4ec094b372c57f49638, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 459d60ef71d1f4864899379a690db9d8, type: 2}
+  onEventTrigger:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1992554508}
+        m_TargetAssemblyTypeName: SessionAPIHandler, Assembly-CSharp
+        m_MethodName: PopulateSessionData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1997668192
 GameObject:
   m_ObjectHideFlags: 0
