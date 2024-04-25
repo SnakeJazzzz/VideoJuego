@@ -12,6 +12,7 @@ public class Destruction : MonoBehaviour
     
     public void TriggerSOEvent()
     {
+        //Debug.Log("Invoking Game Over.");
         gameEvent.TriggerEvent();
         Destroy(gameObject);
     }

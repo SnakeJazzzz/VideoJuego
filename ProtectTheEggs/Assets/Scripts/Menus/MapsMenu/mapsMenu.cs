@@ -16,6 +16,10 @@ public class mapsMenu : MonoBehaviour
         }
 
     }
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 
     public string GetCurrentMapName()
     {

@@ -30,66 +30,64 @@ public class RangeFinder : NPCSystem
     }
 
     IEnumerator ChecktoAttack()
+{
+    while (true)
     {
-        while (true)
+        if (closestFinder.closest == null)
         {
-            if (closestFinder.closest == null)
+            if (isAttacking) // Stop attacking if previously attacking
             {
-
-                if (isAttacking) // Only invoke StopAttack if we were previously attacking
-                {
-                    //Debug.Log("Enemy is null");
-
-                    StopAttack.Invoke();
-                    isAttacking = false; // Update the state
-                }
-                if (isMoving)
-                {
-                    StopMovement.Invoke();
-                    isMoving = false;
-                }
-                yield return new WaitForSeconds(0.5f); // Wait before the next iteration
-                continue;
+                Debug.Log("Stopping attack because there is no target.");
+                StopAttack.Invoke();
+                isAttacking = false;
             }
-            
-            distanceToClosest = Vector3.Distance(transform.position, closestFinder.closest.transform.position); 
-           
-            if (distanceToClosest <= npcController.npcStats.range) 
+            if (isMoving) // Stop moving if previously moving
             {
-                if (!isAttacking)
-                {
-                    //Debug.Log("Starting to attack");
-                    StopMovement.Invoke();
-                    StartAttack.Invoke();
-                    isAttacking = true; // Update the state
-                }
-                if (isMoving)
-                {
-                    StopMovement.Invoke();
-                    isMoving = false;
-                }
+                Debug.Log("Stopping movement because there is no target.");
+                StopMovement.Invoke();
+                isMoving = false;
             }
-            else if (distanceToClosest > npcController.npcStats.range)
-            {
-                if (isAttacking)
-                {   
-                    //Debug.Log("Stopping attack");
-                    StopAttack.Invoke();
-                    isAttacking = false; // Update the state
-                }
-                if (!isMoving)
-                {
-                    StartMovement.Invoke();
-                    isMoving = true;
-                }                
-            }
-            
-            yield return new WaitForSeconds(0.1f);
-
+            yield return new WaitForSeconds(0.5f);
+            continue;
         }
 
+        float distanceToClosest = Vector3.Distance(transform.position, closestFinder.closest.transform.position);
 
-    } 
+        if (distanceToClosest <= npcController.npcStats.range)
+        {
+            if (!isAttacking)
+            {
+                Debug.Log("Starting to attack: Enemy within range.");
+                StopMovement.Invoke(); // Ensure movement is stopped before attacking
+                StartAttack.Invoke();
+                isAttacking = true;
+            }
+            if (isMoving) // Ensure no movement during attack
+            {
+                Debug.Log("Stopping movement to attack.");
+                StopMovement.Invoke();
+                isMoving = false;
+            }
+        }
+        else if (distanceToClosest > npcController.npcStats.range)
+        {
+            if (isAttacking)
+            {
+                Debug.Log("Stopping attack: Enemy out of range.");
+                StopAttack.Invoke();
+                isAttacking = false;
+            }
+            if (!isMoving)
+            {
+                Debug.Log("Starting movement to chase enemy.");
+                StartMovement.Invoke();
+                isMoving = true;
+            }
+        }
+
+        yield return new WaitForSeconds(0.1f);
+    }
+}
 
 
     /*
