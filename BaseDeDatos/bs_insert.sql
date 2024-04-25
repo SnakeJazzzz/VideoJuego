@@ -27,7 +27,7 @@ INSERT INTO NPC (name, health, speed, attack, attackCooldown, `range`, isStructu
 ('Catapult', 400, 0, 50, 3, 17, 1, 0, 1),
 ('Mortar Tower', 450, 0, 100, 2, 10, 1, 0, 1),
 ('Archer Tower', 650, 0, 45, 1, 8, 1, 0, 1),
-('Inferno Tower', 1500, 0, 800, 5, 6, 1, 0, 1),
+('Inferno Tower', 1500, 0, 800, 2.5, 10, 1, 0, 1),
 ('Wizard Tower', 700, 0, 60, 1.5, 10, 1, 0, 1);
 /*
 ('Thorn Barrier', 800, 0, 30, 0, 0, 1, 0, 1),

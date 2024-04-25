@@ -4,7 +4,6 @@ using UnityEngine;
 using System.Linq;
 using TMPro;
 
-
 public class CardAdder : MonoBehaviour
 {
     public DeckBuilderManager deckBuilderManager;
@@ -13,6 +12,9 @@ public class CardAdder : MonoBehaviour
     public GameObject CardContainer;
     public CardCounter cardCounter;
     public TMP_Text text;
+    public GameObject TextoMensaje20cartas;
+    public TMP_Text TextoCartasRestantes;
+    public GameObject TextoMensajeNombreMazo;
     
     void Awake()
     {
@@ -23,13 +25,16 @@ public class CardAdder : MonoBehaviour
     {
         if (!cardCounter.status) 
         {
-            Debug.Log("Tienes que seleccionar "+ cardCounter.deckSize+ " cartas.");
+            Debug.Log("Tienes que seleccionar " + cardCounter.deckSize + " cartas.");
+            TextoCartasRestantes.text = "You need to add " + cardCounter.deckSize + " cards!";
+            StartCoroutine(mensaje20cartas());
             return;
         }
        
         if (text.text.Length == 1)
         {
             Debug.Log("Tienes que seleccionar un nombre para el mazo.");
+            StartCoroutine(mensajeNombreMazo());
             return;
         }
         string name = text.text.Substring(0, text.text.Length-1);
@@ -55,5 +60,19 @@ public class CardAdder : MonoBehaviour
         {
             deckBuilderManager.StartPut?.Invoke();
         }
+    }
+
+    IEnumerator mensaje20cartas()
+    {
+        TextoMensaje20cartas.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        TextoMensaje20cartas.SetActive(false);
+    }
+
+    IEnumerator mensajeNombreMazo()
+    {
+        TextoMensajeNombreMazo.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        TextoMensajeNombreMazo.SetActive(false);
     }
 }

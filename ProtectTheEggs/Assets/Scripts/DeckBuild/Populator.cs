@@ -12,10 +12,8 @@ public class Populator : MonoBehaviour
     public RSRSCards mazos;
     public TMP_InputField nameText;
    
-
     public void Start()
     {
-
         if(mazos.Items[userInformation.selectedDeck].nombreMazo != "")
         {
             deckBuilderManager.CreateOrEdit = false;
@@ -59,13 +57,13 @@ public class Populator : MonoBehaviour
                     break;
                 }
             }
+
             MenuCard display = Instantiate(CardPrefab, AvailableCardsContainer).GetComponent<MenuCard>();
             display.Display(card); // true indicates this card is in the available pool and should be set up for addition
             display.SetValue(count);
-
         }
 
-        Debug.Log("Setting text box to "+mazoEditado.nombreMazo);
+        Debug.Log("Setting text box to " + mazoEditado.nombreMazo);
         nameText.text = mazoEditado.nombreMazo;
     }
 }

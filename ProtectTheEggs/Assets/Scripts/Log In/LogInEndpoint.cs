@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
+using TMPro;
 
 public class LogInEndpoint : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class LogInEndpoint : MonoBehaviour
     private string password;
     public GameObject textoMensajeLogIn;
     public GameObject textoMensajeErrorLI;
+    public TMP_Text TextoErroresLI;
 
     void OnEnable()
     {
@@ -53,6 +55,8 @@ public class LogInEndpoint : MonoBehaviour
         if(www.result != UnityWebRequest.Result.Success)
         {
             Debug.Log($"Request failed: {www.error}");
+
+            TextoErroresLI.text = $"Request failed: {www.error}";
             
             textoMensajeErrorLI.SetActive(true);
             yield return new WaitForSeconds(2f);
@@ -83,9 +87,11 @@ public class LogInEndpoint : MonoBehaviour
             else
             {
                 Debug.Log(logInCheck.Error);
-                //textoMensajeErrorLItext = logInCheck.Error;
+
+                TextoErroresLI.text = logInCheck.Error;
+                
                 textoMensajeErrorLI.SetActive(true);
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(4f);
                 textoMensajeErrorLI.SetActive(false);
             }
         }
