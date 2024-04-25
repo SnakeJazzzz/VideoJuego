@@ -5,22 +5,18 @@ using UnityEngine.Networking;
 
 public class LoadDecks : MonoBehaviour
 {
-
     public UserInformation userInformation;
     public RSRSCards mazos;
     public string apiURL = "http://localhost:3000/api/mazo/";
     void Start()
     {
-
         if(!userInformation.loadedDeck)
         {
             mazos.Reset();
             StartCoroutine(GetDecks());
         }
-        
     }
 
-   
     IEnumerator GetDecks()
     {
         Debug.Log("Starting Coroutine");
@@ -36,7 +32,6 @@ public class LoadDecks : MonoBehaviour
         }
         else 
         {
-           
             string data = www.downloadHandler.text;
             Debug.Log(data);
 
@@ -61,8 +56,6 @@ public class LoadDecks : MonoBehaviour
                     }
                 }
             }
-
-
         }
     }
 }

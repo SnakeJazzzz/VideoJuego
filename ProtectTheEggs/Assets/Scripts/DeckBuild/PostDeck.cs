@@ -20,8 +20,6 @@ public class PostDeck : MonoBehaviour
     {
         deckBuilderManager.StartPost -= CreateJson;
     }
-
-
     
     void CreateJson()
     {
@@ -30,7 +28,6 @@ public class PostDeck : MonoBehaviour
         Debug.Log(json);
         StartCoroutine(Post(json));
     }
-
     
     IEnumerator Post(string json)
     {
@@ -62,7 +59,4 @@ public class PostDeck : MonoBehaviour
             // ... Handle successful deck save ...
         }
     }
-
-   
-
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
+using TMPro;
 
 public class CreateAccountEndpoint : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class CreateAccountEndpoint : MonoBehaviour
     public UserInformation userInformation;
     public GameObject textoMensajeCreateAccount;
     public GameObject textoMensajeErrorCA;
+    public TMP_Text TextoErroresCA;
 
     void OnEnable()
     {
@@ -51,6 +53,8 @@ public class CreateAccountEndpoint : MonoBehaviour
         {
             Debug.Log($"Request failed: {www.error}");
 
+            TextoErroresCA.text = $"Request failed: {www.error}";
+
             textoMensajeErrorCA.SetActive(true);
             yield return new WaitForSeconds(2f);
             textoMensajeErrorCA.SetActive(false);
@@ -80,6 +84,8 @@ public class CreateAccountEndpoint : MonoBehaviour
             else
             {
                 Debug.Log(logInCheck.Error);
+
+                TextoErroresCA.text = logInCheck.Error;
 
                 textoMensajeErrorCA.SetActive(true);
                 yield return new WaitForSeconds(2f);

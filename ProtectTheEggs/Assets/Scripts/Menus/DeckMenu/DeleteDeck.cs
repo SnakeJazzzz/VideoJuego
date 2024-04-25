@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DeleteDeck : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class DeleteDeck : MonoBehaviour
     public GameObject TextoMensajeMazoBorrado;
     public GameObject TextoMensajeBorrandoMazo;
     public GameObject TextoMensajeErrorDD;
+    public TMP_Text TextoErrorDD;
 
     public void StartDelete()
     {
@@ -38,6 +40,8 @@ public class DeleteDeck : MonoBehaviour
             yield return new WaitForSeconds(2f);
 
             Debug.Log($"Request failed: {www.error}");
+
+            TextoErrorDD.text = $"Request failed: {www.error}";
 
             TextoMensajeErrorDD.SetActive(true);
             yield return new WaitForSeconds(5f);
