@@ -24,9 +24,9 @@ public class StatsShower : MonoBehaviour
         statsString += "Attack: " + card.stats.attack + "\n";
         statsString += "Attack Cooldown: " + card.stats.attackCooldown.ToString("F2") + "\n"; // Formatting float with 2 decimal places
         statsString += "Range: " + card.stats.range.ToString("F2") + "\n"; // Formatting float with 2 decimal places
-        statsString += "Is Structure: " + (card.stats.isStructure ? "Yes" : "No") + "\n";
-        statsString += "Attack Towers: " + (card.stats.attackTowers ? "Yes" : "No") + "\n";
-        statsString += "Attack Enemies: " + (card.stats.attackEnemies ? "Yes" : "No") + "\n";
+        //statsString += "Is Structure: " + (card.stats.isStructure ? "Yes" : "No") + "\n";
+        //statsString += "Attack Towers: " + (card.stats.attackTowers ? "Yes" : "No") + "\n";
+        //statsString += "Attack Enemies: " + (card.stats.attackEnemies ? "Yes" : "No") + "\n";
         
         statsText.text = statsString;
 

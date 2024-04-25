@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Button : MonoBehaviour
 {
     public UsernameValidator usernameValidator;
+    public UserInformation userInformation;
     
     public void ValidateInfo()
     {
@@ -29,6 +30,11 @@ public class Button : MonoBehaviour
     
     public void DeckMenu()
     {
+        SceneManager.LoadScene("DeckMenu");
+    }
+    public void MenuAndUnselect()
+    {
+        userInformation.selectedDeck = -1;
         SceneManager.LoadScene("DeckMenu");
     }
 }

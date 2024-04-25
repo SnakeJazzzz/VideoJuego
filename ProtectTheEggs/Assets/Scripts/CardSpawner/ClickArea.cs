@@ -91,5 +91,9 @@ public class ClickArea : MonoBehaviour
         lineRenderer.enabled = false;
     }
 
+     public void DestroyGameObject()
+    {
+        Destroy(gameObject);
+    }
    
 }
