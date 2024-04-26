@@ -13,6 +13,7 @@ public class SessionAPIHandler : MonoBehaviour
 
     public void PopulateSessionData()
     {
+        Debug.Log("PopulateSessionData called");
         currentPartida.currentSession.username = userInformation.username;
         currentPartida.currentSession.MaxOrda = waveCounter.waveNumberText.text;
         currentPartida.currentSession.NombreMapa = mapsMenu.GetCurrentMapName(); 

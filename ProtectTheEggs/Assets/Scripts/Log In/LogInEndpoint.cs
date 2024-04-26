@@ -15,7 +15,7 @@ public class LogInEndpoint : MonoBehaviour
     public GameObject textoMensajeLogIn;
     public GameObject textoMensajeErrorLI;
     public TMP_Text TextoErroresLI;
-
+        
     void OnEnable()
     {
         usernameValidator.ValidUsername += CheckInfo;

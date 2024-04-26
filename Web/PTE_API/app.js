@@ -511,6 +511,7 @@ app.post("/api/partidas", async (req, res) => {
       "INSERT INTO Partidas (IDUsuario, MaxOrda, IDMapa) VALUES (?, ?, ?);",
       [userID, MaxOrda, mapID]
     );
+    console.log("Se registro la partida con exito!");
 
     res.status(200).json({ "Success": true, "IDPartida": insertResult.insertId });
   } catch (error) {

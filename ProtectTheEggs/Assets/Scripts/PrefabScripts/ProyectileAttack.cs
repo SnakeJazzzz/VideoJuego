@@ -33,6 +33,7 @@ public class ProyectileAttack : NPCSystem
     {
         if (attackCoroutine!= null)
         {
+            //Debug.Log("Stoppoing attackCoroutine");
             StopCoroutine(attackCoroutine);
         }
         //Debug.Log("IM OUT OF RANGE!");

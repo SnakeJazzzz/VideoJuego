@@ -105,6 +105,7 @@ private List<EnemyInfo> GenerateDynamicWaveInfo(int waveNumber)
 
     // Here we could define the different types of enemies that could spawn
     string[] enemyTypes = new string[] { "Archer", "Goblin", "Troll", "Knight", "Mage", "Orc", "Ghost", "Assassin", "Berserker","Centaur","Elf","Giant","Scout","Stone Golem"};
+    //string[] enemyTypes = new string[] { "Elf"};
 
     // Randomly decide how many different types of enemies will be in this wave
     int typesInThisWave = Random.Range(1, enemyTypes.Length);

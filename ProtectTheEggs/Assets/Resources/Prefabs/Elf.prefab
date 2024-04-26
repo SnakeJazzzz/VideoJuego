@@ -647,8 +647,8 @@ MonoBehaviour:
   StopAttack:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5670210319069151022}
-        m_TargetAssemblyTypeName: SingleAttack, Assembly-CSharp
+      - m_Target: {fileID: 2475596953099991320}
+        m_TargetAssemblyTypeName: ProyectileAttack, Assembly-CSharp
         m_MethodName: OutTest
         m_Mode: 1
         m_Arguments:
@@ -768,8 +768,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   proyectile: {fileID: 8930121568858369566, guid: 967c1eb77972c458bae401849421c3c1, type: 3}
+  offset: {x: 0, y: 0, z: 0}
   Pspeed: 4
   Radius: 0
+  angle: 0
 --- !u!1 &8656115705108129154
 GameObject:
   m_ObjectHideFlags: 0
