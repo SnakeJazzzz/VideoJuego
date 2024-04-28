@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 319996465280557049}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 1.7, z: 0}
-  m_LocalScale: {x: 3.26701, y: 3.3252544, z: 1}
+  m_LocalPosition: {x: -0.0128, y: 1.868, z: 0}
+  m_LocalScale: {x: 1.1811178, y: 0.80985093, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6458116419297576790}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: -1236926435
   m_SortingLayer: 1
   m_SortingOrder: 5
-  m_Sprite: {fileID: -935595569, guid: 07830c7f834df437b8ba5de83e29b9e1, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: ea3deb698f6a24c598cd80e776cc3b37, type: 3}
+  m_Color: {r: 0.30671912, g: 0.3003738, b: 0.4716981, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -471,7 +471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.05, y: 2.55}
+  m_AnchoredPosition: {x: 0.16, y: 3.28}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7140145573071753829
@@ -811,10 +811,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa31dcae3d1141a294b76dbfea864f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  proyectile: {fileID: 8930121568858369566, guid: 323ec7ddcd2524fcf896a2c8378a9798, type: 3}
+  proyectile: {fileID: 6862277898855426095, guid: afa58205e4a1e4259a3912e61cf0a51a, type: 3}
   offset: {x: 0, y: 2, z: 0}
-  Pspeed: 8
-  Radius: 0
+  Pspeed: 6
+  Radius: 2
   angle: 0
 --- !u!61 &8078217661753964232
 BoxCollider2D:
@@ -848,7 +848,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.50010896, y: 1.0515604}
+  m_Offset: {x: -0.050112724, y: 0.15475461}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -859,5 +859,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7709911, y: 0.866153}
+  m_Size: {x: 1.488136, y: 0.7075401}
   m_EdgeRadius: 0
