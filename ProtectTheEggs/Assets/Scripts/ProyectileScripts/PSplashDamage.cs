@@ -23,7 +23,7 @@ public class PSplashDamage : MonoBehaviour
 
     void Explode()
     {
-        Debug.Log("Explode function called!");
+        //Debug.Log("Explode function called!");
         
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, pController.radius);
         
@@ -31,11 +31,6 @@ public class PSplashDamage : MonoBehaviour
         foreach (Collider2D hit in hitColliders)
         {
             NPCController hitController = hit.GetComponent<NPCController>();
-            if (hitController == null)
-            {
-                Debug.Log("hitController es null");
-                continue;
-            }
             if (hitController.owner != pController.team)
             {
                 hit.GetComponent<IDamageable>().TakeDamage(pController.damage);
