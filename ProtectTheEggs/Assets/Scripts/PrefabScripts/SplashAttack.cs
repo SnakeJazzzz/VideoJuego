@@ -43,6 +43,7 @@ public class SplashAttack : NPCSystem
                 foreach (Collider2D hit in hitColliders)
                 {
                     NPCController hitController = hit.GetComponent<NPCController>();
+                    if (hitController == null){continue;}
                     if (hitController.owner != npcController.owner)
                     {
                         hit.GetComponent<IDamageable>().TakeDamage(npcController.npcStats.attack);

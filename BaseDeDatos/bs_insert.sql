@@ -2,9 +2,9 @@
 USE PTE;
 
 -- Insert data to Usuarios table
-INSERT INTO Usuarios (NombreUsuario, Contraseña, PuntuaciónMáxima) VALUES 
-('jugador1', 'contraseñaSegura123', 0),
-('test', '123', 0);
+INSERT INTO Usuarios (NombreUsuario, Contraseña) VALUES 
+('jugador1', 'contraseñaSegura123'),
+('test', '123');
 
 -- Insert data to NPC table
 INSERT INTO NPC (name, health, speed, attack, attackCooldown, `range`, isStructure, attackTowers, attackEnemies) VALUES 
@@ -82,8 +82,17 @@ INSERT INTO Mapas (NombreMapa) VALUES
 ("Village"),
 ("EnchantedForest");
 
-/*
+
 -- Insert data to Partidas table
-INSERT INTO Partidas (IDUsuario, MaxOrda) VALUES 
-(1, 500);
-*/
+INSERT INTO Partidas (IDUsuario, MaxOrda, IDMapa) VALUES 
+(1, 500, 1),
+(2, 200, 1),
+(2, 150, 1),
+(2, 300, 1),
+(2, 300, 2),
+(2, 100, 2),
+(2, 50, 2),
+(2, 10, 2),
+(2, 300, 3),
+(2, 100, 3),
+(2, 50, 3);

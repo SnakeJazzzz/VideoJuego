@@ -3,12 +3,14 @@
 // Importing modules
 import express from "express";
 import mysql from "mysql2/promise";
-
+import fs from "fs";
 const app = express();
 const port = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static('../public'))
+
 
 // Function to connect to the MySQL database
 
@@ -24,6 +26,19 @@ async function connectToDB() {
     database: "PTE",
   });
 }
+
+
+app.get('/', (request, response)=>{
+  fs.readFile('../public/html/leaderboard.html', 'utf8', (err, html)=>{
+      if(err) response.status(500).send('There was an error: ' + err)
+      console.log('Loading page...')
+      response.send(html)
+  })
+})
+
+
+
+
 
 //Endpoint para verificar si los datos del log in estan correctos.
 app.get("/api/usuarios/:username/:password", async (request, response) => {
@@ -558,6 +573,100 @@ app.post("/api/partidas", async (req, res) => {
     return {};
   }
 }*/
+
+
+//Endpoint para recibir todas las cartqas
+
+app.get("/api/leaderboard", async (request, response) => {
+  let connection = null;
+
+  try {
+
+    const returnjson = {};
+    connection = await connectToDB();
+    console.log("API CALLED");
+    
+    const mapList = ["Seaside", "Village", "EnchantedForest"];
+
+    for (let i = 0; i < mapList.length; i++)
+    {
+      const [leaders] = await connection.execute(
+        "SELECT MaxOrda, NombreUsuario FROM Partidas INNER JOIN Usuarios USING(IDUsuario) INNER JOIN Mapas USING(IDMapa) WHERE NombreMapa LIKE ? ORDER BY MaxOrda DESC LIMIT 5;",
+        [mapList[i]]
+      );
+      returnjson[mapList[i]] = structuredClone(leaders);
+    }
+      
+    response.status(200).json(returnjson);
+  }
+  catch (error) {
+    response.status(500);
+    response.json(error);
+    console.log(error);
+  }
+  finally {
+    if (connection !== null) {
+      connection.end();
+      console.log("Connection closed succesfully!");
+    }
+  }
+});
+
+app.get("/api/mapStats", async (request, response) => {
+  let connection = null;
+
+  try {
+
+    connection = await connectToDB();
+    
+    const [mapInfo] = await connection.execute(
+      `SELECT NombreMapa, Count(*) AS "Count" FROM Partidas INNER JOIN Mapas USING(IDMapa) GROUP BY NombreMapa;`
+    );
+    console.log(mapInfo);
+      
+    response.status(200).json(mapInfo);
+  }
+  catch (error) {
+    response.status(500);
+    response.json(error);
+    console.log(error);
+  }
+  finally {
+    if (connection !== null) {
+      connection.end();
+      console.log("Connection closed succesfully!");
+    }
+  }
+});
+
+
+app.get("/api/cardStats", async (request, response) => {
+  let connection = null;
+
+  try {
+
+    connection = await connectToDB();
+    
+    const [mapInfo] = await connection.execute(
+        "SELECT cardName, SUM(Cantidad) AS Count FROM DetallesMazo INNER JOIN Cartas USING(IDCarta) GROUP BY cardName ORDER BY Count DESC LIMIT 5;"
+      );
+    console.log(mapInfo);
+      
+    response.status(200).json(mapInfo);
+  }
+  catch (error) {
+    response.status(500);
+    response.json(error);
+    console.log(error);
+  }
+  finally {
+    if (connection !== null) {
+      connection.end();
+      console.log("Connection closed succesfully!");
+    }
+  }
+});
+
 
 
 

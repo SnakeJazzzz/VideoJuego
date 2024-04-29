@@ -8,8 +8,7 @@ USE PTE;
 CREATE TABLE Usuarios (
     IDUsuario INTEGER PRIMARY KEY AUTO_INCREMENT,
     NombreUsuario VARCHAR(40) NOT NULL,
-    Contraseña VARCHAR(40) NOT NULL,
-    PuntuaciónMáxima INTEGER DEFAULT 0
+    Contraseña VARCHAR(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Create the NPC table
