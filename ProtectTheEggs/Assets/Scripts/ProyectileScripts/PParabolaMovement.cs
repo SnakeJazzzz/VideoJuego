@@ -21,6 +21,7 @@ public class PParabolaMovement : MonoBehaviour
         float y1 = transform.position.y;
         float x2 = pController.target.transform.position.x;
         float y2 = pController.target.transform.position.y;
+        if(x1 == x2){x2++;}
         maxX = x2;
         /*
         float x1 = 1;
