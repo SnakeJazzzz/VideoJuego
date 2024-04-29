@@ -8,6 +8,7 @@ public class StatsShower : MonoBehaviour
     public TMP_Text statsText;
     public GameObject panel;
     string statsString;
+ 
 
     public void ShowStats(Card card)
     {
@@ -36,6 +37,8 @@ public class StatsShower : MonoBehaviour
     public void Deactivate()
     {
         panel.SetActive(false);
+        
+       
     }
     
 }

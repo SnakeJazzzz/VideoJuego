@@ -629,6 +629,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usernameValidator: {fileID: 0}
+  userInformation: {fileID: 0}
+  buttonClickSoundName: Archer
 --- !u!1 &247757588
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +914,7 @@ MonoBehaviour:
   selector: {fileID: 1756869819}
   index: 1
   selectable: 0
+  buttonClickSoundName: Star
 --- !u!1 &307498799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1942,6 +1945,76 @@ MonoBehaviour:
   selector: {fileID: 1756869819}
   index: 0
   selectable: 0
+  buttonClickSoundName: Star
+--- !u!1001 &934723005
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3849084299514721174, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398596796774650070, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: sfxClips.Array.size
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398596796774650070, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: sfxClips.Array.data[8]
+      value: 
+      objectReference: {fileID: 8300000, guid: bf9077d287dba408fb0cce5740890c59, type: 3}
+    - target: {fileID: 7398596796774650070, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: sfxClips.Array.data[24]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5ea77a264f3614127ac66069e202686c, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a03aa8b00672749b196705ce224f6792, type: 3}
 --- !u!1 &979634371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,6 +2162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1756869820}
+  buttonClickSoundName: Play
 --- !u!1 &1093221875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,6 +2733,7 @@ MonoBehaviour:
   selector: {fileID: 1756869819}
   index: 4
   selectable: 0
+  buttonClickSoundName: Star
 --- !u!1 &1166789916
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,6 +3152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneLoader: {fileID: 1756869820}
+  buttonClickSoundName: EditDeck
 --- !u!1 &1414098015
 GameObject:
   m_ObjectHideFlags: 0
@@ -3320,6 +3396,7 @@ MonoBehaviour:
   TextoMensajeBorrandoMazo: {fileID: 595243667}
   TextoMensajeErrorDD: {fileID: 2009763255}
   TextoErrorDD: {fileID: 2076966985}
+  buttonClickSoundName: DelDeck
 --- !u!1 &1964569345
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,6 +3546,7 @@ MonoBehaviour:
   selector: {fileID: 1756869819}
   index: 3
   selectable: 0
+  buttonClickSoundName: Star
 --- !u!1 &1972444239
 GameObject:
   m_ObjectHideFlags: 0
@@ -4030,6 +4108,7 @@ MonoBehaviour:
   selector: {fileID: 1756869819}
   index: 2
   selectable: 0
+  buttonClickSoundName: Star
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4039,3 +4118,4 @@ SceneRoots:
   - {fileID: 307498800}
   - {fileID: 1972444242}
   - {fileID: 1756869818}
+  - {fileID: 934723005}

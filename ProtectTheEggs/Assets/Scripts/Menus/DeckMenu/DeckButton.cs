@@ -10,6 +10,7 @@ public class DeckButton : MonoBehaviour
     public bool selectable;
     Image image;
     TMP_Text text;
+    public string buttonClickSoundName;
     public void Awake()
     {
         image = GetComponent<Image>();
@@ -21,6 +22,8 @@ public class DeckButton : MonoBehaviour
         {
             selector.NewSelect(index);
         }
+        SoundManager.Instance.PlaySFXByName(buttonClickSoundName);
+        
     }
     public void Highlight()
     {

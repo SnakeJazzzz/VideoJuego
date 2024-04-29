@@ -15,6 +15,8 @@ public class LogInEndpoint : MonoBehaviour
     public GameObject textoMensajeLogIn;
     public GameObject textoMensajeErrorLI;
     public TMP_Text TextoErroresLI;
+    public string loginSuccessSoundName;
+    public string loginErrorSoundName;
         
     void OnEnable()
     {
@@ -29,6 +31,7 @@ public class LogInEndpoint : MonoBehaviour
     void Start()
     {
         userInformation.Reset();
+        SoundManager.Instance.PlayMusic(SoundManager.Instance.musicClips[7], true); 
     }
 
     public void CheckInfo(string u, string p)
@@ -80,7 +83,13 @@ public class LogInEndpoint : MonoBehaviour
                 textoMensajeLogIn.SetActive(true);
                 yield return new WaitForSeconds(0.5f);
                 
+//--------------------
+                textoMensajeLogIn.SetActive(true);
+                SoundManager.Instance.PlaySFXByName(loginSuccessSoundName);
+                yield return new WaitForSeconds(0.5f); // Wait for the sound to play a bit
                 SceneManager.LoadScene("Menu");
+//--------------------
+                
 
                 textoMensajeLogIn.SetActive(false);
             }
@@ -89,10 +98,14 @@ public class LogInEndpoint : MonoBehaviour
                 Debug.Log(logInCheck.Error);
 
                 TextoErroresLI.text = logInCheck.Error;
-                
+
+//--------------------
+                SoundManager.Instance.PlaySFXByName(loginErrorSoundName);
                 textoMensajeErrorLI.SetActive(true);
-                yield return new WaitForSeconds(4f);
+                yield return new WaitForSeconds(0.5f);
                 textoMensajeErrorLI.SetActive(false);
+//--------------------
+
             }
         }
     }
