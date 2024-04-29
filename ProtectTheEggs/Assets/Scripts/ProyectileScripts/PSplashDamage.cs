@@ -31,6 +31,7 @@ public class PSplashDamage : MonoBehaviour
         foreach (Collider2D hit in hitColliders)
         {
             NPCController hitController = hit.GetComponent<NPCController>();
+            if (hitController == null) {continue;}
             if (hitController.owner != pController.team)
             {
                 hit.GetComponent<IDamageable>().TakeDamage(pController.damage);
