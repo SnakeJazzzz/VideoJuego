@@ -15,9 +15,13 @@ public class DeleteDeck : MonoBehaviour
     public GameObject TextoMensajeErrorDD;
     public TMP_Text TextoErrorDD;
 
+    public string buttonClickSoundName;
+
     public void StartDelete()
     {
         StartCoroutine(Delete());
+
+        SoundManager.Instance.PlaySFXByName(buttonClickSoundName);
     }
 
     IEnumerator Delete()

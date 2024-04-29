@@ -43,5 +43,7 @@ public class SaveLocal : MonoBehaviour
         }
 
          SceneManager.LoadScene("DeckMenu");
+         
     }
+
 }

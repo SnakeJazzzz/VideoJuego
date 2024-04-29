@@ -36,7 +36,19 @@ public class Spawner : MonoBehaviour
 
                 newNPC.GetComponent<NPCController>().setOwnership(0, card.stats); 
                 newNPC.SetActive(true);
+
+                PlayRandomSpawnSound();
             }
+        }
+    }
+
+    private void PlayRandomSpawnSound()
+    {
+        if (SoundManager.Instance.sfxClips.Count > 0)
+        {
+            int index = UnityEngine.Random.Range(0, SoundManager.Instance.sfxClips.Count);
+            AudioClip randomClip = SoundManager.Instance.sfxClips[index];
+            SoundManager.Instance.PlaySFX(randomClip);
         }
     }
 }

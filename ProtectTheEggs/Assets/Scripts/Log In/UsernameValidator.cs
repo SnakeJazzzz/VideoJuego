@@ -25,6 +25,7 @@ public class UsernameValidator : MonoBehaviour
         {
             StartCoroutine(mensaje3caracateres());
             Debug.Log("El username y password tiene que ser mas de 3 o mas caracteres");
+
         }
     }
 

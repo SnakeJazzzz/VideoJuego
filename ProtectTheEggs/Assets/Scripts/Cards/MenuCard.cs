@@ -12,6 +12,8 @@ public class MenuCard : MonoBehaviour
     public Image artworkImage; 
     public Card cardData;
     public StatsShower statsShower;
+    public string soundMinus;
+    public string soundPlus;
 
     public void ShowStats()
     {
@@ -35,6 +37,8 @@ public class MenuCard : MonoBehaviour
         value++;
         text.text = value.ToString();
         cardCounter.ChangeCount(1);
+        SoundManager.Instance.PlaySFXByName(soundPlus);
+        
     }
 
     public void Minus()
@@ -43,6 +47,7 @@ public class MenuCard : MonoBehaviour
         value--;
         text.text = value.ToString();
         cardCounter.ChangeCount(-1);
+        SoundManager.Instance.PlaySFXByName(soundMinus);
     }
     public void SetValue(int x)
     {
