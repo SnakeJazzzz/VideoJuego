@@ -1,0 +1,83 @@
+
+body
+{
+    background-image: url('dark_forest.png');
+    background-size: cover;
+    /*background-position: center;*/
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+div
+{
+    margin: -8px;
+    padding: 20px;
+}
+
+p
+{
+    line-height: 1.5;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+div.title_Titulo
+{
+    text-align: center;
+    background-color: #23434d;
+}
+
+
+
+div.index
+{
+    /*position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;*/
+
+    background-color: #242222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+div.index .content
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.index a
+{
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+.index a:hover
+{
+    color: #23434d;
+}
+
+.index a:active
+{
+    text-decoration: underline;
+}
+
+
+
+div.text_Resumen
+{
+    background-color: #171615;
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
