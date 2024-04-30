@@ -1,0 +1,83 @@
+
+body
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+div
+{
+    margin: -8px;
+    padding: 20px;
+}
+
+p
+{
+    line-height: 1.5;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+div.index
+{
+    background-color: #242222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+div.index .content
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.index a
+{
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+.index a:hover
+{
+    color: #23434d;
+}
+
+.index a:active
+{
+    text-decoration: underline;
+}
+
+
+
+div.title_creditos
+{
+    background-color: #23434d;
+    text-align: center;
+}
+
+div.title_estudiantes
+{
+    background-color: #242222;
+}
+
+div.nombres_matriculas
+{
+    background-color: #171615;
+    /*text-align: center;*/
+}
+
+div.copy
+{
+    background-color: #242222;
+    text-align: center;
+    font-weight: bold;
+}
