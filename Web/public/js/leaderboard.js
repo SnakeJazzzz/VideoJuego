@@ -21,7 +21,7 @@ function getNrandom_colors(n, alpha = 1.0)
 Chart.defaults.font.size = 16;
 
 // We obtain a reference to the canvas that we are going to use to plot the chart.
-const ctx = document.getElementById('firstChart').getContext('2d');
+const ctx = document.getElementById('firstChart')//.getContext('2d');
 
 // To plot a chart, we need a configuration object that has all the information that the chart needs.
 const firstChart = new Chart(ctx, {
