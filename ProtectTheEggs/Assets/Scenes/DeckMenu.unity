@@ -630,7 +630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameValidator: {fileID: 0}
   userInformation: {fileID: 0}
-  buttonClickSoundName: Archer
+  buttonClickSoundName: Lite_Button5
 --- !u!1 &247757588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,18 +1998,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7398596796774650070, guid: a03aa8b00672749b196705ce224f6792, type: 3}
-      propertyPath: sfxClips.Array.size
-      value: 24
-      objectReference: {fileID: 0}
-    - target: {fileID: 7398596796774650070, guid: a03aa8b00672749b196705ce224f6792, type: 3}
-      propertyPath: sfxClips.Array.data[8]
-      value: 
-      objectReference: {fileID: 8300000, guid: bf9077d287dba408fb0cce5740890c59, type: 3}
-    - target: {fileID: 7398596796774650070, guid: a03aa8b00672749b196705ce224f6792, type: 3}
-      propertyPath: sfxClips.Array.data[24]
-      value: 
-      objectReference: {fileID: 8300000, guid: 5ea77a264f3614127ac66069e202686c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -44,12 +44,11 @@ public class Spawner : MonoBehaviour
 
     private void PlayRandomSpawnSound()
     {
-        if (SoundManager.Instance.sfxClips.Count > 0)
-        {
-            int index = UnityEngine.Random.Range(0, SoundManager.Instance.sfxClips.Count);
-            AudioClip randomClip = SoundManager.Instance.sfxClips[index];
-            SoundManager.Instance.PlaySFX(randomClip);
-        }
+        List<string> soundNames = new List<string> { "Star", "Deck_mainMenu", "Ghost", "Goblin","Lite_Button3","Lite_Button4","Lite_Button5" };
+        int index = UnityEngine.Random.Range(0, soundNames.Count);
+        string randomSoundName = soundNames[index];
+        SoundManager.Instance.PlaySFXByName(randomSoundName);
+
     }
 }
 

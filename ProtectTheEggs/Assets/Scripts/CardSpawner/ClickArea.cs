@@ -9,6 +9,7 @@ public class ClickArea : MonoBehaviour
     private LineRenderer lineRenderer;
     private PolygonCollider2D polygonCollider;
     private Coroutine highlightCoroutine;
+    public string buttonClickSoundName;
 
     void Awake()
     {
@@ -43,31 +44,37 @@ public class ClickArea : MonoBehaviour
         {
             //Debug.Log("1 selected.");
             cardSOSystem.NewSelected(1);
+            SoundManager.Instance.PlaySFXByName(buttonClickSoundName);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             //Debug.Log("2 selected.");
-            cardSOSystem.NewSelected(2);        
+            cardSOSystem.NewSelected(2);
+            SoundManager.Instance.PlaySFXByName(buttonClickSoundName);        
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             //Debug.Log("3 selected.");
-            cardSOSystem.NewSelected(3);        
+            cardSOSystem.NewSelected(3); 
+            SoundManager.Instance.PlaySFXByName(buttonClickSoundName);       
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             //Debug.Log("4 selected.");
-            cardSOSystem.NewSelected(4);        
+            cardSOSystem.NewSelected(4);
+            SoundManager.Instance.PlaySFXByName(buttonClickSoundName);        
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             //Debug.Log("5 selected.");
-            cardSOSystem.NewSelected(5);        
+            cardSOSystem.NewSelected(5);
+            SoundManager.Instance.PlaySFXByName(buttonClickSoundName);        
         }
         else if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             //Debug.Log("6 selected.");
-            cardSOSystem.NewSelected(6);        
+            cardSOSystem.NewSelected(6);
+            SoundManager.Instance.PlaySFXByName(buttonClickSoundName);        
         }
     }
 

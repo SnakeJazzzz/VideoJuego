@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSOSystem: {fileID: 11400000, guid: 34ef335433ca24b7098b4b1988de9419, type: 2}
   highlightDuration: 0.5
+  buttonClickSoundName: NewDeck
 --- !u!120 &2809051307550817774
 LineRenderer:
   serializedVersion: 2

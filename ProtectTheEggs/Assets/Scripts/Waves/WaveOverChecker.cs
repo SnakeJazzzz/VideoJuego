@@ -7,10 +7,12 @@ public class WaveOverChecker : MonoBehaviour
     public NPCManager npcManager;
     public UnityEvent WaveIsOver;
     public WaveCounter waveCounter;
+    public string buttonClickSoundName;
     Coroutine checkCoroutine;
     public void WaveOver()
     {
         checkCoroutine = StartCoroutine(CheckIfWaveOver());
+        
     }
 
     IEnumerator CheckIfWaveOver()
@@ -22,6 +24,7 @@ public class WaveOverChecker : MonoBehaviour
         }
         //Debug.Log("WAVE IS OVER");
         WaveIsOver.Invoke();
+        SoundManager.Instance.PlaySFXByName(buttonClickSoundName);
     }
 
 

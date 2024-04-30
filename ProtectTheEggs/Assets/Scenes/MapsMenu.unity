@@ -2022,9 +2022,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
   textoMensajeNoMazo: {fileID: 297681785}
-  buttonClickSoundName: Archer
-  soundNoMaso: MenosCarta
-  soundMapa: Inferno
+  buttonClickSoundName: Lite_Button5
+  soundNoMaso: Elf
+  soundMapa: AddCard
 --- !u!4 &1328616199
 Transform:
   m_ObjectHideFlags: 0

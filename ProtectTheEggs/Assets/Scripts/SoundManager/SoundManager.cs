@@ -11,9 +11,12 @@ public class SoundManager : MonoBehaviour
     private AudioSource musicSource; // To play music
     [SerializeField]
     private AudioSource sfxSource; // To play sound effects
+      
+
 
     public List<AudioClip> musicClips; // List to store music clips
     public List<AudioClip> sfxClips; // List to store sound effect clips
+    
 
     private void Awake()
     {

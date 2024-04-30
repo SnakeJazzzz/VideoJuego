@@ -703,8 +703,8 @@ MonoBehaviour:
       attackTowers: 0
       attackEnemies: 0
   statsShower: {fileID: 0}
-  soundMinus: RemuveCard
-  soundPlus: AddCard
+  soundMinus: Lite_Button2
+  soundPlus: Lite_Button3
 --- !u!1 &8610762587402369007
 GameObject:
   m_ObjectHideFlags: 0

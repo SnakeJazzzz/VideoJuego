@@ -5321,6 +5321,10 @@ PrefabInstance:
       propertyPath: waveCounter
       value: 
       objectReference: {fileID: 5111453341250579081, guid: d86c2326d18924d098df5f3f54710044, type: 3}
+    - target: {fileID: 202973660344973024, guid: 8281a61aaec77451f8609141bbc15ebc, type: 3}
+      propertyPath: buttonClickSoundName
+      value: NextWave
+      objectReference: {fileID: 0}
     - target: {fileID: 1112953137605603975, guid: 8281a61aaec77451f8609141bbc15ebc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -31776,6 +31780,10 @@ PrefabInstance:
     - target: {fileID: 6255849107080491894, guid: 5eb8e1c6713814da79cb719be45962b3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439636094884055950, guid: 5eb8e1c6713814da79cb719be45962b3, type: 3}
+      propertyPath: buttonClickSoundName
+      value: Lite_Button
       objectReference: {fileID: 0}
     - target: {fileID: 9141101911336551124, guid: 5eb8e1c6713814da79cb719be45962b3, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x

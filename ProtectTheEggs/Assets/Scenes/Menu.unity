@@ -2409,7 +2409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
-  buttonClickSoundName: Archer
+  buttonClickSoundName: Done
 --- !u!4 &1721079227
 Transform:
   m_ObjectHideFlags: 0

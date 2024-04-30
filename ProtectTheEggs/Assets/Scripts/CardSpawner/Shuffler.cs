@@ -10,6 +10,8 @@ public class Shuffler : MonoBehaviour
     //int currentIndex = 0;
     public List<int> listaDeIndices = new List<int>();
     public float shuffleTime = 5f;
+    public string cardDeal;
+    public string shuffleSound;
 
     Coroutine shuffle;
     void Awake()
@@ -59,6 +61,7 @@ public class Shuffler : MonoBehaviour
     {
         shuffleTime = time;
         shuffle = StartCoroutine(ShuffleCoroutine());
+        SoundManager.Instance.PlaySFXByName(shuffleSound);
     }
 
     IEnumerator ShuffleCoroutine()
@@ -68,5 +71,6 @@ public class Shuffler : MonoBehaviour
         
         cardSOSystem.currentIndex = 0;
         cardSOSystem.ShuffleOver();
+        SoundManager.Instance.PlaySFXByName(cardDeal);
     }
 }

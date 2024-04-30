@@ -1978,7 +1978,7 @@ RectTransform:
   - {fileID: 1196617820}
   - {fileID: 303021592}
   - {fileID: 1448148240}
-  - {fileID: 1997668193}
+  - {fileID: 1580796982}
   - {fileID: 1149132275}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3887,6 +3887,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userInformation: {fileID: 0}
+  textoMensajeNoMazo: {fileID: 0}
+  buttonClickSoundName: 
+  soundNoMaso: 
+  soundMapa: 
 --- !u!4 &1434833711
 Transform:
   m_ObjectHideFlags: 0
@@ -4201,11 +4205,12 @@ Transform:
   m_GameObject: {fileID: 1580796981}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -931.9912, y: -539.8687, z: -14.004375}
+  m_LocalScale: {x: 1.4004376, y: 1.4004376, z: 1.4004376}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 1997668193}
+  m_Father: {fileID: 861202465}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1580796983
 MonoBehaviour:
@@ -4220,6 +4225,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   optionsPanel: {fileID: 645460287}
+  buttonPauseSoundName: Lite_Button4
+  buttonResumeSoundName: Lite_Button5
+  buttonMenuSoundName: Lite_Button3
 --- !u!1001 &1602472833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4280,6 +4288,10 @@ PrefabInstance:
       propertyPath: sessionAPIHandler
       value: 
       objectReference: {fileID: 1992554508}
+    - target: {fileID: 2872889502740668373, guid: 83f901dd9c43546a7932818ecfbdb82d, type: 3}
+      propertyPath: buttonClickSoundName
+      value: GameOver
+      objectReference: {fileID: 0}
     - target: {fileID: 3550406536027586582, guid: 83f901dd9c43546a7932818ecfbdb82d, type: 3}
       propertyPath: m_Name
       value: GameController
@@ -4423,6 +4435,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608798250}
   m_CullTransparentMesh: 1
+--- !u!1001 &1642949474
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3849084299514721174, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4612593220858768644, guid: a03aa8b00672749b196705ce224f6792, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a03aa8b00672749b196705ce224f6792, type: 3}
 --- !u!1 &1714576403
 GameObject:
   m_ObjectHideFlags: 0
@@ -5345,7 +5414,6 @@ GameObject:
   - component: {fileID: 1997668193}
   - component: {fileID: 1997668196}
   - component: {fileID: 1997668195}
-  - component: {fileID: 1997668194}
   m_Layer: 0
   m_Name: PauseMenuDropdown
   m_TagString: Untagged
@@ -5361,79 +5429,19 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1997668192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.4000003, y: 2.4000003, z: 2.4000003}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalScale: {x: 1.7137502, y: 1.7137502, z: 1.7137502}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1164864442}
   - {fileID: 645460288}
-  m_Father: {fileID: 861202465}
+  m_Father: {fileID: 1580796982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1351, y: 771}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 1, y: 1}
---- !u!114 &1997668194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1997668192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1997668195}
-  m_Template: {fileID: 0}
-  m_CaptionText: {fileID: 0}
-  m_CaptionImage: {fileID: 0}
-  m_Placeholder: {fileID: 0}
-  m_ItemText: {fileID: 0}
-  m_ItemImage: {fileID: 0}
-  m_Value: 0
-  m_Options:
-    m_Options:
-    - m_Text: Option A
-      m_Image: {fileID: 0}
-    - m_Text: Option B
-      m_Image: {fileID: 0}
-    - m_Text: Option C
-      m_Image: {fileID: 0}
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_AlphaFadeSpeed: 0.15
 --- !u!114 &1997668195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5829,6 +5837,18 @@ PrefabInstance:
       propertyPath: ReshufflingDeckBanner
       value: 
       objectReference: {fileID: 1451390049}
+    - target: {fileID: 5459648922037876616, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: cardDeal
+      value: Deal_Multiple
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459648922037876616, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: shuffleSound
+      value: Shuffle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5459648922037876616, guid: c91bd5745368440b9823018a11e97504, type: 3}
+      propertyPath: buttonClickSoundName
+      value: Deal_Multiple
+      objectReference: {fileID: 0}
     - target: {fileID: 6010595164496802681, guid: c91bd5745368440b9823018a11e97504, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.3306246
@@ -6292,5 +6312,5 @@ SceneRoots:
   - {fileID: 133351185617438952}
   - {fileID: 8548470883603287308}
   - {fileID: 1602472833}
-  - {fileID: 1580796982}
   - {fileID: 1992554509}
+  - {fileID: 1642949474}

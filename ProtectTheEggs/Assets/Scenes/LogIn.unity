@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameValidator: {fileID: 2123203965}
   userInformation: {fileID: 0}
-  buttonClickSoundName: 
+  buttonClickSoundName: Lite_Button
 --- !u!1 &634932511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,7 +2247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameValidator: {fileID: 2123203965}
   userInformation: {fileID: 0}
-  buttonClickSoundName: Archer
+  buttonClickSoundName: Lite_Button2
 --- !u!114 &1002955009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3507,8 +3507,8 @@ MonoBehaviour:
   textoMensajeLogIn: {fileID: 367484148}
   textoMensajeErrorLI: {fileID: 1134739346}
   TextoErroresLI: {fileID: 158993820}
-  loginSuccessSoundName: Inferno
-  loginErrorSoundName: MenosCarta
+  loginSuccessSoundName: AddCard
+  loginErrorSoundName: Elf
 --- !u!4 &2123203967
 Transform:
   m_ObjectHideFlags: 0
