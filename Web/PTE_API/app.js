@@ -29,10 +29,38 @@ async function connectToDB() {
 
 
 app.get('/', (request, response)=>{
+  console.log('Loading page...');
+  fs.readFile('../public/html/titulo.html', 'utf8', (err, html)=>{
+      if(err) response.status(500).send('There was an error: ' + err)
+      console.log('Loading page...');
+      response.send(html);
+  })
+})
+
+app.get('/leaderboard', (request, response)=>{
+  console.log('Loading page...');
   fs.readFile('../public/html/leaderboard.html', 'utf8', (err, html)=>{
       if(err) response.status(500).send('There was an error: ' + err)
-      console.log('Loading page...')
-      response.send(html)
+      console.log('Loading page...');
+      response.send(html);
+  })
+})
+
+app.get('/creditos', (request, response)=>{
+  console.log('Loading page...');
+  fs.readFile('../public/html/creditos.html', 'utf8', (err, html)=>{
+      if(err) response.status(500).send('There was an error: ' + err)
+      console.log('Loading page...');
+      response.send(html);
+  })
+})
+
+app.get('/how_to_play', (request, response)=>{
+  console.log('Loading page...');
+  fs.readFile('../public/html/how_to_play.html', 'utf8', (err, html)=>{
+      if(err) response.status(500).send('There was an error: ' + err)
+      console.log('Loading page...');
+      response.send(html);
   })
 })
 
