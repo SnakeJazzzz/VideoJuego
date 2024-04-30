@@ -8,9 +8,9 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance { get; private set; }
 
     [SerializeField]
-    private AudioSource musicSource; // To play music
+    public AudioSource musicSource; // To play music
     [SerializeField]
-    private AudioSource sfxSource; // To play sound effects
+    public AudioSource sfxSource; // To play sound effects
       
 
 

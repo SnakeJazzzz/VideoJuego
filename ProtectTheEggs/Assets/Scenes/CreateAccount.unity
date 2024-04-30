@@ -1285,7 +1285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameValidator: {fileID: 2123203965}
   userInformation: {fileID: 0}
-  buttonClickSoundName: Archer
+  buttonClickSoundName: Lite_Button3
 --- !u!1 &928159879
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,7 +3104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usernameValidator: {fileID: 2123203965}
   userInformation: {fileID: 0}
-  buttonClickSoundName: Done
+  buttonClickSoundName: Lite_Button
 --- !u!114 &1970144402
 MonoBehaviour:
   m_ObjectHideFlags: 0
