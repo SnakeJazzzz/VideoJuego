@@ -32,13 +32,15 @@ h1{
 
 .chartContainer{
     border: 0;
-    /* justify-content: center; */
-    justify-items: center;
+    justify-content: center; 
+    justify-items: flex-start;
     display: flex;
     width: 100%;
     flex-direction: row;
     align-items: center;
-    /* align-content: center; */
+    flex-wrap: wrap;
+    align-content: space-around;
+    /*align-content: center; */
 }
 
 .chartContainer canvas{
