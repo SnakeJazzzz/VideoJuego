@@ -5,7 +5,7 @@ using System.Collections;
 public class SessionAPIHandler : MonoBehaviour
 {
     // Base URL for API requests
-    private string baseUrl = "http://localhost:3000/api/partidas";
+    public string baseUrl = "http://127.0.0.1:3000/api/partidas";
     public PartidaInfo currentPartida;
     public UserInformation userInformation;
     public WaveCounter waveCounter;

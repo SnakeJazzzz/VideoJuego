@@ -65,6 +65,17 @@ app.get('/how_to_play', (request, response)=>{
 })
 
 
+app.get('/game', (request, response)=>{
+  console.log('Loading page...');
+  fs.readFile('../public/html/index.html', 'utf8', (err, html)=>{
+      if(err) response.status(500).send('There was an error: ' + err)
+      console.log('Loading page...');
+      response.send(html);
+  })
+})
+
+
+
 
 
 
@@ -120,10 +131,11 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
     let connection = null;
 
     try {
+      console.log("Create account called");
     //console.log("Request arrived");
     const username = request.body.username;
     const password = request.body.password;
-    //console.log(request.body);
+    console.log(request.body);
   
     //const returnjson = {};
     connection = await connectToDB();
@@ -133,6 +145,8 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
         [username]
     );
     
+    console.log(results);
+
     if (results[0] !== undefined)
     {
         console.log("Couldnt create account: Username already exists.");
@@ -146,8 +160,9 @@ app.get("/api/usuarios/:username/:password", async (request, response) => {
     }
     else
     {
+        console.log("Trying to  create account.");
         const [results2, fields2] = await connection.execute(
-            "INSERT INTO Usuarios (NombreUsuario, Contraseña, PuntuaciónMáxima) VALUES (?, ?, 0);",
+            "INSERT INTO Usuarios (NombreUsuario, Contraseña) VALUES (?, ?);",
             [username, password]
             );
             console.log("Succesfully created account!");

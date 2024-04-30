@@ -3379,7 +3379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazos: {fileID: 11400000, guid: 0b12d424b6874449480202a6aab6a4b8, type: 2}
   userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
-  apiURL: http://localhost:3000/api/mazo/
+  apiURL: http://127.0.0.1:3000/api/mazo/
   TextoMensajeMazoBorrado: {fileID: 78696949}
   TextoMensajeBorrandoMazo: {fileID: 595243667}
   TextoMensajeErrorDD: {fileID: 2009763255}

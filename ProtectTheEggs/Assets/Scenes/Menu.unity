@@ -4144,7 +4144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
   mazos: {fileID: 11400000, guid: 0b12d424b6874449480202a6aab6a4b8, type: 2}
-  apiURL: http://localhost:3000/api/mazo/
+  apiURL: http://127.0.0.1:3000/api/mazo/
   textoMensajeErrorMenu: {fileID: 2141082176}
   TextoErroresMenu: {fileID: 1059903123}
 --- !u!4 &2137147581
@@ -4176,7 +4176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AvailableCards: {fileID: 11400000, guid: 618a25b0ccc5b4c7ba48ff067fc78f49, type: 2}
   userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
-  apiURL: http://localhost:3000/api/card
+  apiURL: http://127.0.0.1:3000/api/card
   textoMensajeErrorMenu: {fileID: 2141082176}
   TextoErroresMenu: {fileID: 1059903123}
 --- !u!1 &2140305800
