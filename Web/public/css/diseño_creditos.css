@@ -3,6 +3,10 @@ body
 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
+
+    background-image: url('/imagenes/light_forest.png');
+    background-size: cover;
+    background-position: top;
 }
 
 div
@@ -23,19 +27,18 @@ p
 div.index
 {
     background-color: #242222;
+    opacity: 0.9;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 30px;
 }
-
 div.index .content
 {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-
 .index a
 {
     margin-left: 20px;
@@ -45,12 +48,10 @@ div.index .content
     font-weight: bold;
     transition: color 0.5s ease;
 }
-
 .index a:hover
 {
     color: #23434d;
 }
-
 .index a:active
 {
     text-decoration: underline;
@@ -60,24 +61,35 @@ div.index .content
 
 div.title_creditos
 {
-    background-color: #23434d;
+    text-justify: center;
     text-align: center;
-}
 
-div.title_estudiantes
-{
-    background-color: #242222;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('letrero2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
 }
 
 div.nombres_matriculas
 {
-    background-color: #171615;
-    /*text-align: center;*/
+    text-align: center;    
 }
+
 
 div.copy
 {
     background-color: #242222;
+    opacity: 0.9;
     text-align: center;
     font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
 }

@@ -3,6 +3,10 @@ body
 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
+
+    background-image: url('../css/imagenes/dark_forest.png');
+    background-size: cover;
+    background-position: center;
 }
 
 div
@@ -23,6 +27,7 @@ p
 div.index
 {
     background-color: #242222;
+    opacity: 0.9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,21 +65,29 @@ div.index .content
 
 div.title_HowToPlay
 {
-    background-color: #23434d;
+    text-justify: center;
     text-align: center;
+
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../css/imagenes/letrero.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
 }
 
-
-
-div.title_instrucciones
-{
-    background-color: #242222;
-}
 
 div.text_instrucciones
 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #171615;
+    background-color: #242222;
+    margin: 10px;
+    opacity: 0.75;
+    border-radius: 10px;
 }
 
 
@@ -82,22 +95,20 @@ div.text_instrucciones
 div.index2
 {
     background-color: #242222;
+    opacity: 0.9;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 20px;
 }
-
 div.index2 .content
 {
     display: flex;
-    flex-direction: row;
     align-items: center;
 }
-
 .index2 a
 {
-    font-size:x-large;
+    font-size:xx-large;
     margin-left: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
@@ -105,12 +116,10 @@ div.index2 .content
     font-weight: bold;
     transition: color 0.5s ease;
 }
-
 .index2 a:hover
 {
     color: #23434d;
 }
-
 .index2 a:active
 {
     text-decoration: underline;
