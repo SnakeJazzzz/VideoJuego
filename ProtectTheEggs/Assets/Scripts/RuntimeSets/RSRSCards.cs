@@ -12,8 +12,7 @@ public class RSRSCards: RuntimeSet<RSCards>
    {
     for (int i = 0; i<Items.Count; i++)
     {
-        Items[i].Items.Clear();
-        Items[i].nombreMazo = "";
+        Items[i].Reset();
     }
    }
 }   

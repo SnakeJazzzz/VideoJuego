@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public UserInformation userInformation;
+    public RSRSCards mazos;
+    public RSCards AvailableCards;
     public string buttonClickSoundName;
 
 
@@ -22,12 +24,17 @@ public class MainMenu : MonoBehaviour
     }
 
 
-    
+    public void LogOut()
+    {
+        userInformation.Reset();
+        mazos.Reset();
+        AvailableCards.Reset();
+
+        SceneManager.LoadScene("LogIn");
+        SoundManager.Instance.PlaySFXByName(buttonClickSoundName);
+
+    }
   
 
-    public void QuitGame()
-    {
-        Debug.Log("QUIT!");
-        Application.Quit();
-    }
+   
 }
