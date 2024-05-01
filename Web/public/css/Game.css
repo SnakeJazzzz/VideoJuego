@@ -45,7 +45,7 @@ p
     top: 0; /* Stick to the top */
     z-index: 1000; /* Ensure the navbar is above other items */
 }
-div.index .content
+.index .content
 {
     display: flex;
     flex-direction: row;
@@ -73,7 +73,7 @@ div.index .content
     text-decoration: underline;
 }
 
-.index a[href="./creditos"]:not(:hover) {
+.index a[href="./game"]:not(:hover) {
     color: #fff;
     background-color: #ff4500; /* A bright color to indicate active page */
     border-radius: 5px;
@@ -118,7 +118,7 @@ div.title_creditos
 }
 
 
-div.copy
+.copy
 {
     background-color: #242222;
     opacity: 0.9;

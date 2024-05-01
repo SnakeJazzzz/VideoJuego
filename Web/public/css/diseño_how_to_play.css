@@ -8,8 +8,9 @@ body {
     padding-top: 0px; /* Added to prevent content from hiding behind the fixed navbar */
 }
 
-.index, .index2{
-    background-color: rgba(36, 34, 34, 0.9); /* Use RGBA for transparent black */
+.index
+{
+    background-color: rgba(36, 34, 34, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,9 +19,14 @@ body {
     top: 0; /* Stick to the top */
     z-index: 1000; /* Ensure the navbar is above other items */
 }
-
-
-.index a, .index2 a {
+div.index .content
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.index a
+{
     margin: 0 15px;
     font-family: 'Rowdies', sans-serif; /* Applying Rowdies font */
     color: white;
@@ -28,14 +34,19 @@ body {
     font-weight: bold; /* Regular weight, use 700 for bold if needed */
     transition: color 0.3s, background-color 0.3s;
 }
-
-.index a:hover, .index2 a:hover {
+.index a:hover
+{
     color: #f8f8f2; /* Light color for hover */
     background-color: rgba(35, 67, 77, 0.5); /* Transparent background on hover */
     text-decoration: none; /* No underline on hover */
     padding: 0.5rem 1rem; /* Padding for a 'button-like' feel */
     border-radius: 5px; /* Rounded corners on hover */
 }
+.index a:active
+{
+    text-decoration: underline;
+}
+
 
 .index a[href="./how_to_play"]:not(:hover) {
     color: #fff;
@@ -101,10 +112,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.5;
 }
 
-.index2 {
-    bottom: 0;
-    padding-bottom: 20px;
-}
+
 
 @media (max-width: 768px) {
     .text_instrucciones .instruction-box {
@@ -114,9 +122,9 @@ h1, h2, h3, h4, h5, h6 {
         flex-wrap: wrap; /* Wrap items to the next line if space runs out */
     }
 
-    .index a, .index2 a {
+    /*.index a, .index2 a {
         margin: 0 10px;
-    }
+    }*/
     .text_instrucciones .instruction-box img {
         max-width: 50%; /* Take up half the width on small screens */
     }
