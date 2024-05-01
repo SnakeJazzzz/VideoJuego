@@ -64,8 +64,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   currentWave: 0
-  BaseEnemyCount: 5
-  EnemyCountIncrement: 3
+  BaseEnemyCount: 10
+  EnemyCountIncrement: 2
 --- !u!114 &202973660344973024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,7 +94,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  waveCounter: {fileID: 0}
+  waveCounter: {fileID: 5111453341250579081, guid: d86c2326d18924d098df5f3f54710044, type: 3}
+  buttonClickSoundName: NextWave
 --- !u!114 &8793622274530713153
 MonoBehaviour:
   m_ObjectHideFlags: 0
