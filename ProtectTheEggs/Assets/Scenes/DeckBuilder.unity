@@ -700,7 +700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5916ca8fd469d466fa2af4f4e80fc32a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: http://localhost:3000/api/CreateDeck
+  url: http://127.0.0.1:3000/api/CreateDeck
   deckBuilderManager: {fileID: 11400000, guid: 743eea175007b452f920da75b1931303, type: 2}
 --- !u!114 &364787156
 MonoBehaviour:
@@ -730,7 +730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ab9713419914b56977a9031b80d93d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  url: http://localhost:3000/api/EditDeck/
+  url: http://127.0.0.1:3000/api/EditDeck/
   deckBuilderManager: {fileID: 11400000, guid: 743eea175007b452f920da75b1931303, type: 2}
   mazos: {fileID: 11400000, guid: 0b12d424b6874449480202a6aab6a4b8, type: 2}
   userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}

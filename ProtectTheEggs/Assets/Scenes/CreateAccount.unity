@@ -3514,7 +3514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47a0b929300bf444f8b9b703d392d724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiURL: http://localhost:3000/api/usuarios/
+  apiURL: http://127.0.0.1:3000/api/usuarios/
   usernameValidator: {fileID: 2123203965}
   userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
   textoMensajeCreateAccount: {fileID: 51681265}

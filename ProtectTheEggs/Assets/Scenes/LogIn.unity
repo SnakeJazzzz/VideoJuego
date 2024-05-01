@@ -2799,7 +2799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: -10.099976}
+  m_AnchoredPosition: {x: 0, y: -10.099976}
   m_SizeDelta: {x: 0, y: 20.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1132036121
@@ -3503,7 +3503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userInformation: {fileID: 11400000, guid: 87c5ed52823734ec589dd433a1abcdd5, type: 2}
   usernameValidator: {fileID: 2123203965}
-  apiURL: http://localhost:3000/api/usuarios/
+  apiURL: http://127.0.0.1:3000/api/usuarios/
   textoMensajeLogIn: {fileID: 367484148}
   textoMensajeErrorLI: {fileID: 1134739346}
   TextoErroresLI: {fileID: 158993820}
