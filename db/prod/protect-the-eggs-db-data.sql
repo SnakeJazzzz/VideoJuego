@@ -99,16 +99,16 @@ INSERT IGNORE INTO Mapas (NombreMapa) VALUES
 
 -- Insert data into Partidas table, adjusting maximum order as needed
 INSERT INTO Partidas (IDUsuario, MaxOrda, IDMapa) VALUES 
-(1, 500, 1),
-(2, 200, 1),
-(2, 150, 1),
-(2, 300, 1),
-(2, 300, 2),
-(2, 100, 2),
+(1, 5, 1),
+(2, 2, 1),
+(2, 1, 1),
+(2, 3, 1),
+(2, 3, 2),
+(2, 1, 2),
 (2, 50, 2),
 (2, 10, 2),
-(2, 300, 3),
-(2, 100, 3),
+(2, 3, 3),
+(2, 1, 3),
 (2, 50, 3)
 ON DUPLICATE KEY UPDATE 
-    MaxOrda = VALUES(MaxOrda);
+    MaxOrda = VALUES(MaxOrda); 
