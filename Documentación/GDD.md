@@ -41,7 +41,8 @@ Tomás Molina Pérez Diez - A01784116
 
 ### **Resumen**
 
-En "Protect the Egg" te enfrascaras en una batalla estratégica contra ordas de monstruos, con la ayuda de cartas invocaras tus tropas con el objetivo de proteger un huevo de dragón. El dominio de creación de mazo, posicionamiento de unidades y estrucutras, más la gestión de recursos es clave para la victoria en este competitivo juego 2D para computadoras. El juego desafía a los jugadores a gestionar estos recursos y en desplegar unidades estratégicamente para cuidar el huevo de dragón ¿Por cuantas ordas podras protegerlo?
+En "Protect the Egg" participarás en una batalla estratégica contra hordas de monstruos. Con la ayuda de cartas convocarás a tus tropas con el objetivo de defender un huevo de dragón. El dominio de la creación de cubiertas, posicionamiento de unidades y estructuras, más la gestión de recursos es clave para la victoria en este competitivo juego de ordenador en 2D. ¿Durante cuántas hordas podrás protegerlo?
+
 ---
 
 ### **Jugabilidad**
@@ -52,7 +53,7 @@ Cada orda de monstruos es más dificil que la anterior, mientras que la misma or
 
 #### **Premios / Recompensas**
 
-Tras acabar cada partida, el juego guardarán los datos de la partida como los puntos y ordas en tu perfil, los cuales se rankearán dandole un toque de competibidad por ver quien consigue más puntos.
+Tras acabar cada partida, el juego guardará los datos de la partida (la horda máxima y mapa usado), los cuales se rankearán y presentarán en la página web, dandole un toque de competibidad por ver quien consigue más puntos.
 
 ---
 
@@ -70,24 +71,18 @@ El juego provoca una mentalidad de estratégica y adaptabilidad. Los jugadores d
 
 ---
 
-#### **Pantalla de Título**
+#### **Pantalla de Log In**
 Primer pantalla al entrar al juego.
 - **Título del juego**: Logo del juego.
-- **Iniciar Sesión/Registro**: Lleva a los jugadores a la pantalla de Log In para iniciar sesión o registrarse.
-
-#### **Pantalla de Iniciar Sesión/Registro**
-- **Log In**: Los jugadores existentes pueden ingresar su usuario y contraseña para acceder a sus perfiles.
-- **Registro**: Nuevos jugadores pueden crear una cuenta, proporcionando un usuario, correo electrónico y contraseña.
+- **Iniciar Sesión**: Los jugadores existentes pueden ingresar su usuario y contraseña para acceder a sus perfiles.
+- **Create Account**: Lleva a los jugadores a la pantalla de Create Account para que los nuevos jugadores pueden crear una cuenta, proporcionando un usuario, correo electrónico y contraseña.
 
 ![LogIn](./fotos/LogIn.png)
 
 #### **Pantalla Principal**
-- **Iniciar Partida**: Lleva a los jugadores a la pantalla de partidas.
+- **Iniciar Partida**: Lleva a los jugadores a la pantalla de selección de mapas, tras elegir un mapa podrá comenzar una nueva partida si hay un mazo seleccionado.
 - **Selección de Mazo**: Lleva a los jugadores a la pantalla de selección de mazo.
-- **¿Cómo Jugar?**: Lleva a los jugadores a la pantalla de ¿Cómo Jugar?.
-- **Opciones**: Lleva a los jugadores a la pantalla de configuraciones.
-- **Créditos**: Lleva a los jugadores a la pantalla de créditos.
-- **Salir**: Opción para cerrar el juego.
+- **Log Out**: Opción para cerrar sesión y regresa a la pantalla de log in.
 
 ![StartScreen](./fotos/StartScreen.png)
 
@@ -99,7 +94,6 @@ Primer pantalla al entrar al juego.
 
 #### **Pantalla de Victoria/Derrota**
 Al finalizar una partida, los jugadores son dirigidos a esta pantalla, que muestra el resultado de la partida.
-- **¿Jugar de Nuevo?**: Regresa a los jugadores la pantalla de partidas para comenzar otra.
 - **Salir**: Regresa a los jugadores a la pantalla de pantalla principal.
 
 #### **Pantalla de menu de pausa**
@@ -142,29 +136,37 @@ Permite a los jugadores personalizar su experiencia de juego.
 
 ---
 
-#### **En Partida**
+#### Antes de partida:
 
-El objetivo principal del juego consiste en proteger un huevo de dragón el cual es atacado por oleadas de monstruos, por medio de cartas de invocación de personajes (NPC) y estrucutras.
+Antes de la partida deberas seleccionar un mazo para usar, si no lo haces no podras jugar. Y finalmente tras elegir el mapa en el que quieres jugar, comenzará la partida!
 
-Para invocar cartas, dispones de elixir de dragón como recurso de invocación, la cantidad empieza en 10 puntos, y este aumenta en 10 puntos cada 10 segundos y el límite de almacenamiento es de 50 puntos, cada carta tiene un costo para desplegar y puedes ver la cantidad de elixir que dispones en la esquina superior izquierda.
+#### Selección y Creación de mazos:
 
-Para usar una carta, para moverte entre las cartas entre tu mano; se seleccionan con las teclas; 1, 2, 3, 4, 5 y 6. Mientras que con click derecho, el personaje o estrucutra se colocará en la posición del mouse. Ten en cuenta que hay una zona limitada para invocar cartas, si intentas colocarla de esta zona, no se colocará la carta y se marcará el límite de la zona.
+Para jugar, debes crear almenos un mazo de los 5 disponibles, cada mazo debe de tener 20 cartas exactas y un nombre para poderse guardar, las cartas se pueden repetir siempre y cuando el total sea 20, tambien se encontrará toda la información de cada carta para poder elegir con conciencia cliqueando en el 'Artwork' de la carta.
 
-Tras haber usado las 20 cartas de tu mazo; estas se volverán a revolver para que las puedas volver a usar, este proceso dura 5 segundos, en los cuales no podrás usar ninguna carta, en alado derecho de las cartas "en mano" se encuentra el contador de cartas restantes en el mazo.
-
-Por otra parte, las oleadas de monstruos se van poniendo progresivamente más dificiles, el contador de la orda en la que te encuentras se ubica en el centro de la parte superior.
-
-#### **Selección y Creación de Mazos**
-
-Para poder jugar, debes crear almenos un mazo de los 5 disponibles, cada mazo debe de tener 20 cartas exactas y un nombre para poderse guardar, las cartas se pueden repetir siempre y cuando el total sea 20, tambien se encontrará toda la información de cada carta para poder elegir con conciencia.
-
-#### **Selección de Mapa**
+#### Selección de Mapa:
 
 Tras elegir tu mazo, debes de elegir en cual de los 3 mapas jugarás, al clickear en el botón del mapa elegido, se comenzará la partida con tu mazo seleccionado y mapa elegido.
 
-#### **Victoria**
+#### En partida:
 
-¿Por cuantas ordas de monstruos podras proteger al huevo de dragón? Tras terminar la partida, se guardará tu puntuación.
+El objetivo principal del juego consiste en proteger un huevo de dragón el cual es atacado por hordas de monstruos, por medio de cartas de invocación de personajes (NPC) y estrucutras.
+
+#### Elixir:
+
+Para invocar cartas, dispones de elixir de dragón como recurso de invocación, la cantidad inicial es de 10 puntos de elixir y aumenta en 10 puntos cada 10 segundos, el límite de almacenamiento es de 50 puntos totales de elixir al mismo tiempo, si intentas ahorrar una cantidad mayor a esta, los puntos de elixir correspondientes se quemarán. Cada carta tiene un costo para desplegar y puedes ver la cantidad de elixir que dispones en la esquina superior izquierda de cada carta.
+
+#### Para usar una carta:
+
+Para moverte entre las cartas de tu mano; se seleccionan con las teclas; 1, 2, 3, 4, 5 y 6. Mientras que con click derecho en el mapa, el personaje o estrucutra se colocará en la posición del mouse. Ten en cuenta que hay una zona limitada para invocar cartas, si intentas colocarla fuera de esta zona,
+no se colocará la carta y se marcará el límite de la zona para que lo vuelvas a intentar.
+
+Revolver mazo:
+Tras haber usado las 20 cartas de tu mazo; estas se volverán a revolver para que las puedas volver a usar, este proceso dura 5 segundos, en los cuales no podrás usar ninguna carta, pon atención al lado derecho de las cartas "en mano", ya que se encuentra el contador de cartas restantes en el mazo.
+
+#### Hordas de monstruos:
+
+Las hordas de monstruos irán subiendo su dificultad progresivamente hasta que pierdas, el contador de la orda en la que te encuentras se ubica en el centro de la parte superior.
 
 ---
 
@@ -194,15 +196,13 @@ Tras elegir tu mazo, debes de elegir en cual de los 3 mapas jugarás, al clickea
 
 ### **Flujo de Juego Estratégico**
 
-1. **Selección de Mazo**: Cada jugador elige cuidadosamente un mazo de batalla, planeando su estrategia basada en las cartas disponibles y potenciales tácticas enemigas.
+1. **Selección de Mazo**: Cada jugador elige cuidadosamente un mazo de batalla, planeando su estrategia basada en las cartas disponibles.
 
-2. **Generación de Recursos**: Al inicio de la batalla, los jugadores comienzan a acumular recursos esenciales para el despliegue de unidades, estableciendo la base para la estrategia económica del juego.
+2. **Generación de Recursos**: Al inicio de la batalla, el jugador comienza a acumular el elixir esencial para el despliegue de unidades, estableciendo la base para la estrategia económica del juego.
 
 3. **Despliegue Táctico de Unidades**: Utilizando el mazo seleccionado, los jugadores colocan unidades en el campo de batalla, con cada decisión influenciada por el diseño del nivel, la composición del mazo enemigo, y los objetivos estratégicos inmediatos.
 
-4. **Conquista y Defensa**: La interacción dinámica entre atacar y defender torres centrales y la torre principal enemiga dicta el ritmo de la partida, con el terreno jugando un papel crucial en el éxito de estas maniobras.
-
-5. **Victorias Condicionales**: La partida culmina con la destrucción de la torre principal de un jugador, pero las estrategias para llegar a este punto varían enormemente, influenciadas por el diseño del nivel y las decisiones tácticas.
+4. **Victorias Condicionales**: La partida culmina con la destrucción del huevo de dragón del jugador, el objetivo principal del jugador consiste en sobrevivir la mayor cantidad de hordas que le sea posible con el maso que utiliza.
 
 ---
 
@@ -593,8 +593,6 @@ Tras elegir tu mazo, debes de elegir en cual de los 3 mapas jugarás, al clickea
   - Nota: Arroja bombas a un área, causando daño masivo a múltiples unidades enemigas.
 
 ![Torre de Bombardero](./fotos/Card_pictures/Torre_de_Bombardero.png)
-
-
 
 ---
 
