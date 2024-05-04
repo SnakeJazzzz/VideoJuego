@@ -71,57 +71,90 @@ El juego provoca una mentalidad de estratégica y adaptabilidad. Los jugadores d
 
 ---
 
-#### **Pantalla de Log In**
+#### **Pantalla de "LogIn"**
 Primer pantalla al entrar al juego.
-- **Título del juego**: Logo del juego.
-- **Iniciar Sesión**: Los jugadores existentes pueden ingresar su usuario y contraseña para acceder a sus perfiles.
-- **Create Account**: Lleva a los jugadores a la pantalla de Create Account para que los nuevos jugadores pueden crear una cuenta, proporcionando un usuario, correo electrónico y contraseña.
+**Iniciar Sesión**: Los jugadores existentes pueden ingresar su usuario y contraseña en esta escena para acceder al juego con la información de sus perfiles.
+- **Boton a "CreateAccount"**: Lleva a los jugadores a la pantalla de Create Account.
+- **Boton a salir**: Boton que permite salir del juego.
 
 ![LogIn](./fotos/LogIn.png)
 
-#### **Pantalla Principal**
-- **Iniciar Partida**: Lleva a los jugadores a la pantalla de selección de mapas, tras elegir un mapa podrá comenzar una nueva partida si hay un mazo seleccionado.
-- **Selección de Mazo**: Lleva a los jugadores a la pantalla de selección de mazo.
-- **Log Out**: Opción para cerrar sesión y regresa a la pantalla de log in.
+#### **Pantalla de "CreateAccount"**
+**Crear cuenta**: En esta escena, los jugadores podran crear una cuenta del juego proporcionando un username y una contraseña, la cual se guardará en la base de datos.
+- **Boton a "LogIn"**: Lleva a los jugadores a la pantalla de Log In.
+- **Boton a salir**: Boton que permite salir del juego.
 
-![StartScreen](./fotos/StartScreen.png)
+![CreateAccount](./fotos/CreateAccount.png)
 
-#### **Pantalla Partidas**
-- **Mapa de Partida**: Campo de batalla.
-- **Mano**: Cartas disponibles para usar.
-- **Menu de Pausa**: Lleva a los jugadores a la pantalla de pausa.
-- **Visuales**: Efectos visuales reactivos a las acciones de la partida.
+#### **Pantalla de Menu**
+- **Boton de "Play"**: Lleva a los jugadores a la escena "MapsMenu".
+- **Boton de "Decks"**: Lleva a los jugadores a la escena de selección de "DecksMenu".
+- **Boton de Opciones de audio**: Abre el marco para poder manipular los niveles de sonido del juego.
+- **Boton de "Log Out"**: Opción para cerrar sesión y regresar a la pantalla de "LogIn".
 
-#### **Pantalla de Victoria/Derrota**
+![Menu](./fotos/Menu.png)
+
+#### **Marco de opciones de audio**
+- **Barra de "Music Volume"**: Barra para editar el volumen de la musica del juego.
+- **Barra de "SFX Vokume"**: Barra para editar el volumen de los efectos de sonido del juego.
+- **Boton de regresar**: Boton para regresar a la escena de Menu.
+
+![MenuVolume](./fotos/MenuVolume.png)
+
+#### **Pantalla de "MapsMenu"**
+- **Boton de "Sea Side"**: Si el jugador tiene un mazo seleccionado, lleva al jugador la escena de GUI en conjunto con la escena de "SeaSide".
+- **Boton de "Village"**: Si el jugador tiene un mazo seleccionado, lleva al jugador la escena de GUI en conjunto con la escena de "Village".
+- **Boton de "Enchanted Forest"**: Si el jugador tiene un mazo seleccionado, lleva al jugador la escena de GUI en conjunto con la escena de "EnchantedForest".
+- **Boton de regresar**: Boton para regresar a la escena de Menu.
+
+![MapsMenu](./fotos/MapsMenu.png)
+
+#### **Pantalla de "DecksMenu"**
+- **Boton de "Create new deck"**: Este boton llevará al jugador a la escena de "CreateDeck"
+- **Boton de primer mazo**: Al seleccionar este boton, se seleccionará el mazo guardado y aparecerán los botones de "Edit Deck" y "Delete Deck".
+- **Boton de segundo mazo**: Al seleccionar este boton, se seleccionará el mazo guardado y aparecerán los botones de "Edit Deck" y "Delete Deck".
+- **Boton de tercer mazo**: Al seleccionar este boton, se seleccionará el mazo guardado y aparecerán los botones de "Edit Deck" y "Delete Deck".
+- **Boton de cuarto mazo**: Al seleccionar este boton, se seleccionará el mazo guardado y aparecerán los botones de "Edit Deck" y "Delete Deck".
+- **Boton de quinto mazo**: Al seleccionar este boton, se seleccionará el mazo guardado y aparecerán los botones de "Edit Deck" y "Delete Deck".
+- **Boton de "Edit deck"**: Este boton llevará al jugador a la escena de "CreateDeck" para editar el mazo seleccionado.
+- **Boton de "Delete deck"**: Este boton borrará el deck seleccionado.
+- **Boton de regresar**: Boton para regresar a la escena de Menu.
+
+![DecksMenu](./fotos/DecksMenu.png)
+
+#### **Pantalla de "CreateDeck"**
+- **Interfaz de cartas**: Se ve una imagen de todas las cartas del juego con botones de "+" y "-" a un lado para agregar o eliminar las cartas del mazo, cada imagen de carta es un boton que muestra la "interfaz de stats".
+- **Interfaz de stats**: Se ve una lista las stats de la carta seleccionada.
+- **Nombre del mazo**: Espacio para escribir y guardar el nombre del mazo.
+- **Boton de aceptar**: Este boton guardará el mazo tras finalizarlo.
+- **Boton de regresar**: Boton para regresar a la escena de "DecksMenu".
+
+![CreateDeck](./fotos/CreateDeck.png)
+
+#### **Pantalla de GUI**
+- **Mapa de Partida**: Mapa seleccionado desde la escena de "MapsMenu".
+- **Cartas en mano**: Cartas disponibles para usar, junto con su costo de elixir.
+- **Mazo**: Mazo con contador de cartas restantes.
+- **Elixir**: Contador de elixir más su barra de valor.
+- **Hordas**: Contador de horda de mosntruos actual.
+- **Boton de pausa**: Muetra a los jugadores el menu de pausa.
+
+![GUI](./fotos/GUI.png)
+
+#### **Pantalla de Menu de pausa**
+- **Pantalla de partida de fondo**: Momento de la partida en la que se pausoó el juego.
+- **Boton de reanudar**: Reanuda la partida.
+- **Boton de regresar**: Boton para regresar a la escena de Menu.
+- **Boton de Opciones de audio**: Abre el marco para poder manipular los niveles de sonido del juego.
+
+![Pause](./fotos/Pause.png)
+
+#### **Pantalla de EndGame**
 Al finalizar una partida, los jugadores son dirigidos a esta pantalla, que muestra el resultado de la partida.
-- **Salir**: Regresa a los jugadores a la pantalla de pantalla principal.
+- **Boton de regresar**: Boton para regresar a la escena de Menu.
+- **Salir**: Saca a los jugadores del juego.
 
-#### **Pantalla de menu de pausa**
-- **Reanudar**: Regresa al jugador a la pantalla de partida.
-- **Opciones**: Lleva a los jugadores a la pantalla de configuraciones.
-- **Salir**: Lleva a los jugadores a la pantalla principal.
-
-#### **Selección de Mazo**
-Una interfaz dedicada a la gestión de mazos, donde los jugadores pueden:
-- **Crear Mazo**: Interface para la creación de nuevos mazos, con acceso a todas las cartas disponibles.
-- **Listas de Mazos**: Visualización y edición de mazos existentes.
-- **Todas las Cartas**: Exploración de todas las cartas disponibles, incluyendo descripciones y estadísticas.
-- **Salir**: Regresa a los jugadores a la pantalla de pantalla principal.
-
-#### **Pantalla de ¿Cómo Jugar?**
-- **Documento de Instrucciones**: Documento sobre cómo jugar "Tower Siege" incluyendo reglas.
-- **Salir**: Regresa a los jugadores a la pantalla de pantalla principal.
-
-#### **Pantalla de Opciones**
-Permite a los jugadores personalizar su experiencia de juego.
-- **Volumen**: Control de volumen para música y efectos de sonido.
-- **Teclas Personalizables**: Configuración de controles de teclado para adaptarse a las preferencias del jugador.
-- **Salir**: Regresa a los jugadores a la pantalla de donde venga.
-
-![options](./fotos/options.png)
-
-#### **Pantalla de Créditos**
-- **Info de los desarrolladores**: Nombres y matriculas.
+![EndGame](./fotos/EndGame.png)
 
 ---
 
@@ -176,21 +209,38 @@ Las hordas de monstruos irán subiendo su dificultad progresivamente hasta que p
 
 ### **Temas**
 
-#### **Campo de Batalla**
-
-- **Ambiente**: Campo de batalla medieval; muy forestal, con caminos, arboles, lagos, ríos, torres de piedra, etc.
+#### **Sea Side**
+- **Ambiente**: Campo de batalla medieval; muy forestal; con arboles y casas delimitando los límites del nivel junto con una enorme costa de con un enorme cuerpo de agua.
 - **Ambientes Detallados**:
-  - **Bosques Espesos**: Los árboles no solo añaden complejidad visual, sino que también pueden ofrecer cobertura táctica o ser obstáculos.
-  - **Cuerpos de Agua**: Lagos añaden barreras naturales, forzando a los jugadores a adaptar sus estrategias de movimiento y posicionamiento.
   - **Torres**: Elementos icónicos del paisaje que sirven como objetivos críticos y puntos de fortaleza.
+  - **Casas**: Casas diseñadas en la época en la que esta inspirado el juego, para darle ese toque medieval.
+  - **Arboles**: Pinos que le dan el toque forestal al nivel.
+  - **Cuerpo de Agua**: Cuerpo de agua natural que le da una ambientación distinta a la de un bosque común.
 
-![MapEgg](./fotos/fotoMap.png)
+![SeaSide](./fotos/SeaSide.png)
+
+#### **Village**
+- **Ambiente**: Campo de batalla medieval; con casas y edificios colocados por todo el mapa, muros de piedra que delimitan el limite del campo y casas de decoración.
+- **Ambientes Detallados**:
+  - **Torres**: Elementos icónicos del paisaje que sirven como objetivos críticos y puntos de fortaleza.
+- **Casas y muralla**: Casas diseñadas en la época en la que esta inspirado el juego, para darle ese toque medieval.
+  - **Arboles**: Pinos que le dan el toque forestal al nivel.
+
+![Village](./fotos/EnchantedForest.png)
+
+#### **Enchanted Forest**
+- **Ambiente**: Campo de batalla medieval; muy forestal; con arboles colocados por todo el mapa y delimitando los límites del nivel.
+- **Ambientes Detallados**:
+  - **Torres**: Elementos icónicos del paisaje que sirven como objetivos críticos y puntos de fortaleza.
+  - **Arboles**: Pinos que le dan el toque forestal al nivel.
+
+![EnchantedForest](./fotos/EnchantedForest.png)
 
 - **Objetos en el Campo de Batalla**:
   - **Interactivos**:
     - **Obstáculos Naturales**: Rocas y árboles pueden bloquear o desviar el avance, mientras que ríos y lagos limitan el acceso a ciertas áreas, requiriendo estrategias adaptativas.
-    - **Objetivos Estratégicos**: El huevo central y las torres de protección actúan como catalizadores de confrontaciones, con su destrucción ofreciendo ventajas tácticas decisivas.
-  - **Decorativos**: Elementos como rocas, estanques pequeños, y árboles añaden profundidad al mundo del juego, mejorando la inmersión sin afectar directamente la jugabilidad.
+    - **Objetivos Estratégicos**: La posición del huevo y de las torres de protección actúan como catalizadores de confrontaciones, con su destrucción ofreciendo ventajas tácticas decisivas.
+  - **Decorativos**: Elementos como los árboles que le añaden profundidad al mundo del juego, mejorando la inmersión sin afectar directamente la jugabilidad.
 
 ---
 
@@ -213,72 +263,142 @@ Las hordas de monstruos irán subiendo su dificultad progresivamente hasta que p
 ### **Clases Abstractas / Componentes**
 
 1. **Carta**
-    - Atributos: Descripción, Vida, Velocidad, Daño, Velocidad de Ataque, Rango, Costo, Enemigos Objetivo, Tipo (Ataque/Defensa).
+    - Atributos: cardName, description, cost, numberOfNPCs y IDNPC.
 
-2. **Unidad**
-    - Derivado de Carta: Soldado, Caballero, Arquero, Catapulta, Trol, Gigante, Fantasma, Goblin, Orco, Escudo, Healer, Mago, Dragon, Bruja, Sacerdote, Lanzador de Javalina, Asesino, Elemental de Fuego, Centauro, Nigromante.
-
-3. **Torre**
-    - Atributos: Vida, Daño, Rango de Ataque.
+2. **Unidades**
+    - Derivado de Carta: Knight, Archer, Goblin, Giant, Mage, Ghost, Orc, Assasin, Centaur, Elf, Berserker, Ice Sorceress, Stone Golem, Troll, Scout, Cannon, Mortar Tower, Archer Tower, Inferno Tower, Wizard Tower.
+    - Atributos: name, health, speed, sttack, attackCooldown, range, isStructure, attackTowers, attackEnemies.
+    3. **Torre Default**
+    - Atributos: name, health, speed, sttack, attackCooldown, range, isStructure, attackTowers, attackEnemies.
+    4. **Huevo de dragón**
+    - Atributos: health.
 
 ---
 
-### **Listado de Clases a Programar**
+### **Listado de Scripts a Programar**
 
-- **Clase `Game`**:
-  - **Responsabilidad**: Administrar el flujo del juego, el estado de la partida y las transiciones entre diferentes pantallas (menús, juego, victoria/derrota).
-  - **Métodos importantes**:
-    - `startGame()`: Inicia una nueva partida.
-    - `pauseGame()`: Pausa la partida en curso.
-    - `endGame()`: Finaliza la partida y muestra resultados.
+- **Clase `Cards`**:
+  - **Card**
+  - **CardDisplay**
+  - **CardUICounter**
+  - **MenuCard**
 
-- **Clase `Player`**:
-  - **Responsabilidad**: Representar a cada jugador, manteniendo su puntuación, mazo de cartas y acciones disponibles.
-  - **Propiedades**:
-    - `deck`: Una colección de objetos `Card`.
-    - `score`: Puntuación actual del jugador.
-  - **Métodos**:
-    - `playCard()`: Juega una carta del mazo.
-    - `calculateScore()`: Actualiza la puntuación basada en el juego.
+- **Clase `CardSpawner`**:
+  - **AlertsManager**
+  - **CardSOSystem**
+  - **CardsUIManager**
+  - **ClickArea**
+  - **InputSystem 1**
+  - **Shuffler**
+  - **Spawner**
+  - **Starter**
 
-- **Clase `Card`**:
-  - **Responsabilidad**: Definir las características y comportamiento de las cartas utilizadas en el juego.
-  - **Propiedades**:
-    - `cost`: Recursos necesarios para jugar la carta.
-    - `cooldown`: Tiempo de espera antes de que la carta pueda ser utilizada nuevamente.
-  - **Métodos**:
-    - `activate()`: Ejecuta la acción de la carta cuando se juega.
+- **Clase `DeckBuild`**:
+  - **CardAdder**
+  - **CardCounter**
+  - **DeckBuilder**
+  - **DeckBuilderManager**
+  - **DeckData**
+  - **GetAllCards**
+  - **Populator**
+  - **PostDeck**
+  - **PostDeck**
+  - **PutDeck**
+  - **SaveLocal**
+  - **StatsShower**
 
-- **Clase `Unit`**:
-  - **Responsabilidad**: Actuar como la superclase para todas las unidades de combate en el juego, definiendo propiedades comunes y métodos.
-  - **Propiedades**:
-    - `health`: La salud actual de la unidad.
-    - `damage`: El daño que la unidad puede infligir.
-  - **Métodos**:
-    - `move()`: Mueve la unidad en el campo de batalla.
-    - `attack()`: Realiza un ataque a enemigos o estructuras.
+- **Clase `DeckBuild`**:
+  - **Elixir**
+  - **ElixirGenerator**
+  - **ElixirSetter**
+  - **ElixirUI**
 
-- **Clase `Tower`**:
-  - **Responsabilidad**: Controlar el estado y la defensa de las torres en el juego.
-  - **Propiedades**:
-    - `location`: La posición de la torre en el mapa.
-    - `defense`: La capacidad defensiva de la torre.
-  - **Métodos**:
-    - `receiveDamage()`: Reduce la salud de la torre cuando es atacada.
+- **Clase `Events`**:
+  - **GameEvent**
+  - **GameEventListener**
+  - **GameOver**
 
-- **Clase `Resource`**:
-  - **Responsabilidad**: Gestionar los recursos del jugador, que son necesarios para desplegar unidades y realizar acciones.
-  - **Propiedades**:
-    - `amount`: La cantidad actual de recursos disponibles.
-  - **Métodos**:
-    - `generate()`: Incrementa los recursos con el tiempo.
-    - `spend()`: Deduce los recursos al jugar cartas o realizar acciones.
+- **Clase `LogIn`**:
+  - **Button**
+  - **CreateAccountEndpoint**
+  - **LogInCheck**
+  - **LogInEndpoint**
+  - **UserInformation**
+  - **UsernameValidator**
 
-- **Clase `AI`**:
-  - **Responsabilidad**: Dirigir la lógica de los oponentes controlados por la computadora, permitiendo una jugabilidad desafiante y dinámica.
-  - **Métodos**:
-    - `determineStrategy()`: Decide una estrategia basada en el estado actual del juego.
-    - `executeAction()`: Realiza una acción basada en la estrategia determinada.
+- **Clase `Mazos`**:
+  - **DeckClasses**
+  - **LoadDecks**
+
+- **Clase `Menus`**:
+  - **GUIGetter**
+  - **MainMenu**
+  - **PauseMenu**
+  - **DeckButton**
+  - **DeckMenuSceneButton**
+  - **DeleteDeck**
+  - **PopulateButtons**
+  - **SceneLoader**
+  - **Selector**
+  - **mapsMenu**
+
+- **Clase `NPC Manager`**:
+  - **NPCManager**
+
+- **Clase `PlayStats`**:
+  - **PartidaInfo**
+  - **ScoreManager**
+  - **SessionAPIHandler**
+
+- **Clase `PrefabScripts`**:
+  - **ClosestFinder**
+  - **Damageable**
+  - **Destruction**
+  - **HBar**
+  - **HealthBarColor**
+  - **HealthBarValue**
+  - **Health**
+  - **NPCController**
+  - **NPCSystem**
+  - **ProyectileAttack**
+  - **PushMovement**
+  - **RangeFinder**
+  - **SingleAttack**
+  - **SplashAttack**
+  - **StopMovement**
+
+- **Clase `ProyectileScripts`**:
+  - **PController**
+  - **PMovement**
+  - **PParabolaMovement**
+  - **PSingleAttack**
+  - **PSplashDamage**
+
+- **Clase `RuntimeSets`**:
+  - **RSCards**
+  - **RSGameObject**
+  - **RSNPCStats**
+  - **RSRCards**
+  - **RSRGameObject**
+  - **RuntimeSet**
+
+- **Clase `SoundManager`**:
+  - **OptionsController**
+  - **SoundManager**
+
+- **Clase `Stats`**:
+  - **NPCStats**
+
+- **Clase `TeamColorSO`**:
+  - **TeamColors**
+
+- **Clase `Waves`**:
+  - **EnemyInfo**
+  - **WaveCounter**
+  - **WaveOverChecker**
+  - **WaveSpawner**
+  - **Wave**
+  - **WaveList**
 
 ---
 
@@ -287,319 +407,324 @@ Las hordas de monstruos irán subiendo su dificultad progresivamente hasta que p
 ---
 
 #### **Unidades**
-![SampleDeck](./fotos/sampleDeck.png)
 
-- **Caballero**:
+- **Knight**:
   - Health: 400
-  - Speed: Alto
+  - Speed: 1
   - Attack: 70
-  - Attack Cooldown: 1.5 segundos
-  - Attack Type: Cuerpo a cuerpo
-  - Range: Corto
-  - Cost: 3 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Resistente a ataques físicos, ideal para combate frontal.
+  - Attack Cooldown: 1.5
+  - Range: 1
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
 
-  ![Knight](./fotos/Card_pictures/knight.png)
+  - Description: "Front-line combat"
+  - Coste: 5
+  - Numero de NPCs: 1
+  - ID: 1
 
-- **Arquero**:
+- **Archer**:
   - Health: 150
-  - Speed: Alto
+  - Speed: 1
   - Attack: 40
-  - Attack Cooldown: 1 segundo
-  - Attack Type: A distancia
-  - Range: Largo
-  - Cost: 2 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Puede atacar desde lejos, vulnerable a ataques rápidos.
+  - Attack Cooldown: 0.8
+  - Range: 10
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
 
-![Archer](./fotos/Card_pictures/archer.png)
+  - Description: "Quick and ranged"
+  - Coste: 10
+  - Numero de NPCs: 2
+  - ID: 2
 
-- **Duende**:
-  - Health: 100
-  - Speed: Muy Alto
-  - Attack: 25
-  - Attack Cooldown: 0.5 segundos
-  - Attack Type: Cuerpo a cuerpo
-  - Range: Corto
-  - Cost: 1 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Rápido y eficaz para ataques rápidos y distracciones.
+- **Goblin**:
+  - Health: 50
+  - Speed: 2
+  - Attack: 35
+  - Attack Cooldown: 0.5
+  - Range: 1
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
 
-![Duende](./fotos/Card_pictures/Duende.png)
+  - Description: "Strikes and distractions"
+  - Coste: 5
+  - Numero de NPCs: 3
+  - ID: 3
 
-- **Gigante**:
-  - Health: 800
-  - Speed: Bajo
-  - Attack: 150
-  - Attack Cooldown: 2 segundos
-  - Attack Type: Cuerpo a cuerpo
-  - Range: Corto
-  - Cost: 5 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Muy resistente, ideal para absorber daño.
+- **Giant**:
+  - Health: 1000
+  - Speed: 1
+  - Attack: 450
+  - Attack Cooldown: 1.5
+  - Range: 1
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
 
-![Gigante](./fotos/Card_pictures/Gigante.png)
+  - Description: "Very resilient"
+  - Coste: 30
+  - Numero de NPCs: 1
+  - ID: 4
 
-- **Mago**:
+- **Mage**:
   - Health: 250
-  - Speed: Medio
-  - Attack: 100
-  - Attack Cooldown: 2 segundos
-  - Attack Type: Mágico
-  - Range: Medio
-  - Cost: 4 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Capaz de causar daño en área, efectivo contra grupos de enemigos.
+  - Speed: 1
+  - Attack: 30
+  - Attack Cooldown: 1.5
+  - Range: 10
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
 
-![Mago](./fotos/Card_pictures/Mago.png)
+  - Description: "Can deal area damage"
+  - Coste: 15
+  - Numero de NPCs: 1
+  - ID: 5
 
-- **Fantasma**:
+- **Ghost**:
   - Health: 200
-  - Speed: Alto
-  - Attack: 30 
-  - Attack Cooldown: 1
-  - Attack Type: Cuerpo a Cuerpo
-  - Range: Corto
-  - Cost: 3 de elixir
-  - Attack Enemies?: Si
-  - Nota: atraviesa unidades enemigas, invisible los primeros 5 segundos
+  - Speed: 1
+  - Attack: 55
+  - Attack Cooldown: 0.8
+  - Range: 1
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
 
-![Fantasma](./fotos/Card_pictures/Fantasma.png)
+  - Description: "Sumons other ghost"
+  - Coste: 12
+  - Numero de NPCs: 4
+  - ID: 6
 
-- **Orco**:
+- **Orc**:
   - Health: 350
-  - Speed: Medio
-  - Attack: 60
-  - Attack Cooldown: 1.2 segundos
-  - Attack Type: Cuerpo a cuerpo
-  - Range: Corto
-  - Cost: 3 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Fuerte y resistente, buen balance entre ataque y defensa.
+  - Speed: 1.5
+  - Attack: 65
+  - Attack Cooldown: 1
+  - Range: 1
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
 
-![Orco](./fotos/Card_pictures/Orco.png)
+  - Description: "Strong and study"
+  - Coste: 8
+  - Numero de NPCs: 1
+  - ID: 7
 
-- **Asesino**:
-  - Health: 150
-  - Speed: Muy Alto
-  - Attack: 80
-  - Attack Cooldown: 1 segundo
-  - Attack Type: Cuerpo a cuerpo
-  - Range: Corto
-  - Cost: 4 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Alto daño y velocidad, perfecto para eliminar objetivos clave rápidamente.
+- **Assasin**:
+  - Health: 250
+  - Speed: 2
+  - Attack: 150
+  - Attack Cooldown: 0.5
+  - Range: 1
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
 
-![Asesino](./fotos/Card_pictures/Asesino.png)
+  - Description: "High damage and speed"
+  - Coste: 12
+  - Numero de NPCs: 1
+  - ID: 8
 
-- **Centauro**:
-  - Health: 300
-  - Speed: Alto
+- **Centaur**:
+  - Health: 450
+  - Speed: 1
+  - Attack: 100
+  - Attack Cooldown: 1.5
+  - Range: 2
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
+
+  - Description: "Versatile"
+  - Coste: 8
+  - Numero de NPCs: 1
+  - ID: 9
+
+- **Elf**:
+  - Health: 200
+  - Speed: 1.5
   - Attack: 70
-  - Attack Cooldown: 1.5 segundos
-  - Attack Type: A distancia
-  - Range: Medio
-  - Cost: 4 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Versátil para ataque y defensa, efectivo en múltiples situaciones.
+  - Attack Cooldown: 1.5
+  - Range: 15
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
 
-![Centauro](./fotos/Card_pictures/centauro.png)
-
-- **Elfo**:
-  - Health: 300
-  - Speed: Medio
-  - Attack: 60
-  - Attack Cooldown: 1.2 segundos
-  - Attack Type: Físico
-  - Range: Largo
-  - Cost: 4 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Excelentes para ataques a larga distancia, los Elfos pueden ablandar al enemigo antes de que se acerquen.
-
-![Elfo](./fotos/Card_pictures/Elfo.png)
+  - Description: "Long-range arracks"
+  - Coste: 25
+  - Numero de NPCs: 1
+  - ID: 10
 
 
 - **Berserker**:
   - Health: 450
-  - Speed: Alto
-  - Attack: 85
-  - Attack Cooldown: 0.8 segundos
-  - Attack Type: Físico
-  - Range: Corto
-  - Cost: 5 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Guerreros feroces que causan estragos en las filas enemigas con su increíble velocidad y fuerza.
-
-![Berserker](./fotos/Card_pictures/Berserker.png)
-
-- **Hechicera de Hielo**:
-  - Health: 250
-  - Speed: Medio
-  - Attack: 70
-  - Attack Cooldown: 1.5 segundos
-  - Attack Type: Mágico (Congelación)
-  - Range: Medio
-  - Cost: 6 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Puede ralentizar a los enemigos con su magia de hielo, dando ventaja táctica al jugador.
-
-![Hechicera de Hielo](./fotos/Card_pictures/HechiceraHielo.png)
-
-- **Gólem de Piedra**:
-  - Health: 800
-  - Speed: Bajo
+  - Speed: 1
   - Attack: 100
-  - Attack Cooldown: 2.5 segundos
-  - Attack Type: Físico
-  - Range: Corto
-  - Cost: 7 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Un tanque viviente, capaz de absorber una cantidad masiva de daño antes de caer.
+  - Attack Cooldown: 0.8
+  - Range: 1
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
 
-![Golem de piedra](./fotos/Card_pictures/GolemPiedra.png)
+  - Description: "Fierce warriors causing"
+  - Coste: 10
+  - Numero de NPCs: 1
+  - ID: 11
+
+- **Ice Sorceress**:
+  - Health: 500
+  - Speed: 1
+  - Attack: 50
+  - Attack Cooldown: 0.8
+  - Range: 5
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
+
+  - Description: "Tactical advantage"
+  - Coste: 12
+  - Numero de NPCs: 1
+  - ID: 12
+
+- **Stone Golem**:
+  - Health: 1250
+  - Speed: 1
+  - Attack: 150
+  - Attack Cooldown: 3
+  - Range: 1
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
+
+  - Description: "A living tank"
+  - Coste: 20
+  - Numero de NPCs: 1
+  - ID: 13
 
 - **Troll**:
   - Health: 650
-  - Speed: Bajo
+  - Speed: 1
   - Attack: 120
-  - Attack Cooldown: 2.5 segundos
-  - Attack Type: Físico
-  - Range: Corto
-  - Cost: 7 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Fuertes y resistentes, los Trolls son excelentes para romper las líneas defensivas enemigas.
+  - Attack Cooldown: 2
+  - Range: 1
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
 
-![Troll](./fotos/Card_pictures/Troll.png)
+  - Description: "Strong and resilient"
+  - Coste: 7
+  - Numero de NPCs: 1
+  - ID: 14
 
-- **Explorador**:
+- **Scout**:
   - Health: 200
-  - Speed: Muy Alto
+  - Speed: 3
   - Attack: 50
-  - Attack Cooldown: 1 segundo
-  - Attack Type: Físico
-  - Range: Medio
-  - Cost: 3 de elixir
-  - Attack Enemies?: Sí
-  - Nota: Rápidos y ágiles, los Exploradores son perfectos para reconocer y atacar puntos débiles enemigos.
+  - Attack Cooldown: 1
+  - Range: 2
+  - isStructure?: 0
+  - Attack Towers?: 1
+  - Attack Enemies?: 1
 
-![Explorador](./fotos/Card_pictures/Explorador.png)
+  - Description: "Fast and agile"
+  - Coste: 6
+  - Numero de NPCs: 2
+  - ID: 15
 
 #### **Estructuras**:
 
-- **Cañón**:
+- **Cannon**:
   - Health: 500
+  - Speed: 0
   - Attack: 80
-  - Attack Cooldown: 2 segundos
-  - Attack Type: Proyectil
-  - Range: Medio
-  - Cost: 4 de elixir
+  - Attack Cooldown: 1.5
+  - Range: 8
+  - isStructure?: 1
+  - Attack Towers?: 0
+  - Attack Enemies?: 1
 
-  - Attack Towers?: No
-  - Attack Enemies?: Sí
-  - Nota: Ideal para defensa contra unidades terrestres, el Cañón proporciona un sólido punto de control.
+  - Description: "Ideal for defense"
+  - Coste: 25
+  - Numero de NPCs: 1
+  - ID: 16
 
-![Cañón](./fotos/Card_pictures/Canon.png)
-
-- **Catapulta**:
+- **Catapult**:
   - Health: 400
-  - Attack: 120
-  - Attack Cooldown: 3 segundos
-  - Attack Type: Área de Efecto
-  - Range: Largo
-  - Cost: 5 de elixir
+  - Speed: 1
+  - Attack: 50
+  - Attack Cooldown: 3
+  - Range: 17
+  - isStructure?: 1
+  - Attack Towers?: 0
+  - Attack Enemies?: 1
 
-  - Attack Towers?: No
-  - Attack Enemies?: Sí
-  - Nota: Con su gran alcance y daño en área, la Catapulta es perfecta contra grupos de enemigos.
+  - Description: "Great range"
+  - Coste: 40
+  - Numero de NPCs: 1
+  - ID: 17
 
-![Catapulta](./fotos/Card_pictures/catapulta.png)
-
-- **Mortero**:
+- **Mortar Tower**:
   - Health: 450
-  - Attack: 100
-  - Attack Cooldown: 2.5 segundos
-  - Attack Type: Explosivo
-  - Range: Muy Largo
-  - Cost: 6 de elixir
+  - Speed: 0
+  - Attack: 45
+  - Attack Cooldown: 1
+  - Range: 8
+  - isStructure?: 1
+  - Attack Towers?: 0
+  - Attack Enemies?: 1
 
-  - Attack Towers?: No
-  - Attack Enemies?: Sí
-  - Nota: El Mortero puede alcanzar y dañar a enemigos desde una distancia segura, ideal para posiciones fortificadas.
+  - Description: "Fortified position"
+  - Coste: 35
+  - Numero de NPCs: 1
+  - ID: 18
 
-![Torre Mortero](./fotos/Card_pictures/Mortero.png)
-
-- **Torre de Arqueras**:
+- **Archer tower**:
   - Health: 650
-  - Attack: 45 por arquera
-  - Attack Cooldown: 1 segundo
-  - Attack Type: Flechas
-  - Range: Largo
-  - Cost: 5 de elixir
+  - Speed: 0
+  - Attack: 45
+  - Attack Cooldown: 1
+  - Range: 8
+  - isStructure?: 1
+  - Attack Towers?: 0
+  - Attack Enemies?: 1
 
-  - Attack Enemies?: Sí
-  - Nota: Alberga a tres arqueras que atacan independientemente a los enemigos en su rango.
+  - Description: "Coverting/ range"
+  - Coste: 35
+  - Numero de NPCs: 1
+  - ID: 19
 
-![Torre de arqueras](./fotos/Card_pictures/Torre_de_arqueras.png)
+- **Inferno Tower**:
+  - Health: 1500
+  - Speed: 0
+  - Attack: 800
+  - Attack Cooldown: 2.5
+  - Range: 10
+  - isStructure?: 1
+  - Attack Towers?: 0
+  - Attack Enemies?: 1
 
-- **Torre Inferno**:
-  - Health: 550
-  - Attack: 20 a 120 (incrementa con el tiempo mientras ataca al mismo objetivo)
-  - Attack Cooldown: 2 segundos
-  - Attack Type: Rayo de Fuego
-  - Range: Medio
-  - Cost: 6 de elixir
+  - Description: "Ideal bigDamage"
+  - Coste: 40
+  - Numero de NPCs: 1
+  - ID: 20
 
-  - Attack Enemies?: Sí
-  - Nota: Su daño aumenta cuanto más tiempo permanece enfocado en un solo objetivo, ideal contra unidades de alta salud.
+- **Wizard Tower**:
+  - Health: 700
+  - Speed: 0
+  - Attack: 60
+  - Attack Cooldown: 1.5
+  - Range: 10
+  - isStructure?: 1
+  - Attack Towers?: 0
+  - Attack Enemies?: 1
 
-![Torre inferno](./fotos/Card_pictures/Torre_inferno.png)
-
-- **Torre de Mago**:
-  - Health: 500
-  - Attack: 80
-  - Attack Cooldown: 1.5 segundos
-  - Attack Type: Mágico
-  - Range: Medio
-  - Cost: 7 de elixir
-
-  - Attack Enemies?: Sí
-  - Nota: Lanza hechizos de área que pueden afectar a múltiples enemigos a la vez.
-
-![Torre de magos](./fotos/Card_pictures/Torre_de_magos.png)
-
-- **Barrera de Espinas**:
-  - Health: 800
-  - Attack: 30 (a los enemigos que contactan con la barrera)
-  - Attack Cooldown: No aplica
-  - Attack Type: Pasivo
-  - Range: No aplica
-  - Cost: 4 de elixir
-
-  - Attack Enemies?: Sí
-  - Nota: Daña a los enemigos que la atacan o intentan cruzarla, efectiva para ralentizar avances.
-
-![Barrera de Espinas](./fotos/Card_pictures/Barrera_de_Espinas.png)
-
-- **Torre de Bombardero**:
-  - Health: 600
-  - Attack: 100
-  - Attack Cooldown: 2.5 segundos
-  - Attack Type: Explosivo
-  - Range: Medio
-  - Cost: 6 de elixir
-
-  - Attack Enemies?: Sí
-  - Nota: Arroja bombas a un área, causando daño masivo a múltiples unidades enemigas.
-
-![Torre de Bombardero](./fotos/Card_pictures/Torre_de_Bombardero.png)
-
----
-
-#### **Obstáculos**
-
-- **Árbol & Roca**: Proporciona cobertura y es un obstaculo.
-- **Lago**: Obstáculo natural que limita el movimiento; solo ciertas unidades pueden cruzarlo.
+  - Description: "Casts spells"
+  - Coste: 40
+  - Numero de NPCs: 1
+  - ID: 21
 
 ---
 
